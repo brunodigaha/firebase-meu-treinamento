@@ -1,4 +1,4 @@
-module.exports = function ($rootScope, $state,$stateParams,coreEventsService, authModelService) {
+module.exports = function ($rootScope,$location,$state,authModelService,coreEventsService) {
 	$rootScope.$on("$stateChangeStart", function (event, toState, toParams, fromState, fromParams) {
 		// console.log('$stateChangeStart to '+toState.to+'- fired when the transition begins. toState,toParams : \n',toState, toParams);
 		// console.log("fromSate",fromState);
@@ -13,11 +13,21 @@ module.exports = function ($rootScope, $state,$stateParams,coreEventsService, au
 		// 	event.preventDefault(); 
 		// 	$state.go('core.user', {userId:12});
 		// }
+		if(toState.name == 'login' && authModelService.$getAuth()) {
+			event.preventDefault(); 
+			$state.go('core.user.home.planTraining', {userId:12});
+		}
 	});
-	$rootScope.$on('$stateChangeError',function(event, toState, toParams, fromState, fromParams){
+	$rootScope.$on('$stateChangeError',function(event, toState, toParams, fromState, fromParams, error){
 		event.preventDefault();
-		console.log('$stateChangeError - fired when an error occurs during transition.');
-		console.log(arguments);
+		if (error === "AUTH_REQUIRED") {
+			$location.path("/login");
+			// $state.go("login");
+			console.log("Erro Autenticacao Firebase ---- StateChangeError");
+		}else {
+			console.log('$stateChangeError - fired when an error occurs during transition.');
+			console.log(arguments);
+		}
 	});
 
 	// $rootScope.$on('$stateChangeSuccess',function(event, toState, toParams, fromState, fromParams){

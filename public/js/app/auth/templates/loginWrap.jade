@@ -8,18 +8,17 @@ section.login-wrap
 		form(name="loginForm")
 			md-input-container
 				label Login
-				input(type="text",  required="", name="username", ng-model="userModel.username")
-				div(ng-messages="loginForm.username.$error" role="alert")
+				input(type="email",  required="", name="email", ng-model="email")
+				div(ng-messages="loginForm.email.$error" role="alert")
 					div(ng-if="showRequiredError")
 						div(ng-message="required") Este campo é obrigatório.
 			md-input-container
 				label Senha
-				input(type="password", required="", name="password", ng-model="userModel.password")
+				input(type="password", required="", name="password", ng-model="password")
 				div(ng-messages="loginForm.password.$error" role="alert")
 					div(ng-if="showRequiredError")
 						div(ng-message="required") Este campo é obrigatório.
-			md-progress-circular( ng-if="userModel.loading" md-mode="indeterminate", value="...", md-diameter="20")
+			md-progress-circular( ng-if="loading" md-mode="indeterminate", value="...", md-diameter="20")
 			md-button(class="md-raised md-primary"  ng-click="login();") Entrar
-			// h5 Login: admin Senha 123
 
 

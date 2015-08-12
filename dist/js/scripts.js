@@ -54104,7 +54104,7 @@ module.exports = function ($stateProvider,$compileProvider,$animateProvider,$loc
 };
 
 },{"./auth/authRoutes.js":37,"./core/coreRoutes.js":46,"./train/trainRoutes.js":59,"./user/userRoutes.js":63}],36:[function(require,module,exports){
-module.exports = function ($rootScope, $state,$stateParams,coreEventsService, authModelService) {
+module.exports = function ($rootScope,$location,$state,authModelService,coreEventsService) {
 	$rootScope.$on("$stateChangeStart", function (event, toState, toParams, fromState, fromParams) {
 		// console.log('$stateChangeStart to '+toState.to+'- fired when the transition begins. toState,toParams : \n',toState, toParams);
 		// console.log("fromSate",fromState);
@@ -54119,11 +54119,21 @@ module.exports = function ($rootScope, $state,$stateParams,coreEventsService, au
 		// 	event.preventDefault(); 
 		// 	$state.go('core.user', {userId:12});
 		// }
+		if(toState.name == 'login' && authModelService.$getAuth()) {
+			event.preventDefault(); 
+			$state.go('core.user.home.planTraining', {userId:12});
+		}
 	});
-	$rootScope.$on('$stateChangeError',function(event, toState, toParams, fromState, fromParams){
+	$rootScope.$on('$stateChangeError',function(event, toState, toParams, fromState, fromParams, error){
 		event.preventDefault();
-		console.log('$stateChangeError - fired when an error occurs during transition.');
-		console.log(arguments);
+		if (error === "AUTH_REQUIRED") {
+			$location.path("/login");
+			// $state.go("login");
+			console.log("Erro Autenticacao Firebase ---- StateChangeError");
+		}else {
+			console.log('$stateChangeError - fired when an error occurs during transition.');
+			console.log(arguments);
+		}
 	});
 
 	// $rootScope.$on('$stateChangeSuccess',function(event, toState, toParams, fromState, fromParams){
@@ -54163,7 +54173,7 @@ module.exports = {
 						}
 					},
 					controller: 'loginController',
-					template: Buffer("CjxkaXY+CiAgPGlucHV0IHR5cGU6InRleHQ9InR5cGU6InRleHQiIG5nLW1vZGVsPSJuZXdVc2VyTmFtZSIvPgogIDxidXR0b24gbmctY2xpY2s9ImFkZFVzZXIoKTsiPitVc2VyPC9idXR0b24+CiAgPHA+e3tkYXRhIHwganNvbn19PC9wPgogIDxkaXYgbmctcmVwZWF0PSJ1c2VyIGluIHVzZXJzIiBuZy1jbGljaz0icmVtb3ZlVXNlcih1c2VyKTsiPnt7dXNlci5ub21lfX08L2Rpdj4KPC9kaXY+CjxzZWN0aW9uIGNsYXNzPSJsb2dpbi13cmFwIj4KICA8c2VjdGlvbiBjbGFzcz0ibG9naW4iPgogICAgPGZvcm0gbmFtZT0ibG9naW5Gb3JtIj4KICAgICAgPG1kLWlucHV0LWNvbnRhaW5lcj4KICAgICAgICA8bGFiZWw+TG9naW48L2xhYmVsPgogICAgICAgIDxpbnB1dCB0eXBlPSJ0ZXh0IiByZXF1aXJlZD0iIiBuYW1lPSJ1c2VybmFtZSIgbmctbW9kZWw9InVzZXJNb2RlbC51c2VybmFtZSIvPgogICAgICAgIDxkaXYgbmctbWVzc2FnZXM9ImxvZ2luRm9ybS51c2VybmFtZS4kZXJyb3IiIHJvbGU9ImFsZXJ0Ij4KICAgICAgICAgIDxkaXYgbmctaWY9InNob3dSZXF1aXJlZEVycm9yIj4KICAgICAgICAgICAgPGRpdiBuZy1tZXNzYWdlPSJyZXF1aXJlZCI+RXN0ZSBjYW1wbyDDqSBvYnJpZ2F0w7NyaW8uPC9kaXY+CiAgICAgICAgICA8L2Rpdj4KICAgICAgICA8L2Rpdj4KICAgICAgPC9tZC1pbnB1dC1jb250YWluZXI+CiAgICAgIDxtZC1pbnB1dC1jb250YWluZXI+CiAgICAgICAgPGxhYmVsPlNlbmhhPC9sYWJlbD4KICAgICAgICA8aW5wdXQgdHlwZT0icGFzc3dvcmQiIHJlcXVpcmVkPSIiIG5hbWU9InBhc3N3b3JkIiBuZy1tb2RlbD0idXNlck1vZGVsLnBhc3N3b3JkIi8+CiAgICAgICAgPGRpdiBuZy1tZXNzYWdlcz0ibG9naW5Gb3JtLnBhc3N3b3JkLiRlcnJvciIgcm9sZT0iYWxlcnQiPgogICAgICAgICAgPGRpdiBuZy1pZj0ic2hvd1JlcXVpcmVkRXJyb3IiPgogICAgICAgICAgICA8ZGl2IG5nLW1lc3NhZ2U9InJlcXVpcmVkIj5Fc3RlIGNhbXBvIMOpIG9icmlnYXTDs3Jpby48L2Rpdj4KICAgICAgICAgIDwvZGl2PgogICAgICAgIDwvZGl2PgogICAgICA8L21kLWlucHV0LWNvbnRhaW5lcj4KICAgICAgPG1kLXByb2dyZXNzLWNpcmN1bGFyIG5nLWlmPSJ1c2VyTW9kZWwubG9hZGluZyIgbWQtbW9kZT0iaW5kZXRlcm1pbmF0ZSIgdmFsdWU9Ii4uLiIgbWQtZGlhbWV0ZXI9IjIwIj48L21kLXByb2dyZXNzLWNpcmN1bGFyPgogICAgICA8bWQtYnV0dG9uIG5nLWNsaWNrPSJsb2dpbigpOyIgY2xhc3M9Im1kLXJhaXNlZCBtZC1wcmltYXJ5Ij5FbnRyYXI8L21kLWJ1dHRvbj4KICAgICAgPCEtLSBoNSBMb2dpbjogYWRtaW4gU2VuaGEgMTIzLS0+CiAgICAgIAogICAgPC9mb3JtPgogIDwvc2VjdGlvbj4KPC9zZWN0aW9uPg==","base64")  
+					template: Buffer("CjxkaXY+CiAgPGlucHV0IHR5cGU6InRleHQ9InR5cGU6InRleHQiIG5nLW1vZGVsPSJuZXdVc2VyTmFtZSIvPgogIDxidXR0b24gbmctY2xpY2s9ImFkZFVzZXIoKTsiPitVc2VyPC9idXR0b24+CiAgPHA+e3tkYXRhIHwganNvbn19PC9wPgogIDxkaXYgbmctcmVwZWF0PSJ1c2VyIGluIHVzZXJzIiBuZy1jbGljaz0icmVtb3ZlVXNlcih1c2VyKTsiPnt7dXNlci5ub21lfX08L2Rpdj4KPC9kaXY+CjxzZWN0aW9uIGNsYXNzPSJsb2dpbi13cmFwIj4KICA8c2VjdGlvbiBjbGFzcz0ibG9naW4iPgogICAgPGZvcm0gbmFtZT0ibG9naW5Gb3JtIj4KICAgICAgPG1kLWlucHV0LWNvbnRhaW5lcj4KICAgICAgICA8bGFiZWw+TG9naW48L2xhYmVsPgogICAgICAgIDxpbnB1dCB0eXBlPSJlbWFpbCIgcmVxdWlyZWQ9IiIgbmFtZT0iZW1haWwiIG5nLW1vZGVsPSJlbWFpbCIvPgogICAgICAgIDxkaXYgbmctbWVzc2FnZXM9ImxvZ2luRm9ybS5lbWFpbC4kZXJyb3IiIHJvbGU9ImFsZXJ0Ij4KICAgICAgICAgIDxkaXYgbmctaWY9InNob3dSZXF1aXJlZEVycm9yIj4KICAgICAgICAgICAgPGRpdiBuZy1tZXNzYWdlPSJyZXF1aXJlZCI+RXN0ZSBjYW1wbyDDqSBvYnJpZ2F0w7NyaW8uPC9kaXY+CiAgICAgICAgICA8L2Rpdj4KICAgICAgICA8L2Rpdj4KICAgICAgPC9tZC1pbnB1dC1jb250YWluZXI+CiAgICAgIDxtZC1pbnB1dC1jb250YWluZXI+CiAgICAgICAgPGxhYmVsPlNlbmhhPC9sYWJlbD4KICAgICAgICA8aW5wdXQgdHlwZT0icGFzc3dvcmQiIHJlcXVpcmVkPSIiIG5hbWU9InBhc3N3b3JkIiBuZy1tb2RlbD0icGFzc3dvcmQiLz4KICAgICAgICA8ZGl2IG5nLW1lc3NhZ2VzPSJsb2dpbkZvcm0ucGFzc3dvcmQuJGVycm9yIiByb2xlPSJhbGVydCI+CiAgICAgICAgICA8ZGl2IG5nLWlmPSJzaG93UmVxdWlyZWRFcnJvciI+CiAgICAgICAgICAgIDxkaXYgbmctbWVzc2FnZT0icmVxdWlyZWQiPkVzdGUgY2FtcG8gw6kgb2JyaWdhdMOzcmlvLjwvZGl2PgogICAgICAgICAgPC9kaXY+CiAgICAgICAgPC9kaXY+CiAgICAgIDwvbWQtaW5wdXQtY29udGFpbmVyPgogICAgICA8bWQtcHJvZ3Jlc3MtY2lyY3VsYXIgbmctaWY9ImxvYWRpbmciIG1kLW1vZGU9ImluZGV0ZXJtaW5hdGUiIHZhbHVlPSIuLi4iIG1kLWRpYW1ldGVyPSIyMCI+PC9tZC1wcm9ncmVzcy1jaXJjdWxhcj4KICAgICAgPG1kLWJ1dHRvbiBuZy1jbGljaz0ibG9naW4oKTsiIGNsYXNzPSJtZC1yYWlzZWQgbWQtcHJpbWFyeSI+RW50cmFyPC9tZC1idXR0b24+CiAgICA8L2Zvcm0+CiAgPC9zZWN0aW9uPgo8L3NlY3Rpb24+","base64")  
 				},
 			}
 		}
@@ -54174,8 +54184,10 @@ module.exports = {
 
 }).call(this,require("buffer").Buffer)
 },{"buffer":1}],38:[function(require,module,exports){
-module.exports = function ($scope,$timeout, authModelService,$firebaseArray,FBURL) {
-	var userModel = $scope.userModel = authModelService;
+module.exports = function ($scope,$timeout,$location, authModelService,$firebaseArray,FBURL) {
+	// var userModel = $scope.userModel = authModelService;
+	$scope.email = null;
+	$scope.password = null;
 	var URL = new Firebase(FBURL);
 	$scope.users  = $firebaseArray(URL);
 	$scope.addUser = function(){
@@ -54191,10 +54203,17 @@ module.exports = function ($scope,$timeout, authModelService,$firebaseArray,FBUR
 	// $scope.items=$firebase(newFirebase(URL+'/items'));
 	// $scope.data.$add({nome:"Bruno Alexandre"});
 	$scope.login = function () {
-		if (userModel.username && userModel.password){
-			userModel.loading = true;
-			console.log(userModel.username, userModel.password);
-			$timeout(authModelService.login,1000);
+		if ($scope.email && $scope.password){
+			$scope.loading = true;
+			authModelService.$authWithPassword({ email: $scope.email, password: $scope.password }, {rememberMe: true})
+			.then(function(/* user */) {
+				$location.path('/user/12/training-history');
+			}, function(err) {
+				$scope.err = errMessage(err);
+			});
+			// console.log($scope.email, $scope.password);
+			// console.log(userModel.username, userModel.password);
+			// $timeout(authModelService.login,1000);
 		}
 	};
 };
@@ -54205,20 +54224,22 @@ module.exports = angular.module('auth',[])
 			.controller('loginController', require('./controllers/loginController.js'));
 
 },{"./controllers/loginController.js":38,"./services/authModelService.js":40}],40:[function(require,module,exports){
-module.exports = function ($state,$cookies) {
-	var authModel = {
-		currentUser: {},
-		token: '',
-		username: '',
-		password: '',
-		loading: false
-	};
+module.exports = function ($firebaseAuth,FBURL) {
+	var ref = new Firebase(FBURL);
+	return $firebaseAuth(ref);
+	// var authModel = {
+	// 	currentUser: {},
+	// 	token: '',
+	// 	username: '',
+	// 	password: '',
+	// 	loading: false
+	// };
 
-	authModel.set_login = function(token){
-		RestangularCustom.setDefaultHeaders({'Authorization': authModel.token});
-		authModel.token = token;
-		$cookies.put('token',token);
-	};
+	// authModel.set_login = function(token){
+	// 	RestangularCustom.setDefaultHeaders({'Authorization': authModel.token});
+	// 	authModel.token = token;
+	// 	$cookies.put('token',token);
+	// };
 
 	// authModel.reset_login = function () {
 	// 		RestangularCustom.setDefaultHeaders({"Authorization": ""});
@@ -54226,16 +54247,16 @@ module.exports = function ($state,$cookies) {
 	// 		$cookies.put('token', ""); 
 	// };
 
-	authModel.is_authenticated = function () {
-		var cookieToken = $cookies.get('token');
-		if (cookieToken) {
-			authModel.set_login(cookieToken);
-			return true;
-		}
-		$cookies.put('token', ""); 
-		console.log("passou sem token");
-		return false;
-	};
+	// authModel.is_authenticated = function () {
+	// 	var cookieToken = $cookies.get('token');
+	// 	if (cookieToken) {
+	// 		authModel.set_login(cookieToken);
+	// 		return true;
+	// 	}
+	// 	$cookies.put('token', ""); 
+	// 	console.log("passou sem token");
+	// 	return false;
+	// };
 
 
 	// authModel.init_token = function(){
@@ -54263,13 +54284,13 @@ module.exports = function ($state,$cookies) {
 	// 	});
 	// };
 
-	authModel.logout = function () {
-		// authModel.reset_login();
-		$state.go('login');
-		console.log("logout passou");
-	};
+	// authModel.logout = function () {
+	// 	// authModel.reset_login();
+	// 	$state.go('login');
+	// 	console.log("logout passou");
+	// };
 
-	return authModel;
+	// return authModel;
 };
 
 },{}],41:[function(require,module,exports){
@@ -54308,7 +54329,7 @@ module.exports = function($scope, coreEventsService, $mdDialog, $mdToast, $anima
 },{}],42:[function(require,module,exports){
 (function (Buffer){
 
-module.exports = function ($scope,$mdDialog, coreEventsService, authModelService) {
+module.exports = function ($scope,$mdDialog,$location, coreEventsService, authModelService) {
 	var coreEvents = $scope.coreEventse = coreEventsService;
 	$scope.plans = [
 		"12/04/15 - 12/05/15",
@@ -54320,7 +54341,8 @@ module.exports = function ($scope,$mdDialog, coreEventsService, authModelService
 		"16/04/15 - 12/05/15"
 	];
 	$scope.logout = function () {
-		authModelService.logout();
+		authModelService.$unauth();
+		$location.path("/login");
 	};
 	$scope.toggle_options = function () {
 		coreEventsService.toggle_options();
@@ -54374,7 +54396,7 @@ module.exports = function($scope,$mdDialog, $mdToast,$animate) {
 		$mdDialog.show({
 			controller: 'searchDialogController',
 			// templateUrl: 'dialog1.tmpl.html',
-			template: Buffer("CjxtZC1kaWFsb2cgYXJpYS1sYWJlbD0iTWFuZ28gKEZydWl0KSI+CiAgPG1kLXRvb2xiYXIgbWQtdGhlbWU9ImRlZmF1bHQiPiAKICAgIDxkaXYgY2xhc3M9Im1kLXRvb2xiYXItdG9vbHMiPgogICAgICA8aDE+Q2FkYXN0cmFyIE5vdm8gQWx1bm88L2gxPjxzcGFuIGZsZXg9IiI+PC9zcGFuPgogICAgICA8bWQtYnV0dG9uIG5nLWNsaWNrPSJhbnN3ZXIoJ25vdCBhcHBsaWNhYmxlJykiPkNhbmNlbGFyPC9tZC1idXR0b24+CiAgICAgIDwhLS0gbmctbWQtaWNvbihpY29uPSJjbG9zZSIgbmctY2xpY2s9ImFuc3dlcignbm90IGFwcGxpY2FibGUnKSIgc3R5bGU9ImZpbGw6d2hpdGUiIHNpemU9IjI1IiktLT4KICAgIDwvZGl2PgogIDwvbWQtdG9vbGJhcj4KICA8bWQtZGlhbG9nLWNvbnRlbnQ+CiAgICA8c2VjdGlvbiBjbGFzcz0ibmV3LXVzZXIiPgogICAgICA8IS0tIG1kLXRvb2xiYXIubWQtcHJpbWFyeS0tPgogICAgICA8IS0tIAkubWQtdG9vbGJhci10b29scy0tPgogICAgICA8IS0tIAkJaDIubWQtZmxleCBDYWRhc3RyYXIgQWx1bm8tLT4KICAgICAgPCEtLSBtZC1jb250ZW50KG1kLXRoZW1lPSJibHVlLWdyZXkiKS0tPgogICAgICA8c2VjdGlvbiBjbGFzcz0iYXZhdGFyIj48aW1nIG5nLWlmPSIhaW1hZ2UiIGNsYXNzPSJpY29uLWF2YXRhciIvPjxpbWcgbmctc3JjPSJ7e2ltYWdlfX0iIG5nLWlmPSJpbWFnZSIgY2xhc3M9ImltZy1yZXNwb25zaXZlIGltZy1zZWxlY3RlZCIvPgogICAgICAgIDx1cGxvYWRjYXJlLXdpZGdldCBuZy1tb2RlbD0ib2JqZWN0LmltYWdlLmluZm8udXVpZCIgZGF0YS1wdWJsaWMta2V5PSJlYjM5YzVkZWY2NTdmY2Q4ODk0NiIgZGF0YS1sb2NhbGU9InB0IiBkYXRhLXRhYnM9ImZpbGUgZmFjZWJvb2sgZ2RyaXZlIGRyb3Bib3ggaW5zdGFncmFtIGV2ZXJub3RlIGZsaWNrciBza3lkcml2ZSIgZGF0YS1pbWFnZXMtb25seT0idHJ1ZSIgZGF0YS1wYXRoLXZhbHVlPSJ0cnVlIiBkYXRhLXByZXZpZXctc3RlcD0idHJ1ZSIgZGF0YS1jbGVhcmFibGU9InRydWUiIGRhdGEtbXVsdGlwbGU9ImZhbHNlIiBkYXRhLWNyb3A9ImZyZWUiIG9uLXVwbG9hZC1jb21wbGV0ZT0ib25VQ1VwbG9hZENvbXBsZXRlKGluZm8pIiBvbi13aWRnZXQtcmVhZHk9Im9uVUNXaWRnZXRSZWFkeSh3aWRnZXQpIiB2YWx1ZT0ie3sgb2JqZWN0LmltYWdlLmluZm8uY2RuVXJsIH19Ij48L3VwbG9hZGNhcmUtd2lkZ2V0PgogICAgICA8L3NlY3Rpb24+CiAgICAgIDxzZWN0aW9uIGNsYXNzPSJhdHRyaWJ1dGVzIj4KICAgICAgICA8bWQtaW5wdXQtY29udGFpbmVyPgogICAgICAgICAgPGxhYmVsPk5vbWUgQ29tcGxldG88L2xhYmVsPgogICAgICAgICAgPCEtLSBpbnB1dChuZy1tb2RlbD0iaW1hZ2UiKS0tPgogICAgICAgICAgPGlucHV0IG5nLW1vZGVsPSJzZWFyY2hNb2RlbC5ub21lIi8+CiAgICAgICAgPC9tZC1pbnB1dC1jb250YWluZXI+CiAgICAgICAgPG1kLWlucHV0LWNvbnRhaW5lcj4KICAgICAgICAgIDxsYWJlbD5UZWxlZm9uZTwvbGFiZWw+CiAgICAgICAgICA8aW5wdXQgdHlwZT0idGVsIiBuZy1tb2RlbD0ic2VhcmNoTW9kZWwuZW1haWwiLz4KICAgICAgICA8L21kLWlucHV0LWNvbnRhaW5lcj4KICAgICAgICA8bWQtaW5wdXQtY29udGFpbmVyPgogICAgICAgICAgPGxhYmVsPkRhdGEgZGUgTmFzY2ltZW50bzwvbGFiZWw+CiAgICAgICAgICA8aW5wdXQgdHlwZT0iZGF0ZSIgbmctbW9kZWw9InNlYXJjaE1vZGVsLm5hc2NpbWVudG8iLz4KICAgICAgICA8L21kLWlucHV0LWNvbnRhaW5lcj4KICAgICAgPC9zZWN0aW9uPgogICAgPC9zZWN0aW9uPgogIDwvbWQtZGlhbG9nLWNvbnRlbnQ+CiAgPGRpdiBsYXlvdXQ9InJvdyIgY2xhc3M9Im1kLWFjdGlvbnMiPjxzcGFuIGZsZXg9IiI+PC9zcGFuPgogICAgPG1kLWJ1dHRvbiBuZy1jbGljaz0iYW5zd2VyKCdub3QgdXNlZnVsJykiIGNsYXNzPSJtZC1wcmltYXJ5Ij5DYW5jZWxhcjwvbWQtYnV0dG9uPgogICAgPG1kLWJ1dHRvbiBuZy1jbGljaz0iYW5zd2VyKCd1c2VmdWwnKSIgY2xhc3M9Im1kLXByaW1hcnkgYnV0dG9uLXNpbHZlciI+Q2FkYXN0cmFyIFVzdcOhcmlvPC9tZC1idXR0b24+CiAgPC9kaXY+CjwvbWQtZGlhbG9nPg==","base64"),
+			template: Buffer("","base64"),
 			parent: angular.element(document.body),
 			targetEvent: ev,
 		})
@@ -54433,6 +54455,11 @@ module.exports = {
 			authenticate: true,
 			abstract: true,
 			// redirectTo: 'core.user',
+			resolve: {
+				currentAuth:function(authModelService) {
+					return authModelService.$requireAuth();
+				}
+			},
 			views: {
 				'wrap': {
 					template: Buffer("CjxzZWN0aW9uIHVpLXZpZXc9ImFzaWRlIiBuZy1jbGFzcz0ieydhc2lkZSc6IWNvcmVFdmVudHMuc2VhcmNoLCAnYXNpZGUtb3Blbic6IGNvcmVFdmVudHMuc2VhcmNofSI+PC9zZWN0aW9uPgo8c2VjdGlvbiB1aS12aWV3PSJjb250ZW50TWFpbiIgbmctY2xhc3M9InsnY29udGVudC1tYWluJzohY29yZUV2ZW50cy5zZWFyY2gsICdjb250ZW50LW1haW4tb3Blbic6IGNvcmVFdmVudHMuc2VhcmNofSI+PC9zZWN0aW9uPgo8IS0tIHNlY3Rpb24odWktdmlldz0iY29udGVudE1haW4iIG5nLWNsYXNzPSJ7J2NvbnRlbnQtbWFpbic6IWNvcmVFdmVudHMuc2VhcmNoLCAnY29udGVudC1tYWluLW9wZW4gYW5pbWF0ZWQgem9vbUluVXAnOiBjb3JlRXZlbnRzLnNlYXJjaH0iICktLT4=","base64")
@@ -54442,7 +54469,7 @@ module.exports = {
 					template: Buffer("CjwhLS0gaW1nKGNsYXNzPSJpY29uLXNlYXJjaCIgbmctY2xpY2s9ImNvcmVFdmVudHMudG9nZ2xlX3NlYXJjaCgpOyIpLS0+CjxzZWN0aW9uIGNsYXNzPSJzZWFyY2gtaWNvbiI+CiAgPCEtLSBuZy1tZC1pY29uKGljb249InNlYXJjaCIgbmctaWY9IiFjb3JlRXZlbnRzLnNlYXJjaCIgc3R5bGU9ImZpbGw6c2lsdmVyIiAgc2l6ZT0iNjUiIG5nLWNsaWNrPSJjb3JlRXZlbnRzLnRvZ2dsZV9zZWFyY2goKTsiKS0tPjxpbWcgbmctY2xpY2s9ImNvcmVFdmVudHMudG9nZ2xlX3NlYXJjaCgpOyIgbmctaWY9IiFjb3JlRXZlbnRzLnNlYXJjaCIgaG9sZGVyPSJob2xkZXIuanMvNzB4NzA/JmFtcDtiZz1GRkZGRkYmYW1wO3RleHQ9KyZhbXA7c2l6ZT0zNSZhbXA7Zmc9OUU5RTlFIiBjbGFzcz0iaW1nLXJlc3BvbnNpdmUgYnRuIi8+CiAgPG5nLW1kLWljb24gaWNvbj0ia2V5Ym9hcmRfYmFja3NwYWNlIiBuZy1pZj0iY29yZUV2ZW50cy5zZWFyY2giIHN0eWxlPSJmaWxsOnNpbHZlciIgc2l6ZT0iNjUiIG5nLWNsaWNrPSJjb3JlRXZlbnRzLnRvZ2dsZV9zZWFyY2goKTsiPjwvbmctbWQtaWNvbj4KPC9zZWN0aW9uPgo8c2VjdGlvbiBuZy1jbGFzcz0ieydsaXN0LXVzZXJzJzogIWNvcmVFdmVudHMuc2VhcmNoLCAnbGlzdC11c2Vycy1vcGVuJzogY29yZUV2ZW50cy5zZWFyY2h9IiBjbGFzcz0ibGlzdC11c2VycyI+CiAgPHNlY3Rpb24gbmctcmVwZWF0PSJwZXJzb24gaW4gWzEsMiwzLDQsNSw2LDcsOF0gdHJhY2sgYnkgJGluZGV4Ij48aW1nIHVpLXNyZWYtYWN0aXZlPSJhY3RpdmUiIHVpLXNyZWY9ImNvcmUudXNlci5saXN0VHJhaW5pbmciIGFsdD0ie3sgcGVyc29uLm5hbWUgfX0iIGhvbGRlcj0iaG9sZGVyLmpzLzYweDYwP2F1dG89eWVzJmFtcDtyYW5kb209eWVzJmFtcDt0ZXh0PUJSVSIgY2xhc3M9ImltZy1yZXNwb25zaXZlIi8+CiAgICA8IS0tIGltZyhjbGFzcz0iaW1nLXJlc3BvbnNpdmUiIHVpLXNyZWY9ImNvcmUudXNlci50cmFpbmluZyIgaG9sZGVyPSdob2xkZXIuanMvNjB4NjA/YXV0bz15ZXMmdGhlbWU9Z3JheSZ0ZXh0PUJSVScpLS0+CiAgICA8cCBuZy1pZj0iY29yZUV2ZW50cy5zZWFyY2giPkJydW5vIEFsZXhhbmRyZWVlZWU8L3A+CiAgICA8bmctbWQtaWNvbiBpY29uPSJjbG9zZSIgc3R5bGU9ImZpbGw6c2lsdmVyIiBzaXplPSIzNSIgbmctaWY9ImNvcmVFdmVudHMuc2VhcmNoIiBuZy1jbGljaz0iZG9TZWNvbmRhcnlBY3Rpb24oJGV2ZW50KTsiPjwvbmctbWQtaWNvbj4KICA8L3NlY3Rpb24+Cjwvc2VjdGlvbj4=","base64")
 				},
 				'contentMain@core': {
-					controller: function($scope, coreEventsService) {
+					controller: function($scope,currentAuth, coreEventsService) {
 						var coreEvents = $scope.coreEvents = coreEventsService;
 					},
 					template: Buffer("CjxzZWN0aW9uIG5nLWlmPSIhY29yZUV2ZW50cy5zZWFyY2giPgogIDxzZWN0aW9uIHVpLXZpZXc9ImhlYWRlciIgY2xhc3M9ImhlYWRlciI+PC9zZWN0aW9uPgogIDxzZWN0aW9uIGNsYXNzPSJjb250ZW50Ij4KICAgIDxtZC1jb250ZW50PgogICAgICA8bWQtY2FyZCBjbGFzcz0iZ3JpZCI+CiAgICAgICAgPG1kLWNhcmQtY29udGVudCB1aS12aWV3PSJjb250ZW50Ij48L21kLWNhcmQtY29udGVudD4KICAgICAgPC9tZC1jYXJkPgogICAgPC9tZC1jb250ZW50PgogIDwvc2VjdGlvbj4KPC9zZWN0aW9uPgo8c2VjdGlvbiBuZy1pZj0iY29yZUV2ZW50cy5zZWFyY2giPgogIDxzZWN0aW9uIHVpLXZpZXc9ImNvbnRlbnRTZWFyY2giPjwvc2VjdGlvbj4KPC9zZWN0aW9uPg==","base64")  

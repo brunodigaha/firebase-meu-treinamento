@@ -5,6 +5,11 @@ module.exports = {
 			authenticate: true,
 			abstract: true,
 			// redirectTo: 'core.user',
+			resolve: {
+				currentAuth:function(authModelService) {
+					return authModelService.$requireAuth();
+				}
+			},
 			views: {
 				'wrap': {
 					template: fs.readFileSync(__dirname + '/templates/coreWrap.html')
@@ -14,7 +19,7 @@ module.exports = {
 					template: fs.readFileSync(__dirname + '/templates/coreAside.html')
 				},
 				'contentMain@core': {
-					controller: function($scope, coreEventsService) {
+					controller: function($scope,currentAuth, coreEventsService) {
 						var coreEvents = $scope.coreEvents = coreEventsService;
 					},
 					template: fs.readFileSync(__dirname + '/templates/coreContentMain.html')  

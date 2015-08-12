@@ -1,17 +1,19 @@
-module.exports = function ($state,$cookies) {
-	var authModel = {
-		currentUser: {},
-		token: '',
-		username: '',
-		password: '',
-		loading: false
-	};
+module.exports = function ($firebaseAuth,FBURL) {
+	var ref = new Firebase(FBURL);
+	return $firebaseAuth(ref);
+	// var authModel = {
+	// 	currentUser: {},
+	// 	token: '',
+	// 	username: '',
+	// 	password: '',
+	// 	loading: false
+	// };
 
-	authModel.set_login = function(token){
-		RestangularCustom.setDefaultHeaders({'Authorization': authModel.token});
-		authModel.token = token;
-		$cookies.put('token',token);
-	};
+	// authModel.set_login = function(token){
+	// 	RestangularCustom.setDefaultHeaders({'Authorization': authModel.token});
+	// 	authModel.token = token;
+	// 	$cookies.put('token',token);
+	// };
 
 	// authModel.reset_login = function () {
 	// 		RestangularCustom.setDefaultHeaders({"Authorization": ""});
@@ -19,16 +21,16 @@ module.exports = function ($state,$cookies) {
 	// 		$cookies.put('token', ""); 
 	// };
 
-	authModel.is_authenticated = function () {
-		var cookieToken = $cookies.get('token');
-		if (cookieToken) {
-			authModel.set_login(cookieToken);
-			return true;
-		}
-		$cookies.put('token', ""); 
-		console.log("passou sem token");
-		return false;
-	};
+	// authModel.is_authenticated = function () {
+	// 	var cookieToken = $cookies.get('token');
+	// 	if (cookieToken) {
+	// 		authModel.set_login(cookieToken);
+	// 		return true;
+	// 	}
+	// 	$cookies.put('token', ""); 
+	// 	console.log("passou sem token");
+	// 	return false;
+	// };
 
 
 	// authModel.init_token = function(){
@@ -56,11 +58,11 @@ module.exports = function ($state,$cookies) {
 	// 	});
 	// };
 
-	authModel.logout = function () {
-		// authModel.reset_login();
-		$state.go('login');
-		console.log("logout passou");
-	};
+	// authModel.logout = function () {
+	// 	// authModel.reset_login();
+	// 	$state.go('login');
+	// 	console.log("logout passou");
+	// };
 
-	return authModel;
+	// return authModel;
 };

@@ -1,5 +1,5 @@
 var fs = require('fs');
-module.exports = function ($scope,$mdDialog, coreEventsService, authModelService) {
+module.exports = function ($scope,$mdDialog,$location, coreEventsService, authModelService) {
 	var coreEvents = $scope.coreEventse = coreEventsService;
 	$scope.plans = [
 		"12/04/15 - 12/05/15",
@@ -11,7 +11,8 @@ module.exports = function ($scope,$mdDialog, coreEventsService, authModelService
 		"16/04/15 - 12/05/15"
 	];
 	$scope.logout = function () {
-		authModelService.logout();
+		authModelService.$unauth();
+		$location.path("/login");
 	};
 	$scope.toggle_options = function () {
 		coreEventsService.toggle_options();
