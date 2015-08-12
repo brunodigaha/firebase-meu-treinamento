@@ -1,0 +1,180 @@
+{
+  "name": "MeuTreinamento",
+  "description": "Sistema para controle de fichas de treinamento para academias de musculação!",
+  "version": "4.0.2",
+  "author": "Bruno Alexandre de Souza",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/brucealex/vittapro"
+  },
+  "main": "server.js",
+  "engines": {
+    "node": "0.12.x"
+  },
+  "scripts": {
+    "start": "node server.js"
+  },
+  "dependencies": {
+    "bcrypt": "^0.8.2",
+    "good": "^5.1.0",
+    "good-console": "^4.1.0",
+    "hapi": "^8.4.0",
+    "hapi-assets": "^0.3.0",
+    "hapi-auth-jwt2": "^4.3.2",
+    "hapi-authorization": "^2.1.2",
+    "hapi-cache-buster": "^0.3.0",
+    "hapi-named-routes": "^0.3.0",
+    "jade": "^1.11.0",
+    "joi": "^5.0.2",
+    "jsonwebtoken": "^5.0.0",
+    "mongodb-uri": "^0.9.7",
+    "mongoose": "^4.0.2",
+    "rand-token": "^0.2.1",
+    "require-directory": "~2.0.0"
+  },
+  "devDependencies": {
+    "bower": "~1.3.12",
+    "brfs": "^1.4.0",
+    "browser-sync": "^2.8.2",
+    "browserify": "^10.2.1",
+    "browserify-shim": "^3.8.10",
+    "gulp": "^3.8.11",
+    "gulp-if": "^1.2.5",
+    "gulp-jade": "^1.1.0",
+    "gulp-load-plugins": "^0.10.0",
+    "gulp-nodemon": "^2.0.3",
+    "gulp-notify": "^2.2.0",
+    "gulp-rename": "^1.2.0",
+    "gulp-sequence": "^0.3.2",
+    "gulp-stylus": "^2.0.5",
+    "gulp-util": "^3.0.6",
+    "gulp-watch": "^4.1.1",
+    "vinyl-source-stream": "^1.1.0",
+    "watchify": "^3.3.1"
+  },
+  "browser": {
+    "angular": "./public/bower_components/angular/angular.js",
+    "angularCookies": "./public/bower_components/angular-cookies/angular-cookies.js",
+    "chart": "./public/bower_components/Chart.js/Chart.min.js",
+    "angularChart": "./public/bower_components/angular-chart.js/dist/angular-chart.min.js",
+    "angularSortableView": "./public/bower_components/angular-sortable-view/src/angular-sortable-view.min.js",
+    "angularScroll": "./public/bower_components/angular-scroll-glue/src/scrollglue.js",
+    "restAngular": "./public/bower_components/restangular/dist/restangular.js",
+    "angularAnimate": "./public/bower_components/angular-animate/angular-animate.js",
+    "angularIcons": "./public/bower_components/angular-material-icons/angular-material-icons.min.js",
+    "angularAria": "./public/bower_components/angular-aria/angular-aria.js",
+    "angularMessages": "./public/bower_components/angular-messages/angular-messages.js",
+    "angularMaterial": "./public/bower_components/angular-material/angular-material.js",
+    "firebase": "./public/bower_components/firebase/firebase.js",
+    "angularFire": "./public/bower_components/angularfire/dist/angularfire.js",
+    "lodash": "./public/bower_components/lodash/lodash.js",
+    "angularHolderjs": "./public/bower_components/angular-holderjs/src/holder.js",
+    "angularUploadcare": "./public/bower_components/angular-uploadcare/angular-uploadcare.js",
+    "holderjs": "./public/bower_components/holderjs/holder.js",
+    "modernizr": "./public/bower_components/modernizr/modernizr.js",
+    "angularBreadcrumb": "./public/bower_components/angular-breadcrumb/dist/angular-breadcrumb.min.js",
+    "ui-router": "./public/bower_components/angular-ui-router/release/angular-ui-router.js"
+  },
+  "browserify-shim": {
+    "angular": {
+      "exports": "angular",
+      "depends": null
+    },
+    "angularIcons": {
+      "exports": "angular.module('ngMdIcons')",
+      "depends": "angular"
+    },
+    "angularSortableView": {
+      "exports": "angular.module('angular-sortable-view')",
+      "depends": "angular"
+    },
+    "angularScroll": {
+      "exports": "angular.module('luegg.directives')",
+      "depends": "angular"
+    },
+    "angularAnimate": {
+      "exports": "angular.module('ngAnimate')",
+      "depends": "angular"
+    },
+    "angularAria": {
+      "exports": "angular.module('ngAria')",
+      "depends": "angular"
+    },
+    "angularMessages": {
+      "exports": "angular.module('ngMessages')",
+      "depends": "angular"
+    },
+    "angularMaterial": {
+      "exports": "angular.module('ngMaterial')",
+      "depends": [
+        "angular",
+        "angularAnimate",
+        "angularAria"
+      ]
+    },
+    "angularCookies": {
+      "exports": "angular.module('ngCookies')",
+      "depends": "angular"
+    },
+    "firebase": {
+      "exports": "firebase",
+      "depends": null
+    },
+    "chart": {
+      "exports": "chart",
+      "depends": null
+    },
+    "angularChart": {
+      "exports": "angular.module('chart.js')",
+      "depends": [
+        "chart",
+        "angular"
+      ]
+    },
+    "angularFire": {
+      "exports": "angular.module('firebase')",
+      "depends": [
+        "angular",
+        "firebase"
+      ]
+    },
+    "lodash": {
+      "exports": "lodash",
+      "depends": null
+    },
+    "restAngular": {
+      "exports": "angular.module('restangular')",
+      "depends": [
+        "angular",
+        "lodash"
+      ]
+    },
+    "holderjs": {
+      "exports": "holderjs",
+      "depends": null
+    },
+    "angularUploadcare": {
+      "exports": "angular.module('ng-uploadcare')",
+      "depends": "angular"
+    },
+    "angularHolderjs": {
+      "exports": "angular.module('ngHolder')",
+      "depends": [
+        "angular",
+        "holderjs"
+      ]
+    },
+    "modernizr": {
+      "exports": "modernizr",
+      "depends": null
+    },
+    "angularBreadcrumb": {
+      "exports": "angular.module('ncy-angular-breadcrumb')",
+      "depends": "angular"
+    },
+    "ui-router": {
+      "exports": "angular.module('ui.router')",
+      "depends": "angular"
+    }
+  }
+}

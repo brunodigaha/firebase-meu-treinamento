@@ -1,0 +1,88 @@
+.ds-exercise-edit
+	col(12/12,gutter:0)
+	box-sizing border-box
+	position relative
+	.ds-exercise-edit-header
+		col(12/12,gutter:0)
+		background-color palette('Blue Grey','400')
+		color white
+		line-height 80px
+		.ds-exercise-edit-way
+			col(6/12,gutter:0)
+			box-sizing border-box
+			padding-left 3%
+			padding-right 12%
+			span 
+				font-size 120%
+				color white
+				line-height 30px
+		.ds-exercise-edit-series
+			col(2/12,gutter:0)
+			text-align left
+		.ds-exercise-edit-action
+			col(4/12,gutter:0)
+			box-sizing border-box
+			text-align right
+			padding-right 1em
+	.ds-exercise-edit-content
+		col(12/12,gutter:0)
+		box-sizing border-box
+		padding-top 20px
+		padding-bottom 20px
+		position relative
+		md-content.series
+			min-height 30vh
+			max-height 45vh 
+			+tablet(orientation: portrait)
+				max-height 54vh 
+			+desktop()
+				max-height 54vh 
+			ul
+				margin 0
+				padding 0
+				font-size 100%
+				list-style none
+				box-sizing border-box
+				padding-left 5em
+				padding-right 5em
+				+hd()
+					padding-left 8em
+					padding-right 8em
+				.sv-helper
+					font-size 115%
+					color black
+					opacity 0.9
+				.sv-candidate
+					opacity 0.5
+				li
+					col(12/12,gutter:0)
+					box-sizing border-box
+		.ds-exercise-edit-serie-background
+			col(12/12,gutter:0)
+			box-sizing border-box
+			position absolute
+			top 0
+			left 0
+			height 100%
+			background-color palette('Grey','200')
+			opacity .8
+			z-index 2
+		.ds-exercise-edit-serie
+			col(11.5/12,gutter:0)
+			box-sizing border-box
+			position absolute
+			// top 3em
+			top -3.6em
+			+desktop()
+				top -3em
+			left 1.1em
+			// height 100%
+			background-color white
+			z-index 3
+			// border 1px solid palette('Grey','300')
+			box-shadow 0 3px 16px 5px rgba(0,0,0,.28)
+		.insert-details
+			col(12/12,gutter:0)
+			box-sizing border-box
+			input[type="text"]
+				padding 0

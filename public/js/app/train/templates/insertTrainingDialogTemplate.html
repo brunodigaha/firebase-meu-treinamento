@@ -1,0 +1,26 @@
+
+<md-dialog flex="90" aria-label="insertir treino">
+  <!-- md-toolbar-->
+  <!-- 	.md-toolbar-tools-->
+  <!-- 		h1 Inserir Exercício-->
+  <!-- 		span(flex="")-->
+  <!-- 		md-button(ng-click="answer('not applicable')") Cancelar-->
+  <md-dialog-content>
+    <section class="taining-dialog-content">
+      <ds-exercise-edit exercise="plans" plans="plans"></ds-exercise-edit>
+      <!-- .open-tabs-->
+      <!-- 	// p teste-->
+      <!-- section.way-training-->
+      <!-- 	md-select(placeholder='Método do Exercício', ng-model='plan' style="min-width:250px;")-->
+      <!-- 		md-option(ng-repeat='plan in plans', value='{{plan}}') {{plan}}-->
+      <!-- section.way-add-->
+      <!-- 		ng-md-icon(icon="add" style="fill:white"  size="25")-->
+      <!-- 		span Dois exercícios executados sem descanso.-->
+    </section>
+  </md-dialog-content>
+  <div layout="row" class="md-actions"><span flex=""></span>
+    <!-- md-button.md-primary(ng-click="answer('not useful')")-->
+    <!-- 	| Cancelar-->
+    <md-button ng-click="answer('not useul');" class="md-primary button-silver">Salvar Exercício</md-button>
+  </div>
+</md-dialog>

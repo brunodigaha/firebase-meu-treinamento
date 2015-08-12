@@ -1,0 +1,320 @@
+.perfil
+	col(6/15,gutter:0)
+	height 5em
+	.user
+		col(5/5,gutter:0)
+		.user-img
+			col(1/5,gutter:0)
+			box-sizing border-box
+			text-align left
+			margin-left 1em
+			margin-top .4em
+			cursor pointer
+		.user-name
+			col(1/5,gutter:0)
+			border-bottom 1px solid palette('Grey', '400')
+			color palette('Grey', '700')
+			position absolute
+			left 3.5em
+			top -1.2em
+			text-align left
+		.breadcrumb
+			col(1/5,gutter:0)
+			position absolute
+			left 5.7em
+			top 2.8em
+			text-align right
+			color palette('Grey', '700')
+	.close
+		position fixed
+		top 0
+		left 0
+		height 100%
+		width 100%
+		z-index 4
+	.menu
+		col(4.3/11,gutter:0)
+		+desktop()
+			col(3.8/11,gutter:0)
+		+hd()
+			col(3/11,gutter:0)
+		box-sizing border-box
+		position absolute
+		top 6.3em
+		left .5em
+		background-color white
+		// box-shadow 0px 2px 5px rgba(0,0,0,0.1)
+		// box-shadow: 0 8px 17px rgba(0,0,0,.2)
+		border 1px solid palette('Grey', '300')
+		box-shadow 0 2px 4px 1px rgba(0,0,0,.1)
+		padding 0.5em
+		z-index 6
+		.chat-bubble-arrow-border
+			border-color transparent transparent palette('Grey', '300') transparent
+			border-style solid
+			border-width 1em
+			height 0
+			width 0
+			position absolute
+			top -2em
+			left 1.6em
+		.chat-bubble-arrow
+			border-color transparent transparent #fff transparent
+			border-style solid
+			border-width 1em
+			height 0
+			width 0
+			position absolute
+			top -1.9em
+			left 1.6em
+		.menu-header
+			col(4/4,gutter:0)
+			.perfil-user
+				col(4/4,gutter:0)
+				padding-left 1em
+				.img-user
+					col(.5/4,gutter:0)
+					display inline-block
+					margin 0
+					padding 0
+				h6
+					col(2.5/4,gutter:0)
+					position absolute
+					font-size 1.2em
+					margin 0
+					top .1em
+					left 3.5em
+				ng-md-icon
+					col(.5/4,gutter:0)
+					shift(2.5/4,gutter:0)
+					padding-top .5em
+					text-align center
+		.icons-header
+			col(3/4,gutter:0)
+			shift(.6/4,gutter:0)
+			margin-bottom .5em
+			section
+				col(1/4,.5/4,cycle:3,gutter:0)
+				text-align center
+				cursor pointer
+				p
+					margin 0
+					display block
+					font-size .9em
+					color palette('Blue', '500')
+		.menu-content
+			col(5/5,gutter:0)
+			border-top 1px solid palette('Grey', '200')
+			.plan-header
+				col(5/5,gutter:0)
+				.title-plan
+					col(3.5/5,gutter:0)
+					p
+						box-sizing border-box
+						margin 0
+						color palette('Grey', '600')
+						cursor pointer
+						margin-top .8em
+						margin-left .5em
+					ng-md-icon
+						svg
+							width 7%
+							height 7%
+							+desktop()
+								width 6%
+								height 6%
+				.edit-plan
+					col(1.5/5,gutter:0)
+					text-align right
+					p
+						box-sizing border-box
+						font-size 70%
+						color palette('Blue', '500')
+						margin-top .3em
+						padding-right .9em
+						cursor pointer
+
+				// md-select-label
+				// 	col(2/5,gutter:0)
+				// 	top -1.2em
+				// 	font-size 80%
+			.plan
+				col(5/5,gutter:0)
+				box-sizing border-box
+				padding-left 2.5em
+				padding-right 2.5em
+				margin-bottom .5em
+				text-align center
+				p
+					margin 0
+					color palette('Grey', '600')
+					font-size 75%
+			.icons-content
+				col(7/8,gutter:0)
+				shift(.3/8,gutter:0)
+				margin-bottom .5em
+				vertical-align top
+				section
+					col(2/8,.5/8,cycle:3,gutter:0)
+					text-align center
+					cursor pointer
+					p
+						display block
+						line-height: 100%;
+						color palette('Blue', '500')
+						font-weight normal
+						font-size .9em
+						margin 0
+				.history
+					ng-md-icon
+						svg
+							padding-top .8em
+				.review
+					ng-md-icon
+						svg
+							padding-top 1em
+			.btn-train
+				col(5/5,gutter:0)
+				text-align center
+				margin-top .5em
+				margin-bottom .5em
+				button.md-button
+					width 40%
+					min-width 15px
+					min-height 34px
+					line-height 34px
+					font-size 90%
+					margin 0
+					padding-left 1em
+				ng-md-icon
+					svg
+						position absolute
+						top .3em
+						left .5em
+						+desktop()
+							left 1.5em
+
+.actions
+	col(5/15,gutter:0)
+	shift(6.2/15,gutter:0)
+	position fixed
+	box-sizing border-box
+	padding-left .3em
+	padding-top 1.2em
+	text-align center
+	p
+		font-size 200%
+		+desktop()
+			font-size 210%
+		margin 0
+	button.md-button
+		width 38%
+		min-width 15px
+		min-height 33px
+		line-height 33px
+		font-size 90%
+		margin 0
+		+desktop()
+			width 40%
+			min-width 15px
+			min-height 43px
+			line-height 43px
+			font-size 108%
+			margin 0
+
+.user-admin
+	col(4/15,gutter:0)
+	shift(11/15,gutter:0)
+	position fixed
+	box-sizing border-box
+	z-index 6
+	.notification-admin
+		col(.6/3,.4/3,gutter:0)
+		+desktop()
+			col(.5/3,.7/3,gutter:0)
+		ng-md-icon
+			display block
+			+tablet()
+				margin-top .5em
+			+tablet(orientation: portrait)
+				margin-top .7em
+			+desktop()
+				margin-top .5em
+			text-align center
+	.admin-name
+		col(2/3,gutter:0)
+		box-sizing border-box
+		+desktop()
+			col(1.8/3,gutter:0)
+			text-align center
+		text-align left
+		cursor pointer
+		color palette('Blue', '500')
+		img
+			vertical-align middle
+		span 
+			line-height 280%
+			+tablet()
+				line-height 310%
+			+tablet(orientation: portrait)
+				line-height 450%
+			margin-left .1em
+	.options-admin
+		col(14/15, gutter:0)
+		+desktop()
+			col(10/15, gutter:0)
+		+hd()
+			col(7/15, gutter:0)
+		position absolute
+		top 3.5em
+		+tablet(orientation: portrait)
+			top 4.5em
+		right .5em
+		box-sizing border-box
+		padding-left 1em
+		padding-right 1em
+		padding-top .5em
+		background-color white
+		// box-shadow 0px 2px 13px rgba(0,0,0,0.1)
+		// box-shadow: 0 8px 17px rgba(0,0,0,.2)
+		border 1px solid palette('Grey', '300')
+		box-shadow 0 2px 4px 1px rgba(0,0,0,.1)
+		.chat-bubble-arrow-border
+			border-color transparent transparent palette('Grey', '300') transparent
+			border-style solid
+			border-width .6em
+			height 0
+			width 0
+			position absolute
+			top -1.2em
+			right 3.8em
+			+hd()
+				right 4.5em
+		.chat-bubble-arrow
+			border-color transparent transparent #fff transparent
+			border-style solid
+			border-width .6em
+			height 0
+			width 0
+			position absolute
+			top -1.1em
+			right 3.8em
+			+hd()
+				right 4.5em
+		ul
+			margin 0
+			padding 0
+			font-size 90%
+			color palette('Blue', '500')
+			text-align left
+			list-style none
+			li
+				display block
+				margin-bottom .2em
+				cursor pointer
+				position relative
+				p
+					margin 0
+					margin-top .3em
+					margin-bottom .3em
+					border-top 1px solid palette('Grey', '200')

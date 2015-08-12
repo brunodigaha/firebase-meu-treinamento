@@ -1,0 +1,8 @@
+section(ng-if="!coreEvents.search")
+	section.header(ui-view="header")
+	section.content
+		md-content
+			md-card.grid
+				md-card-content(ui-view="content")
+section(ng-if="coreEvents.search")
+	section(ui-view="contentSearch")

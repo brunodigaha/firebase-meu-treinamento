@@ -1,0 +1,24 @@
+md-dialog(flex="90" aria-label="insertir treino")
+	// md-toolbar
+	// 	.md-toolbar-tools
+	// 		h1 Inserir Exercício
+	// 		span(flex="")
+	// 		md-button(ng-click="answer('not applicable')") Cancelar
+	md-dialog-content
+		section.taining-dialog-content
+			ds-exercise-edit(exercise="plans" plans="plans")
+			// .open-tabs
+			// 	// p teste
+			// section.way-training
+			// 	md-select(placeholder='Método do Exercício', ng-model='plan' style="min-width:250px;")
+			// 		md-option(ng-repeat='plan in plans', value='{{plan}}') {{plan}}
+			// section.way-add
+			// 		ng-md-icon(icon="add" style="fill:white"  size="25")
+			// 		span Dois exercícios executados sem descanso.
+	.md-actions(layout="row")
+		span(flex="")
+		// md-button.md-primary(ng-click="answer('not useful')")
+		// 	| Cancelar
+		md-button.md-primary.button-silver(ng-click="answer('not useul');")
+			| Salvar Exercício
+

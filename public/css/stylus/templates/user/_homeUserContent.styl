@@ -1,0 +1,25 @@
+.home-wrap
+	col(12/12,gutter:0)
+	.home-menu
+		col(12/12,gutter:0)
+		box-sizing border-box
+		padding-right 1em
+		padding-left 1em
+		+desktop()
+			padding-right 5em
+			padding-left 5em
+		md-tabs
+			border-bottom 1px solid palette('Blue Grey','100')
+			md-tab-item.md-tab
+				color palette('Blue','500')
+				font-weight bold
+				+tablet()
+					padding 13px 13px
+					line-height 27px
+					font-size 13px
+			.md-tab.md-active, md-tabs .md-tab.md-focused
+				color black
+				background-color palette('Grey','50')
+
+	.home-content-wrap
+		col(12/12,gutter:0)

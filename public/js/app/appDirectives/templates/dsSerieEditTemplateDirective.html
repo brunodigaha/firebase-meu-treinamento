@@ -1,0 +1,97 @@
+
+<section class="ds-serie-edit">
+  <section class="ds-serie-edit-wrap">
+    <section class="ds-serie-edit-select">
+      <section class="ds-serie-edit-select-wrap">
+        <section class="ds-serie-edit-select-header">
+          <section ng-click="toggle_tab();" class="ds-serie-edit-select-action">
+            <md-button class="md-raised md-primary">
+              <ng-md-icon icon="add_box" aria-label="exercicio" style="fill:white" size="28"></ng-md-icon>
+            </md-button>
+          </section>
+          <section class="ds-serie-edit-select-bar">
+            <md-input-container md-no-float="">
+              <input placeholder="Pesquisar Exercício para Inserir" ng-model="pesquisar" ng-model-options="{ debounce: 150 }" ng-keypress="pesquisar_exercicio($event)"/>
+            </md-input-container>
+          </section>
+        </section>
+        <section ng-if="tabOpened" class="ds-serie-edit-select-tabs">
+          <section class="chat-bubble-arrow-border"></section>
+          <section class="chat-bubble-arrow"></section>
+          <section class="ds-serie-edit-select-tabs-wrap">
+            <md-tabs md-dynamic-height="true" md-border-bottom="false">
+              <!-- md-tab(label="Geral")-->
+              <!-- 	md-content.md-paddin-->
+              <!-- 	section.autocompletedemoCustomTemplate-->
+              <!-- 		md-autocomplete(ng-disabled="isDisabled", md-no-cache="noCache", md-selected-item="selectedItem", md-search-text-change="searchTextChange(searchText)", md-search-text="searchText", md-selected-item-change="selectedItemChange(item)", md-items="item in querySearch(searchText)", md-item-text="item.display", md-min-length="0", placeholder="Digite aqui o nome do exercício que deseja inserir" md-menu-class="autocomplete-custom-template")-->
+              <!-- 			md-item-template-->
+              <!-- 				span.item-title-->
+              <!-- 					md-icon(md-svg-icon="img/icons/octicon-repo.svg")-->
+              <!-- 					span  {{item.name}} -->
+              <!-- 				span.item-metadata-->
+              <!-- 					span.item-metastat-->
+              <!-- 						strong {{item.watchers}}-->
+              <!-- 						| watchers-->
+              <!-- 					span.item-metastat-->
+              <!-- 						strong {{item.forks}}-->
+              <md-tab label="{{list.grupo}}" ng-repeat=" list in ::list_exercicios">
+                <md-content class="md-padding">
+                  <section><span ng-click="insert($index, list);" ng-class="{'item-select animated pulse': exerc.select }" ng-repeat="exerc in ::list.exercicios">{{::exerc.nome}}</span></section>
+                </md-content>
+              </md-tab>
+            </md-tabs>
+          </section>
+        </section>
+      </section>
+    </section>
+    <section class="ds-serie-edit-content">
+      <section sv-root="serieEdit" sv-part="seriesEdit" class="ds-serie-edit-exercises"> 
+        <md-content scroll-glue="scroll.glued" class="ds-serie-edit-scroll">
+          <section ng-repeat="person in [2,3,5,3,4,4,4] track by $index" sv-element="serieEdit" class="ds-serie-edit-exercise">
+            <section sv-handle="" class="ds-serie-edit-drag-item">
+              <ng-md-icon icon="open_with" style="fill:black" size="22"></ng-md-icon>
+            </section>
+            <section class="ds-serie-edit-exercise-item"><span>{{exercicio.nome}}</span><span>Supino Reto</span></section>
+            <section class="ds-serie-edit-rept-item"><span>10 Repts</span></section>
+            <section class="ds-serie-edit-weight-item"><span>10 kg</span></section>
+            <section class="ds-serie-edit-close-item">
+              <ng-md-icon icon="close" style="fill:grey" size="24"></ng-md-icon>
+            </section>
+          </section>
+        </md-content>
+      </section>
+      <section class="ds-serie-edit-sliders">
+        <section class="ds-serie-edit-exer-select">
+          <h4>Supino Reto</h4>
+        </section>
+        <section class="ds-serie-edit-slider-content">
+          <div layout="row">
+            <div flex="20" layout="" layout-align="center center"><span class="md-body-1">Repetição</span></div>
+            <md-slider id="blue-slider" flex="" ng-model="repeticao" min="1" max="40" aria-label="blue" class="md-primary"></md-slider>
+            <div flex="10" layout="" layout-align="center center">
+              <input type="number" ng-model="repeticao" aria-label="blue" aria-controls="blue-slider"/>
+            </div>
+          </div>
+        </section>
+        <section class="ds-serie-edit-slider-title"><span>Repetições</span></section>
+        <section class="ds-serie-edit-slider-content">
+          <div layout="row">
+            <div flex="20" layout="" layout-align="center center"><span class="md-body-1">Peso&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span></div>
+            <md-slider id="blue-slider" flex="" ng-disabled="true" ng-model="peso" min="0" max="280" aria-label="blue" class="md-primary"></md-slider>
+            <div flex="10" layout="" layout-align="center center">
+              <input type="number" ng-model="peso" ng-disabled="true" aria-label="blue" aria-controls="blue-slider"/>
+            </div>
+          </div>
+        </section>
+        <section class="ds-serie-edit-slider-title"><span>Quilos</span></section>
+      </section>
+    </section>
+  </section>
+  <section class="ds-serie-edit-action-bottom">
+    <md-button ng-click="exerciseEdit.edit=false" class="md-raised md-primary">Salvar</md-button>
+    <!-- p serie editar-->
+    <!-- section(ng-click="edit_serie();")-->
+    <!-- 	p editar serie diretiva-->
+    <!-- 	p {{exerciseEdit.edit}}-->
+  </section>
+</section>

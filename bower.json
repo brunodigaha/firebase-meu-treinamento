@@ -1,0 +1,41 @@
+{
+  "name": "MeuTreinamento",
+  "version": "4.0.1",
+  "homepage": "https://github.com/brucealex/meutreinamento",
+  "authors": [
+    "Bruno Alexandre de Souza <bruce_alex2006@hotmail.com>"
+  ],
+  "description": "Sistema para controle de fichas de treinamento para academias de musculação!",
+  "license": "privada",
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components"
+  ],
+  "dependencies": {
+    "jeet": "~6.1.2",
+    "normalize.styl": "~3.0.2",
+    "rupture-by-jenius": "~0.6.1",
+    "angular": "~1.4.1",
+    "angular-ui-router": "~0.2.15",
+    "google-material-color": "~1.2.2",
+    "modernizr": "~2.8.3",
+    "holderjs": "~2.7.1",
+    "angular-cookies": "~1.4.1",
+    "restangular": "~1.5.1",
+    "angular-holderjs": "~1.1.0",
+    "angular-material": "0.10.1-rc1",
+    "angular-messages": "~1.4.1",
+    "firebase": "~2.2.7",
+    "angularfire": "~1.1.2",
+    "typographic": "~2.9.3",
+    "animate.css": "https://github.com/daneden/animate.css.git#3.3.0",
+    "angular-material-icons": "~0.5.0",
+    "angular-uploadcare": "~0.1.2",
+    "angular-breadcrumb": "~0.4.0",
+    "angular-sortable-view": "~0.0.13",
+    "angular-scroll-glue": "~2.0.6",
+    "angular-chart.js": "~0.7.2"
+  }
+}

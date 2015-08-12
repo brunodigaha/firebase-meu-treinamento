@@ -1,0 +1,122 @@
+.ds-serie
+	col(12/12,gutter:0)
+	position relative
+	margin-top 4px
+	margin-bottom 4px
+	.ds-serie-view
+		col(12/12,gutter:0)
+		box-sizing border-box
+		background-color white
+		.ds-serie-step-content
+			col(12/12,gutter:0)
+			margin-bottom 8px
+			.ds-serie-position-step
+				col(1/12,gutter:0)
+				box-sizing border-box
+				text-align center
+				position relative
+				top -3px
+				cursor move
+				span
+					font-weight bold
+					font-size 90%
+					color palette('Grey','600')
+				// 	border-radius 7px
+				// 	font-size 90%
+				// 	padding 2px
+			.ds-serie-list
+				col(11/12,gutter:0)
+				box-sizing border-box
+				border 1px solid palette('Blue Grey','300')
+				position relative
+				.ds-serie-list-item-wrap
+					col(11/11,gutter:0)
+					.ds-serie-list-item--active
+						opacity .1
+						background-color palette('Grey','500')
+					.ds-serie-list-item
+						col(11/11,gutter:0)
+						box-sizing border-box
+						padding-top 6px
+						padding-bottom 6px
+						line-height 20px
+						// border-bottom 1px solid palette('Grey','50')
+						vertical-align middle
+						.ds-serie-exerc
+							col(5/11,gutter:0)
+							box-sizing border-box
+							text-align center
+							padding-left 5px
+						.ds-serie-repts
+							col(3/11,gutter:0)
+							text-align right
+						.ds-serie-weight
+							col(3/11,gutter:0)
+							text-align center
+				.ds-serie-view-wrap
+					col(12/12,gutter:0)
+					// box-sizing border-box
+					position absolute
+					top 0 
+					left 0
+					right 0
+					bottom 0
+					height 70%
+					min-height 30px
+					max-height 30px
+					margin auto
+					// border 1px solid palette('Grey','200')
+					text-align center
+					animation-duration .6s
+					animation-delay 0s
+					span
+						cursor pointer
+						color black
+						// font-weight bold
+						// line-height 20px
+						// vertical-align middle
+					ng-md-icon
+						cursor pointer
+						svg
+							vertical-align middle
+							box-sizing border-box
+							padding-right 5px
+							position relative
+							top -3px
+							// max-width 9%
+							// max-height 9%
+							// width 28%
+							// height 28%
+							+desktop()
+								&:hover
+									zoom 1.2
+					// button.md-button
+					// 	width 38%
+					// 	min-width 15px
+					// 	min-height 30px
+					// 	line-height 30px
+					// 	font-size 80%
+					// 	margin 0
+					// 	+desktop()
+					// 		width 60%
+					// 		min-width 15px
+					// 		min-height 30px
+					// 		line-height 30px
+					// 		font-size 85%
+					// 		margin 0
+					// 	span
+					.ds-serie-view
+						background-color transparent
+						padding-left 4em
+						padding-right 4em
+						.ds-serie-view-clone
+							col(4/12,gutter:0)
+							// box-sizing border-box
+							// padding-right 1em
+							// padding-left 1em
+							// border 1px solid palette('Grey','200')
+						.ds-serie-view-edit
+							col(4/12,gutter:0)
+						.ed-serie-view-delete
+							col(4/12,gutter:0)
+

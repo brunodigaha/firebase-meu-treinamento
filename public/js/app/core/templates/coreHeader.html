@@ -1,0 +1,106 @@
+
+<section ui-view="perfil" class="perfil">
+  <section class="user">
+    <section class="user-img"><img ng-click="coreEvents.toggle_menu();" holder="holder.js/80x80?auto=yes&amp;theme=vine&amp;text=BRU" class="img-responsive"/></section><a ui-sref="core.user.home.planTraining">
+      <h3 class="user-name">Bruno</h3></a><span class="breadcrumb">
+      <ng-md-icon icon="place" style="fill:grey" size="20"></ng-md-icon><span ncy-breadcrumb-last="">&nbsp;{{getStatesChain}}</span></span>
+  </section>
+  <section ng-if="(coreEvents.menu || coreEvents.options)" ng-click="coreEvents.close_all();" class="close"></section>
+  <section ui-view="menu" ng-if="coreEvents.menu" class="menu">
+    <section class="chat-bubble-arrow-border"></section>
+    <section class="chat-bubble-arrow"></section>
+    <section class="menu-header">
+      <section class="perfil-user">
+        <section class="img-user"><img holder="holder.js/45x45?auto=yes&amp;theme=sky&amp;text=BRU" class="img-responsive"/></section>
+        <h6>Bruno Alexandre</h6>
+        <ng-md-icon icon="create" style="fill:silver" size="22"></ng-md-icon>
+      </section>
+    </section>
+    <section class="icons-header">
+      <section class="dashboard"><a ui-sref="core.user.home.planTraining">
+          <ng-md-icon icon="dashboard" style="fill:grey" size="40"></ng-md-icon>
+          <p>Painel</p></a></section>
+      <section class="notification"><a ui-sref="core.user.home.planTraining">
+          <ng-md-icon icon="notifications" style="fill:grey" size="40"></ng-md-icon>
+          <p>Notificações</p></a></section>
+    </section>
+    <section class="menu-content">
+      <section class="plan-header">
+        <section class="title-plan"><a ui-sref="core.user.home.planTraining">
+            <p>Plano de Treinamento
+              <ng-md-icon icon="launch" style="fill:silver" size="25"></ng-md-icon>
+            </p></a></section>
+        <section class="edit-plan">
+          <p><a ui-sref-active="sdd" ui-sref="core.user.plans">Trocar Plano</a></p>
+        </section>
+        <!-- md-select(placeholder='Plano', ng-model='plan' style="min-width:250px;")-->
+        <!-- 	md-option(ng-repeat='plan in plans', value='{{plan}}') {{plan}}-->
+        <!-- ng-md-icon(icon="launch" style="fill:silver"  size="25" ng-click="true")-->
+      </section>
+      <section class="plan">
+        <p>2&#170; Semana (8&deg; dia)</p>
+        <md-progress-linear md-mode="determinate" value="40" class="md-primary"></md-progress-linear>
+      </section>
+      <section class="icons-content">
+        <section class="train"><a ui-sref="core.user.listTraining">
+            <ng-md-icon icon="assignment" style="fill:grey" size="40"></ng-md-icon>
+            <p>Treinos</p></a></section>
+        <section class="history"><a ui-sref="core.user.trainingHistory">
+            <ng-md-icon icon="local_movies" style="fill:grey" size="40"></ng-md-icon>
+            <p>  Histórico Treinamentos</p></a></section>
+        <section class="review">
+          <ng-md-icon icon="straighten" style="fill:grey" size="40"></ng-md-icon>
+          <p>Medidas</p>
+        </section>
+      </section>
+      <section class="btn-train">
+        <md-button ng-click="train_dialog_open($event);" id="btn-treinar" class="md-raised md-primary">
+          <ng-md-icon icon="play_arrow" style="fill:white" size="25"></ng-md-icon>&nbsp;&nbsp;Treinar
+        </md-button>
+      </section>
+    </section>
+  </section>
+</section>
+<section ui-view="actions" class="actions">
+  <!-- a(ui-sref-active="sdd" ui-sref="core.user.addtraining")-->
+  <!-- 	md-button(class="md-raised md-primary") Inserir Treino-->
+  <p>Fit Academia</p>
+</section>
+<section ui-view="user-admin" class="user-admin">
+  <section class="notification-admin">
+    <ng-md-icon icon="notifications_none" style="fill:grey" size="40"></ng-md-icon>
+  </section>
+  <section class="admin-name"><img holder="holder.js/40x40?auto=yes&amp;theme=sky&amp;text=BRU" class="img-responsive square"/><span ng-click="toggle_options();">Bruno
+      <ng-md-icon icon="expand_more" style="fill:grey" size="17"></ng-md-icon></span></section>
+  <section ng-if="coreEvents.options" class="options-admin">
+    <section class="chat-bubble-arrow-border"></section>
+    <section class="chat-bubble-arrow"></section>
+    <ul>
+      <li> 
+        <ng-md-icon icon="person" style="fill:grey" size="17"></ng-md-icon>&nbsp;&nbsp;Perfil
+      </li>
+      <li><a ui-sref="core.user.schedule">
+          <ng-md-icon icon="schedule" style="fill:grey" size="17"></ng-md-icon>&nbsp;&nbsp;Agenda</a></li>
+      <li><a ui-sref="core.user.collectionTraining">
+          <ng-md-icon icon="local_library" style="fill:grey" size="17"></ng-md-icon>&nbsp;&nbsp;Coleção Treinos</a></li>
+      <li>
+        <p class="line"></p>
+      </li>
+      <li>
+        <ng-md-icon icon="settings" style="fill:grey" size="17"></ng-md-icon>&nbsp;&nbsp;Configurações
+      </li>
+      <li>
+        <ng-md-icon icon="shopping_cart" style="fill:grey" size="17"></ng-md-icon>&nbsp;&nbsp;Conta
+      </li>
+      <li>
+        <p class="line"></p>
+      </li>
+      <li>
+        <ng-md-icon icon="vpn_key" style="fill:grey" size="17"></ng-md-icon>&nbsp;&nbsp;Alterar Senha
+      </li>
+      <li ng-click="logout();">
+        <ng-md-icon icon="settings_power" style="fill:grey" size="17"></ng-md-icon>&nbsp;&nbsp;Sair
+      </li>
+    </ul>
+  </section>
+</section>

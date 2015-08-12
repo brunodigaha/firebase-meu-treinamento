@@ -1,0 +1,11 @@
+
+<!-- p treinos do alunos {{params}} {{state.url}} {{estado}}-->
+<!-- div(ncy-breadcrumb="")-->
+<section class="training">
+  <section class="trainings">
+    <p>Treinos</p>
+    <md-radio-group ng-model="data.group1"><a ui-sref="core.user.listTraining.training({trainId:{{$index}}})" ng-repeat="person in ['A','B','C','D','E'] track by $index"> 
+        <md-radio-button value="{{person}}" class="md-primary">Treino {{person}}</md-radio-button></a></md-radio-group>
+  </section>
+  <section ui-view="training" class="training-wrap"></section>
+</section>

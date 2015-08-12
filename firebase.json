@@ -1,0 +1,10 @@
+{
+  "firebase": "vitta",
+  "public": "dist",
+  "ignore": [
+    "firebase.json",
+    "**/.*",
+	"/public",
+    "**/node_modules/**"
+  ]
+}

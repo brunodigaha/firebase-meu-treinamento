@@ -1,0 +1,83 @@
+
+<section class="plan-wrap">
+  <section class="plan-dashboard">
+    <md-card>
+      <md-card-content>
+        <section class="plan-header-options"><a ui-sref-active="sdd" ui-sref="core.user.edit.addPlan">
+            <md-button class="md-raised">Editar Plano</md-button></a></section>
+        <section class="plan-graf">
+          <canvas id="pie" data="data" labels="labels" class="chart chart-pie"></canvas><span class="one"> </span><span>&nbsp;Dias Restantes 33%&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="two"> </span><span>&nbsp;Dias Decorridos 66%</span>
+        </section>
+        <section class="plan-overview">
+          <section class="plan-goal">
+            <h1> 
+              <ng-md-icon icon="gps_fixed" style="fill:grey" size="25"></ng-md-icon>&nbsp;Ganho de Peso
+            </h1><span>21/04/15 até 14/05/15</span>
+          </section>
+          <section class="plan-time">
+            <section class="card">
+              <ds-info>
+                <section class="ds-title"><span>Duração</span></section>
+                <section class="ds-content"><span>5 semanas</span></section>
+              </ds-info>
+              <ds-info>
+                <section class="ds-title"><span>Frequência Semanal</span></section>
+                <section class="ds-content"><span>5x</span></section>
+              </ds-info>
+            </section>
+          </section>
+        </section>
+      </md-card-content>
+    </md-card>
+  </section>
+  <section class="plan-cards">
+    <section class="plan-trainings">
+      <md-card>
+        <md-card-content><a ui-sref="core.user.listTraining">
+            <h4>Treinos
+              <ng-md-icon icon="launch" style="fill:silver" size="23"></ng-md-icon>
+            </h4></a>
+          <md-content>
+            <md-subheader></md-subheader>
+            <ds-training name="A" disable="true"></ds-training>
+            <ds-training name="B"></ds-training>
+            <ds-training name="C"></ds-training>
+            <ds-training name="D"></ds-training>
+            <ds-training name="D"></ds-training>
+            <ds-training name="D"></ds-training>
+            <ds-training name="D"></ds-training>
+            <ds-training name="E"></ds-training>
+            <ds-training name="F"></ds-training>
+            <ds-training name="E"></ds-training>
+            <ds-training name="F"></ds-training>
+            <ds-training name="E"></ds-training>
+            <ds-training name="F"></ds-training>
+            <ds-training name="E"></ds-training>
+            <ds-training name="F"></ds-training>
+            <ds-training name="G"></ds-training>
+            <ds-training name="H"></ds-training>
+          </md-content>
+        </md-card-content>
+        <div layout="row" layout-align="end center" class="md-actions">
+          <md-button class="md-raised md-primary"><a ui-sref-active="sdd" ui-sref="core.user.edit.addtraining">Inserir Treino</a></md-button>
+        </div>
+      </md-card>
+    </section>
+    <section class="plan-historical">
+      <md-card>
+        <md-card-content><a ui-sref="core.user.trainingHistory">
+            <h4>Histórico Treinamentos
+              <ng-md-icon icon="launch" style="fill:silver" size="24"></ng-md-icon>
+            </h4></a>
+          <md-content>
+            <md-subheader></md-subheader>
+            <p>conteudo</p>
+          </md-content>
+        </md-card-content>
+        <div layout="row" layout-align="end center" class="md-actions">
+          <md-button class="md-raised md-primary"><a>Treinar</a></md-button>
+        </div>
+      </md-card>
+    </section>
+  </section>
+</section>

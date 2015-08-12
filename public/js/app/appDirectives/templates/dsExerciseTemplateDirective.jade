@@ -1,0 +1,34 @@
+section.ds-exercise
+	// section.ds-mov(sv-handle="" style="display:none;")
+	section.ds-exercise-close(ng-hide="isOpened" ng-cloak='' ng-click="open_exerc()")
+		section.ds-viw-exerc
+			section.ds-drag(sv-handle="")
+				ng-md-icon(icon="open_with" style="fill:black" size="22")
+			section.ds-exerc
+				span {{exercicio.nome}}
+				span {{exercicio.nome}}
+				span {{exercicio.nome}}
+				span ...
+	section.ds-exercise-open(ng-show="isOpened" ng-cloak='' ng-class="{'animated fadeIn': isOpened}" ng-click="close_exerc()")
+		section.ds-header-exerc
+			section.ds-series
+				span Biset com 4 séries
+			section.ds-break-time
+				span Descanso 20 seg
+			section.ds-exerc-options
+				ng-md-icon(icon="settings" style="fill:white" size="22")
+				ng-md-icon(icon="close" ng-click="remove(exercicio); $event.stopPropagation();" style="fill:white" size="22")
+		section.ds-content-exerc
+			md-content.exerc
+				section.ds-list-steps
+					section.ds-step-content(ng-repeat="person in [1,2,3,4] track by $index")
+						section.ds-position-step
+							span {{$index+1}}ª
+						section.ds-list-exerc
+							section.ds-list-exerc-item(ng-repeat="person in [1,2] track by $index")
+								section.ds-exer-name
+									span {{exercicio.nome}}
+								section.ds-exerc-repts
+									span 10 Repts
+								section.ds-exerc-weight
+									span 20kg

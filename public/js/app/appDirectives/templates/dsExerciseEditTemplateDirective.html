@@ -1,0 +1,41 @@
+
+<section class="ds-exercise-edit">
+  <section class="ds-exercise-edit-header">
+    <section class="ds-exercise-edit-way">
+      <md-select placeholder="Método do Exercício" ng-model="plan" style="min-width:250px;">
+        <md-option ng-repeat="plan in plans" value="{{plan}}">{{plan}}</md-option>
+      </md-select>
+    </section>
+    <section class="ds-exercise-edit-series"><span>3 Séries</span></section>
+    <section class="ds-exercise-edit-action">
+      <md-button ng-click="insertTraining($event);" class="md-raised md-primary">Adicionar Série</md-button>
+    </section>
+  </section>
+  <section class="ds-exercise-edit-content">
+    <md-content class="series">
+      <!-- ds-serie(serie="{name:'bruno'}" position="{{$index+1}}" ng-repeat="serie in exercise")-->
+      <ul sv-root="serie" sv-part="exercise">
+        <li ng-repeat="serie in exercise" sv-element="serie">
+          <ds-serie serie="{name:'bruno'}" dial="edit_serie()" position="{{$index+1}}"></ds-serie>
+        </li>
+      </ul>
+    </md-content>
+    <section ng-if="exerciseEdit.edit" class="ds-exercise-edit-serie-background"></section>
+    <section ng-if="exerciseEdit.edit" class="ds-exercise-edit-serie">
+      <!-- ds-serie-edit(dial="edit_serie()")-->
+      <ds-serie-edit></ds-serie-edit>
+      <!-- section(ng-click="edit_serie();") -->
+      <!-- 	p bruno-->
+    </section>
+    <section class="insert-details">
+      <!-- section(sv-root="plan" sv-part="plans")-->
+      <!-- 	section(ng-repeat="plan in plans" sv-element="plan")-->
+      <!-- 		p {{plan}}-->
+      <md-input-container flex="">
+        <label>Observação do Exercício</label>
+        <input ng-model="oberservacao" type="text"/>
+      </md-input-container>
+    </section>
+    <!-- ds-serie-->
+  </section>
+</section>

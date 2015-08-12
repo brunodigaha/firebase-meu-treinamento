@@ -1,0 +1,8 @@
+
+<section class="ds-exercises">
+  <ul sv-root="exercises" sv-part="exercicios">
+    <li ng-repeat="exercicio in exercicios" sv-element="exercise" ng-class="{'exerc-select': $index==index}" class="angular-animate">
+      <ds-exercise exercicio="exercicio"></ds-exercise>
+    </li>
+  </ul>
+</section>

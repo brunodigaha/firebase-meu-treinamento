@@ -1,0 +1,29 @@
+section.ds-exercise-edit
+	section.ds-exercise-edit-header
+		section.ds-exercise-edit-way
+			md-select(placeholder='Método do Exercício', ng-model='plan' style="min-width:250px;")
+				md-option(ng-repeat='plan in plans', value='{{plan}}') {{plan}}
+		section.ds-exercise-edit-series
+			span 3 Séries
+		section.ds-exercise-edit-action
+			md-button(class="md-raised md-primary" ng-click="insertTraining($event);") Adicionar Série
+	section.ds-exercise-edit-content
+		md-content.series
+			// ds-serie(serie="{name:'bruno'}" position="{{$index+1}}" ng-repeat="serie in exercise")
+			ul(sv-root="serie" sv-part="exercise")
+				li(ng-repeat="serie in exercise" sv-element="serie")
+					ds-serie(serie="{name:'bruno'}" dial="edit_serie()" position="{{$index+1}}")
+		section.ds-exercise-edit-serie-background(ng-if="exerciseEdit.edit")
+		section.ds-exercise-edit-serie(ng-if="exerciseEdit.edit")
+			// ds-serie-edit(dial="edit_serie()")
+			ds-serie-edit
+			// section(ng-click="edit_serie();") 
+			// 	p bruno
+		section.insert-details
+			// section(sv-root="plan" sv-part="plans")
+			// 	section(ng-repeat="plan in plans" sv-element="plan")
+			// 		p {{plan}}
+			md-input-container(flex="")
+				label Observação do Exercício
+				input(ng-model="oberservacao" type="text")
+		// ds-serie
