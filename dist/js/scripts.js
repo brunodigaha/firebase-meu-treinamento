@@ -28348,6 +28348,8 @@ angular.module('ng-uploadcare', [])
 }).call(this,typeof global !== "undefined" ? global : typeof self !== "undefined" ? self : typeof window !== "undefined" ? window : {})
 },{"/home/bruno/ProjNode/FirebaseMeuTreinamento/firebase-meu-treinamento/public/bower_components/angular/angular.js":19}],19:[function(require,module,exports){
 (function (global){
+
+; require("/home/bruno/ProjNode/FirebaseMeuTreinamento/firebase-meu-treinamento/public/bower_components/lodash/lodash.js");
 ; var __browserify_shim_require__=require;(function browserifyShim(module, exports, require, define, browserify_shim__define__module__export__) {
 /**
  * @license AngularJS v1.4.3
@@ -56718,7 +56720,7 @@ var minlengthDirective = function() {
 }).call(global, undefined, undefined, undefined, undefined, function defineExport(ex) { module.exports = ex; });
 
 }).call(this,typeof global !== "undefined" ? global : typeof self !== "undefined" ? self : typeof window !== "undefined" ? window : {})
-},{}],20:[function(require,module,exports){
+},{"/home/bruno/ProjNode/FirebaseMeuTreinamento/firebase-meu-treinamento/public/bower_components/lodash/lodash.js":23}],20:[function(require,module,exports){
 (function (global){
 
 ; require("/home/bruno/ProjNode/FirebaseMeuTreinamento/firebase-meu-treinamento/public/bower_components/angular/angular.js");
@@ -75537,1373 +75539,6 @@ window.Modernizr = (function( window, document, undefined ) {
 
 }).call(this,typeof global !== "undefined" ? global : typeof self !== "undefined" ? self : typeof window !== "undefined" ? window : {})
 },{}],25:[function(require,module,exports){
-(function (global){
-
-; require("/home/bruno/ProjNode/FirebaseMeuTreinamento/firebase-meu-treinamento/public/bower_components/angular/angular.js");
-require("/home/bruno/ProjNode/FirebaseMeuTreinamento/firebase-meu-treinamento/public/bower_components/lodash/lodash.js");
-; var __browserify_shim_require__=require;(function browserifyShim(module, exports, require, define, browserify_shim__define__module__export__) {
-/**
- * Restful Resources service for AngularJS apps
- * @version v1.4.0 - 2015-04-03 * @link https://github.com/mgonto/restangular
- * @author Martin Gontovnikas <martin@gon.to>
- * @license MIT License, http://www.opensource.org/licenses/MIT
- */(function() {
-
-var restangular = angular.module('restangular', []);
-
-restangular.provider('Restangular', function() {
-  // Configuration
-  var Configurer = {};
-  Configurer.init = function(object, config) {
-    object.configuration = config;
-
-    /**
-     * Those are HTTP safe methods for which there is no need to pass any data with the request.
-     */
-    var safeMethods= ['get', 'head', 'options', 'trace', 'getlist'];
-    config.isSafe = function(operation) {
-      return _.contains(safeMethods, operation.toLowerCase());
-    };
-
-    var absolutePattern = /^https?:\/\//i;
-    config.isAbsoluteUrl = function(string) {
-      return _.isUndefined(config.absoluteUrl) || _.isNull(config.absoluteUrl) ?
-              string && absolutePattern.test(string) :
-              config.absoluteUrl;
-    };
-
-    config.absoluteUrl = _.isUndefined(config.absoluteUrl) ? true : config.absoluteUrl;
-    object.setSelfLinkAbsoluteUrl = function(value) {
-      config.absoluteUrl = value;
-    };
-    /**
-     * This is the BaseURL to be used with Restangular
-     */
-    config.baseUrl = _.isUndefined(config.baseUrl) ? '' : config.baseUrl;
-    object.setBaseUrl = function(newBaseUrl) {
-      config.baseUrl = /\/$/.test(newBaseUrl) ?
-        newBaseUrl.substring(0, newBaseUrl.length-1) :
-        newBaseUrl;
-      return this;
-    };
-
-    /**
-     * Sets the extra fields to keep from the parents
-     */
-    config.extraFields = config.extraFields || [];
-    object.setExtraFields = function(newExtraFields) {
-      config.extraFields = newExtraFields;
-      return this;
-    };
-
-    /**
-     * Some default $http parameter to be used in EVERY call
-    **/
-    config.defaultHttpFields = config.defaultHttpFields || {};
-    object.setDefaultHttpFields = function(values) {
-      config.defaultHttpFields = values;
-      return this;
-    };
-
-    config.withHttpValues = function(httpLocalConfig, obj) {
-      return _.defaults(obj, httpLocalConfig, config.defaultHttpFields);
-    };
-
-    config.encodeIds = _.isUndefined(config.encodeIds) ? true : config.encodeIds;
-    object.setEncodeIds = function(encode) {
-      config.encodeIds = encode;
-    };
-
-    config.defaultRequestParams = config.defaultRequestParams || {
-      get: {},
-      post: {},
-      put: {},
-      remove: {},
-      common: {}
-    };
-
-    object.setDefaultRequestParams = function(param1, param2) {
-      var methods = [],
-          params = param2 || param1;
-      if (!_.isUndefined(param2)) {
-        if (_.isArray(param1)) {
-          methods = param1;
-        } else {
-          methods.push(param1);
-        }
-      } else {
-        methods.push('common');
-      }
-
-      _.each(methods, function (method) {
-        config.defaultRequestParams[method] = params;
-      });
-      return this;
-    };
-
-    object.requestParams = config.defaultRequestParams;
-
-    config.defaultHeaders = config.defaultHeaders || {};
-    object.setDefaultHeaders = function(headers) {
-      config.defaultHeaders = headers;
-      object.defaultHeaders = config.defaultHeaders;
-      return this;
-    };
-
-    object.defaultHeaders = config.defaultHeaders;
-
-    /**
-     * Method overriders will set which methods are sent via POST with an X-HTTP-Method-Override
-     **/
-    config.methodOverriders = config.methodOverriders || [];
-    object.setMethodOverriders = function(values) {
-      var overriders = _.extend([], values);
-      if (config.isOverridenMethod('delete', overriders)) {
-        overriders.push('remove');
-      }
-      config.methodOverriders = overriders;
-      return this;
-    };
-
-    config.jsonp = _.isUndefined(config.jsonp) ? false : config.jsonp;
-    object.setJsonp = function(active) {
-      config.jsonp = active;
-    };
-
-    config.isOverridenMethod = function(method, values) {
-      var search = values || config.methodOverriders;
-      return !_.isUndefined(_.find(search, function(one) {
-        return one.toLowerCase() === method.toLowerCase();
-      }));
-    };
-
-    /**
-     * Sets the URL creator type. For now, only Path is created. In the future we'll have queryParams
-    **/
-    config.urlCreator = config.urlCreator || 'path';
-    object.setUrlCreator = function(name) {
-      if (!_.has(config.urlCreatorFactory, name)) {
-        throw new Error('URL Path selected isn\'t valid');
-      }
-
-      config.urlCreator = name;
-      return this;
-    };
-
-    /**
-     * You can set the restangular fields here. The 3 required fields for Restangular are:
-     *
-     * id: Id of the element
-     * route: name of the route of this element
-     * parentResource: the reference to the parent resource
-     *
-     *  All of this fields except for id, are handled (and created) by Restangular. By default,
-     *  the field values will be id, route and parentResource respectively
-     */
-    config.restangularFields = config.restangularFields || {
-      id: 'id',
-      route: 'route',
-      parentResource: 'parentResource',
-      restangularCollection: 'restangularCollection',
-      cannonicalId: '__cannonicalId',
-      etag: 'restangularEtag',
-      selfLink: 'href',
-      get: 'get',
-      getList: 'getList',
-      put: 'put',
-      post: 'post',
-      remove: 'remove',
-      head: 'head',
-      trace: 'trace',
-      options: 'options',
-      patch: 'patch',
-      getRestangularUrl: 'getRestangularUrl',
-      getRequestedUrl: 'getRequestedUrl',
-      putElement: 'putElement',
-      addRestangularMethod: 'addRestangularMethod',
-      getParentList: 'getParentList',
-      clone: 'clone',
-      ids: 'ids',
-      httpConfig: '_$httpConfig',
-      reqParams: 'reqParams',
-      one: 'one',
-      all: 'all',
-      several: 'several',
-      oneUrl: 'oneUrl',
-      allUrl: 'allUrl',
-      customPUT: 'customPUT',
-      customPOST: 'customPOST',
-      customDELETE: 'customDELETE',
-      customGET: 'customGET',
-      customGETLIST: 'customGETLIST',
-      customOperation: 'customOperation',
-      doPUT: 'doPUT',
-      doPOST: 'doPOST',
-      doDELETE: 'doDELETE',
-      doGET: 'doGET',
-      doGETLIST: 'doGETLIST',
-      fromServer: 'fromServer',
-      withConfig: 'withConfig',
-      withHttpConfig: 'withHttpConfig',
-      singleOne: 'singleOne',
-      plain: 'plain',
-      save: 'save',
-      restangularized: 'restangularized'
-    };
-    object.setRestangularFields = function(resFields) {
-      config.restangularFields =
-        _.extend(config.restangularFields, resFields);
-      return this;
-    };
-
-    config.isRestangularized = function(obj) {
-      return !!obj[config.restangularFields.restangularized];
-    };
-
-    config.setFieldToElem = function(field, elem, value) {
-      var properties = field.split('.');
-      var idValue = elem;
-      _.each(_.initial(properties), function(prop) {
-        idValue[prop] = {};
-        idValue = idValue[prop];
-      });
-      idValue[_.last(properties)] = value;
-      return this;
-    };
-
-    config.getFieldFromElem = function(field, elem) {
-      var properties = field.split('.');
-      var idValue = elem;
-      _.each(properties, function(prop) {
-        if (idValue) {
-          idValue = idValue[prop];
-        }
-      });
-      return angular.copy(idValue);
-    };
-
-    config.setIdToElem = function(elem, id /*, route */) {
-      config.setFieldToElem(config.restangularFields.id, elem, id);
-      return this;
-    };
-
-    config.getIdFromElem = function(elem) {
-      return config.getFieldFromElem(config.restangularFields.id, elem);
-    };
-
-    config.isValidId = function(elemId) {
-      return '' !== elemId && !_.isUndefined(elemId) && !_.isNull(elemId);
-    };
-
-    config.setUrlToElem = function(elem, url /*, route */) {
-      config.setFieldToElem(config.restangularFields.selfLink, elem, url);
-      return this;
-    };
-
-    config.getUrlFromElem = function(elem) {
-      return config.getFieldFromElem(config.restangularFields.selfLink, elem);
-    };
-
-    config.useCannonicalId = _.isUndefined(config.useCannonicalId) ? false : config.useCannonicalId;
-    object.setUseCannonicalId = function(value) {
-      config.useCannonicalId = value;
-      return this;
-    };
-
-    config.getCannonicalIdFromElem = function(elem) {
-      var cannonicalId = elem[config.restangularFields.cannonicalId];
-      var actualId = config.isValidId(cannonicalId) ? cannonicalId : config.getIdFromElem(elem);
-      return actualId;
-    };
-
-    /**
-     * Sets the Response parser. This is used in case your response isn't directly the data.
-     * For example if you have a response like {meta: {'meta'}, data: {name: 'Gonto'}}
-     * you can extract this data which is the one that needs wrapping
-     *
-     * The ResponseExtractor is a function that receives the response and the method executed.
-     */
-
-    config.responseInterceptors = config.responseInterceptors || [];
-
-    config.defaultResponseInterceptor = function(data /*, operation, what, url, response, deferred */) {
-      return data;
-    };
-
-    config.responseExtractor = function(data, operation, what, url, response, deferred) {
-      var interceptors = angular.copy(config.responseInterceptors);
-      interceptors.push(config.defaultResponseInterceptor);
-      var theData = data;
-      _.each(interceptors, function(interceptor) {
-        theData = interceptor(theData, operation,
-          what, url, response, deferred);
-      });
-      return theData;
-    };
-
-    object.addResponseInterceptor = function(extractor) {
-      config.responseInterceptors.push(extractor);
-      return this;
-    };
-
-    config.errorInterceptors = config.errorInterceptors || [];
-    object.addErrorInterceptor = function(interceptor) {
-      config.errorInterceptors.push(interceptor);
-      return this;
-    };
-
-    object.setResponseInterceptor = object.addResponseInterceptor;
-    object.setResponseExtractor = object.addResponseInterceptor;
-    object.setErrorInterceptor = object.addErrorInterceptor;
-
-    /**
-     * Response interceptor is called just before resolving promises.
-     */
-
-
-    /**
-     * Request interceptor is called before sending an object to the server.
-     */
-    config.requestInterceptors = config.requestInterceptors || [];
-
-    config.defaultInterceptor = function(element, operation, path, url, headers, params, httpConfig) {
-      return {
-        element: element,
-        headers: headers,
-        params: params,
-        httpConfig: httpConfig
-      };
-    };
-
-    config.fullRequestInterceptor = function(element, operation, path, url, headers, params, httpConfig) {
-      var interceptors = angular.copy(config.requestInterceptors);
-      var defaultRequest = config.defaultInterceptor(element, operation, path, url, headers, params, httpConfig);
-      return _.reduce(interceptors, function(request, interceptor) {
-        return _.extend(request, interceptor(request.element, operation,
-          path, url, request.headers, request.params, request.httpConfig));
-      }, defaultRequest);
-    };
-
-    object.addRequestInterceptor = function(interceptor) {
-      config.requestInterceptors.push(function(elem, operation, path, url, headers, params, httpConfig) {
-        return {
-          headers: headers,
-          params: params,
-          element: interceptor(elem, operation, path, url),
-          httpConfig: httpConfig
-        };
-      });
-      return this;
-    };
-
-    object.setRequestInterceptor = object.addRequestInterceptor;
-
-    object.addFullRequestInterceptor = function(interceptor) {
-      config.requestInterceptors.push(interceptor);
-      return this;
-    };
-
-    object.setFullRequestInterceptor = object.addFullRequestInterceptor;
-
-    config.onBeforeElemRestangularized = config.onBeforeElemRestangularized || function(elem) {
-      return elem;
-    };
-    object.setOnBeforeElemRestangularized = function(post) {
-      config.onBeforeElemRestangularized = post;
-      return this;
-    };
-
-    object.setRestangularizePromiseInterceptor = function(interceptor) {
-      config.restangularizePromiseInterceptor = interceptor;
-      return this;
-    };
-
-    /**
-     * This method is called after an element has been "Restangularized".
-     *
-     * It receives the element, a boolean indicating if it's an element or a collection
-     * and the name of the model
-     *
-     */
-    config.onElemRestangularized = config.onElemRestangularized || function(elem) {
-      return elem;
-    };
-    object.setOnElemRestangularized = function(post) {
-      config.onElemRestangularized = post;
-      return this;
-    };
-
-    config.shouldSaveParent = config.shouldSaveParent || function() {
-      return true;
-    };
-    object.setParentless = function(values) {
-      if (_.isArray(values)) {
-        config.shouldSaveParent = function(route) {
-          return !_.contains(values, route);
-        };
-      } else if (_.isBoolean(values)) {
-        config.shouldSaveParent = function() {
-          return !values;
-        };
-      }
-      return this;
-    };
-
-    /**
-     * This lets you set a suffix to every request.
-     *
-     * For example, if your api requires that for JSon requests you do /users/123.json, you can set that
-     * in here.
-     *
-     *
-     * By default, the suffix is null
-     */
-    config.suffix = _.isUndefined(config.suffix) ? null : config.suffix;
-    object.setRequestSuffix = function(newSuffix) {
-      config.suffix = newSuffix;
-      return this;
-    };
-
-    /**
-     * Add element transformers for certain routes.
-     */
-    config.transformers = config.transformers || {};
-    object.addElementTransformer = function(type, secondArg, thirdArg) {
-      var isCollection = null;
-      var transformer = null;
-      if (arguments.length === 2) {
-        transformer = secondArg;
-      } else {
-        transformer = thirdArg;
-        isCollection = secondArg;
-      }
-
-      var typeTransformers = config.transformers[type];
-      if (!typeTransformers) {
-        typeTransformers = config.transformers[type] = [];
-      }
-
-      typeTransformers.push(function(coll, elem) {
-        if (_.isNull(isCollection) || (coll === isCollection)) {
-          return transformer(elem);
-        }
-        return elem;
-      });
-
-      return object;
-    };
-
-    object.extendCollection = function(route, fn) {
-      return object.addElementTransformer(route, true, fn);
-    };
-
-    object.extendModel = function(route, fn) {
-      return object.addElementTransformer(route, false, fn);
-    };
-
-    config.transformElem = function(elem, isCollection, route, Restangular, force) {
-      if (!force && !config.transformLocalElements && !elem[config.restangularFields.fromServer]) {
-        return elem;
-      }
-      var typeTransformers = config.transformers[route];
-      var changedElem = elem;
-      if (typeTransformers) {
-        _.each(typeTransformers, function(transformer) {
-          changedElem = transformer(isCollection, changedElem);
-        });
-      }
-      return config.onElemRestangularized(changedElem, isCollection, route, Restangular);
-    };
-
-    config.transformLocalElements = _.isUndefined(config.transformLocalElements) ?
-      false :
-      config.transformLocalElements;
-
-    object.setTransformOnlyServerElements = function(active) {
-      config.transformLocalElements = !active;
-    };
-
-    config.fullResponse = _.isUndefined(config.fullResponse) ? false : config.fullResponse;
-    object.setFullResponse = function(full) {
-      config.fullResponse = full;
-      return this;
-    };
-
-
-    //Internal values and functions
-    config.urlCreatorFactory = {};
-
-    /**
-     * Base URL Creator. Base prototype for everything related to it
-     **/
-
-     var BaseCreator = function() {
-     };
-
-     BaseCreator.prototype.setConfig = function(config) {
-       this.config = config;
-       return this;
-     };
-
-     BaseCreator.prototype.parentsArray = function(current) {
-      var parents = [];
-      while(current) {
-        parents.push(current);
-        current = current[this.config.restangularFields.parentResource];
-      }
-      return parents.reverse();
-    };
-
-    function RestangularResource(config, $http, url, configurer) {
-      var resource = {};
-      _.each(_.keys(configurer), function(key) {
-        var value = configurer[key];
-
-        // Add default parameters
-        value.params = _.extend({}, value.params, config.defaultRequestParams[value.method.toLowerCase()]);
-        // We don't want the ? if no params are there
-        if (_.isEmpty(value.params)) {
-          delete value.params;
-        }
-
-        if (config.isSafe(value.method)) {
-
-          resource[key] = function() {
-            return $http(_.extend(value, {
-              url: url
-            }));
-          };
-
-        } else {
-
-          resource[key] = function(data) {
-            return $http(_.extend(value, {
-              url: url,
-              data: data
-            }));
-          };
-
-        }
-      });
-
-      return resource;
-    }
-
-    BaseCreator.prototype.resource = function(current, $http, localHttpConfig, callHeaders, callParams, what, etag,operation) {
-
-      var params = _.defaults(callParams || {}, this.config.defaultRequestParams.common);
-      var headers = _.defaults(callHeaders || {}, this.config.defaultHeaders);
-
-      if (etag) {
-        if (!config.isSafe(operation)) {
-          headers['If-Match'] = etag;
-        } else {
-          headers['If-None-Match'] = etag;
-        }
-      }
-
-      var url = this.base(current);
-
-      if (what) {
-        var add = '';
-        if (!/\/$/.test(url)) {
-          add += '/';
-        }
-        add += what;
-        url += add;
-      }
-
-      if (this.config.suffix &&
-        url.indexOf(this.config.suffix, url.length - this.config.suffix.length) === -1 &&
-        !this.config.getUrlFromElem(current)) {
-          url += this.config.suffix;
-      }
-
-      current[this.config.restangularFields.httpConfig] = undefined;
-
-      return RestangularResource(this.config, $http, url, {
-        getList: this.config.withHttpValues(localHttpConfig,
-          {method: 'GET',
-          params: params,
-          headers: headers}),
-
-        get: this.config.withHttpValues(localHttpConfig,
-          {method: 'GET',
-          params: params,
-          headers: headers}),
-
-        jsonp: this.config.withHttpValues(localHttpConfig,
-          {method: 'jsonp',
-          params: params,
-          headers: headers}),
-
-        put: this.config.withHttpValues(localHttpConfig,
-          {method: 'PUT',
-          params: params,
-          headers: headers}),
-
-        post: this.config.withHttpValues(localHttpConfig,
-          {method: 'POST',
-          params: params,
-          headers: headers}),
-
-        remove: this.config.withHttpValues(localHttpConfig,
-          {method: 'DELETE',
-          params: params,
-          headers: headers}),
-
-        head: this.config.withHttpValues(localHttpConfig,
-          {method: 'HEAD',
-          params: params,
-          headers: headers}),
-
-        trace: this.config.withHttpValues(localHttpConfig,
-          {method: 'TRACE',
-          params: params,
-          headers: headers}),
-
-        options: this.config.withHttpValues(localHttpConfig,
-          {method: 'OPTIONS',
-          params: params,
-          headers: headers}),
-
-        patch: this.config.withHttpValues(localHttpConfig,
-          {method: 'PATCH',
-          params: params,
-          headers: headers})
-      });
-    };
-
-    /**
-     * This is the Path URL creator. It uses Path to show Hierarchy in the Rest API.
-     * This means that if you have an Account that then has a set of Buildings, a URL to a building
-     * would be /accounts/123/buildings/456
-    **/
-    var Path = function() {
-    };
-
-    Path.prototype = new BaseCreator();
-
-    Path.prototype.normalizeUrl = function (url){
-      var parts = /(http[s]?:\/\/)?(.*)?/.exec(url);
-      parts[2] = parts[2].replace(/[\\\/]+/g, '/');
-      return (typeof parts[1] !== 'undefined')? parts[1] + parts[2] : parts[2];
-    };
-
-    Path.prototype.base = function(current) {
-      var __this = this;
-      return  _.reduce(this.parentsArray(current), function(acum, elem) {
-        var elemUrl;
-        var elemSelfLink = __this.config.getUrlFromElem(elem);
-        if (elemSelfLink) {
-          if (__this.config.isAbsoluteUrl(elemSelfLink)) {
-            return elemSelfLink;
-          } else {
-            elemUrl = elemSelfLink;
-          }
-        } else {
-          elemUrl = elem[__this.config.restangularFields.route];
-
-          if (elem[__this.config.restangularFields.restangularCollection]) {
-            var ids = elem[__this.config.restangularFields.ids];
-            if (ids) {
-              elemUrl += '/' + ids.join(',');
-            }
-          } else {
-            var elemId;
-            if (__this.config.useCannonicalId) {
-              elemId = __this.config.getCannonicalIdFromElem(elem);
-            } else {
-              elemId = __this.config.getIdFromElem(elem);
-            }
-
-            if (config.isValidId(elemId) && !elem.singleOne) {
-              elemUrl += '/' + (__this.config.encodeIds ? encodeURIComponent(elemId) : elemId);
-            }
-          }
-        }
-        acum = acum.replace(/\/$/, '') + '/' + elemUrl;
-        return __this.normalizeUrl(acum);
-
-      }, this.config.baseUrl);
-    };
-
-
-
-    Path.prototype.fetchUrl = function(current, what) {
-      var baseUrl = this.base(current);
-      if (what) {
-        baseUrl += '/' + what;
-      }
-      return baseUrl;
-    };
-
-    Path.prototype.fetchRequestedUrl = function(current, what) {
-      var url = this.fetchUrl(current, what);
-      var params = current[config.restangularFields.reqParams];
-
-      // From here on and until the end of fetchRequestedUrl,
-      // the code has been kindly borrowed from angular.js
-      // The reason for such code bloating is coherence:
-      //   If the user were to use this for cache management, the
-      //   serialization of parameters would need to be identical
-      //   to the one done by angular for cache keys to match.
-      function sortedKeys(obj) {
-        var keys = [];
-        for (var key in obj) {
-          if (obj.hasOwnProperty(key)) {
-            keys.push(key);
-          }
-        }
-        return keys.sort();
-      }
-
-      function forEachSorted(obj, iterator, context) {
-        var keys = sortedKeys(obj);
-        for ( var i = 0; i < keys.length; i++) {
-          iterator.call(context, obj[keys[i]], keys[i]);
-        }
-        return keys;
-      }
-
-      function encodeUriQuery(val, pctEncodeSpaces) {
-        return encodeURIComponent(val).
-                   replace(/%40/gi, '@').
-                   replace(/%3A/gi, ':').
-                   replace(/%24/g, '$').
-                   replace(/%2C/gi, ',').
-                   replace(/%20/g, (pctEncodeSpaces ? '%20' : '+'));
-      }
-
-      if (!params) { return url + (this.config.suffix || ''); }
-
-      var parts = [];
-      forEachSorted(params, function(value, key) {
-        if (value === null || value === undefined) { return; }
-        if (!angular.isArray(value)) { value = [value]; }
-
-        angular.forEach(value, function(v) {
-          if (angular.isObject(v)) {
-            v = angular.toJson(v);
-          }
-          parts.push(encodeUriQuery(key) + '=' + encodeUriQuery(v));
-        });
-      });
-
-      return url + (this.config.suffix || '') + ((url.indexOf('?') === -1) ? '?' : '&') + parts.join('&');
-    };
-
-    config.urlCreatorFactory.path = Path;
-  };
-
-  var globalConfiguration = {};
-
-  Configurer.init(this, globalConfiguration);
-
-
-
-  this.$get = ['$http', '$q', function($http, $q) {
-
-    function createServiceForConfiguration(config) {
-      var service = {};
-
-      var urlHandler = new config.urlCreatorFactory[config.urlCreator]();
-      urlHandler.setConfig(config);
-
-      function restangularizeBase(parent, elem, route, reqParams, fromServer) {
-        elem[config.restangularFields.route] = route;
-        elem[config.restangularFields.getRestangularUrl] = _.bind(urlHandler.fetchUrl, urlHandler, elem);
-        elem[config.restangularFields.getRequestedUrl] = _.bind(urlHandler.fetchRequestedUrl, urlHandler, elem);
-        elem[config.restangularFields.addRestangularMethod] = _.bind(addRestangularMethodFunction, elem);
-        elem[config.restangularFields.clone] = _.bind(copyRestangularizedElement, elem, elem);
-        elem[config.restangularFields.reqParams] = _.isEmpty(reqParams) ? null : reqParams;
-        elem[config.restangularFields.withHttpConfig] = _.bind(withHttpConfig, elem);
-        elem[config.restangularFields.plain] = _.bind(stripRestangular, elem, elem);
-
-        // Tag element as restangularized
-        elem[config.restangularFields.restangularized] = true;
-
-        // RequestLess connection
-        elem[config.restangularFields.one] = _.bind(one, elem, elem);
-        elem[config.restangularFields.all] = _.bind(all, elem, elem);
-        elem[config.restangularFields.several] = _.bind(several, elem, elem);
-        elem[config.restangularFields.oneUrl] = _.bind(oneUrl, elem, elem);
-        elem[config.restangularFields.allUrl] = _.bind(allUrl, elem, elem);
-
-        elem[config.restangularFields.fromServer] = !!fromServer;
-
-        if (parent && config.shouldSaveParent(route)) {
-          var parentId = config.getIdFromElem(parent);
-          var parentUrl = config.getUrlFromElem(parent);
-
-          var restangularFieldsForParent = _.union(
-            _.values( _.pick(config.restangularFields, ['route', 'singleOne', 'parentResource']) ),
-            config.extraFields
-          );
-          var parentResource = _.pick(parent, restangularFieldsForParent);
-
-          if (config.isValidId(parentId)) {
-            config.setIdToElem(parentResource, parentId, route);
-          }
-          if (config.isValidId(parentUrl)) {
-            config.setUrlToElem(parentResource, parentUrl, route);
-          }
-
-          elem[config.restangularFields.parentResource] = parentResource;
-        } else {
-          elem[config.restangularFields.parentResource] = null;
-        }
-        return elem;
-      }
-
-      function one(parent, route, id, singleOne) {
-        var error;
-        if (_.isNumber(route) || _.isNumber(parent)) {
-          error = 'You\'re creating a Restangular entity with the number ';
-          error += 'instead of the route or the parent. For example, you can\'t call .one(12).';
-          throw new Error(error);
-        }
-        if (_.isUndefined(route)) {
-          error = 'You\'re creating a Restangular entity either without the path. ';
-          error += 'For example you can\'t call .one(). Please check if your arguments are valid.';
-          throw new Error(error);
-        }
-        var elem = {};
-        config.setIdToElem(elem, id, route);
-        config.setFieldToElem(config.restangularFields.singleOne, elem, singleOne);
-        return restangularizeElem(parent, elem , route, false);
-      }
-
-
-      function all(parent, route) {
-        return restangularizeCollection(parent, [] , route, false);
-      }
-
-      function several(parent, route /*, ids */) {
-        var collection = [];
-        collection[config.restangularFields.ids] = Array.prototype.splice.call(arguments, 2);
-        return restangularizeCollection(parent, collection , route, false);
-      }
-
-      function oneUrl(parent, route, url) {
-        if (!route) {
-          throw new Error('Route is mandatory when creating new Restangular objects.');
-        }
-        var elem = {};
-        config.setUrlToElem(elem, url, route);
-        return restangularizeElem(parent, elem , route, false);
-      }
-
-
-      function allUrl(parent, route, url) {
-        if (!route) {
-          throw new Error('Route is mandatory when creating new Restangular objects.');
-        }
-        var elem = {};
-        config.setUrlToElem(elem, url, route);
-        return restangularizeCollection(parent, elem , route, false);
-      }
-      // Promises
-      function restangularizePromise(promise, isCollection, valueToFill) {
-        promise.call = _.bind(promiseCall, promise);
-        promise.get = _.bind(promiseGet, promise);
-        promise[config.restangularFields.restangularCollection] = isCollection;
-        if (isCollection) {
-            promise.push = _.bind(promiseCall, promise, 'push');
-        }
-        promise.$object = valueToFill;
-        if (config.restangularizePromiseInterceptor) {
-          config.restangularizePromiseInterceptor(promise);
-        }
-        return promise;
-      }
-
-      function promiseCall(method) {
-        var deferred = $q.defer();
-        var callArgs = arguments;
-        var filledValue = {};
-        this.then(function(val) {
-          var params = Array.prototype.slice.call(callArgs, 1);
-          var func = val[method];
-          func.apply(val, params);
-          filledValue = val;
-          deferred.resolve(val);
-        });
-        return restangularizePromise(deferred.promise, this[config.restangularFields.restangularCollection], filledValue);
-      }
-
-      function promiseGet(what) {
-        var deferred = $q.defer();
-        var filledValue = {};
-        this.then(function(val) {
-          filledValue = val[what];
-          deferred.resolve(filledValue);
-        });
-        return restangularizePromise(deferred.promise, this[config.restangularFields.restangularCollection], filledValue);
-      }
-
-      function resolvePromise(deferred, response, data, filledValue) {
-        _.extend(filledValue, data);
-
-        // Trigger the full response interceptor.
-        if (config.fullResponse) {
-          return deferred.resolve(_.extend(response, {
-            data: data
-          }));
-        } else {
-          deferred.resolve(data);
-        }
-      }
-
-
-      // Elements
-      function stripRestangular(elem) {
-        if (_.isArray(elem)) {
-          var array = [];
-          _.each(elem, function(value) {
-              array.push(config.isRestangularized(value) ?  stripRestangular(value) : value);
-          });
-          return array;
-        } else {
-          return _.omit(elem, _.values(_.omit(config.restangularFields, 'id')));
-        }
-      }
-
-      function addCustomOperation(elem) {
-        elem[config.restangularFields.customOperation] = _.bind(customFunction, elem);
-        _.each(['put', 'post', 'get', 'delete'], function(oper) {
-          _.each(['do', 'custom'], function(alias) {
-            var callOperation = oper === 'delete' ? 'remove' : oper;
-            var name = alias + oper.toUpperCase();
-            var callFunction;
-
-            if (callOperation !== 'put' && callOperation !== 'post') {
-              callFunction = customFunction;
-            } else {
-              callFunction = function(operation, elem, path, params, headers) {
-                return _.bind(customFunction, this)(operation, path, params, headers, elem);
-              };
-            }
-            elem[name] = _.bind(callFunction, elem, callOperation);
-          });
-        });
-        elem[config.restangularFields.customGETLIST] = _.bind(fetchFunction, elem);
-        elem[config.restangularFields.doGETLIST] = elem[config.restangularFields.customGETLIST];
-      }
-
-      function copyRestangularizedElement(fromElement, toElement) {
-        var copiedElement = angular.copy(fromElement, toElement);
-        return restangularizeElem(copiedElement[config.restangularFields.parentResource],
-                copiedElement, copiedElement[config.restangularFields.route], true);
-      }
-
-      function restangularizeElem(parent, element, route, fromServer, collection, reqParams) {
-        var elem = config.onBeforeElemRestangularized(element, false, route);
-
-        var localElem = restangularizeBase(parent, elem, route, reqParams, fromServer);
-
-        if (config.useCannonicalId) {
-          localElem[config.restangularFields.cannonicalId] = config.getIdFromElem(localElem);
-        }
-
-        if (collection) {
-          localElem[config.restangularFields.getParentList] = function() {
-            return collection;
-          };
-        }
-
-        localElem[config.restangularFields.restangularCollection] = false;
-        localElem[config.restangularFields.get] = _.bind(getFunction, localElem);
-        localElem[config.restangularFields.getList] = _.bind(fetchFunction, localElem);
-        localElem[config.restangularFields.put] = _.bind(putFunction, localElem);
-        localElem[config.restangularFields.post] = _.bind(postFunction, localElem);
-        localElem[config.restangularFields.remove] = _.bind(deleteFunction, localElem);
-        localElem[config.restangularFields.head] = _.bind(headFunction, localElem);
-        localElem[config.restangularFields.trace] = _.bind(traceFunction, localElem);
-        localElem[config.restangularFields.options] = _.bind(optionsFunction, localElem);
-        localElem[config.restangularFields.patch] = _.bind(patchFunction, localElem);
-        localElem[config.restangularFields.save] = _.bind(save, localElem);
-
-        addCustomOperation(localElem);
-        return config.transformElem(localElem, false, route, service, true);
-      }
-
-      function restangularizeCollection(parent, element, route, fromServer, reqParams) {
-        var elem = config.onBeforeElemRestangularized(element, true, route);
-
-        var localElem = restangularizeBase(parent, elem, route, reqParams, fromServer);
-        localElem[config.restangularFields.restangularCollection] = true;
-        localElem[config.restangularFields.post] = _.bind(postFunction, localElem, null);
-        localElem[config.restangularFields.remove] = _.bind(deleteFunction, localElem);
-        localElem[config.restangularFields.head] = _.bind(headFunction, localElem);
-        localElem[config.restangularFields.trace] = _.bind(traceFunction, localElem);
-        localElem[config.restangularFields.putElement] = _.bind(putElementFunction, localElem);
-        localElem[config.restangularFields.options] = _.bind(optionsFunction, localElem);
-        localElem[config.restangularFields.patch] = _.bind(patchFunction, localElem);
-        localElem[config.restangularFields.get] = _.bind(getById, localElem);
-        localElem[config.restangularFields.getList] = _.bind(fetchFunction, localElem, null);
-
-        addCustomOperation(localElem);
-        return config.transformElem(localElem, true, route, service, true);
-      }
-
-      function restangularizeCollectionAndElements(parent, element, route) {
-        var collection = restangularizeCollection(parent, element, route, false);
-        _.each(collection, function(elem) {
-          restangularizeElem(parent, elem, route, false);
-        });
-        return collection;
-      }
-
-      function getById(id, reqParams, headers){
-        return this.customGET(id.toString(), reqParams, headers);
-      }
-
-      function putElementFunction(idx, params, headers) {
-        var __this = this;
-        var elemToPut = this[idx];
-        var deferred = $q.defer();
-        var filledArray = [];
-        filledArray = config.transformElem(filledArray, true, elemToPut[config.restangularFields.route], service);
-        elemToPut.put(params, headers).then(function(serverElem) {
-          var newArray = copyRestangularizedElement(__this);
-          newArray[idx] = serverElem;
-          filledArray = newArray;
-          deferred.resolve(newArray);
-        }, function(response) {
-          deferred.reject(response);
-        });
-
-        return restangularizePromise(deferred.promise, true, filledArray);
-      }
-
-      function parseResponse(resData, operation, route, fetchUrl, response, deferred) {
-        var data = config.responseExtractor(resData, operation, route, fetchUrl, response, deferred);
-        var etag = response.headers('ETag');
-        if (data && etag) {
-          data[config.restangularFields.etag] = etag;
-        }
-        return data;
-      }
-
-
-      function fetchFunction(what, reqParams, headers) {
-        var __this = this;
-        var deferred = $q.defer();
-        var operation = 'getList';
-        var url = urlHandler.fetchUrl(this, what);
-        var whatFetched = what || __this[config.restangularFields.route];
-
-        var request = config.fullRequestInterceptor(null, operation,
-            whatFetched, url, headers || {}, reqParams || {}, this[config.restangularFields.httpConfig] || {});
-
-        var filledArray = [];
-        filledArray = config.transformElem(filledArray, true, whatFetched, service);
-
-        var method = 'getList';
-
-        if (config.jsonp) {
-          method = 'jsonp';
-        }
-
-        var okCallback = function(response) {
-          var resData = response.data;
-          var fullParams = response.config.params;
-          var data = parseResponse(resData, operation, whatFetched, url, response, deferred);
-
-          // support empty response for getList() calls (some APIs respond with 204 and empty body)
-          if (_.isUndefined(data) || '' === data) {
-            data = [];
-          }
-          if (!_.isArray(data)) {
-            throw new Error('Response for getList SHOULD be an array and not an object or something else');
-          }
-          var processedData = _.map(data, function(elem) {
-            if (!__this[config.restangularFields.restangularCollection]) {
-              return restangularizeElem(__this, elem, what, true, data);
-            } else {
-              return restangularizeElem(__this[config.restangularFields.parentResource],
-                elem, __this[config.restangularFields.route], true, data);
-            }
-          });
-
-          processedData = _.extend(data, processedData);
-
-          if (!__this[config.restangularFields.restangularCollection]) {
-            resolvePromise(
-              deferred,
-              response,
-              restangularizeCollection(
-                __this,
-                processedData,
-                what,
-                true,
-                fullParams
-              ),
-              filledArray
-            );
-          } else {
-            resolvePromise(
-              deferred,
-              response,
-              restangularizeCollection(
-                __this[config.restangularFields.parentResource],
-                processedData,
-                __this[config.restangularFields.route],
-                true,
-                fullParams
-              ),
-              filledArray
-            );
-          }
-        };
-
-        urlHandler.resource(this, $http, request.httpConfig, request.headers, request.params, what,
-                this[config.restangularFields.etag], operation)[method]().then(okCallback, function error(response) {
-          if (response.status === 304 && __this[config.restangularFields.restangularCollection]) {
-            resolvePromise(deferred, response, __this, filledArray);
-          } else if ( _.every(config.errorInterceptors, function(cb) { return cb(response, deferred, okCallback) !== false; }) ) {
-            // triggered if no callback returns false
-            deferred.reject(response);
-          }
-        });
-
-        return restangularizePromise(deferred.promise, true, filledArray);
-      }
-
-      function withHttpConfig(httpConfig) {
-        this[config.restangularFields.httpConfig] = httpConfig;
-        return this;
-      }
-
-      function save(params, headers) {
-        if (this[config.restangularFields.fromServer]) {
-          return this[config.restangularFields.put](params, headers);
-        } else {
-          return _.bind(elemFunction, this)('post', undefined, params, undefined, headers);
-        }
-      }
-
-      function elemFunction(operation, what, params, obj, headers) {
-        var __this = this;
-        var deferred = $q.defer();
-        var resParams = params || {};
-        var route = what || this[config.restangularFields.route];
-        var fetchUrl = urlHandler.fetchUrl(this, what);
-
-        var callObj = obj || this;
-        // fallback to etag on restangular object (since for custom methods we probably don't explicitly specify the etag field)
-        var etag = callObj[config.restangularFields.etag] || (operation !== 'post' ? this[config.restangularFields.etag] : null);
-
-        if (_.isObject(callObj) && config.isRestangularized(callObj)) {
-          callObj = stripRestangular(callObj);
-        }
-        var request = config.fullRequestInterceptor(callObj, operation, route, fetchUrl,
-          headers || {}, resParams || {}, this[config.restangularFields.httpConfig] || {});
-
-        var filledObject = {};
-        filledObject = config.transformElem(filledObject, false, route, service);
-
-        var okCallback = function(response) {
-          var resData = response.data;
-          var fullParams = response.config.params;
-          var elem = parseResponse(resData, operation, route, fetchUrl, response, deferred);
-          if (elem) {
-
-            if (operation === 'post' && !__this[config.restangularFields.restangularCollection]) {
-              var data = restangularizeElem(
-                __this[config.restangularFields.parentResource],
-                elem,
-                route,
-                true,
-                null,
-                fullParams
-              );
-              resolvePromise(deferred, response, data, filledObject);
-            } else {
-              var data = restangularizeElem(
-                __this[config.restangularFields.parentResource],
-                elem,
-                __this[config.restangularFields.route],
-                true,
-                null,
-                fullParams
-              );
-
-              data[config.restangularFields.singleOne] = __this[config.restangularFields.singleOne];
-              resolvePromise(deferred, response, data, filledObject);
-            }
-
-          } else {
-            resolvePromise(deferred, response, undefined, filledObject);
-          }
-        };
-
-        var errorCallback = function(response) {
-          if (response.status === 304 && config.isSafe(operation)) {
-            resolvePromise(deferred, response, __this, filledObject);
-          } else if ( _.every(config.errorInterceptors, function(cb) { return cb(response, deferred, okCallback) !== false; }) ) {
-            // triggered if no callback returns false
-            deferred.reject(response);
-          }
-        };
-        // Overriding HTTP Method
-        var callOperation = operation;
-        var callHeaders = _.extend({}, request.headers);
-        var isOverrideOperation = config.isOverridenMethod(operation);
-        if (isOverrideOperation) {
-          callOperation = 'post';
-          callHeaders = _.extend(callHeaders, {'X-HTTP-Method-Override': operation === 'remove' ? 'DELETE' : operation.toUpperCase()});
-        } else if (config.jsonp && callOperation === 'get') {
-          callOperation = 'jsonp';
-        }
-
-        if (config.isSafe(operation)) {
-          if (isOverrideOperation) {
-            urlHandler.resource(this, $http, request.httpConfig, callHeaders, request.params,
-              what, etag, callOperation)[callOperation]({}).then(okCallback, errorCallback);
-          } else {
-            urlHandler.resource(this, $http, request.httpConfig, callHeaders, request.params,
-              what, etag, callOperation)[callOperation]().then(okCallback, errorCallback);
-          }
-        } else {
-          urlHandler.resource(this, $http, request.httpConfig, callHeaders, request.params,
-            what, etag, callOperation)[callOperation](request.element).then(okCallback, errorCallback);
-        }
-
-        return restangularizePromise(deferred.promise, false, filledObject);
-      }
-
-      function getFunction(params, headers) {
-        return _.bind(elemFunction, this)('get', undefined, params, undefined, headers);
-      }
-
-      function deleteFunction(params, headers) {
-        return _.bind(elemFunction, this)('remove', undefined, params, undefined, headers);
-      }
-
-      function putFunction(params, headers) {
-        return _.bind(elemFunction, this)('put', undefined, params, undefined, headers);
-      }
-
-      function postFunction(what, elem, params, headers) {
-        return _.bind(elemFunction, this)('post', what, params, elem, headers);
-      }
-
-      function headFunction(params, headers) {
-        return _.bind(elemFunction, this)('head', undefined, params, undefined, headers);
-      }
-
-      function traceFunction(params, headers) {
-        return _.bind(elemFunction, this)('trace', undefined, params, undefined, headers);
-      }
-
-      function optionsFunction(params, headers) {
-        return _.bind(elemFunction, this)('options', undefined, params, undefined, headers);
-      }
-
-      function patchFunction(elem, params, headers) {
-        return _.bind(elemFunction, this)('patch', undefined, params, elem, headers);
-      }
-
-      function customFunction(operation, path, params, headers, elem) {
-        return _.bind(elemFunction, this)(operation, path, params, elem, headers);
-      }
-
-      function addRestangularMethodFunction(name, operation, path, defaultParams, defaultHeaders, defaultElem) {
-        var bindedFunction;
-        if (operation === 'getList') {
-          bindedFunction = _.bind(fetchFunction, this, path);
-        } else {
-          bindedFunction = _.bind(customFunction, this, operation, path);
-        }
-
-        var createdFunction = function(params, headers, elem) {
-          var callParams = _.defaults({
-            params: params,
-            headers: headers,
-            elem: elem
-          }, {
-            params: defaultParams,
-            headers: defaultHeaders,
-            elem: defaultElem
-          });
-          return bindedFunction(callParams.params, callParams.headers, callParams.elem);
-        };
-
-        if (config.isSafe(operation)) {
-          this[name] = createdFunction;
-        } else {
-          this[name] = function(elem, params, headers) {
-            return createdFunction(params, headers, elem);
-          };
-        }
-      }
-
-      function withConfigurationFunction(configurer) {
-        var newConfig = angular.copy(_.omit(config, 'configuration'));
-        Configurer.init(newConfig, newConfig);
-        configurer(newConfig);
-        return createServiceForConfiguration(newConfig);
-      }
-
-      function toService(route, parent) {
-        var knownCollectionMethods = _.values(config.restangularFields);
-        var serv = {};
-        var collection = (parent || service).all(route);
-        serv.one = _.bind(one, (parent || service), parent, route);
-        serv.post = _.bind(collection.post, collection);
-        serv.getList = _.bind(collection.getList, collection);
-
-        for (var prop in collection) {
-          if (collection.hasOwnProperty(prop) && _.isFunction(collection[prop]) && !_.contains(knownCollectionMethods, prop)) {
-            serv[prop] = _.bind(collection[prop], collection);
-          }
-        }
-
-        return serv;
-      }
-
-
-      Configurer.init(service, config);
-
-      service.copy = _.bind(copyRestangularizedElement, service);
-
-      service.service = _.bind(toService, service);
-
-      service.withConfig = _.bind(withConfigurationFunction, service);
-
-      service.one = _.bind(one, service, null);
-
-      service.all = _.bind(all, service, null);
-
-      service.several = _.bind(several, service, null);
-
-      service.oneUrl = _.bind(oneUrl, service, null);
-
-      service.allUrl = _.bind(allUrl, service, null);
-
-      service.stripRestangular = _.bind(stripRestangular, service);
-
-      service.restangularizeElement = _.bind(restangularizeElem, service);
-
-      service.restangularizeCollection = _.bind(restangularizeCollectionAndElements, service);
-
-      return service;
-    }
-
-    return createServiceForConfiguration(globalConfiguration);
-  }];
-});
-
-})();
-
-; browserify_shim__define__module__export__(typeof angular.module('restangular') != "undefined" ? angular.module('restangular') : window.angular.module('restangular'));
-
-}).call(global, undefined, undefined, undefined, undefined, function defineExport(ex) { module.exports = ex; });
-
-}).call(this,typeof global !== "undefined" ? global : typeof self !== "undefined" ? self : typeof window !== "undefined" ? window : {})
-},{"/home/bruno/ProjNode/FirebaseMeuTreinamento/firebase-meu-treinamento/public/bower_components/angular/angular.js":19,"/home/bruno/ProjNode/FirebaseMeuTreinamento/firebase-meu-treinamento/public/bower_components/lodash/lodash.js":23}],26:[function(require,module,exports){
 //other dependencies
 require('modernizr');
 require('angular');
@@ -76914,7 +75549,6 @@ angular
 	require('angularBreadcrumb').name,
 	require('angularSortableView').name,
 	require('angularScroll').name,
-	require('restAngular').name,
 	require('angularCookies').name,
 	require('angularMessages').name,
 	require('angularIcons').name,
@@ -76929,12 +75563,13 @@ angular
 	require('./user').name,
 	require('./train').name
 ])
+.constant('FBURL', 'https://vitta.firebaseio.com')
 .config(require('./appRoutes.js'))
 .run(require('./appRun.js'));
 
 
 
-},{"./appDirectives":35,"./appRoutes.js":36,"./appRun.js":37,"./auth":40,"./core":48,"./train":60,"./user":64,"angular":19,"angularBreadcrumb":8,"angularChart":9,"angularCookies":10,"angularFire":20,"angularHolderjs":11,"angularIcons":12,"angularMaterial":13,"angularMessages":14,"angularScroll":15,"angularSortableView":16,"angularUploadcare":18,"modernizr":24,"restAngular":25,"ui-router":17}],27:[function(require,module,exports){
+},{"./appDirectives":34,"./appRoutes.js":35,"./appRun.js":36,"./auth":39,"./core":47,"./train":58,"./user":62,"angular":19,"angularBreadcrumb":8,"angularChart":9,"angularCookies":10,"angularFire":20,"angularHolderjs":11,"angularIcons":12,"angularMaterial":13,"angularMessages":14,"angularScroll":15,"angularSortableView":16,"angularUploadcare":18,"modernizr":24,"ui-router":17}],26:[function(require,module,exports){
 (function (Buffer){
 
 module.exports = function() {
@@ -76962,7 +75597,7 @@ module.exports = function() {
 };
 
 }).call(this,require("buffer").Buffer)
-},{"buffer":1}],28:[function(require,module,exports){
+},{"buffer":1}],27:[function(require,module,exports){
 (function (Buffer){
 
 module.exports = function() {
@@ -77262,7 +75897,7 @@ module.exports = function() {
 };
 
 }).call(this,require("buffer").Buffer)
-},{"buffer":1}],29:[function(require,module,exports){
+},{"buffer":1}],28:[function(require,module,exports){
 (function (Buffer){
 
 module.exports = function() {
@@ -77288,7 +75923,7 @@ module.exports = function() {
 };
 
 }).call(this,require("buffer").Buffer)
-},{"buffer":1}],30:[function(require,module,exports){
+},{"buffer":1}],29:[function(require,module,exports){
 (function (Buffer){
 
 module.exports = function() {
@@ -77304,7 +75939,7 @@ module.exports = function() {
 };
 
 }).call(this,require("buffer").Buffer)
-},{"buffer":1}],31:[function(require,module,exports){
+},{"buffer":1}],30:[function(require,module,exports){
 (function (Buffer){
 
 module.exports = function() {
@@ -77320,7 +75955,7 @@ module.exports = function() {
 };
 
 }).call(this,require("buffer").Buffer)
-},{"buffer":1}],32:[function(require,module,exports){
+},{"buffer":1}],31:[function(require,module,exports){
 (function (Buffer){
 
 module.exports = function() {
@@ -77348,7 +75983,7 @@ module.exports = function() {
 };
 
 }).call(this,require("buffer").Buffer)
-},{"buffer":1}],33:[function(require,module,exports){
+},{"buffer":1}],32:[function(require,module,exports){
 (function (Buffer){
 
 module.exports = function() {
@@ -77380,7 +76015,7 @@ module.exports = function() {
 };
 
 }).call(this,require("buffer").Buffer)
-},{"buffer":1}],34:[function(require,module,exports){
+},{"buffer":1}],33:[function(require,module,exports){
 (function (Buffer){
 
 module.exports = function() {
@@ -77395,7 +76030,7 @@ module.exports = function() {
 };
 
 }).call(this,require("buffer").Buffer)
-},{"buffer":1}],35:[function(require,module,exports){
+},{"buffer":1}],34:[function(require,module,exports){
 module.exports = angular.module('appDirectives',[])
 		.directive('dsTraining', require('./directives/dsTrainingDirective.js'))
 		.directive('dsExercises', require('./directives/dsExercisesDirective.js'))
@@ -77406,7 +76041,7 @@ module.exports = angular.module('appDirectives',[])
 		.directive('dsPlan', require('./directives/dsPlanDirective.js'))
 		.directive('dsInfo', require('./directives/dsInfoDirective.js'));
 
-},{"./directives/dsExerciseDirective.js":27,"./directives/dsExerciseEditDirective.js":28,"./directives/dsExercisesDirective.js":29,"./directives/dsInfoDirective.js":30,"./directives/dsPlanDirective.js":31,"./directives/dsSerieDirective.js":32,"./directives/dsSerieEditDirective.js":33,"./directives/dsTrainingDirective.js":34}],36:[function(require,module,exports){
+},{"./directives/dsExerciseDirective.js":26,"./directives/dsExerciseEditDirective.js":27,"./directives/dsExercisesDirective.js":28,"./directives/dsInfoDirective.js":29,"./directives/dsPlanDirective.js":30,"./directives/dsSerieDirective.js":31,"./directives/dsSerieEditDirective.js":32,"./directives/dsTrainingDirective.js":33}],35:[function(require,module,exports){
 
 
 module.exports = function ($stateProvider,$compileProvider,$animateProvider,$locationProvider,$urlRouterProvider,$breadcrumbProvider,ChartJsProvider, $mdThemingProvider) {
@@ -77477,7 +76112,7 @@ module.exports = function ($stateProvider,$compileProvider,$animateProvider,$loc
     });	
 };
 
-},{"./auth/authRoutes.js":38,"./core/coreRoutes.js":47,"./train/trainRoutes.js":61,"./user/userRoutes.js":65}],37:[function(require,module,exports){
+},{"./auth/authRoutes.js":37,"./core/coreRoutes.js":46,"./train/trainRoutes.js":59,"./user/userRoutes.js":63}],36:[function(require,module,exports){
 module.exports = function ($rootScope, $state,$stateParams,coreEventsService, authModelService) {
 	$rootScope.$on("$stateChangeStart", function (event, toState, toParams, fromState, fromParams) {
 		// console.log('$stateChangeStart to '+toState.to+'- fired when the transition begins. toState,toParams : \n',toState, toParams);
@@ -77485,7 +76120,7 @@ module.exports = function ($rootScope, $state,$stateParams,coreEventsService, au
 		// console.log("tostate", toState);
 		// console.log("toParam", toParams);
 		// console.log("fromParam", fromParams);
-		// coreEventsService.close_all();
+		coreEventsService.close_all();
 		// if(toState.authenticate && !authModelService.is_authenticated()){
 		// 	event.preventDefault();
 		// 	$state.go("login");
@@ -77520,7 +76155,7 @@ module.exports = function ($rootScope, $state,$stateParams,coreEventsService, au
 	// });
 };
 
-},{}],38:[function(require,module,exports){
+},{}],37:[function(require,module,exports){
 (function (Buffer){
 
 module.exports = {
@@ -77537,7 +76172,7 @@ module.exports = {
 						}
 					},
 					controller: 'loginController',
-					template: Buffer("CjwhLS0gZGl2LS0+CjwhLS0gCWlucHV0KHR5cGU6InRleHQiIG5nLW1vZGVsPSJuZXdVc2VyTmFtZSIpLS0+CjwhLS0gCWJ1dHRvbihuZy1jbGljaz0iYWRkVXNlcigpOyIpICtVc2VyLS0+CjwhLS0gCXAge3tkYXRhIHwganNvbn19LS0+CjwhLS0gCWRpdihuZy1yZXBlYXQ9InVzZXIgaW4gdXNlcnMiIG5nLWNsaWNrPSJyZW1vdmVVc2VyKHVzZXIpOyIpIHt7dXNlci5ub21lfX0tLT4KPHNlY3Rpb24gY2xhc3M9ImxvZ2luLXdyYXAiPgogIDxzZWN0aW9uIGNsYXNzPSJsb2dpbiI+CiAgICA8Zm9ybSBuYW1lPSJsb2dpbkZvcm0iPgogICAgICA8bWQtaW5wdXQtY29udGFpbmVyPgogICAgICAgIDxsYWJlbD5Mb2dpbjwvbGFiZWw+CiAgICAgICAgPGlucHV0IHR5cGU9InRleHQiIHJlcXVpcmVkPSIiIG5hbWU9InVzZXJuYW1lIiBuZy1tb2RlbD0idXNlck1vZGVsLnVzZXJuYW1lIi8+CiAgICAgICAgPGRpdiBuZy1tZXNzYWdlcz0ibG9naW5Gb3JtLnVzZXJuYW1lLiRlcnJvciIgcm9sZT0iYWxlcnQiPgogICAgICAgICAgPGRpdiBuZy1pZj0ic2hvd1JlcXVpcmVkRXJyb3IiPgogICAgICAgICAgICA8ZGl2IG5nLW1lc3NhZ2U9InJlcXVpcmVkIj5Fc3RlIGNhbXBvIMOpIG9icmlnYXTDs3Jpby48L2Rpdj4KICAgICAgICAgIDwvZGl2PgogICAgICAgIDwvZGl2PgogICAgICA8L21kLWlucHV0LWNvbnRhaW5lcj4KICAgICAgPG1kLWlucHV0LWNvbnRhaW5lcj4KICAgICAgICA8bGFiZWw+U2VuaGE8L2xhYmVsPgogICAgICAgIDxpbnB1dCB0eXBlPSJwYXNzd29yZCIgcmVxdWlyZWQ9IiIgbmFtZT0icGFzc3dvcmQiIG5nLW1vZGVsPSJ1c2VyTW9kZWwucGFzc3dvcmQiLz4KICAgICAgICA8ZGl2IG5nLW1lc3NhZ2VzPSJsb2dpbkZvcm0ucGFzc3dvcmQuJGVycm9yIiByb2xlPSJhbGVydCI+CiAgICAgICAgICA8ZGl2IG5nLWlmPSJzaG93UmVxdWlyZWRFcnJvciI+CiAgICAgICAgICAgIDxkaXYgbmctbWVzc2FnZT0icmVxdWlyZWQiPkVzdGUgY2FtcG8gw6kgb2JyaWdhdMOzcmlvLjwvZGl2PgogICAgICAgICAgPC9kaXY+CiAgICAgICAgPC9kaXY+CiAgICAgIDwvbWQtaW5wdXQtY29udGFpbmVyPgogICAgICA8bWQtcHJvZ3Jlc3MtY2lyY3VsYXIgbmctaWY9InVzZXJNb2RlbC5sb2FkaW5nIiBtZC1tb2RlPSJpbmRldGVybWluYXRlIiB2YWx1ZT0iLi4uIiBtZC1kaWFtZXRlcj0iMjAiPjwvbWQtcHJvZ3Jlc3MtY2lyY3VsYXI+CiAgICAgIDxtZC1idXR0b24gbmctY2xpY2s9ImxvZ2luKCk7IiBjbGFzcz0ibWQtcmFpc2VkIG1kLXByaW1hcnkiPkVudHJhcjwvbWQtYnV0dG9uPgogICAgICA8IS0tIGg1IExvZ2luOiBhZG1pbiBTZW5oYSAxMjMtLT4KICAgICAgCiAgICA8L2Zvcm0+CiAgPC9zZWN0aW9uPgo8L3NlY3Rpb24+","base64")  
+					template: Buffer("CjxkaXY+CiAgPGlucHV0IHR5cGU6InRleHQ9InR5cGU6InRleHQiIG5nLW1vZGVsPSJuZXdVc2VyTmFtZSIvPgogIDxidXR0b24gbmctY2xpY2s9ImFkZFVzZXIoKTsiPitVc2VyPC9idXR0b24+CiAgPHA+e3tkYXRhIHwganNvbn19PC9wPgogIDxkaXYgbmctcmVwZWF0PSJ1c2VyIGluIHVzZXJzIiBuZy1jbGljaz0icmVtb3ZlVXNlcih1c2VyKTsiPnt7dXNlci5ub21lfX08L2Rpdj4KPC9kaXY+CjxzZWN0aW9uIGNsYXNzPSJsb2dpbi13cmFwIj4KICA8c2VjdGlvbiBjbGFzcz0ibG9naW4iPgogICAgPGZvcm0gbmFtZT0ibG9naW5Gb3JtIj4KICAgICAgPG1kLWlucHV0LWNvbnRhaW5lcj4KICAgICAgICA8bGFiZWw+TG9naW48L2xhYmVsPgogICAgICAgIDxpbnB1dCB0eXBlPSJ0ZXh0IiByZXF1aXJlZD0iIiBuYW1lPSJ1c2VybmFtZSIgbmctbW9kZWw9InVzZXJNb2RlbC51c2VybmFtZSIvPgogICAgICAgIDxkaXYgbmctbWVzc2FnZXM9ImxvZ2luRm9ybS51c2VybmFtZS4kZXJyb3IiIHJvbGU9ImFsZXJ0Ij4KICAgICAgICAgIDxkaXYgbmctaWY9InNob3dSZXF1aXJlZEVycm9yIj4KICAgICAgICAgICAgPGRpdiBuZy1tZXNzYWdlPSJyZXF1aXJlZCI+RXN0ZSBjYW1wbyDDqSBvYnJpZ2F0w7NyaW8uPC9kaXY+CiAgICAgICAgICA8L2Rpdj4KICAgICAgICA8L2Rpdj4KICAgICAgPC9tZC1pbnB1dC1jb250YWluZXI+CiAgICAgIDxtZC1pbnB1dC1jb250YWluZXI+CiAgICAgICAgPGxhYmVsPlNlbmhhPC9sYWJlbD4KICAgICAgICA8aW5wdXQgdHlwZT0icGFzc3dvcmQiIHJlcXVpcmVkPSIiIG5hbWU9InBhc3N3b3JkIiBuZy1tb2RlbD0idXNlck1vZGVsLnBhc3N3b3JkIi8+CiAgICAgICAgPGRpdiBuZy1tZXNzYWdlcz0ibG9naW5Gb3JtLnBhc3N3b3JkLiRlcnJvciIgcm9sZT0iYWxlcnQiPgogICAgICAgICAgPGRpdiBuZy1pZj0ic2hvd1JlcXVpcmVkRXJyb3IiPgogICAgICAgICAgICA8ZGl2IG5nLW1lc3NhZ2U9InJlcXVpcmVkIj5Fc3RlIGNhbXBvIMOpIG9icmlnYXTDs3Jpby48L2Rpdj4KICAgICAgICAgIDwvZGl2PgogICAgICAgIDwvZGl2PgogICAgICA8L21kLWlucHV0LWNvbnRhaW5lcj4KICAgICAgPG1kLXByb2dyZXNzLWNpcmN1bGFyIG5nLWlmPSJ1c2VyTW9kZWwubG9hZGluZyIgbWQtbW9kZT0iaW5kZXRlcm1pbmF0ZSIgdmFsdWU9Ii4uLiIgbWQtZGlhbWV0ZXI9IjIwIj48L21kLXByb2dyZXNzLWNpcmN1bGFyPgogICAgICA8bWQtYnV0dG9uIG5nLWNsaWNrPSJsb2dpbigpOyIgY2xhc3M9Im1kLXJhaXNlZCBtZC1wcmltYXJ5Ij5FbnRyYXI8L21kLWJ1dHRvbj4KICAgICAgPCEtLSBoNSBMb2dpbjogYWRtaW4gU2VuaGEgMTIzLS0+CiAgICAgIAogICAgPC9mb3JtPgogIDwvc2VjdGlvbj4KPC9zZWN0aW9uPg==","base64")  
 				},
 			}
 		}
@@ -77547,16 +76182,16 @@ module.exports = {
 
 
 }).call(this,require("buffer").Buffer)
-},{"buffer":1}],39:[function(require,module,exports){
-module.exports = function ($scope,$timeout, authModelService,$firebaseArray) {
+},{"buffer":1}],38:[function(require,module,exports){
+module.exports = function ($scope,$timeout, authModelService,$firebaseArray,FBURL) {
 	var userModel = $scope.userModel = authModelService;
-	// var URL = new Firebase("https://vitta.firebaseio.com/");
-	// $scope.users  = $firebaseArray(URL);
-	// $scope.addUser = function(){
-	// 	$scope.users.$add({
-	// 		nome: $scope.newUserName
-	// 	});
-	// };
+	var URL = new Firebase(FBURL);
+	$scope.users  = $firebaseArray(URL);
+	$scope.addUser = function(){
+		$scope.users.$add({
+			nome: $scope.newUserName
+		});
+	};
 	// $scope.removeUser = function(user){
 	// 	$scope.users.$remove(user);
 	// };
@@ -77573,13 +76208,13 @@ module.exports = function ($scope,$timeout, authModelService,$firebaseArray) {
 	};
 };
 
-},{}],40:[function(require,module,exports){
+},{}],39:[function(require,module,exports){
 module.exports = angular.module('auth',[])
 			.factory('authModelService', require('./services/authModelService.js'))
 			.controller('loginController', require('./controllers/loginController.js'));
 
-},{"./controllers/loginController.js":39,"./services/authModelService.js":41}],41:[function(require,module,exports){
-module.exports = function ($state,$cookies, RestangularCustom) {
+},{"./controllers/loginController.js":38,"./services/authModelService.js":40}],40:[function(require,module,exports){
+module.exports = function ($state,$cookies) {
 	var authModel = {
 		currentUser: {},
 		token: '',
@@ -77594,11 +76229,11 @@ module.exports = function ($state,$cookies, RestangularCustom) {
 		$cookies.put('token',token);
 	};
 
-	authModel.reset_login = function () {
-			RestangularCustom.setDefaultHeaders({"Authorization": ""});
-			authModel.token = "";
-			$cookies.put('token', ""); 
-	};
+	// authModel.reset_login = function () {
+	// 		RestangularCustom.setDefaultHeaders({"Authorization": ""});
+	// 		authModel.token = "";
+	// 		$cookies.put('token', ""); 
+	// };
 
 	authModel.is_authenticated = function () {
 		var cookieToken = $cookies.get('token');
@@ -77626,19 +76261,19 @@ module.exports = function ($state,$cookies, RestangularCustom) {
 	// };
 
 
-	authModel.login = function () {
-		RestangularCustom.all('login').post({username:authModel.username, password:authModel.password}).then(function(response){
-			authModel.loading = false;
-			authModel.set_login(response.headers('Authorization'));
-			$state.go('core.user.home.planTraining', {userId: 12});
-		},function(){
-			authModel.loading = false;
-			console.log("Erro no Login (authModelService)");
-		});
-	};
+	// authModel.login = function () {
+	// 	RestangularCustom.all('login').post({username:authModel.username, password:authModel.password}).then(function(response){
+	// 		authModel.loading = false;
+	// 		authModel.set_login(response.headers('Authorization'));
+	// 		$state.go('core.user.home.planTraining', {userId: 12});
+	// 	},function(){
+	// 		authModel.loading = false;
+	// 		console.log("Erro no Login (authModelService)");
+	// 	});
+	// };
 
 	authModel.logout = function () {
-		authModel.reset_login();
+		// authModel.reset_login();
 		$state.go('login');
 		console.log("logout passou");
 	};
@@ -77646,8 +76281,8 @@ module.exports = function ($state,$cookies, RestangularCustom) {
 	return authModel;
 };
 
-},{}],42:[function(require,module,exports){
-module.exports = function($scope, coreEventsService, RestangularCustom, $mdDialog, $mdToast, $animate) {
+},{}],41:[function(require,module,exports){
+module.exports = function($scope, coreEventsService, $mdDialog, $mdToast, $animate) {
 	var coreEvents = $scope.coreEvents = coreEventsService;
 	// $scope.user = RestangularCustom.all('usuario').getList().$object;
 	$scope.doSecondaryAction = function(event) {
@@ -77679,7 +76314,7 @@ module.exports = function($scope, coreEventsService, RestangularCustom, $mdDialo
 
 };
 
-},{}],43:[function(require,module,exports){
+},{}],42:[function(require,module,exports){
 (function (Buffer){
 
 module.exports = function ($scope,$mdDialog, coreEventsService, authModelService) {
@@ -77716,7 +76351,7 @@ module.exports = function ($scope,$mdDialog, coreEventsService, authModelService
 };
 
 }).call(this,require("buffer").Buffer)
-},{"buffer":1}],44:[function(require,module,exports){
+},{"buffer":1}],43:[function(require,module,exports){
 (function (Buffer){
 
 module.exports = function($scope,$mdDialog, $mdToast,$animate) {
@@ -77762,7 +76397,7 @@ module.exports = function($scope,$mdDialog, $mdToast,$animate) {
 };
 
 }).call(this,require("buffer").Buffer)
-},{"buffer":1}],45:[function(require,module,exports){
+},{"buffer":1}],44:[function(require,module,exports){
 module.exports = function($scope, coreEventsService,$state,$stateParams,$mdDialog) {
 	$scope.onUCUploadComplete = function (info){
 		console.log(info);
@@ -77782,7 +76417,7 @@ module.exports = function($scope, coreEventsService,$state,$stateParams,$mdDialo
 	};
 };
 
-},{}],46:[function(require,module,exports){
+},{}],45:[function(require,module,exports){
 module.exports = function($scope, coreEventsService,$state,$stateParams,$mdDialog) {
 	$scope.duracao=2;
 	$scope.frequencia=3;
@@ -77798,7 +76433,7 @@ module.exports = function($scope, coreEventsService,$state,$stateParams,$mdDialo
 
 };
 
-},{}],47:[function(require,module,exports){
+},{}],46:[function(require,module,exports){
 (function (Buffer){
 
 module.exports = {
@@ -77847,17 +76482,16 @@ module.exports = {
 
 
 }).call(this,require("buffer").Buffer)
-},{"buffer":1}],48:[function(require,module,exports){
+},{"buffer":1}],47:[function(require,module,exports){
 module.exports = angular.module('core',[])
 		.controller('headerController', require('./controllers/headerController.js'))
 		.controller('searchController', require('./controllers/searchController.js'))
 		.controller('searchDialogController', require('./controllers/searchDialogController.js'))
 		.controller('asideController', require('./controllers/asideController.js'))
 		.controller('trainDialogController', require('./controllers/trainDialogController.js'))
-		.factory('coreEventsService', require('./services/coreEventsService.js'))
-		.factory('RestangularCustom', require('./services/restangularCustom.js'));
+		.factory('coreEventsService', require('./services/coreEventsService.js'));
 
-},{"./controllers/asideController.js":42,"./controllers/headerController.js":43,"./controllers/searchController.js":44,"./controllers/searchDialogController.js":45,"./controllers/trainDialogController.js":46,"./services/coreEventsService.js":49,"./services/restangularCustom.js":50}],49:[function(require,module,exports){
+},{"./controllers/asideController.js":41,"./controllers/headerController.js":42,"./controllers/searchController.js":43,"./controllers/searchDialogController.js":44,"./controllers/trainDialogController.js":45,"./services/coreEventsService.js":48}],48:[function(require,module,exports){
 module.exports = function () {
 	var eventsService = {
 		search: false,
@@ -77885,46 +76519,7 @@ module.exports = function () {
 	return eventsService;
 };
 
-},{}],50:[function(require,module,exports){
-module.exports = function ($state,$location,Restangular) {
-	return Restangular.withConfig(function(RestangularConfigurer){
-		RestangularConfigurer.setErrorInterceptor(function (response) {
-			// Redirect the user to the login page if they are not logged in.
-			// if (response.status == '403' && response.data.detail == 'Authentication credentials were not provided.') {
-			if (response.status == '401') {
-				// $state.go('base.home', {userId: 12});
-				// $location.url("/login");
-				console.log("erro 401 nao autorizado");
-			}
-			// Redirect the user on a 404.
-			if (response.status == '404') {
-				// Redirect to a 404 page.
-				console.log("error 404");
-				// $state.go('base.home', {userId: 12});
-				// window.location.href = '/#/';
-			}
-			return response;
-		});
-		RestangularConfigurer.setBaseUrl('/api/v1');
-		RestangularConfigurer.setFullResponse(true);
-		// RestangularConfigurer.setDefaultHeaders({'Authorization': 'Basic OmJkMDRmNGI3NWJiMTR2ZWNjYWZjYmV0NGQyZG1kNjQ1Zm0ycGhiZTg='});
-		RestangularConfigurer.setDefaultRequestParams('jsonp', {callback: 'JSON_CALLBACK'});
-		RestangularConfigurer.addResponseInterceptor(function(data, operation, what, url, response, deferred) {
-			var extractedData;
-				if (operation === "getList") {
-					extractedData = data.result.role;
-					console.log(response);
-					extractedData.error = data.error;
-					extractedData.paging = data.paging;
-				} else {
-					extractedData = data.result;
-				}
-				return extractedData;
-		});
-	});
-};
-
-},{}],51:[function(require,module,exports){
+},{}],49:[function(require,module,exports){
 module.exports = function($scope, coreEventsService,$state,$stateParams,$mdDialog) {
 	$scope.hide = function() {
 		$mdDialog.hide();
@@ -77937,13 +76532,13 @@ module.exports = function($scope, coreEventsService,$state,$stateParams,$mdDialo
 	};
 };
 
-},{}],52:[function(require,module,exports){
+},{}],50:[function(require,module,exports){
 module.exports = function($scope) {
 	$scope.duracao = 3;
 	$scope.frequencia =4;
 };
 
-},{}],53:[function(require,module,exports){
+},{}],51:[function(require,module,exports){
 (function (Buffer){
 
 module.exports = function($scope,$timeout,$q,$log, coreEventsService,$state,$stateParams,$mdDialog) {
@@ -78162,17 +76757,17 @@ module.exports = function($scope,$timeout,$q,$log, coreEventsService,$state,$sta
 };
 
 }).call(this,require("buffer").Buffer)
-},{"buffer":1}],54:[function(require,module,exports){
+},{"buffer":1}],52:[function(require,module,exports){
 module.exports = function($scope) {
 
 };
 
-},{}],55:[function(require,module,exports){
+},{}],53:[function(require,module,exports){
 module.exports = function ($scope) {
 
 };
 
-},{}],56:[function(require,module,exports){
+},{}],54:[function(require,module,exports){
 module.exports = function($scope, coreEventsService,$state,$stateParams,$mdDialog) {
 	$scope.hide = function() {
 		$mdDialog.hide();
@@ -78193,7 +76788,7 @@ module.exports = function($scope, coreEventsService,$state,$stateParams,$mdDialo
 
 };
 
-},{}],57:[function(require,module,exports){
+},{}],55:[function(require,module,exports){
 module.exports =  function($scope,$mdBottomSheet,$timeout, coreEventsService,$state,$stateParams) {
 	$scope.params = $stateParams;
 	$scope.state = $state.current;
@@ -78201,9 +76796,9 @@ module.exports =  function($scope,$mdBottomSheet,$timeout, coreEventsService,$st
 	// $scope.eventsService= eventsService;
 };
 
-},{}],58:[function(require,module,exports){
-arguments[4][54][0].apply(exports,arguments)
-},{"dup":54}],59:[function(require,module,exports){
+},{}],56:[function(require,module,exports){
+arguments[4][52][0].apply(exports,arguments)
+},{"dup":52}],57:[function(require,module,exports){
 module.exports = function($scope) {
 	$scope.train_menu= {menu: false};
 	$scope.close_train_menu = function(){
@@ -78215,7 +76810,7 @@ module.exports = function($scope) {
 
 };
 
-},{}],60:[function(require,module,exports){
+},{}],58:[function(require,module,exports){
 module.exports = angular.module('train',[])
 		.controller('listTrainingController', require('./controllers/listTrainingController.js'))
 		.controller('trainingTrainingController', require('./controllers/trainingTrainingController.js'))
@@ -78227,7 +76822,7 @@ module.exports = angular.module('train',[])
 		.controller('insertTrainingDialogController', require('./controllers/insertTrainingDialogController.js'))
 		.controller('ImportDialogController', require('./controllers/ImportDialogController.js'));
 
-},{"./controllers/ImportDialogController.js":51,"./controllers/addPlanController.js":52,"./controllers/addTrainingController.js":53,"./controllers/collectionTrainingController.js":54,"./controllers/historyTrainingController.js":55,"./controllers/insertTrainingDialogController.js":56,"./controllers/listTrainingController.js":57,"./controllers/plansController.js":58,"./controllers/trainingTrainingController.js":59}],61:[function(require,module,exports){
+},{"./controllers/ImportDialogController.js":49,"./controllers/addPlanController.js":50,"./controllers/addTrainingController.js":51,"./controllers/collectionTrainingController.js":52,"./controllers/historyTrainingController.js":53,"./controllers/insertTrainingDialogController.js":54,"./controllers/listTrainingController.js":55,"./controllers/plansController.js":56,"./controllers/trainingTrainingController.js":57}],59:[function(require,module,exports){
 (function (Buffer){
 
 module.exports = {
@@ -78346,22 +76941,22 @@ module.exports = {
 };
 
 }).call(this,require("buffer").Buffer)
-},{"buffer":1}],62:[function(require,module,exports){
+},{"buffer":1}],60:[function(require,module,exports){
 module.exports = function($scope) {
  $scope.labels = ["Dias Decorridos", "Dias Restantes"];
   $scope.data = [14,7];
 };
 
-},{}],63:[function(require,module,exports){
-arguments[4][54][0].apply(exports,arguments)
-},{"dup":54}],64:[function(require,module,exports){
+},{}],61:[function(require,module,exports){
+arguments[4][52][0].apply(exports,arguments)
+},{"dup":52}],62:[function(require,module,exports){
 module.exports = angular.module('user',[])
 		.controller('planController', require('./controllers/planController.js'))
 		.controller('scheduleController', require('./controllers/scheduleController.js'));
 		// .factory('userModel', require('./services/userModel.js'))
 		// .factory('RestangularCustom', require('./services/restangularCustom.js'));
 
-},{"./controllers/planController.js":62,"./controllers/scheduleController.js":63}],65:[function(require,module,exports){
+},{"./controllers/planController.js":60,"./controllers/scheduleController.js":61}],63:[function(require,module,exports){
 (function (Buffer){
 
 module.exports = {
@@ -78422,4 +77017,4 @@ module.exports = {
 };
 
 }).call(this,require("buffer").Buffer)
-},{"buffer":1}]},{},[26]);
+},{"buffer":1}]},{},[25]);

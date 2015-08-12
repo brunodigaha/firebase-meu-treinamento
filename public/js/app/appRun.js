@@ -5,7 +5,7 @@ module.exports = function ($rootScope, $state,$stateParams,coreEventsService, au
 		// console.log("tostate", toState);
 		// console.log("toParam", toParams);
 		// console.log("fromParam", fromParams);
-		// coreEventsService.close_all();
+		coreEventsService.close_all();
 		// if(toState.authenticate && !authModelService.is_authenticated()){
 		// 	event.preventDefault();
 		// 	$state.go("login");

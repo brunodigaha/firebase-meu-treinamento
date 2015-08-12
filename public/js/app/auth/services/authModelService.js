@@ -1,4 +1,4 @@
-module.exports = function ($state,$cookies, RestangularCustom) {
+module.exports = function ($state,$cookies) {
 	var authModel = {
 		currentUser: {},
 		token: '',
@@ -13,11 +13,11 @@ module.exports = function ($state,$cookies, RestangularCustom) {
 		$cookies.put('token',token);
 	};
 
-	authModel.reset_login = function () {
-			RestangularCustom.setDefaultHeaders({"Authorization": ""});
-			authModel.token = "";
-			$cookies.put('token', ""); 
-	};
+	// authModel.reset_login = function () {
+	// 		RestangularCustom.setDefaultHeaders({"Authorization": ""});
+	// 		authModel.token = "";
+	// 		$cookies.put('token', ""); 
+	// };
 
 	authModel.is_authenticated = function () {
 		var cookieToken = $cookies.get('token');
@@ -45,19 +45,19 @@ module.exports = function ($state,$cookies, RestangularCustom) {
 	// };
 
 
-	authModel.login = function () {
-		RestangularCustom.all('login').post({username:authModel.username, password:authModel.password}).then(function(response){
-			authModel.loading = false;
-			authModel.set_login(response.headers('Authorization'));
-			$state.go('core.user.home.planTraining', {userId: 12});
-		},function(){
-			authModel.loading = false;
-			console.log("Erro no Login (authModelService)");
-		});
-	};
+	// authModel.login = function () {
+	// 	RestangularCustom.all('login').post({username:authModel.username, password:authModel.password}).then(function(response){
+	// 		authModel.loading = false;
+	// 		authModel.set_login(response.headers('Authorization'));
+	// 		$state.go('core.user.home.planTraining', {userId: 12});
+	// 	},function(){
+	// 		authModel.loading = false;
+	// 		console.log("Erro no Login (authModelService)");
+	// 	});
+	// };
 
 	authModel.logout = function () {
-		authModel.reset_login();
+		// authModel.reset_login();
 		$state.go('login');
 		console.log("logout passou");
 	};

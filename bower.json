@@ -23,7 +23,6 @@
     "modernizr": "~2.8.3",
     "holderjs": "~2.7.1",
     "angular-cookies": "~1.4.1",
-    "restangular": "~1.5.1",
     "angular-holderjs": "~1.1.0",
     "angular-material": "0.10.1-rc1",
     "angular-messages": "~1.4.1",

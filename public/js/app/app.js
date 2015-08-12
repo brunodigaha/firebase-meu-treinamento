@@ -8,7 +8,6 @@ angular
 	require('angularBreadcrumb').name,
 	require('angularSortableView').name,
 	require('angularScroll').name,
-	require('restAngular').name,
 	require('angularCookies').name,
 	require('angularMessages').name,
 	require('angularIcons').name,
@@ -23,6 +22,7 @@ angular
 	require('./user').name,
 	require('./train').name
 ])
+.constant('FBURL', 'https://vitta.firebaseio.com')
 .config(require('./appRoutes.js'))
 .run(require('./appRun.js'));
 

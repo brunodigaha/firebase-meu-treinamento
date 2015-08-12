@@ -1,4 +1,4 @@
-module.exports = function($scope, coreEventsService, RestangularCustom, $mdDialog, $mdToast, $animate) {
+module.exports = function($scope, coreEventsService, $mdDialog, $mdToast, $animate) {
 	var coreEvents = $scope.coreEvents = coreEventsService;
 	// $scope.user = RestangularCustom.all('usuario').getList().$object;
 	$scope.doSecondaryAction = function(event) {

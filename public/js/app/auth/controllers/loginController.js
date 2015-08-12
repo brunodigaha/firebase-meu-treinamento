@@ -1,12 +1,12 @@
-module.exports = function ($scope,$timeout, authModelService,$firebaseArray) {
+module.exports = function ($scope,$timeout, authModelService,$firebaseArray,FBURL) {
 	var userModel = $scope.userModel = authModelService;
-	// var URL = new Firebase("https://vitta.firebaseio.com/");
-	// $scope.users  = $firebaseArray(URL);
-	// $scope.addUser = function(){
-	// 	$scope.users.$add({
-	// 		nome: $scope.newUserName
-	// 	});
-	// };
+	var URL = new Firebase(FBURL);
+	$scope.users  = $firebaseArray(URL);
+	$scope.addUser = function(){
+		$scope.users.$add({
+			nome: $scope.newUserName
+		});
+	};
 	// $scope.removeUser = function(user){
 	// 	$scope.users.$remove(user);
 	// };

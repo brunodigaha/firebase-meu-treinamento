@@ -4,5 +4,4 @@ module.exports = angular.module('core',[])
 		.controller('searchDialogController', require('./controllers/searchDialogController.js'))
 		.controller('asideController', require('./controllers/asideController.js'))
 		.controller('trainDialogController', require('./controllers/trainDialogController.js'))
-		.factory('coreEventsService', require('./services/coreEventsService.js'))
-		.factory('RestangularCustom', require('./services/restangularCustom.js'));
+		.factory('coreEventsService', require('./services/coreEventsService.js'));
