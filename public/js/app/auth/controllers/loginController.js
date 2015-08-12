@@ -1,21 +1,23 @@
 module.exports = function ($scope,$timeout,$location, authModelService,$firebaseArray,FBURL) {
-	// var userModel = $scope.userModel = authModelService;
 	$scope.email = null;
 	$scope.password = null;
-	var URL = new Firebase(FBURL);
-	$scope.users  = $firebaseArray(URL);
-	$scope.addUser = function(){
-		$scope.users.$add({
-			nome: $scope.newUserName
-		});
-	};
+
+	// var URL = new Firebase(FBURL);
+	// $scope.users  = $firebaseArray(URL);
+	// $scope.addUser = function(){
+	// 	$scope.users.$add({
+	// 		nome: $scope.newUserName
+	// 	});
+	// };
 	// $scope.removeUser = function(user){
 	// 	$scope.users.$remove(user);
 	// };
+	
 	// syncObject.$bindTo($scope,"data");
 	// $scope.data = $firebaseObject(URL);
 	// $scope.items=$firebase(newFirebase(URL+'/items'));
 	// $scope.data.$add({nome:"Bruno Alexandre"});
+	
 	$scope.login = function () {
 		if ($scope.email && $scope.password){
 			$scope.loading = true;
@@ -25,9 +27,6 @@ module.exports = function ($scope,$timeout,$location, authModelService,$firebase
 			}, function(err) {
 				$scope.err = errMessage(err);
 			});
-			// console.log($scope.email, $scope.password);
-			// console.log(userModel.username, userModel.password);
-			// $timeout(authModelService.login,1000);
 		}
 	};
 };

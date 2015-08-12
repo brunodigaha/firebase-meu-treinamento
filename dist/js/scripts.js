@@ -54185,23 +54185,25 @@ module.exports = {
 }).call(this,require("buffer").Buffer)
 },{"buffer":1}],38:[function(require,module,exports){
 module.exports = function ($scope,$timeout,$location, authModelService,$firebaseArray,FBURL) {
-	// var userModel = $scope.userModel = authModelService;
 	$scope.email = null;
 	$scope.password = null;
-	var URL = new Firebase(FBURL);
-	$scope.users  = $firebaseArray(URL);
-	$scope.addUser = function(){
-		$scope.users.$add({
-			nome: $scope.newUserName
-		});
-	};
+
+	// var URL = new Firebase(FBURL);
+	// $scope.users  = $firebaseArray(URL);
+	// $scope.addUser = function(){
+	// 	$scope.users.$add({
+	// 		nome: $scope.newUserName
+	// 	});
+	// };
 	// $scope.removeUser = function(user){
 	// 	$scope.users.$remove(user);
 	// };
+	
 	// syncObject.$bindTo($scope,"data");
 	// $scope.data = $firebaseObject(URL);
 	// $scope.items=$firebase(newFirebase(URL+'/items'));
 	// $scope.data.$add({nome:"Bruno Alexandre"});
+	
 	$scope.login = function () {
 		if ($scope.email && $scope.password){
 			$scope.loading = true;
@@ -54211,9 +54213,6 @@ module.exports = function ($scope,$timeout,$location, authModelService,$firebase
 			}, function(err) {
 				$scope.err = errMessage(err);
 			});
-			// console.log($scope.email, $scope.password);
-			// console.log(userModel.username, userModel.password);
-			// $timeout(authModelService.login,1000);
 		}
 	};
 };
@@ -54396,7 +54395,7 @@ module.exports = function($scope,$mdDialog, $mdToast,$animate) {
 		$mdDialog.show({
 			controller: 'searchDialogController',
 			// templateUrl: 'dialog1.tmpl.html',
-			template: Buffer("","base64"),
+			template: Buffer("CjxtZC1kaWFsb2cgYXJpYS1sYWJlbD0iTWFuZ28gKEZydWl0KSI+CiAgPG1kLXRvb2xiYXIgbWQtdGhlbWU9ImRlZmF1bHQiPiAKICAgIDxkaXYgY2xhc3M9Im1kLXRvb2xiYXItdG9vbHMiPgogICAgICA8aDE+Q2FkYXN0cmFyIE5vdm8gQWx1bm88L2gxPjxzcGFuIGZsZXg9IiI+PC9zcGFuPgogICAgICA8bWQtYnV0dG9uIG5nLWNsaWNrPSJhbnN3ZXIoJ25vdCBhcHBsaWNhYmxlJykiPkNhbmNlbGFyPC9tZC1idXR0b24+CiAgICAgIDwhLS0gbmctbWQtaWNvbihpY29uPSJjbG9zZSIgbmctY2xpY2s9ImFuc3dlcignbm90IGFwcGxpY2FibGUnKSIgc3R5bGU9ImZpbGw6d2hpdGUiIHNpemU9IjI1IiktLT4KICAgIDwvZGl2PgogIDwvbWQtdG9vbGJhcj4KICA8bWQtZGlhbG9nLWNvbnRlbnQ+CiAgICA8c2VjdGlvbiBjbGFzcz0ibmV3LXVzZXIiPgogICAgICA8IS0tIG1kLXRvb2xiYXIubWQtcHJpbWFyeS0tPgogICAgICA8IS0tIAkubWQtdG9vbGJhci10b29scy0tPgogICAgICA8IS0tIAkJaDIubWQtZmxleCBDYWRhc3RyYXIgQWx1bm8tLT4KICAgICAgPCEtLSBtZC1jb250ZW50KG1kLXRoZW1lPSJibHVlLWdyZXkiKS0tPgogICAgICA8c2VjdGlvbiBjbGFzcz0iYXZhdGFyIj48aW1nIG5nLWlmPSIhaW1hZ2UiIGNsYXNzPSJpY29uLWF2YXRhciIvPjxpbWcgbmctc3JjPSJ7e2ltYWdlfX0iIG5nLWlmPSJpbWFnZSIgY2xhc3M9ImltZy1yZXNwb25zaXZlIGltZy1zZWxlY3RlZCIvPgogICAgICAgIDx1cGxvYWRjYXJlLXdpZGdldCBuZy1tb2RlbD0ib2JqZWN0LmltYWdlLmluZm8udXVpZCIgZGF0YS1wdWJsaWMta2V5PSJlYjM5YzVkZWY2NTdmY2Q4ODk0NiIgZGF0YS1sb2NhbGU9InB0IiBkYXRhLXRhYnM9ImZpbGUgZmFjZWJvb2sgZ2RyaXZlIGRyb3Bib3ggaW5zdGFncmFtIGV2ZXJub3RlIGZsaWNrciBza3lkcml2ZSIgZGF0YS1pbWFnZXMtb25seT0idHJ1ZSIgZGF0YS1wYXRoLXZhbHVlPSJ0cnVlIiBkYXRhLXByZXZpZXctc3RlcD0idHJ1ZSIgZGF0YS1jbGVhcmFibGU9InRydWUiIGRhdGEtbXVsdGlwbGU9ImZhbHNlIiBkYXRhLWNyb3A9ImZyZWUiIG9uLXVwbG9hZC1jb21wbGV0ZT0ib25VQ1VwbG9hZENvbXBsZXRlKGluZm8pIiBvbi13aWRnZXQtcmVhZHk9Im9uVUNXaWRnZXRSZWFkeSh3aWRnZXQpIiB2YWx1ZT0ie3sgb2JqZWN0LmltYWdlLmluZm8uY2RuVXJsIH19Ij48L3VwbG9hZGNhcmUtd2lkZ2V0PgogICAgICA8L3NlY3Rpb24+CiAgICAgIDxzZWN0aW9uIGNsYXNzPSJhdHRyaWJ1dGVzIj4KICAgICAgICA8bWQtaW5wdXQtY29udGFpbmVyPgogICAgICAgICAgPGxhYmVsPk5vbWUgQ29tcGxldG88L2xhYmVsPgogICAgICAgICAgPCEtLSBpbnB1dChuZy1tb2RlbD0iaW1hZ2UiKS0tPgogICAgICAgICAgPGlucHV0IG5nLW1vZGVsPSJzZWFyY2hNb2RlbC5ub21lIi8+CiAgICAgICAgPC9tZC1pbnB1dC1jb250YWluZXI+CiAgICAgICAgPG1kLWlucHV0LWNvbnRhaW5lcj4KICAgICAgICAgIDxsYWJlbD5UZWxlZm9uZTwvbGFiZWw+CiAgICAgICAgICA8aW5wdXQgdHlwZT0idGVsIiBuZy1tb2RlbD0ic2VhcmNoTW9kZWwuZW1haWwiLz4KICAgICAgICA8L21kLWlucHV0LWNvbnRhaW5lcj4KICAgICAgICA8bWQtaW5wdXQtY29udGFpbmVyPgogICAgICAgICAgPGxhYmVsPkRhdGEgZGUgTmFzY2ltZW50bzwvbGFiZWw+CiAgICAgICAgICA8aW5wdXQgdHlwZT0iZGF0ZSIgbmctbW9kZWw9InNlYXJjaE1vZGVsLm5hc2NpbWVudG8iLz4KICAgICAgICA8L21kLWlucHV0LWNvbnRhaW5lcj4KICAgICAgPC9zZWN0aW9uPgogICAgPC9zZWN0aW9uPgogIDwvbWQtZGlhbG9nLWNvbnRlbnQ+CiAgPGRpdiBsYXlvdXQ9InJvdyIgY2xhc3M9Im1kLWFjdGlvbnMiPjxzcGFuIGZsZXg9IiI+PC9zcGFuPgogICAgPG1kLWJ1dHRvbiBuZy1jbGljaz0iYW5zd2VyKCdub3QgdXNlZnVsJykiIGNsYXNzPSJtZC1wcmltYXJ5Ij5DYW5jZWxhcjwvbWQtYnV0dG9uPgogICAgPG1kLWJ1dHRvbiBuZy1jbGljaz0iYW5zd2VyKCd1c2VmdWwnKSIgY2xhc3M9Im1kLXByaW1hcnkgYnV0dG9uLXNpbHZlciI+Q2FkYXN0cmFyIFVzdcOhcmlvPC9tZC1idXR0b24+CiAgPC9kaXY+CjwvbWQtZGlhbG9nPg==","base64"),
 			parent: angular.element(document.body),
 			targetEvent: ev,
 		})
