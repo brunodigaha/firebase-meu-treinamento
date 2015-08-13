@@ -54173,7 +54173,7 @@ module.exports = {
 						}
 					},
 					controller: 'loginController',
-					template: Buffer("CjxkaXY+CiAgPGlucHV0IHR5cGU6InRleHQ9InR5cGU6InRleHQiIG5nLW1vZGVsPSJuZXdVc2VyTmFtZSIvPgogIDxidXR0b24gbmctY2xpY2s9ImFkZFVzZXIoKTsiPitVc2VyPC9idXR0b24+CiAgPHA+e3tkYXRhIHwganNvbn19PC9wPgogIDxkaXYgbmctcmVwZWF0PSJ1c2VyIGluIHVzZXJzIiBuZy1jbGljaz0icmVtb3ZlVXNlcih1c2VyKTsiPnt7dXNlci5ub21lfX08L2Rpdj4KPC9kaXY+CjxzZWN0aW9uIGNsYXNzPSJsb2dpbi13cmFwIj4KICA8c2VjdGlvbiBjbGFzcz0ibG9naW4iPgogICAgPGZvcm0gbmFtZT0ibG9naW5Gb3JtIj4KICAgICAgPG1kLWlucHV0LWNvbnRhaW5lcj4KICAgICAgICA8bGFiZWw+TG9naW48L2xhYmVsPgogICAgICAgIDxpbnB1dCB0eXBlPSJlbWFpbCIgcmVxdWlyZWQ9IiIgbmFtZT0iZW1haWwiIG5nLW1vZGVsPSJlbWFpbCIvPgogICAgICAgIDxkaXYgbmctbWVzc2FnZXM9ImxvZ2luRm9ybS5lbWFpbC4kZXJyb3IiIHJvbGU9ImFsZXJ0Ij4KICAgICAgICAgIDxkaXYgbmctaWY9InNob3dSZXF1aXJlZEVycm9yIj4KICAgICAgICAgICAgPGRpdiBuZy1tZXNzYWdlPSJyZXF1aXJlZCI+RXN0ZSBjYW1wbyDDqSBvYnJpZ2F0w7NyaW8uPC9kaXY+CiAgICAgICAgICA8L2Rpdj4KICAgICAgICA8L2Rpdj4KICAgICAgPC9tZC1pbnB1dC1jb250YWluZXI+CiAgICAgIDxtZC1pbnB1dC1jb250YWluZXI+CiAgICAgICAgPGxhYmVsPlNlbmhhPC9sYWJlbD4KICAgICAgICA8aW5wdXQgdHlwZT0icGFzc3dvcmQiIHJlcXVpcmVkPSIiIG5hbWU9InBhc3N3b3JkIiBuZy1tb2RlbD0icGFzc3dvcmQiLz4KICAgICAgICA8ZGl2IG5nLW1lc3NhZ2VzPSJsb2dpbkZvcm0ucGFzc3dvcmQuJGVycm9yIiByb2xlPSJhbGVydCI+CiAgICAgICAgICA8ZGl2IG5nLWlmPSJzaG93UmVxdWlyZWRFcnJvciI+CiAgICAgICAgICAgIDxkaXYgbmctbWVzc2FnZT0icmVxdWlyZWQiPkVzdGUgY2FtcG8gw6kgb2JyaWdhdMOzcmlvLjwvZGl2PgogICAgICAgICAgPC9kaXY+CiAgICAgICAgPC9kaXY+CiAgICAgIDwvbWQtaW5wdXQtY29udGFpbmVyPgogICAgICA8bWQtcHJvZ3Jlc3MtY2lyY3VsYXIgbmctaWY9ImxvYWRpbmciIG1kLW1vZGU9ImluZGV0ZXJtaW5hdGUiIHZhbHVlPSIuLi4iIG1kLWRpYW1ldGVyPSIyMCI+PC9tZC1wcm9ncmVzcy1jaXJjdWxhcj4KICAgICAgPG1kLWJ1dHRvbiBuZy1jbGljaz0ibG9naW4oKTsiIGNsYXNzPSJtZC1yYWlzZWQgbWQtcHJpbWFyeSI+RW50cmFyPC9tZC1idXR0b24+CiAgICA8L2Zvcm0+CiAgPC9zZWN0aW9uPgo8L3NlY3Rpb24+","base64")  
+					template: Buffer("CjwhLS0gZGl2LS0+CjwhLS0gCWlucHV0KHR5cGU6InRleHQiIG5nLW1vZGVsPSJuZXdVc2VyTmFtZSIpLS0+CjwhLS0gCWJ1dHRvbihuZy1jbGljaz0iYWRkVXNlcigpOyIpICtVc2VyLS0+CjwhLS0gCXAge3tkYXRhIHwganNvbn19LS0+CjwhLS0gCWRpdihuZy1yZXBlYXQ9InVzZXIgaW4gdXNlcnMiIG5nLWNsaWNrPSJyZW1vdmVVc2VyKHVzZXIpOyIpIHt7dXNlci5ub21lfX0tLT4KPHNlY3Rpb24gY2xhc3M9ImxvZ2luLXdyYXAiPgogIDxzZWN0aW9uIGNsYXNzPSJsb2dpbiI+CiAgICA8Zm9ybSBuYW1lPSJsb2dpbkZvcm0iPgogICAgICA8bWQtaW5wdXQtY29udGFpbmVyPgogICAgICAgIDxsYWJlbD5FbWFpbDwvbGFiZWw+CiAgICAgICAgPGlucHV0IHR5cGU9ImVtYWlsIiByZXF1aXJlZD0iIiBuYW1lPSJlbWFpbCIgbmctbW9kZWw9ImVtYWlsIi8+CiAgICAgICAgPGRpdiBuZy1tZXNzYWdlcz0ibG9naW5Gb3JtLmVtYWlsLiRlcnJvciIgcm9sZT0iYWxlcnQiPgogICAgICAgICAgPGRpdiBuZy1pZj0ic2hvd1JlcXVpcmVkRXJyb3IiPgogICAgICAgICAgICA8ZGl2IG5nLW1lc3NhZ2U9InJlcXVpcmVkIj5Fc3RlIGNhbXBvIMOpIG9icmlnYXTDs3Jpby48L2Rpdj4KICAgICAgICAgIDwvZGl2PgogICAgICAgIDwvZGl2PgogICAgICA8L21kLWlucHV0LWNvbnRhaW5lcj4KICAgICAgPG1kLWlucHV0LWNvbnRhaW5lcj4KICAgICAgICA8bGFiZWw+U2VuaGE8L2xhYmVsPgogICAgICAgIDxpbnB1dCB0eXBlPSJwYXNzd29yZCIgcmVxdWlyZWQ9IiIgbmFtZT0icGFzc3dvcmQiIG5nLW1vZGVsPSJwYXNzd29yZCIvPgogICAgICAgIDxkaXYgbmctbWVzc2FnZXM9ImxvZ2luRm9ybS5wYXNzd29yZC4kZXJyb3IiIHJvbGU9ImFsZXJ0Ij4KICAgICAgICAgIDxkaXYgbmctaWY9InNob3dSZXF1aXJlZEVycm9yIj4KICAgICAgICAgICAgPGRpdiBuZy1tZXNzYWdlPSJyZXF1aXJlZCI+RXN0ZSBjYW1wbyDDqSBvYnJpZ2F0w7NyaW8uPC9kaXY+CiAgICAgICAgICA8L2Rpdj4KICAgICAgICA8L2Rpdj4KICAgICAgPC9tZC1pbnB1dC1jb250YWluZXI+CiAgICAgIDxzZWN0aW9uIGNsYXNzPSJsb2dpbi1mb290ZXIiPgogICAgICAgIDxzZWN0aW9uIGNsYXNzPSJpbmZvLWxvZ2luIj4KICAgICAgICAgIDxzZWN0aW9uIGNsYXNzPSJwcm9ncmVzcy1sb2dpbiI+CiAgICAgICAgICAgIDxtZC1wcm9ncmVzcy1jaXJjdWxhciBuZy1zaG93PSJsb2FkaW5nIiBtZC1tb2RlPSJpbmRldGVybWluYXRlIiB2YWx1ZT0iLi4uIiBtZC1kaWFtZXRlcj0iMjUiPjwvbWQtcHJvZ3Jlc3MtY2lyY3VsYXI+CiAgICAgICAgICA8L3NlY3Rpb24+CiAgICAgICAgICA8c2VjdGlvbiBuZy1zaG93PSJlcnJvciIgY2xhc3M9ImVycm9yLWxvZ2luIj48c3BhbiBuZy1iaW5kPSJlcnJvciI+PC9zcGFuPjwvc2VjdGlvbj4KICAgICAgICA8L3NlY3Rpb24+CiAgICAgICAgPHNlY3Rpb24gY2xhc3M9ImJ1dHRvbi1sb2dpbiI+CiAgICAgICAgICA8bWQtYnV0dG9uIG5nLWNsaWNrPSJsb2dpbigpOyIgY2xhc3M9Im1kLXJhaXNlZCBtZC1wcmltYXJ5Ij5FbnRyYXIgbm8gU2lzdGVtYTwvbWQtYnV0dG9uPgogICAgICAgIDwvc2VjdGlvbj4KICAgICAgPC9zZWN0aW9uPgogICAgPC9mb3JtPgogIDwvc2VjdGlvbj4KPC9zZWN0aW9uPg==","base64")  
 				},
 			}
 		}
@@ -54187,6 +54187,7 @@ module.exports = {
 module.exports = function ($scope,$timeout,$location, authModelService,$firebaseArray,FBURL) {
 	$scope.email = null;
 	$scope.password = null;
+	$scope.error = null;
 
 	// var URL = new Firebase(FBURL);
 	// $scope.users  = $firebaseArray(URL);
@@ -54198,20 +54199,35 @@ module.exports = function ($scope,$timeout,$location, authModelService,$firebase
 	// $scope.removeUser = function(user){
 	// 	$scope.users.$remove(user);
 	// };
-	
+
 	// syncObject.$bindTo($scope,"data");
 	// $scope.data = $firebaseObject(URL);
 	// $scope.items=$firebase(newFirebase(URL+'/items'));
 	// $scope.data.$add({nome:"Bruno Alexandre"});
-	
+
 	$scope.login = function () {
+		$scope.error = null;
 		if ($scope.email && $scope.password){
 			$scope.loading = true;
 			authModelService.$authWithPassword({ email: $scope.email, password: $scope.password }, {rememberMe: true})
 			.then(function(/* user */) {
 				$location.path('/user/12/training-history');
-			}, function(err) {
-				$scope.err = errMessage(err);
+			}, function(error) {
+				$scope.loading = false;
+				switch (error.code) {
+					case "INVALID_EMAIL":
+						$scope.error ="Email Inválido";
+					break;
+					case "INVALID_PASSWORD":
+						$scope.error ="Senha Inválida";
+						$scope.password = null;
+					break;
+					case "INVALID_USER":
+						$scope.error ="Conta Inexistente";
+					break;
+					default:
+						$scope.error ="Erro ao realizar o Login " + error;
+				} 
 			});
 		}
 	};

@@ -1,15 +1,14 @@
 
-<div>
-  <input type:"text="type:"text" ng-model="newUserName"/>
-  <button ng-click="addUser();">+User</button>
-  <p>{{data | json}}</p>
-  <div ng-repeat="user in users" ng-click="removeUser(user);">{{user.nome}}</div>
-</div>
+<!-- div-->
+<!-- 	input(type:"text" ng-model="newUserName")-->
+<!-- 	button(ng-click="addUser();") +User-->
+<!-- 	p {{data | json}}-->
+<!-- 	div(ng-repeat="user in users" ng-click="removeUser(user);") {{user.nome}}-->
 <section class="login-wrap">
   <section class="login">
     <form name="loginForm">
       <md-input-container>
-        <label>Login</label>
+        <label>Email</label>
         <input type="email" required="" name="email" ng-model="email"/>
         <div ng-messages="loginForm.email.$error" role="alert">
           <div ng-if="showRequiredError">
@@ -26,8 +25,17 @@
           </div>
         </div>
       </md-input-container>
-      <md-progress-circular ng-if="loading" md-mode="indeterminate" value="..." md-diameter="20"></md-progress-circular>
-      <md-button ng-click="login();" class="md-raised md-primary">Entrar</md-button>
+      <section class="login-footer">
+        <section class="info-login">
+          <section class="progress-login">
+            <md-progress-circular ng-show="loading" md-mode="indeterminate" value="..." md-diameter="25"></md-progress-circular>
+          </section>
+          <section ng-show="error" class="error-login"><span ng-bind="error"></span></section>
+        </section>
+        <section class="button-login">
+          <md-button ng-click="login();" class="md-raised md-primary">Entrar no Sistema</md-button>
+        </section>
+      </section>
     </form>
   </section>
 </section>

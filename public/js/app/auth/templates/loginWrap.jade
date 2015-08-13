@@ -1,13 +1,13 @@
-div
-	input(type:"text" ng-model="newUserName")
-	button(ng-click="addUser();") +User
-	p {{data | json}}
-	div(ng-repeat="user in users" ng-click="removeUser(user);") {{user.nome}}
+// div
+// 	input(type:"text" ng-model="newUserName")
+// 	button(ng-click="addUser();") +User
+// 	p {{data | json}}
+// 	div(ng-repeat="user in users" ng-click="removeUser(user);") {{user.nome}}
 section.login-wrap
 	section.login
 		form(name="loginForm")
 			md-input-container
-				label Login
+				label Email
 				input(type="email",  required="", name="email", ng-model="email")
 				div(ng-messages="loginForm.email.$error" role="alert")
 					div(ng-if="showRequiredError")
@@ -18,7 +18,13 @@ section.login-wrap
 				div(ng-messages="loginForm.password.$error" role="alert")
 					div(ng-if="showRequiredError")
 						div(ng-message="required") Este campo é obrigatório.
-			md-progress-circular( ng-if="loading" md-mode="indeterminate", value="...", md-diameter="20")
-			md-button(class="md-raised md-primary"  ng-click="login();") Entrar
+			section.login-footer
+				section.info-login
+					section.progress-login
+						md-progress-circular( ng-show="loading" md-mode="indeterminate", value="...", md-diameter="25")
+					section.error-login(ng-show="error")
+						span(ng-bind="error")
+				section.button-login
+					md-button(class="md-raised md-primary"  ng-click="login();") Entrar no Sistema
 
 
