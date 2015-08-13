@@ -17391,11 +17391,11 @@ md-dialog md-dialog-content .train-dialog-wrap .train-dialog-content .action but
 .history-wrap .history-content:last-child {
   margin-right: 0%;
 }
-md-dialog md-dialog-content {
+md-dialog md-dialog-content.insert-training {
   padding: 0;
   position: relative;
 }
-md-dialog md-dialog-content .taining-dialog-content {
+md-dialog md-dialog-content.insert-training .taining-dialog-content {
   *zoom: 1;
   float: left;
   clear: none;
@@ -17405,18 +17405,18 @@ md-dialog md-dialog-content .taining-dialog-content {
   margin-right: 0%;
   box-sizing: border-box;
 }
-md-dialog md-dialog-content .taining-dialog-content:before,
-md-dialog md-dialog-content .taining-dialog-content:after {
+md-dialog md-dialog-content.insert-training .taining-dialog-content:before,
+md-dialog md-dialog-content.insert-training .taining-dialog-content:after {
   content: '';
   display: table;
 }
-md-dialog md-dialog-content .taining-dialog-content:after {
+md-dialog md-dialog-content.insert-training .taining-dialog-content:after {
   clear: both;
 }
-md-dialog md-dialog-content .taining-dialog-content:last-child {
+md-dialog md-dialog-content.insert-training .taining-dialog-content:last-child {
   margin-right: 0%;
 }
-md-dialog md-dialog-content .taining-dialog-content .open-tabs {
+md-dialog md-dialog-content.insert-training .taining-dialog-content .open-tabs {
   width: 100%;
   height: 100%;
   background-color: #fafafa;
@@ -17427,7 +17427,7 @@ md-dialog md-dialog-content .taining-dialog-content .open-tabs {
   opacity: 0.8;
   display: none;
 }
-md-dialog md-dialog-content .taining-dialog-content .way-training {
+md-dialog md-dialog-content.insert-training .taining-dialog-content .way-training {
   *zoom: 1;
   float: left;
   clear: none;
@@ -17437,18 +17437,18 @@ md-dialog md-dialog-content .taining-dialog-content .way-training {
   margin-right: 0%;
   text-align: center;
 }
-md-dialog md-dialog-content .taining-dialog-content .way-training:before,
-md-dialog md-dialog-content .taining-dialog-content .way-training:after {
+md-dialog md-dialog-content.insert-training .taining-dialog-content .way-training:before,
+md-dialog md-dialog-content.insert-training .taining-dialog-content .way-training:after {
   content: '';
   display: table;
 }
-md-dialog md-dialog-content .taining-dialog-content .way-training:after {
+md-dialog md-dialog-content.insert-training .taining-dialog-content .way-training:after {
   clear: both;
 }
-md-dialog md-dialog-content .taining-dialog-content .way-training:last-child {
+md-dialog md-dialog-content.insert-training .taining-dialog-content .way-training:last-child {
   margin-right: 0%;
 }
-md-dialog md-dialog-content .taining-dialog-content .way-add {
+md-dialog md-dialog-content.insert-training .taining-dialog-content .way-add {
   *zoom: 1;
   float: left;
   clear: none;
@@ -17457,23 +17457,23 @@ md-dialog md-dialog-content .taining-dialog-content .way-add {
   margin-left: 0%;
   margin-right: 0%;
 }
-md-dialog md-dialog-content .taining-dialog-content .way-add:before,
-md-dialog md-dialog-content .taining-dialog-content .way-add:after {
+md-dialog md-dialog-content.insert-training .taining-dialog-content .way-add:before,
+md-dialog md-dialog-content.insert-training .taining-dialog-content .way-add:after {
   content: '';
   display: table;
 }
-md-dialog md-dialog-content .taining-dialog-content .way-add:after {
+md-dialog md-dialog-content.insert-training .taining-dialog-content .way-add:after {
   clear: both;
 }
-md-dialog md-dialog-content .taining-dialog-content .way-add:last-child {
+md-dialog md-dialog-content.insert-training .taining-dialog-content .way-add:last-child {
   margin-right: 0%;
 }
-md-dialog md-dialog-content .taining-dialog-content .way-add span {
+md-dialog md-dialog-content.insert-training .taining-dialog-content .way-add span {
   font-size: 80%;
   color: #616161;
   line-height: 30px;
 }
-md-dialog md-dialog-content .taining-dialog-content .way-add ng-md-icon svg {
+md-dialog md-dialog-content.insert-training .taining-dialog-content .way-add ng-md-icon svg {
   position: relative;
   top: 30px;
   left: 10px;
