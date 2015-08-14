@@ -11326,14 +11326,11 @@ span.icon-notification:before {
   -moz-border-radius: 50%;
   -ms-border-radius: 50%;
   border-radius: 50%;
-  border: 1px solid #eee;
+  border: 1px solid #bdbdbd;
   box-sizing: border-box;
 }
 .btn {
   border: 1px solid #c0c0c0;
-}
-.square {
-  border-radius: 8%;
 }
 svg {
   max-width: 100%;
@@ -13798,13 +13795,18 @@ a:visited {
   margin-left: auto;
   margin-right: auto;
   display: block;
-  width: 60%;
+  width: 63%;
   cursor: pointer;
   cursor: hand;
 }
+@media only screen and (max-width: 1400px) {
+  .list-users img {
+    width: 73%;
+  }
+}
 @media only screen and (min-width: 1800px) {
   .list-users img {
-    width: 47%;
+    width: 52%;
   }
 }
 .list-users-open {
@@ -13981,7 +13983,7 @@ a:visited {
   box-sizing: border-box;
   text-align: left;
   margin-left: 1em;
-  margin-top: 0.4em;
+  margin-top: 0.2em;
   cursor: pointer;
 }
 .perfil .user .user-img:before,
@@ -13994,6 +13996,17 @@ a:visited {
 }
 .perfil .user .user-img:last-child {
   margin-right: 0%;
+}
+@media only screen and (min-width: 1050px) {
+  .perfil .user .user-img {
+    margin-top: 0.4em;
+  }
+}
+.perfil .user .user-img img {
+  max-width: 100%;
+  height: auto;
+  border: 1px solid #bdbdbd;
+  box-sizing: border-box;
 }
 .perfil .user .user-name {
   *zoom: 1;
@@ -14068,7 +14081,7 @@ a:visited {
   left: 0.5em;
   background-color: #fff;
   border: 1px solid #e0e0e0;
-  box-shadow: 0 2px 4px 1px rgba(0,0,0,0.1);
+  box-shadow: 0 2px 4px 1px rgba(0,0,0,0.13);
   padding: 0.5em;
   z-index: 6;
 }
@@ -14175,6 +14188,7 @@ a:visited {
   width: 100%;
   margin-left: 0%;
   margin-right: 0%;
+  box-sizing: border-box;
   padding-left: 1em;
 }
 .perfil .menu .menu-header .perfil-user:before,
@@ -14220,6 +14234,7 @@ a:visited {
   margin-left: 0%;
   margin-right: 0%;
   position: absolute;
+  color: #424242;
   font-size: 1.2em;
   margin: 0;
   top: 0.1em;
@@ -14748,6 +14763,7 @@ a:visited {
 }
 .user-admin .admin-name img {
   vertical-align: middle;
+  border: 1px solid #bdbdbd;
 }
 .user-admin .admin-name span {
   line-height: 280%;
@@ -14780,7 +14796,7 @@ a:visited {
   padding-top: 0.5em;
   background-color: #fff;
   border: 1px solid #e0e0e0;
-  box-shadow: 0 2px 4px 1px rgba(0,0,0,0.1);
+  box-shadow: 0 2px 4px 1px rgba(0,0,0,0.13);
 }
 .user-admin .options-admin:before,
 .user-admin .options-admin:after {
