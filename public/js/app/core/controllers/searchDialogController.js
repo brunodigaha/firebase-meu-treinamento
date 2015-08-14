@@ -1,11 +1,39 @@
-module.exports = function($scope, coreEventsService,$state,$stateParams,$mdDialog) {
+module.exports = function($scope,$mdToast,$mdDialog,FBURL,$window,$firebaseObject) {
+	$scope.newUser = {
+		image:null,
+		name: null,
+		surname: null,
+		birthday:null,
+		phone: null
+	};
 	$scope.onUCUploadComplete = function (info){
-		console.log(info);
-		$scope.image=info.cdnUrl;
-		console.log(info.cdnURL);
+		$scope.newUser.image = info.cdnUrl;
 		$scope.$digest();
 	};
-
+	$scope.create_user = function () {
+		if ($scope.birthday && $scope.newUser.surname && $scope.newUser.phone && $scope.newUser.name){
+			$scope.newUser.birthday = $scope.birthday.getTime();
+			var ref = new $window.Firebase(FBURL);
+			var newUser = ref.child("users");
+			newUser.push($scope.newUser,function(error)
+				 {
+					 if(error){
+						 console.log("error com salvamento"+ error);
+					 }else {
+						 console.log("salvo com sucesso");
+						 $mdDialog.hide();
+						 $mdToast.show(
+							 $mdToast.simple()
+							 .content('Aluno Cadastrado com Sucesso!')
+							 .position("top right")
+							 .hideDelay(4000)
+						 );
+					 }
+				 });
+		}else{
+			$scope.ishowRequiredError =true;
+		}
+	};
 	$scope.hide = function() {
 		$mdDialog.hide();
 	};

@@ -1,40 +1,71 @@
 
-<md-dialog aria-label="Mango (Fruit)">
-  <md-toolbar md-theme="default"> 
-    <div class="md-toolbar-tools">
-      <h1>Cadastrar Novo Aluno</h1><span flex=""></span>
-      <md-button ng-click="answer('not applicable')">Cancelar</md-button>
-      <!-- ng-md-icon(icon="close" ng-click="answer('not applicable')" style="fill:white" size="25")-->
+<md-dialog aria-label="Caixa Cadastrar Aluno">
+  <form name="newUserForm">
+    <md-toolbar md-theme="default"> 
+      <div class="md-toolbar-tools">
+        <h1>Cadastrar Novo Aluno</h1><span flex=""></span>
+        <md-button ng-click="answer('not applicable')">Cancelar</md-button>
+        <!-- ng-md-icon(icon="close" ng-click="answer('not applicable')" style="fill:white" size="25")-->
+      </div>
+    </md-toolbar>
+    <md-dialog-content>
+      <section class="new-user">
+        <section class="avatar"><img ng-if="!newUser.image" class="icon-avatar"/><img ng-src="{{newUser.image}}" ng-if="newUser.image" class="img-responsive img-selected"/>
+          <uploadcare-widget ng-model="object.image.info.uuid" data-public-key="eb39c5def657fcd88946" data-locale="pt" data-tabs="file facebook gdrive dropbox instagram evernote flickr skydrive" data-images-only="true" data-path-value="true" data-preview-step="true" data-clearable="true" data-multiple="false" data-crop="4:4" on-upload-complete="onUCUploadComplete(info)" on-widget-ready="onUCWidgetReady(widget)" value="{{ object.image.info.cdnUrl }}"></uploadcare-widget>
+        </section>
+        <section class="attributes">
+          <section class="login-name">
+            <md-input-container>
+              <label>Nome</label>
+              <input md-maxlength="20" required="required" name="name" ng-model="newUser.name"/>
+              <div ng-messages="newUserForm.name.$error" role="alert">
+                <div ng-if="ishowRequiredError">
+                  <div ng-message="required">Este campo é obrigatório.</div>
+                </div>
+                <div ng-message="md-maxlength">Nome com no máximo 30 caracteres</div>
+              </div>
+            </md-input-container>
+          </section>
+          <section class="login-surname">
+            <md-input-container>
+              <label>Sobrenome</label>
+              <input md-maxlength="20" required="required" name="surname" ng-model="newUser.surname"/>
+              <div ng-messages="newUserForm.surname.$error" role="alert">
+                <div ng-if="ishowRequiredError">
+                  <div ng-message="required">Este campo é obrigatório.</div>
+                </div>
+                <div ng-message="md-maxlength">Sobrenome com no máximo 30 caracteres</div>
+              </div>
+            </md-input-container>
+          </section>
+          <section class="login-birthday">
+            <md-input-container>
+              <label>Data de Nascimento</label>
+              <input type="date" required="required" name="birthday" ng-model="birthday"/>
+              <div ng-messages="newUserForm.birthday.$error" role="alert">
+                <div ng-if="ishowRequiredError">
+                  <div ng-message="required">Este campo é obrigatório.</div>
+                </div>
+              </div>
+            </md-input-container>
+          </section>
+          <section class="login-phone">
+            <md-input-container>
+              <label>Telefone</label>
+              <input type="number" required="required" name="phone" ng-model="newUser.phone"/>
+              <div ng-messages="newUserForm.phone.$error" role="alert">
+                <div ng-if="ishowRequiredError">
+                  <div ng-message="required">Este campo é obrigatório.</div>
+                </div>
+              </div>
+            </md-input-container>
+          </section>
+        </section>
+      </section>
+    </md-dialog-content>
+    <div layout="row" class="md-actions"><span flex=""></span>
+      <md-button ng-click="answer('not useful')" class="md-primary">Cancelar</md-button>
+      <md-button ng-click="create_user();" class="md-primary button-silver">Salvar Aluno</md-button>
     </div>
-  </md-toolbar>
-  <md-dialog-content>
-    <section class="new-user">
-      <!-- md-toolbar.md-primary-->
-      <!-- 	.md-toolbar-tools-->
-      <!-- 		h2.md-flex Cadastrar Aluno-->
-      <!-- md-content(md-theme="blue-grey")-->
-      <section class="avatar"><img ng-if="!image" class="icon-avatar"/><img ng-src="{{image}}" ng-if="image" class="img-responsive img-selected"/>
-        <uploadcare-widget ng-model="object.image.info.uuid" data-public-key="eb39c5def657fcd88946" data-locale="pt" data-tabs="file facebook gdrive dropbox instagram evernote flickr skydrive" data-images-only="true" data-path-value="true" data-preview-step="true" data-clearable="true" data-multiple="false" data-crop="free" on-upload-complete="onUCUploadComplete(info)" on-widget-ready="onUCWidgetReady(widget)" value="{{ object.image.info.cdnUrl }}"></uploadcare-widget>
-      </section>
-      <section class="attributes">
-        <md-input-container>
-          <label>Nome Completo</label>
-          <!-- input(ng-model="image")-->
-          <input ng-model="searchModel.nome"/>
-        </md-input-container>
-        <md-input-container>
-          <label>Telefone</label>
-          <input type="tel" ng-model="searchModel.email"/>
-        </md-input-container>
-        <md-input-container>
-          <label>Data de Nascimento</label>
-          <input type="date" ng-model="searchModel.nascimento"/>
-        </md-input-container>
-      </section>
-    </section>
-  </md-dialog-content>
-  <div layout="row" class="md-actions"><span flex=""></span>
-    <md-button ng-click="answer('not useful')" class="md-primary">Cancelar</md-button>
-    <md-button ng-click="answer('useful')" class="md-primary button-silver">Cadastrar Usuário</md-button>
-  </div>
+  </form>
 </md-dialog>
