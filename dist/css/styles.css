@@ -11276,6 +11276,7 @@ span.icon-notification:before {
 .content-main .content md-content.md-default-theme md-card.grid,
 .content-main-open .content md-content.md-default-theme md-card.grid {
   box-sizing: border-box;
+  border-radius: 0;
   min-height: 86vh;
 }
 @media only screen and (min-width: 400px) and (max-width: 1050px) and (orientation: portrait) {
@@ -11322,15 +11323,15 @@ span.icon-notification:before {
 .img-responsive {
   max-width: 100%;
   height: auto;
-  -webkit-border-radius: 50%;
-  -moz-border-radius: 50%;
-  -ms-border-radius: 50%;
-  border-radius: 50%;
   border: 1px solid #bdbdbd;
   box-sizing: border-box;
 }
 .btn {
   border: 1px solid #c0c0c0;
+  -webkit-border-radius: 50%;
+  -moz-border-radius: 50%;
+  -ms-border-radius: 50%;
+  border-radius: 50%;
 }
 svg {
   max-width: 100%;
@@ -13738,8 +13739,8 @@ a:visited {
   margin-left: 0%;
   margin-right: 0%;
   text-align: center;
-  margin-top: 0.3em;
-  margin-bottom: 0.3em;
+  margin-top: 0.5em;
+  margin-bottom: 2em;
 }
 .search-icon:before,
 .search-icon:after {
@@ -13752,14 +13753,24 @@ a:visited {
 .search-icon:last-child {
   margin-right: 0%;
 }
+@media only screen and (max-width: 830px) {
+  .search-icon {
+    margin-top: 0.1em;
+  }
+}
+@media only screen and (min-width: 1050px) {
+  .search-icon {
+    margin-top: 0.8em;
+  }
+}
 .search-icon img {
   margin-bottom: 1.4em;
-  margin-top: 0.7em;
+  margin-top: 0.8em;
   margin-left: auto;
   margin-right: auto;
   display: block;
-  width: 63% !important;
-  height: 63% !important;
+  width: 58% !important;
+  height: 58% !important;
   cursor: pointer;
   cursor: hand;
 }
@@ -13795,24 +13806,20 @@ a:visited {
   margin-left: auto;
   margin-right: auto;
   display: block;
-  width: 63%;
+  width: 55%;
   cursor: pointer;
   cursor: hand;
 }
-@media only screen and (max-width: 1400px) {
-  .list-users img {
-    width: 73%;
-  }
-}
 @media only screen and (min-width: 1800px) {
   .list-users img {
-    width: 52%;
+    width: 47%;
   }
 }
 .list-users-open {
   box-sizing: border-box;
   padding-left: 0.5em;
   padding-right: 0.5em;
+  margin-bottom: 1em;
 }
 .list-users-open section {
   *zoom: 1;
@@ -15624,6 +15631,7 @@ md-dialog md-dialog-content .train-dialog-wrap .train-dialog-content .action but
 }
 .edit-wrap-content md-content md-card {
   min-height: 88vh;
+  border-radius: 0;
 }
 @media only screen and (min-width: 1050px) {
   .edit-wrap-content md-content md-card {

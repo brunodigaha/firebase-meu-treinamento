@@ -1,16 +1,20 @@
 .search-icon
 	col(3/3, gutter:0)
 	text-align center
-	margin-top .3em
-	margin-bottom .3em
+	margin-top .5em
+	+below(830px)
+		margin-top .1em
+	+desktop()
+		margin-top .8em
+	margin-bottom 2em
 	img
 		margin-bottom 1.4em
-		margin-top .7em
+		margin-top .8em
 		margin-left auto
 		margin-right auto
 		display block
-		width 63% !important
-		height 63% !important
+		width 58% !important
+		height 58% !important
 		+hd()
 			width 50% !important
 			height 50% !important
@@ -25,11 +29,11 @@
 		margin-left auto
 		margin-right auto
 		display block
-		width 63%
-		+below(1400px)
-			width 73%
+		width 55%
+		// +below(1400px)
+		// 	width 67%
 		+hd()
-			width 52%
+			width 47%
 		cursor pointer
 		cursor hand
 		// +hd()
@@ -38,6 +42,7 @@
 	box-sizing border-box
 	padding-left .5em
 	padding-right .5em
+	margin-bottom 1em
 	section
 		col(1/1,cycle:1)
 		img
