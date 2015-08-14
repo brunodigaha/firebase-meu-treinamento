@@ -11098,7 +11098,7 @@ span.icon-notification:before {
   position: relative;
   left: 8.333333333333332%;
   box-sizing: border-box;
-  background-color: #fafafa;
+  background-color: #f5f5f5;
 }
 .content-main:before,
 .content-main-open:before,
@@ -11326,6 +11326,8 @@ span.icon-notification:before {
   -moz-border-radius: 50%;
   -ms-border-radius: 50%;
   border-radius: 50%;
+  border: 1px solid #eee;
+  box-sizing: border-box;
 }
 .btn {
   border: 1px solid #c0c0c0;
@@ -11354,8 +11356,8 @@ p:focus {
 button.md-button {
   text-transform: none;
   font-size: 90%;
-  padding-right: 20px;
-  padding-left: 20px;
+  padding-right: 12px;
+  padding-left: 12px;
 }
 button.md-button.sec {
   margin-right: 20px;
@@ -11403,7 +11405,7 @@ md-dialog .md-actions .button-silver {
 body {
   font-family: 'Roboto-Light';
   font-weight: 300;
-  background-color: #fafafa;
+  background-color: #f5f5f5;
   height: 100vh;
   -khtml-user-select: none;
   -moz-user-select: none;
@@ -14594,7 +14596,7 @@ a:visited {
   }
 }
 .actions button.md-button {
-  width: 38%;
+  width: 44%;
   min-width: 15px;
   min-height: 33px;
   line-height: 33px;
@@ -14603,7 +14605,7 @@ a:visited {
 }
 @media only screen and (min-width: 1050px) {
   .actions button.md-button {
-    width: 40%;
+    width: 43%;
     min-width: 15px;
     min-height: 43px;
     line-height: 43px;
