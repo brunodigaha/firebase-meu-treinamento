@@ -11323,7 +11323,7 @@ span.icon-notification:before {
 .img-responsive {
   max-width: 100%;
   height: auto;
-  border: 1px solid #bdbdbd;
+  border: 1px solid #e0e0e0;
   box-sizing: border-box;
 }
 .btn {
@@ -11386,7 +11386,7 @@ md-dialog h1 {
   font-weight: bold;
 }
 md-dialog .md-actions {
-  border-top: 1px solid #e0e0e0;
+  border-top: 1px solid #eee;
   background-color: #f5f5f5;
 }
 md-dialog .md-actions .button-silver {
@@ -13740,7 +13740,7 @@ a:visited {
   margin-right: 0%;
   text-align: center;
   margin-top: 0.5em;
-  margin-bottom: 2em;
+  margin-bottom: 1.2em;
 }
 .search-icon:before,
 .search-icon:after {
@@ -14053,7 +14053,7 @@ a:visited {
   left: 5.7em;
   top: 2.8em;
   text-align: right;
-  color: #616161;
+  color: #424242;
 }
 .perfil .user .breadcrumb:before,
 .perfil .user .breadcrumb:after {
@@ -14401,7 +14401,7 @@ a:visited {
 .perfil .menu .menu-content .plan-header .title-plan p {
   box-sizing: border-box;
   margin: 0;
-  color: #757575;
+  color: #616161;
   cursor: pointer;
   margin-top: 0.8em;
   margin-left: 0.5em;
