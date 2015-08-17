@@ -6,17 +6,17 @@ module.exports = function ($rootScope,UCURL,$location,$state,authModelService,co
 		// console.log("toParam", toParams);
 		// console.log("fromParam", fromParams);
 		coreEventsService.close_all();
-		// if(toState.authenticate && !authModelService.is_authenticated()){
-		// 	event.preventDefault();
-		// 	$state.go("login");
-		// }else if(toState.name == 'login' && authModelService.is_authenticated()) {
-		// 	event.preventDefault(); 
-		// 	$state.go('core.user', {userId:12});
-		// }
-		if(toState.name == 'login' && authModelService.$getAuth()) {
+		if(toState.authenticate && !authModelService.$getAuth()){
+			event.preventDefault();
+			$state.go("login");
+		}else if(toState.name == 'login' && authModelService.$getAuth()) {
 			event.preventDefault(); 
 			$state.go('core.user.home.planTraining', {userId:12});
 		}
+		// if(toState.name == 'login' && authModelService.$getAuth()) {
+		// 	event.preventDefault(); 
+		// 	$state.go('core.user.home.planTraining', {userId:12});
+		// }
 	});
 	$rootScope.$on('$stateChangeError',function(event, toState, toParams, fromState, fromParams, error){
 		event.preventDefault();
@@ -27,6 +27,14 @@ module.exports = function ($rootScope,UCURL,$location,$state,authModelService,co
 		}else {
 			console.log('$stateChangeError - fired when an error occurs during transition.');
 			console.log(arguments);
+		}
+	});
+
+	// event On Firebase auth
+	authModelService.$onAuth(function(authData){
+		if (authData === null){
+			$location.path("/login"); 
+			console.log("evento logout Firebase");
 		}
 	});
 
