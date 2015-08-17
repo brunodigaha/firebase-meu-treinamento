@@ -22,7 +22,10 @@ angular
 	require('./user').name,
 	require('./train').name
 ])
+//Firebase URL APP
 .constant('FBURL', 'https://vitta.firebaseio.com')
+//UploadCare URL to Images
+.constant('UCURL', 'https://www.ucarecdn.com/')
 .config(require('./appRoutes.js'))
 .run(require('./appRun.js'));
 

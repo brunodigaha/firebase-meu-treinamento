@@ -5,7 +5,7 @@ section(class="search-icon")
 	ng-md-icon(icon="keyboard_backspace" ng-if="coreEvents.search"  style="fill:grey" size="65" ng-click="coreEvents.toggle_search();")
 section(class="list-users"  ng-class="{'list-users': !coreEvents.search, 'list-users-open': coreEvents.search}")
 	section(ng-repeat="user in users_opened")
-		img(class="img-responsive" ng-src="{{user.image}}-/preview/80x80/" ui-sref-active="active" ui-sref="core.user.listTraining" alt="{{ person.name }}" holder='holder.js/60x60?auto=yes&random=yes&text=BRU')
+		img(class="img-responsive" ng-src="{{UCURL.url}}{{user.image}}-/preview/80x80/" ui-sref-active="active" ui-sref="core.user.listTraining" alt="{{ person.name }}" holder='holder.js/60x60?auto=yes&random=yes&text=BRU')
 		// img(class="img-responsive" ui-sref="core.user.training" holder='holder.js/60x60?auto=yes&theme=gray&text=BRU')
 		p(ng-show="coreEvents.search") {{user.name}} {{user.surname}}
 		ng-md-icon(icon="close" style="fill:silver" size="35" ng-show="coreEvents.search" ng-click="doSecondaryAction($event);")

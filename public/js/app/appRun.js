@@ -1,4 +1,4 @@
-module.exports = function ($rootScope,$location,$state,authModelService,coreEventsService) {
+module.exports = function ($rootScope,UCURL,$location,$state,authModelService,coreEventsService) {
 	$rootScope.$on("$stateChangeStart", function (event, toState, toParams, fromState, fromParams) {
 		// console.log('$stateChangeStart to '+toState.to+'- fired when the transition begins. toState,toParams : \n',toState, toParams);
 		// console.log("fromSate",fromState);
@@ -42,6 +42,9 @@ module.exports = function ($rootScope,$location,$state,authModelService,coreEven
 		console.log('$stateNotFound '+unfoundState.to+'  - fired when a state cannot be found by its name.');
 		console.log(unfoundState, fromState, fromParams);
 	});
+	$rootScope.UCURL = {
+		url: UCURL
+	};
 
 	// $state.transitionTo($state.current, $stateParams, {
 	// 	reload: true,

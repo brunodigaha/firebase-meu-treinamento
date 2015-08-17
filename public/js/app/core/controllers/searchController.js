@@ -20,14 +20,14 @@ module.exports = function($scope,$mdDialog, $mdToast,$animate) {
 				alert("teste");
 			});
 		}, function() {
-			// alert('Foi cancelado');
 			console.log("cancelou abrir usuario");
 		});
 	};
 	$scope.new_user = function(ev) {
 		$mdDialog.show({
 			controller: 'searchDialogController',
-			// templateUrl: 'dialog1.tmpl.html',
+			scope: $scope,
+			preserveScope: true,
 			template: fs.readFileSync(__dirname + '/../templates/searchDialogTemplate.html'),
 			parent: angular.element(document.body),
 			targetEvent: ev,

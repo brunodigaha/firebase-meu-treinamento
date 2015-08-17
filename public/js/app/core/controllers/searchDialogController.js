@@ -7,7 +7,12 @@ module.exports = function($scope,$mdToast,$mdDialog,FBURL,$window,$firebaseObjec
 		phone: null
 	};
 	$scope.onUCUploadComplete = function (info){
-		$scope.newUser.image = info.cdnUrl;
+		console.log(info);
+		if (info.cdnUrlModifiers) {
+			$scope.newUser.image = info.uuid+'/'+info.cdnUrlModifiers;
+		}else{
+			$scope.newUser.image = info.uuid+'/';
+		}
 		$scope.$digest();
 	};
 	$scope.create_user = function () {
