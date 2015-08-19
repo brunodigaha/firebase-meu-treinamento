@@ -43,7 +43,13 @@ module.exports = function ($stateProvider,$compileProvider,$animateProvider,$loc
 				{url:'/collection-training'},require('./train/trainRoutes.js').train.collectionTraining))
 
 		.state('login',angular.extend(
-				{url:'/login'},require('./auth/authRoutes.js').auth.login));
+				{url:'/login'},require('./auth/authRoutes.js').auth.login))
+
+		.state('administration',angular.extend(
+				{url:'/administration'},require('./user/userRoutes.js').user.administration))
+
+		.state('administration.adminBill',angular.extend(
+				{url:'/bill'},require('./user/userRoutes.js').user.billAdmin));
 
    $mdThemingProvider.theme('default')
     .primaryPalette('blue');

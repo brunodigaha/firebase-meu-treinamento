@@ -54731,7 +54731,13 @@ module.exports = function ($stateProvider,$compileProvider,$animateProvider,$loc
 				{url:'/collection-training'},require('./train/trainRoutes.js').train.collectionTraining))
 
 		.state('login',angular.extend(
-				{url:'/login'},require('./auth/authRoutes.js').auth.login));
+				{url:'/login'},require('./auth/authRoutes.js').auth.login))
+
+		.state('administration',angular.extend(
+				{url:'/administration'},require('./user/userRoutes.js').user.administration))
+
+		.state('administration.adminBill',angular.extend(
+				{url:'/bill'},require('./user/userRoutes.js').user.billAdmin));
 
    $mdThemingProvider.theme('default')
     .primaryPalette('blue');
@@ -55722,6 +55728,41 @@ module.exports = {
 				}
 			},
 		},
+
+		administration : {
+			authenticate: true,
+			abstract: true,
+			views: {
+				'wrap': {
+					// controller: function($stateParams) {
+					// 	// expect($stateParams).toBe({userId: 12});
+					// },
+					template: Buffer("CjxzZWN0aW9uIGNsYXNzPSJhZG1pbi13cmFwIj4KICA8c2VjdGlvbiBjbGFzcz0iYWRtaW4tYXNpZGUiPgogICAgPHA+YXNpZGU8L3A+CiAgPC9zZWN0aW9uPgogIDxzZWN0aW9uIGNsYXNzPSJhZG1pbi1jb250ZW50LXdyYXAiPgogICAgPG1kLWNhcmQ+CiAgICAgIDxtZC1jYXJkLWNvbnRlbnQ+CiAgICAgICAgPHNlY3Rpb24gdWktdmlldz0iY29udGVudC1hZG1pbiIgY2xhc3M9ImFkbWluLWNvbnRlbnQiPgogICAgICAgICAgPHNlY3Rpb24gdWktdmlldz0iYWRtaW4tY29udGVudC1tZW51IiBjbGFzcz0iYWRtaW4tY29udGVudC1tZW51Ij4KICAgICAgICAgICAgPHA+QWRtaW4tY29udGVudC1tZW51LW1lbnU8L3A+CiAgICAgICAgICA8L3NlY3Rpb24+CiAgICAgICAgICA8c2VjdGlvbiB1aS12aWV3PSJhZG1pbi1jb250ZW50LW1lbnUtY29udGVudCIgY2xhc3M9ImFkbWluLWNvbnRlbnQtbWVudS1jb250ZW50Ij4KICAgICAgICAgICAgPHA+QWRtaW4tY29udGVudC1tZW51LWNvbnRlbnQ8L3A+CiAgICAgICAgICA8L3NlY3Rpb24+CiAgICAgICAgPC9zZWN0aW9uPgogICAgICA8L21kLWNhcmQtY29udGVudD4KICAgIDwvbWQtY2FyZD4KICA8L3NlY3Rpb24+Cjwvc2VjdGlvbj4=","base64")  
+				}
+			},
+		},
+
+		billAdmin : {
+			authenticate: true,
+			ncyBreadcrumb: {
+				label: 'Administração'
+			},
+			views: {
+				// controller: function($stateParams) {
+				// 	// expect($stateParams).toBe({userId: 12});
+				// },
+				// 'admin-content-menu@administration': {
+				// 	template: fs.readFileSync(__dirname + '/templates/homeUserContent.html')  
+				// },
+				// 'admin-content-menu"-content@administration': {
+				// 	template: fs.readFileSync(__dirname + '/templates/billUserAdmin.html')  
+				// }
+				'content-admin@administration': {
+					template: Buffer("CjxzZWN0aW9uIGNsYXNzPSJiaWxsLWFkbWluLXdyYXAiPgogIDxwPmNvbnRhIGFkbWluPC9wPgo8L3NlY3Rpb24+","base64")  
+				}
+			},
+		},
+
 
 		planTraining : {
 			authenticate: true,

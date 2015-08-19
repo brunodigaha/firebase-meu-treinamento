@@ -1,0 +1,41 @@
+.admin-wrap
+	col(12/12,gutter:0)
+	height 100%
+	.admin-aside
+		col(2.5/12,gutter:0)
+		box-sizing border-box
+		height 100%
+		+desktop()
+			col(2/12,gutter:0)
+		+hd()
+			col(2/16,gutter:0)
+		overflow-y auto
+		border 1px solid palette('Grey','300')
+		background-color white
+	.admin-content-wrap
+		col(9.5/12,gutter:0)
+		box-sizing border-box
+		padding-right .2em
+		padding-left .2em
+		margin-top .3em
+		+desktop()
+			col(10/12,gutter:0)
+			padding-right 2em
+			padding-left 2em
+		+above(1400px)
+			padding-right 4em
+			padding-left 4em
+		+hd()
+			col(14/16,gutter:0)
+			padding-right 8em
+			padding-left 8em
+		md-card
+			min-height:97vh
+			// +tablet(orientation: portrait)
+			// 	min-height:98vh
+			md-card-content
+				.admin-content
+					.admin-content-menu
+						col(10/10,gutter:0)
+					.admin-content-menu-content
+						col(10/10,gutter:0)
