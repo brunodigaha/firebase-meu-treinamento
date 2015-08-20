@@ -49,7 +49,10 @@ module.exports = function ($stateProvider,$compileProvider,$animateProvider,$loc
 				{url:'/administration'},require('./user/userRoutes.js').user.administration))
 
 		.state('administration.adminBill',angular.extend(
-				{url:'/bill'},require('./user/userRoutes.js').user.billAdmin));
+				{url:'/bill'},require('./user/userRoutes.js').user.billAdmin))
+
+		.state('administration.adminGym',angular.extend(
+				{url:'/gym'},require('./user/userRoutes.js').user.gymAdmin));
 
    $mdThemingProvider.theme('default')
     .primaryPalette('blue');

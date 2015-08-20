@@ -1,0 +1,25 @@
+.gym-content-menu-wrap
+	col(12/12,gutter:0)
+	box-sizing border-box
+	padding-right 3em
+	padding-left 3em
+	margin-bottom 1.5em
+	+desktop()
+		padding-right 5em
+		padding-left 5em
+		margin-bottom 2.5em
+	md-tabs
+		border-bottom 1px solid palette('Grey','200')
+		md-tab-item.md-tab
+			color palette('Blue','500')
+			font-size 94%
+			text-transform none
+			+tablet()
+				padding 13px 13px
+				line-height 27px
+			// 	font-size 15px
+		.md-tab.md-active, md-tabs .md-tab.md-focused
+			color black
+			background-color palette('Grey','50')
+			font-weight bold
+			font-size 96%

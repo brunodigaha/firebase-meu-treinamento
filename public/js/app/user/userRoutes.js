@@ -62,6 +62,24 @@ module.exports = {
 			},
 		},
 
+		gymAdmin : {
+			authenticate: true,
+			ncyBreadcrumb: {
+				label: 'Administração'
+			},
+			views: {
+				// controller: function($stateParams) {
+				// 	// expect($stateParams).toBe({userId: 12});
+				// },
+				'admin-content-menu@administration': {
+					template: fs.readFileSync(__dirname + '/templates/gymMenuUserAdmin.html')  
+				},
+				'admin-content-menu-content@administration': {
+					template: fs.readFileSync(__dirname + '/templates/gymContentUserAdmin.html')  
+				}
+			},
+		},
+
 
 		planTraining : {
 			authenticate: true,

@@ -15691,16 +15691,17 @@ md-dialog md-dialog-content .train-dialog-wrap .train-dialog-content .action but
   }
 }
 .home-wrap .home-menu md-tabs {
-  border-bottom: 1px solid #eceff1;
+  border-bottom: 1px solid #eee;
 }
 .home-wrap .home-menu md-tabs md-tab-item.md-tab {
   color: #2196f3;
+  font-size: 84%;
+  text-transform: none;
 }
 @media only screen and (min-width: 400px) and (max-width: 1050px) {
   .home-wrap .home-menu md-tabs md-tab-item.md-tab {
     padding: 13px 13px;
     line-height: 27px;
-    font-size: 13px;
   }
 }
 @media only screen and (min-width: 1050px) {
@@ -15713,6 +15714,7 @@ md-dialog md-dialog-content .train-dialog-wrap .train-dialog-content .action but
   color: #000;
   background-color: #fafafa;
   font-weight: bold;
+  font-size: 86%;
 }
 .home-wrap .home-content-wrap {
   *zoom: 1;
@@ -16289,7 +16291,7 @@ md-dialog md-dialog-content .train-dialog-wrap .train-dialog-content .action but
 }
 .admin-wrap .admin-aside .perfil-administration img {
   border: 1px solid #bdbdbd;
-  max-width: 40%;
+  max-width: 50%;
 }
 @media only screen and (min-width: 1050px) {
   .admin-wrap .admin-aside .perfil-administration img {
@@ -16324,8 +16326,8 @@ md-dialog md-dialog-content .train-dialog-wrap .train-dialog-content .action but
   margin-right: 0%;
   box-sizing: border-box;
   margin-top: 2em;
-  padding-left: 1em;
-  padding-right: 1em;
+  padding-left: 0.5em;
+  padding-right: 0.5em;
 }
 .admin-wrap .admin-aside .perfil-administration-menu:before,
 .admin-wrap .admin-aside .perfil-administration-menu:after {
@@ -16353,7 +16355,7 @@ md-dialog md-dialog-content .train-dialog-wrap .train-dialog-content .action but
 }
 @media only screen and (min-width: 700px) {
   .admin-wrap .admin-aside .perfil-administration-menu ul li {
-    line-height: 40px;
+    line-height: 45px;
   }
 }
 @media only screen and (min-width: 1050px) {
@@ -16510,6 +16512,78 @@ md-dialog md-dialog-content .train-dialog-wrap .train-dialog-content .action but
 }
 .bill-admin-wrap:last-child {
   margin-right: 0%;
+}
+.gym-content-wrap {
+  *zoom: 1;
+  float: left;
+  clear: none;
+  text-align: inherit;
+  width: 100%;
+  margin-left: 0%;
+  margin-right: 0%;
+}
+.gym-content-wrap:before,
+.gym-content-wrap:after {
+  content: '';
+  display: table;
+}
+.gym-content-wrap:after {
+  clear: both;
+}
+.gym-content-wrap:last-child {
+  margin-right: 0%;
+}
+.gym-content-menu-wrap {
+  *zoom: 1;
+  float: left;
+  clear: none;
+  text-align: inherit;
+  width: 100%;
+  margin-left: 0%;
+  margin-right: 0%;
+  box-sizing: border-box;
+  padding-right: 3em;
+  padding-left: 3em;
+  margin-bottom: 1.5em;
+}
+.gym-content-menu-wrap:before,
+.gym-content-menu-wrap:after {
+  content: '';
+  display: table;
+}
+.gym-content-menu-wrap:after {
+  clear: both;
+}
+.gym-content-menu-wrap:last-child {
+  margin-right: 0%;
+}
+@media only screen and (min-width: 1050px) {
+  .gym-content-menu-wrap {
+    padding-right: 5em;
+    padding-left: 5em;
+    margin-bottom: 2.5em;
+  }
+}
+.gym-content-menu-wrap md-tabs {
+  border-bottom: 1px solid #eee;
+}
+.gym-content-menu-wrap md-tabs md-tab-item.md-tab {
+  color: #2196f3;
+  font-size: 94%;
+  text-transform: none;
+}
+@media only screen and (min-width: 400px) and (max-width: 1050px) {
+  .gym-content-menu-wrap md-tabs md-tab-item.md-tab {
+    padding: 13px 13px;
+    line-height: 27px;
+  }
+}
+.gym-content-menu-wrap md-tabs .md-tab.md-active,
+.gym-content-menu-wrap md-tabs md-tabs .md-tab.md-focused {
+  color: #000;
+  background-color: #fafafa;
+  font-weight: bold;
+  font-size: 96%;
 }
 .training {
   *zoom: 1;
@@ -17810,16 +17884,17 @@ md-dialog md-dialog-content .train-dialog-wrap .train-dialog-content .action but
   }
 }
 .history-wrap .history-menu md-tabs {
-  border-bottom: 1px solid #fafafa;
+  border-bottom: 1px solid #eee;
 }
 .history-wrap .history-menu md-tabs md-tab-item.md-tab {
   color: #2196f3;
+  font-size: 84%;
+  text-transform: none;
 }
 @media only screen and (min-width: 400px) and (max-width: 1050px) {
   .history-wrap .history-menu md-tabs md-tab-item.md-tab {
     padding: 13px 13px;
     line-height: 27px;
-    font-size: 12px;
   }
 }
 .history-wrap .history-menu md-tabs .md-tab.md-active,
@@ -17827,6 +17902,7 @@ md-dialog md-dialog-content .train-dialog-wrap .train-dialog-content .action but
   color: #000;
   background-color: #fafafa;
   font-weight: bold;
+  font-size: 86%;
 }
 .history-wrap .history-content {
   *zoom: 1;
