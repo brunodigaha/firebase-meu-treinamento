@@ -12,6 +12,60 @@
 		overflow-y auto
 		border 1px solid palette('Grey','300')
 		background-color white
+		.perfil-administration
+			col(4/4,gutter:0)
+			box-sizing border-box
+			text-align center
+			margin-top 1.5em
+			img
+				border 1px solid palette('Grey','400')
+				max-width 40%
+				+desktop()
+					max-width 60%
+			.admin-perfil-title
+				margin 0
+				font-size 140%
+				+desktop()
+					font-size 160%
+				font-weight bold
+				color palette('Grey','700')
+				line-height 120%
+			.admin-perfil-subtitle
+				color palette('Grey','500')
+				font-size 80%
+				line-height 100%
+				font-style italic
+		.perfil-administration-menu
+			col(4/4,gutter:0)
+			box-sizing border-box
+			margin-top 2em
+			padding-left 1em
+			padding-right 1em
+			// +desktop()
+			// 	padding-left 1em
+			// 	padding-right 1em
+			ul
+				list-style none
+				padding 0
+				margin 0
+				border-right 2px solid  palette('Grey','300')  
+				// box-sizing none
+				li
+					line-height 30px
+					+above(700px)
+						line-height 40px
+					+desktop()
+						line-height 50px
+					font-size 105%
+					color palette('Blue','500')
+					padding-left 1em
+					&.active
+						color palette('Grey','800')
+						font-weight bold
+						border-right 2px solid rgb(255,64,129,1)
+						position relative
+						left 2px
+						background-color palette('Grey','50')
 	.admin-content-wrap
 		col(9.5/12,gutter:0)
 		box-sizing border-box

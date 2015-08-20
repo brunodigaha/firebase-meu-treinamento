@@ -1,6 +1,22 @@
 section.admin-wrap
 	section.admin-aside
-		p aside
+		section.perfil-administration
+			img(ng-src="https://www.ucarecdn.com/dd855b46-c674-46eb-ab7b-e1326f05e8c1/-/crop/169x174/86,5/-/preview/120x120/" ng-click="coreEvents.toggle_menu();" holder='holder.js/80x80?auto=yes&theme=vine&text=BRU')
+			p.admin-perfil-title Marcos
+			p.admin-perfil-subtitle Admin
+		section.perfil-administration-menu
+			ul
+				li(ui-sref-active="active" ui-sref="administration.adminBill")
+					a Conta
+				li
+					a Academia
+				li
+					a Treino
+				li
+					a Idioma
+				li
+					a Tema
+
 	section.admin-content-wrap
 		md-card
 			md-card-content

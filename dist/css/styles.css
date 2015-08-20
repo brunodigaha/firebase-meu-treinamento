@@ -16264,6 +16264,110 @@ md-dialog md-dialog-content .train-dialog-wrap .train-dialog-content .action but
     margin-right: 0%;
   }
 }
+.admin-wrap .admin-aside .perfil-administration {
+  *zoom: 1;
+  float: left;
+  clear: none;
+  text-align: inherit;
+  width: 100%;
+  margin-left: 0%;
+  margin-right: 0%;
+  box-sizing: border-box;
+  text-align: center;
+  margin-top: 1.5em;
+}
+.admin-wrap .admin-aside .perfil-administration:before,
+.admin-wrap .admin-aside .perfil-administration:after {
+  content: '';
+  display: table;
+}
+.admin-wrap .admin-aside .perfil-administration:after {
+  clear: both;
+}
+.admin-wrap .admin-aside .perfil-administration:last-child {
+  margin-right: 0%;
+}
+.admin-wrap .admin-aside .perfil-administration img {
+  border: 1px solid #bdbdbd;
+  max-width: 40%;
+}
+@media only screen and (min-width: 1050px) {
+  .admin-wrap .admin-aside .perfil-administration img {
+    max-width: 60%;
+  }
+}
+.admin-wrap .admin-aside .perfil-administration .admin-perfil-title {
+  margin: 0;
+  font-size: 140%;
+  font-weight: bold;
+  color: #616161;
+  line-height: 120%;
+}
+@media only screen and (min-width: 1050px) {
+  .admin-wrap .admin-aside .perfil-administration .admin-perfil-title {
+    font-size: 160%;
+  }
+}
+.admin-wrap .admin-aside .perfil-administration .admin-perfil-subtitle {
+  color: #9e9e9e;
+  font-size: 80%;
+  line-height: 100%;
+  font-style: italic;
+}
+.admin-wrap .admin-aside .perfil-administration-menu {
+  *zoom: 1;
+  float: left;
+  clear: none;
+  text-align: inherit;
+  width: 100%;
+  margin-left: 0%;
+  margin-right: 0%;
+  box-sizing: border-box;
+  margin-top: 2em;
+  padding-left: 1em;
+  padding-right: 1em;
+}
+.admin-wrap .admin-aside .perfil-administration-menu:before,
+.admin-wrap .admin-aside .perfil-administration-menu:after {
+  content: '';
+  display: table;
+}
+.admin-wrap .admin-aside .perfil-administration-menu:after {
+  clear: both;
+}
+.admin-wrap .admin-aside .perfil-administration-menu:last-child {
+  margin-right: 0%;
+}
+.admin-wrap .admin-aside .perfil-administration-menu ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  border-right: 2px solid #e0e0e0;
+}
+.admin-wrap .admin-aside .perfil-administration-menu ul li {
+  line-height: 30px;
+  font-size: 105%;
+  color: #2196f3;
+  padding-left: 1em;
+}
+@media only screen and (min-width: 700px) {
+  .admin-wrap .admin-aside .perfil-administration-menu ul li {
+    line-height: 40px;
+  }
+}
+@media only screen and (min-width: 1050px) {
+  .admin-wrap .admin-aside .perfil-administration-menu ul li {
+    line-height: 50px;
+  }
+}
+.admin-wrap .admin-aside .perfil-administration-menu ul li.active {
+  color: #424242;
+  font-weight: bold;
+  border-right: 2px solid #ff4081;
+  position: relative;
+  left: 2px;
+  background-color: #fafafa;
+}
 .admin-wrap .admin-content-wrap {
   *zoom: 1;
   float: left;
