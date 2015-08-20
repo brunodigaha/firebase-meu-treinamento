@@ -16349,6 +16349,7 @@ md-dialog md-dialog-content .train-dialog-wrap .train-dialog-content .action but
   font-size: 105%;
   color: #2196f3;
   padding-left: 1em;
+  cursor: pointer;
 }
 @media only screen and (min-width: 700px) {
   .admin-wrap .admin-aside .perfil-administration-menu ul li {
@@ -16367,6 +16368,7 @@ md-dialog md-dialog-content .train-dialog-wrap .train-dialog-content .action but
   position: relative;
   left: 2px;
   background-color: #fafafa;
+  cursor: auto;
 }
 .admin-wrap .admin-content-wrap {
   *zoom: 1;

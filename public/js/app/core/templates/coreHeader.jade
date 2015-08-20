@@ -89,10 +89,11 @@ section.user-admin(ui-view="user-admin")
 			li
 				p.line
 			li
-				ng-md-icon(icon="settings" style="fill:grey"  size="17")
-				| &nbsp;&nbsp;Configurações
-			li
-				ng-md-icon(icon="shopping_cart" style="fill:grey"  size="17")
+				a(ui-sref="administration.adminBill")
+					ng-md-icon(icon="settings" style="fill:grey"  size="17")
+					| &nbsp;&nbsp;Configurações
+			// li
+				// ng-md-icon(icon="shopping_cart" style="fill:grey"  size="17")
 				| &nbsp;&nbsp;Conta
 			li
 				p.line
