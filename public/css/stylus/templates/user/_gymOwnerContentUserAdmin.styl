@@ -1,2 +1,56 @@
 .gym-content-owner-wrap
 	col(12/12,gutter:0)
+	box-sizing border-box
+	padding-right 1em
+	padding-left 1em
+	+desktop()
+		padding-right 3em
+		padding-left 3em
+	+hd()
+		padding-right 5em
+		padding-left 5em
+	// .owner-subtitle
+	// 	position relative
+	// 	top 0
+	// 	right 0
+	h1
+		font-size 300%
+	.info-gym-owner
+		col(12/12,gutter:0)
+		margin-top 1em
+		+desktop()
+			margin-top 3em
+		.info-gym-item
+			col(12/12,gutter:0)
+			height 15px
+			span
+				&.info-gym-attribute
+					font-size 100%
+					padding-right .5em
+					color  palette('Grey','600')
+				&.info-gym-value
+					font-size 110%
+					color  palette('Grey','800')
+					// font-weight bold
+			// span 
+			// 	color palettte('Grey','800')
+	.action-gym-owner
+		col(8/12,gutter:0)
+		shift(2/12,gutter:0)
+		margin-top 1em
+		text-align right
+		button.md-button
+			width 32%
+			min-width 15px
+			min-height 33px
+			line-height 33px
+			font-size 90%
+			margin 0
+			+desktop()
+				width 35%
+				min-width 15px
+				min-height 43px
+				line-height 43px
+				font-size 108%
+				margin 0
+
