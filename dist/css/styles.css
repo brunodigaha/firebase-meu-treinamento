@@ -16210,6 +16210,7 @@ md-dialog md-dialog-content .train-dialog-wrap .train-dialog-content .action but
   overflow-y: auto;
   border: 1px solid #e0e0e0;
   background-color: #fff;
+  position: relative;
 }
 .admin-wrap .admin-aside:before,
 .admin-wrap .admin-aside:after {
@@ -16266,6 +16267,35 @@ md-dialog md-dialog-content .train-dialog-wrap .train-dialog-content .action but
     margin-right: 0%;
   }
 }
+.admin-wrap .admin-aside .administration-action-back {
+  height: 3.8em;
+  *zoom: 1;
+  float: left;
+  clear: none;
+  text-align: inherit;
+  width: 100%;
+  margin-left: 0%;
+  margin-right: 0%;
+  box-sizing: border-box;
+  text-align: center;
+  border-bottom: 1px solid #e0e0e0;
+  color: #2196f3;
+}
+.admin-wrap .admin-aside .administration-action-back:before,
+.admin-wrap .admin-aside .administration-action-back:after {
+  content: '';
+  display: table;
+}
+.admin-wrap .admin-aside .administration-action-back:after {
+  clear: both;
+}
+.admin-wrap .admin-aside .administration-action-back:last-child {
+  margin-right: 0%;
+}
+.admin-wrap .admin-aside .administration-action-back p {
+  position: relative;
+  top: -21px;
+}
 .admin-wrap .admin-aside .perfil-administration {
   *zoom: 1;
   float: left;
@@ -16276,7 +16306,7 @@ md-dialog md-dialog-content .train-dialog-wrap .train-dialog-content .action but
   margin-right: 0%;
   box-sizing: border-box;
   text-align: center;
-  margin-top: 1.5em;
+  margin-top: 2em;
 }
 .admin-wrap .admin-aside .perfil-administration:before,
 .admin-wrap .admin-aside .perfil-administration:after {
@@ -16288,6 +16318,11 @@ md-dialog md-dialog-content .train-dialog-wrap .train-dialog-content .action but
 }
 .admin-wrap .admin-aside .perfil-administration:last-child {
   margin-right: 0%;
+}
+@media only screen and (min-width: 1050px) {
+  .admin-wrap .admin-aside .perfil-administration {
+    margin-top: 2.5em;
+  }
 }
 .admin-wrap .admin-aside .perfil-administration img {
   border: 1px solid #bdbdbd;
@@ -16325,7 +16360,7 @@ md-dialog md-dialog-content .train-dialog-wrap .train-dialog-content .action but
   margin-left: 0%;
   margin-right: 0%;
   box-sizing: border-box;
-  margin-top: 2em;
+  margin-top: 1em;
   padding-left: 0.5em;
   padding-right: 0.5em;
 }
@@ -16339,6 +16374,11 @@ md-dialog md-dialog-content .train-dialog-wrap .train-dialog-content .action but
 }
 .admin-wrap .admin-aside .perfil-administration-menu:last-child {
   margin-right: 0%;
+}
+@media only screen and (min-width: 1050px) {
+  .admin-wrap .admin-aside .perfil-administration-menu {
+    margin-top: 2em;
+  }
 }
 .admin-wrap .admin-aside .perfil-administration-menu ul {
   list-style: none;
@@ -16513,26 +16553,6 @@ md-dialog md-dialog-content .train-dialog-wrap .train-dialog-content .action but
 .bill-admin-wrap:last-child {
   margin-right: 0%;
 }
-.gym-content-wrap {
-  *zoom: 1;
-  float: left;
-  clear: none;
-  text-align: inherit;
-  width: 100%;
-  margin-left: 0%;
-  margin-right: 0%;
-}
-.gym-content-wrap:before,
-.gym-content-wrap:after {
-  content: '';
-  display: table;
-}
-.gym-content-wrap:after {
-  clear: both;
-}
-.gym-content-wrap:last-child {
-  margin-right: 0%;
-}
 .gym-content-menu-wrap {
   *zoom: 1;
   float: left;
@@ -16584,6 +16604,66 @@ md-dialog md-dialog-content .train-dialog-wrap .train-dialog-content .action but
   background-color: #fafafa;
   font-weight: bold;
   font-size: 96%;
+}
+.gym-content-owner-wrap {
+  *zoom: 1;
+  float: left;
+  clear: none;
+  text-align: inherit;
+  width: 100%;
+  margin-left: 0%;
+  margin-right: 0%;
+}
+.gym-content-owner-wrap:before,
+.gym-content-owner-wrap:after {
+  content: '';
+  display: table;
+}
+.gym-content-owner-wrap:after {
+  clear: both;
+}
+.gym-content-owner-wrap:last-child {
+  margin-right: 0%;
+}
+.gym-content-staff-wrap {
+  *zoom: 1;
+  float: left;
+  clear: none;
+  text-align: inherit;
+  width: 100%;
+  margin-left: 0%;
+  margin-right: 0%;
+}
+.gym-content-staff-wrap:before,
+.gym-content-staff-wrap:after {
+  content: '';
+  display: table;
+}
+.gym-content-staff-wrap:after {
+  clear: both;
+}
+.gym-content-staff-wrap:last-child {
+  margin-right: 0%;
+}
+.gym-content-members-wrap {
+  *zoom: 1;
+  float: left;
+  clear: none;
+  text-align: inherit;
+  width: 100%;
+  margin-left: 0%;
+  margin-right: 0%;
+}
+.gym-content-members-wrap:before,
+.gym-content-members-wrap:after {
+  content: '';
+  display: table;
+}
+.gym-content-members-wrap:after {
+  clear: both;
+}
+.gym-content-members-wrap:last-child {
+  margin-right: 0%;
 }
 .training {
   *zoom: 1;

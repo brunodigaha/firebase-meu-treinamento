@@ -64,22 +64,61 @@ module.exports = {
 
 		gymAdmin : {
 			authenticate: true,
-			ncyBreadcrumb: {
-				label: 'Administração'
-			},
+			abstract: true,
 			views: {
 				// controller: function($stateParams) {
 				// 	// expect($stateParams).toBe({userId: 12});
 				// },
 				'admin-content-menu@administration': {
 					template: fs.readFileSync(__dirname + '/templates/gymMenuUserAdmin.html')  
-				},
-				'admin-content-menu-content@administration': {
-					template: fs.readFileSync(__dirname + '/templates/gymContentUserAdmin.html')  
 				}
 			},
 		},
 
+		gymAdminOwner : {
+			authenticate: true,
+			ncyBreadcrumb: {
+				label: 'Administração - Academia'
+			},
+			views: {
+				// controller: function($stateParams) {
+				// 	// expect($stateParams).toBe({userId: 12});
+				// },
+				'admin-content-menu-content@administration': {
+					template: fs.readFileSync(__dirname + '/templates/gymOwnerContentUserAdmin.html')  
+				}
+			},
+		},
+
+		gymAdminStaff : {
+			authenticate: true,
+			ncyBreadcrumb: {
+				label: 'Administração - Academia'
+			},
+			views: {
+				// controller: function($stateParams) {
+				// 	// expect($stateParams).toBe({userId: 12});
+				// },
+				'admin-content-menu-content@administration': {
+					template: fs.readFileSync(__dirname + '/templates/gymStaffContentUserAdmin.html')  
+				}
+			},
+		},
+
+		gymAdminMembers : {
+			authenticate: true,
+			ncyBreadcrumb: {
+				label: 'Administração - Academia'
+			},
+			views: {
+				// controller: function($stateParams) {
+				// 	// expect($stateParams).toBe({userId: 12});
+				// },
+				'admin-content-menu-content@administration': {
+					template: fs.readFileSync(__dirname + '/templates/gymMembersContentUserAdmin.html')  
+				}
+			},
+		},
 
 		planTraining : {
 			authenticate: true,

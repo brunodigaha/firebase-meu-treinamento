@@ -19,7 +19,7 @@
           <section class="chat-bubble-arrow-border"></section>
           <section class="chat-bubble-arrow"></section>
           <section class="ds-serie-edit-select-tabs-wrap">
-            <md-tabs md-dynamic-height="true" md-border-bottom="false">
+            <md-tabs md-dynamic-height="md-dynamic-height" md-swipe-content="md-swipe-content" md-no-disconnect="md-no-disconnect" md-border-bottom="false">
               <!-- md-tab(label="Geral")-->
               <!-- 	md-content.md-paddin-->
               <!-- 	section.autocompletedemoCustomTemplate-->
@@ -34,7 +34,7 @@
               <!-- 						| watchers-->
               <!-- 					span.item-metastat-->
               <!-- 						strong {{item.forks}}-->
-              <md-tab label="{{list.grupo}}" ng-repeat=" list in ::list_exercicios">
+              <md-tab label="{{::list.grupo}}" ng-repeat=" list in ::list_exercicios">
                 <md-content class="md-padding">
                   <section><span ng-click="insert($index, list);" ng-class="{'item-select animated pulse': exerc.select }" ng-repeat="exerc in ::list.exercicios">{{::exerc.nome}}</span></section>
                 </md-content>

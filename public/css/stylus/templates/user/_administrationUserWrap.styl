@@ -12,11 +12,25 @@
 		overflow-y auto
 		border 1px solid palette('Grey','300')
 		background-color white
+		position relative
+		.administration-action-back
+			height 3.8em
+			col(4/4,gutter:0)
+			box-sizing border-box
+			text-align center
+			border-bottom 1px solid palette('Grey','300')
+			// box-shadow 0 2px 4px -2px rgba(0,0,0,0.15)
+			color palette('Blue','500')
+			p
+				position relative
+				top -21px
 		.perfil-administration
 			col(4/4,gutter:0)
 			box-sizing border-box
 			text-align center
-			margin-top 1.5em
+			margin-top 2em
+			+desktop()
+				margin-top 2.5em
 			img
 				border 1px solid palette('Grey','400')
 				max-width 50%
@@ -38,7 +52,9 @@
 		.perfil-administration-menu
 			col(4/4,gutter:0)
 			box-sizing border-box
-			margin-top 2em
+			margin-top 1em
+			+desktop()
+				margin-top 2em
 			padding-left .5em
 			padding-right .5em
 			ul

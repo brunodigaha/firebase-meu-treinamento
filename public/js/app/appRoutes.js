@@ -52,7 +52,16 @@ module.exports = function ($stateProvider,$compileProvider,$animateProvider,$loc
 				{url:'/bill'},require('./user/userRoutes.js').user.billAdmin))
 
 		.state('administration.adminGym',angular.extend(
-				{url:'/gym'},require('./user/userRoutes.js').user.gymAdmin));
+				{url:'/gym'},require('./user/userRoutes.js').user.gymAdmin))
+
+		.state('administration.adminGym.adminGymOwner',angular.extend(
+				{url:'/owner'},require('./user/userRoutes.js').user.gymAdminOwner))
+
+		.state('administration.adminGym.adminGymStaff',angular.extend(
+				{url:'/staff'},require('./user/userRoutes.js').user.gymAdminStaff))
+
+		.state('administration.adminGym.adminGymMembers',angular.extend(
+				{url:'/members'},require('./user/userRoutes.js').user.gymAdminMembers));
 
    $mdThemingProvider.theme('default')
     .primaryPalette('blue');

@@ -1,4 +1,8 @@
-module.exports = function ($rootScope,UCURL,$location,$state,authModelService,coreEventsService) {
+module.exports = function ($rootScope,UCURL,$location,$state,$stateParams,authModelService,coreEventsService) {
+
+	$rootScope.$state = $state;
+	$rootScope.$stateParams = $stateParams;
+
 	$rootScope.$on("$stateChangeStart", function (event, toState, toParams, fromState, fromParams) {
 		// console.log('$stateChangeStart to '+toState.to+'- fired when the transition begins. toState,toParams : \n',toState, toParams);
 		// console.log("fromSate",fromState);
