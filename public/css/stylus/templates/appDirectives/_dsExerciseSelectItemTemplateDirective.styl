@@ -1,2 +1,112 @@
 .ds-exercise-select-item
 	col(12/12,gutter:0)
+	box-sizing border-box
+	margin-bottom 10px
+	+desktop()
+		margin-bottom 15px
+	.ds-exercise-item-wrap
+		col(12/12,gutter:0)
+		box-sizing border-box
+		// border 1px solid palette('Grey','300')
+		border 1px solid #b7c7cf
+		&.active
+			// border 1px solid palette('Grey','400')
+			box-shadow 0px 1px 3px rgba(0,0,0,0.20)
+			margin-top 7px
+			margin-bottom 7px
+		.ds-exercise-item-closed-wrap
+			col(12/12,gutter:0)
+			.ds-exercise-item-closed
+				col(12/12,gutter:0)
+				box-sizing border-box
+				// border-bottom 1px solid palette('Grey','400')
+				padding-right 10px
+				padding-left 10px
+				line-height 40px
+				height 40px
+				color palette('Grey','800')
+				background-color  #E6F1F6
+				// background-color  #E2EBEF
+				+desktop()
+					line-height 50px
+					height 50px
+				.ds-exercise-item-closed-title
+					col(5/12,gutter:0)
+					font-size 110%
+					font-weight bold
+				.ds-exercise-item-closed-resume
+					col(7/12,gutter:0)
+					ng-md-icon
+						svg
+							position relative
+							top 5px
+							left -2px
+		.ds-exercise-item-opened-wrap
+			col(12/12,gutter:0)
+			box-sizing border-box
+			.ds-exercise-item-opened
+				col(12/12,gutter:0)
+				box-sizing border-box
+				line-height 40px
+				height 40px
+				padding-right 10px
+				padding-left 10px
+				+desktop()
+					line-height 50px
+					height 50px
+				color palette('Grey','800')
+				// background-color palette('Grey','100')
+				background-color  #E6F1F6
+				// background-color  #E2EBEF
+				// border-bottom 1px solid palette('Grey','300')
+				border-bottom 1px solid #d8e6ec
+				.ds-exercise-item-opened-title
+					col(5/12,gutter:0)
+					font-size 110%
+					font-weight bold
+				.ds-exercise-item-opened-resume
+					col(7/12,gutter:0)
+					text-align right
+			.ds-exercise-item-opened-content-wrap
+				col(12/12,gutter:0)
+				box-sizing border-box
+				padding-right .5em
+				padding-left .5em
+				padding-top .2em
+				padding-bottom .8em
+				+desktop()
+					padding-right 1em
+					padding-left 1em
+				.ds-exercise-item-opened-content
+					col(12/12,gutter:0)
+					span
+						border-radius 16px
+						padding-right 15px
+						padding-left 15px
+						margin-right 9px
+						line-height 26px
+						vertical-align middle
+						margin-top 8px
+						text-align left
+						display inline-block
+						background-color palette('Grey','100')
+						border 1px solid palette('Grey', '300')
+						font-size 75%
+						// font-weight bold
+						color black
+						// &:hover
+						// 	background palette('Grey','50')
+						ng-md-icon
+							svg
+								position relative
+								cursor pointer
+								top 5px
+								// +desktop()
+								// 	width 13%
+								// 	height 14%
+								// padding-left 5px
+								// margin-right 5px
+								&:hover
+									fill palette('Red','600')
+									background-color palette('Grey','200')
+

@@ -54546,24 +54546,24 @@ module.exports = function() {
 
 module.exports = function() {
 	return{
-		template: Buffer("CjxzZWN0aW9uIGNsYXNzPSJkcy1leGVyY2lzZS1zZWxlY3QtaXRlbSI+CiAgPHA+ZXhlcmNpY2lvIGl0ZW08L3A+Cjwvc2VjdGlvbj4=","base64"),
-		transclude:true,
+		template: Buffer("CjxzZWN0aW9uIGNsYXNzPSJkcy1leGVyY2lzZS1zZWxlY3QtaXRlbSI+CiAgPHNlY3Rpb24gbmctY2xhc3M9InsnYWN0aXZlJzogaXNPcGVuZWR9IiBjbGFzcz0iZHMtZXhlcmNpc2UtaXRlbS13cmFwIj4KICAgIDxzZWN0aW9uIG5nLWlmPSIhaXNPcGVuZWQiIG5nLWNsaWNrPSJvcGVuX2V4ZXJjKCk7IiBjbGFzcz0iZHMtZXhlcmNpc2UtaXRlbS1jbG9zZWQtd3JhcCI+CiAgICAgIDxzZWN0aW9uIGNsYXNzPSJkcy1leGVyY2lzZS1pdGVtLWNsb3NlZCI+CiAgICAgICAgPHNlY3Rpb24gY2xhc3M9ImRzLWV4ZXJjaXNlLWl0ZW0tY2xvc2VkLXRpdGxlIj4KICAgICAgICAgIDxwPkNvc3RhczwvcD4KICAgICAgICA8L3NlY3Rpb24+CiAgICAgICAgPHNlY3Rpb24gY2xhc3M9ImRzLWV4ZXJjaXNlLWl0ZW0tY2xvc2VkLXJlc3VtZSI+PHNwYW4+MTIgRXhlcmPDrWNpb3MKICAgICAgICAgICAgPG5nLW1kLWljb24gaWNvbj0iZXhwYW5kX21vcmUiIHN0eWxlPSJmaWxsOmdyZXkiIHNpemU9IjE3Ij48L25nLW1kLWljb24+PC9zcGFuPjwvc2VjdGlvbj4KICAgICAgPC9zZWN0aW9uPgogICAgPC9zZWN0aW9uPgogICAgPHNlY3Rpb24gbmctaWY9ImlzT3BlbmVkIiBjbGFzcz0iZHMtZXhlcmNpc2UtaXRlbS1vcGVuZWQtd3JhcCBhbmltYXRlZCBmYWRlSW4iPgogICAgICA8c2VjdGlvbiBjbGFzcz0iZHMtZXhlcmNpc2UtaXRlbS1vcGVuZWQiPgogICAgICAgIDxzZWN0aW9uIG5nLWNsaWNrPSJjbG9zZV9leGVyYygpOyIgY2xhc3M9ImRzLWV4ZXJjaXNlLWl0ZW0tb3BlbmVkLXRpdGxlIj4KICAgICAgICAgIDxwPkNvc3RhczwvcD4KICAgICAgICA8L3NlY3Rpb24+CiAgICAgICAgPHNlY3Rpb24gY2xhc3M9ImRzLWV4ZXJjaXNlLWl0ZW0tb3BlbmVkLXJlc3VtZSI+CiAgICAgICAgICA8cD5FeGVyY2x1aXIgR3J1cG88L3A+CiAgICAgICAgPC9zZWN0aW9uPgogICAgICA8L3NlY3Rpb24+CiAgICAgIDxzZWN0aW9uIGNsYXNzPSJkcy1leGVyY2lzZS1pdGVtLW9wZW5lZC1jb250ZW50LXdyYXAiPgogICAgICAgIDxzZWN0aW9uIGNsYXNzPSJkcy1leGVyY2lzZS1pdGVtLW9wZW5lZC1jb250ZW50Ij48c3Bhbj5TdXBpbm8gRGVjbGluYWRvCiAgICAgICAgICAgIDxuZy1tZC1pY29uIGljb249ImNsb3NlIiBzdHlsZT0iZmlsbDpibGFjayIgc2l6ZT0iMTkiPjwvbmctbWQtaWNvbj48L3NwYW4+PHNwYW4+U3VwaW5vIEFsdGVyZXMKICAgICAgICAgICAgPG5nLW1kLWljb24gaWNvbj0iY2xvc2UiIHN0eWxlPSJmaWxsOmJsYWNrIiBzaXplPSIxOSI+PC9uZy1tZC1pY29uPjwvc3Bhbj48c3Bhbj5TdXBpbm8gQWx0ZXJlcwogICAgICAgICAgICA8bmctbWQtaWNvbiBpY29uPSJjbG9zZSIgc3R5bGU9ImZpbGw6YmxhY2siIHNpemU9IjE5Ij48L25nLW1kLWljb24+PC9zcGFuPjxzcGFuPkNydWNpZml4bwogICAgICAgICAgICA8bmctbWQtaWNvbiBpY29uPSJjbG9zZSIgc3R5bGU9ImZpbGw6YmxhY2siIHNpemU9IjE5Ij48L25nLW1kLWljb24+PC9zcGFuPjxzcGFuPlN1cGlubyBSZXRvIAogICAgICAgICAgICA8bmctbWQtaWNvbiBpY29uPSJjbG9zZSIgc3R5bGU9ImZpbGw6YmxhY2siIHNpemU9IjE5Ij48L25nLW1kLWljb24+PC9zcGFuPjxzcGFuPlN1cGlubyBJbmNsaW5hZG8KICAgICAgICAgICAgPG5nLW1kLWljb24gaWNvbj0iY2xvc2UiIHN0eWxlPSJmaWxsOmJsYWNrIiBzaXplPSIxOSI+PC9uZy1tZC1pY29uPjwvc3Bhbj48c3Bhbj5TdXBpbm8gRGVjbGluYWRvCiAgICAgICAgICAgIDxuZy1tZC1pY29uIGljb249ImNsb3NlIiBzdHlsZT0iZmlsbDpibGFjayIgc2l6ZT0iMTkiPjwvbmctbWQtaWNvbj48L3NwYW4+PHNwYW4+U3VwaW5vIEFsdGVyZXMKICAgICAgICAgICAgPG5nLW1kLWljb24gaWNvbj0iY2xvc2UiIHN0eWxlPSJmaWxsOmJsYWNrIiBzaXplPSIxOSI+PC9uZy1tZC1pY29uPjwvc3Bhbj48c3Bhbj5DcnVjaWZpeG8KICAgICAgICAgICAgPG5nLW1kLWljb24gaWNvbj0iY2xvc2UiIHN0eWxlPSJmaWxsOmJsYWNrIiBzaXplPSIxOSI+PC9uZy1tZC1pY29uPjwvc3Bhbj48c3Bhbj5TdXBpbm8gSW5jbGluYWRvIEFiZXJ0bwogICAgICAgICAgICA8bmctbWQtaWNvbiBpY29uPSJjbG9zZSIgc3R5bGU9ImZpbGw6YmxhY2siIHNpemU9IjE5Ij48L25nLW1kLWljb24+PC9zcGFuPjxzcGFuPlN1cGlubyBEZWNsaW5hZG8KICAgICAgICAgICAgPG5nLW1kLWljb24gaWNvbj0iY2xvc2UiIHN0eWxlPSJmaWxsOmJsYWNrIiBzaXplPSIxOSI+PC9uZy1tZC1pY29uPjwvc3Bhbj48c3Bhbj5TdXBpbm8gQWx0ZXJlcwogICAgICAgICAgICA8bmctbWQtaWNvbiBpY29uPSJjbG9zZSIgc3R5bGU9ImZpbGw6YmxhY2siIHNpemU9IjE5Ij48L25nLW1kLWljb24+PC9zcGFuPjxzcGFuPkNydWNpZml4bwogICAgICAgICAgICA8bmctbWQtaWNvbiBpY29uPSJjbG9zZSIgc3R5bGU9ImZpbGw6YmxhY2siIHNpemU9IjE5Ij48L25nLW1kLWljb24+PC9zcGFuPjwvc2VjdGlvbj4KICAgICAgPC9zZWN0aW9uPgogICAgPC9zZWN0aW9uPgogIDwvc2VjdGlvbj4KPC9zZWN0aW9uPg==","base64"),
+		// transclude:true,
 		scope: {
-			exercicio: "="
+			// exercicio: "="
 		},
-		require: "^dsExercises",
+		require: "^dsExercisesSelectList",
 		link :function(scope, element,attrs,ctrl) {
-			ctrl.registerExercise(scope);
+			ctrl.registerExerciseItem(scope);
 			scope.open_exerc= function () {
 				ctrl.close_all();
 				scope.isOpened = true;
 			};
-			scope.remove = function(exercicio){
-				scope.$emit('remove_exercise',exercicio);
-			};
 			scope.close_exerc= function () {
 				scope.isOpened = false;
 			};
+			// scope.remove = function(exercicio){
+			// 	scope.$emit('remove_exercise',exercicio);
+			// };
 		}
 	};
 };
@@ -54600,22 +54600,22 @@ module.exports = function() {
 
 module.exports = function() {
 	return{
-		template: Buffer("CjxzZWN0aW9uIGNsYXNzPSJkcy1leGVyY2lzZXMtc2VsZWN0LWxpc3QiPgogIDxwPmxpc3RhPC9wPgogIDxkcy1leGVyY2lzZS1zZWxlY3QtaXRlbT48L2RzLWV4ZXJjaXNlLXNlbGVjdC1pdGVtPgo8L3NlY3Rpb24+","base64"),
+		template: Buffer("CjxzZWN0aW9uIGNsYXNzPSJkcy1leGVyY2lzZXMtc2VsZWN0LWxpc3QiPgogIDxkcy1leGVyY2lzZS1zZWxlY3QtaXRlbT48L2RzLWV4ZXJjaXNlLXNlbGVjdC1pdGVtPgogIDxkcy1leGVyY2lzZS1zZWxlY3QtaXRlbT48L2RzLWV4ZXJjaXNlLXNlbGVjdC1pdGVtPgogIDxkcy1leGVyY2lzZS1zZWxlY3QtaXRlbT48L2RzLWV4ZXJjaXNlLXNlbGVjdC1pdGVtPgo8L3NlY3Rpb24+","base64"),
 		// transclude:true,
 		// scope: {
 		// 	exercicios: "="
 		// },
 		controller: function($scope,$element,$attrs){
 			// console.log($scope.exercicios);
-			// var exercises = [];
-			// this.registerExercise = function(exercise){
-			// 	exercises.push(exercise);
-			// };
-			// this.close_all = function (){
-			// 	exercises.forEach(function(exercise){
-			// 		exercise.isOpened = false;
-			// 	});
-			// };
+			var exercisesItem = [];
+			this.registerExerciseItem = function(exercise){
+				exercisesItem.push(exercise);
+			};
+			this.close_all = function (){
+				exercisesItem.forEach(function(exercise){
+					exercise.isOpened = false;
+				});
+			};
 		}
 	};
 };

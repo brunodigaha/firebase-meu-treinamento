@@ -8,15 +8,15 @@ module.exports = function() {
 		// },
 		controller: function($scope,$element,$attrs){
 			// console.log($scope.exercicios);
-			// var exercises = [];
-			// this.registerExercise = function(exercise){
-			// 	exercises.push(exercise);
-			// };
-			// this.close_all = function (){
-			// 	exercises.forEach(function(exercise){
-			// 		exercise.isOpened = false;
-			// 	});
-			// };
+			var exercisesItem = [];
+			this.registerExerciseItem = function(exercise){
+				exercisesItem.push(exercise);
+			};
+			this.close_all = function (){
+				exercisesItem.forEach(function(exercise){
+					exercise.isOpened = false;
+				});
+			};
 		}
 	};
 };
