@@ -12515,6 +12515,46 @@ a:visited {
 .ds-exercise-edit .ds-exercise-edit-content .insert-details input[type="text"] {
   padding: 0;
 }
+.ds-exercises-select-list {
+  *zoom: 1;
+  float: left;
+  clear: none;
+  text-align: inherit;
+  width: 100%;
+  margin-left: 0%;
+  margin-right: 0%;
+}
+.ds-exercises-select-list:before,
+.ds-exercises-select-list:after {
+  content: '';
+  display: table;
+}
+.ds-exercises-select-list:after {
+  clear: both;
+}
+.ds-exercises-select-list:last-child {
+  margin-right: 0%;
+}
+.ds-exercise-select-item {
+  *zoom: 1;
+  float: left;
+  clear: none;
+  text-align: inherit;
+  width: 100%;
+  margin-left: 0%;
+  margin-right: 0%;
+}
+.ds-exercise-select-item:before,
+.ds-exercise-select-item:after {
+  content: '';
+  display: table;
+}
+.ds-exercise-select-item:after {
+  clear: both;
+}
+.ds-exercise-select-item:last-child {
+  margin-right: 0%;
+}
 .ds-serie {
   *zoom: 1;
   float: left;
@@ -16893,6 +16933,7 @@ md-dialog md-dialog-content .train-dialog-wrap .train-dialog-content .action but
   padding-bottom: 0.8em;
   padding-right: 2em;
   padding-left: 2em;
+  margin-bottom: 2em;
   box-shadow: 0px 2px 4px 1px rgba(0,0,0,0.15);
 }
 .train-content-exercises-wrap .train-content-exercises-add:before,
@@ -16970,11 +17011,7 @@ md-dialog md-dialog-content .train-dialog-wrap .train-dialog-content .action but
   min-width: 15px;
   min-height: 30px;
   line-height: 30px;
-  font-size: 90%;
   margin: 0;
-}
-.train-content-exercises-wrap .train-content-exercises-add .train-content-exercises-add-action button.md-button span {
-  font-size: 110%;
 }
 @media only screen and (min-width: 1050px) {
   .train-content-exercises-wrap .train-content-exercises-add .train-content-exercises-add-action button.md-button {
@@ -16982,16 +17019,48 @@ md-dialog md-dialog-content .train-dialog-wrap .train-dialog-content .action but
     min-width: 15px;
     min-height: 40px;
     line-height: 40px;
-    font-size: 108%;
-    margin: 0;
-  }
-  .train-content-exercises-wrap .train-content-exercises-add .train-content-exercises-add-action button.md-button span {
     font-size: 100%;
+    margin: 0;
   }
 }
 @media only screen and (min-width: 1800px) {
   .train-content-exercises-wrap .train-content-exercises-add .train-content-exercises-add-action button.md-button {
     width: 75%;
+  }
+}
+.train-content-exercises-wrap .train-content-exercises-list {
+  *zoom: 1;
+  float: left;
+  clear: none;
+  text-align: inherit;
+  width: 100%;
+  margin-left: 0%;
+  margin-right: 0%;
+  box-sizing: border-box;
+  padding-right: 2em;
+  padding-left: 2em;
+}
+.train-content-exercises-wrap .train-content-exercises-list:before,
+.train-content-exercises-wrap .train-content-exercises-list:after {
+  content: '';
+  display: table;
+}
+.train-content-exercises-wrap .train-content-exercises-list:after {
+  clear: both;
+}
+.train-content-exercises-wrap .train-content-exercises-list:last-child {
+  margin-right: 0%;
+}
+@media only screen and (min-width: 1050px) {
+  .train-content-exercises-wrap .train-content-exercises-list {
+    padding-right: 3em;
+    padding-left: 3em;
+  }
+}
+@media only screen and (min-width: 1800px) {
+  .train-content-exercises-wrap .train-content-exercises-list {
+    padding-right: 5em;
+    padding-left: 5em;
   }
 }
 .train-content-method-wrap {

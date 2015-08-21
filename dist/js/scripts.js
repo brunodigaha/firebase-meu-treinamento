@@ -54213,7 +54213,7 @@ angular
 
 
 
-},{"./appDirectives":34,"./appRoutes.js":35,"./appRun.js":36,"./auth":39,"./core":47,"./train":58,"./user":62,"angular":19,"angularBreadcrumb":8,"angularChart":9,"angularCookies":10,"angularFire":20,"angularHolderjs":11,"angularIcons":12,"angularMaterial":13,"angularMessages":14,"angularScroll":15,"angularSortableView":16,"angularUploadcare":18,"modernizr":24,"ui-router":17}],26:[function(require,module,exports){
+},{"./appDirectives":36,"./appRoutes.js":37,"./appRun.js":38,"./auth":41,"./core":49,"./train":60,"./user":64,"angular":19,"angularBreadcrumb":8,"angularChart":9,"angularCookies":10,"angularFire":20,"angularHolderjs":11,"angularIcons":12,"angularMaterial":13,"angularMessages":14,"angularScroll":15,"angularSortableView":16,"angularUploadcare":18,"modernizr":24,"ui-router":17}],26:[function(require,module,exports){
 (function (Buffer){
 
 module.exports = function() {
@@ -54546,6 +54546,34 @@ module.exports = function() {
 
 module.exports = function() {
 	return{
+		template: Buffer("CjxzZWN0aW9uIGNsYXNzPSJkcy1leGVyY2lzZS1zZWxlY3QtaXRlbSI+CiAgPHA+ZXhlcmNpY2lvIGl0ZW08L3A+Cjwvc2VjdGlvbj4=","base64"),
+		transclude:true,
+		scope: {
+			exercicio: "="
+		},
+		require: "^dsExercises",
+		link :function(scope, element,attrs,ctrl) {
+			ctrl.registerExercise(scope);
+			scope.open_exerc= function () {
+				ctrl.close_all();
+				scope.isOpened = true;
+			};
+			scope.remove = function(exercicio){
+				scope.$emit('remove_exercise',exercicio);
+			};
+			scope.close_exerc= function () {
+				scope.isOpened = false;
+			};
+		}
+	};
+};
+
+}).call(this,require("buffer").Buffer)
+},{"buffer":1}],29:[function(require,module,exports){
+(function (Buffer){
+
+module.exports = function() {
+	return{
 		template: Buffer("CjxzZWN0aW9uIGNsYXNzPSJkcy1leGVyY2lzZXMiPgogIDx1bCBzdi1yb290PSJleGVyY2lzZXMiIHN2LXBhcnQ9ImV4ZXJjaWNpb3MiPgogICAgPGxpIG5nLXJlcGVhdD0iZXhlcmNpY2lvIGluIGV4ZXJjaWNpb3MiIHN2LWVsZW1lbnQ9ImV4ZXJjaXNlIiBuZy1jbGFzcz0ieydleGVyYy1zZWxlY3QnOiAkaW5kZXg9PWluZGV4fSIgY2xhc3M9ImFuZ3VsYXItYW5pbWF0ZSI+CiAgICAgIDxkcy1leGVyY2lzZSBleGVyY2ljaW89ImV4ZXJjaWNpbyI+PC9kcy1leGVyY2lzZT4KICAgIDwvbGk+CiAgPC91bD4KPC9zZWN0aW9uPg==","base64"),
 		// transclude:true,
 		scope: {
@@ -54567,7 +54595,33 @@ module.exports = function() {
 };
 
 }).call(this,require("buffer").Buffer)
-},{"buffer":1}],29:[function(require,module,exports){
+},{"buffer":1}],30:[function(require,module,exports){
+(function (Buffer){
+
+module.exports = function() {
+	return{
+		template: Buffer("CjxzZWN0aW9uIGNsYXNzPSJkcy1leGVyY2lzZXMtc2VsZWN0LWxpc3QiPgogIDxwPmxpc3RhPC9wPgogIDxkcy1leGVyY2lzZS1zZWxlY3QtaXRlbT48L2RzLWV4ZXJjaXNlLXNlbGVjdC1pdGVtPgo8L3NlY3Rpb24+","base64"),
+		// transclude:true,
+		// scope: {
+		// 	exercicios: "="
+		// },
+		controller: function($scope,$element,$attrs){
+			// console.log($scope.exercicios);
+			// var exercises = [];
+			// this.registerExercise = function(exercise){
+			// 	exercises.push(exercise);
+			// };
+			// this.close_all = function (){
+			// 	exercises.forEach(function(exercise){
+			// 		exercise.isOpened = false;
+			// 	});
+			// };
+		}
+	};
+};
+
+}).call(this,require("buffer").Buffer)
+},{"buffer":1}],31:[function(require,module,exports){
 (function (Buffer){
 
 module.exports = function() {
@@ -54583,7 +54637,7 @@ module.exports = function() {
 };
 
 }).call(this,require("buffer").Buffer)
-},{"buffer":1}],30:[function(require,module,exports){
+},{"buffer":1}],32:[function(require,module,exports){
 (function (Buffer){
 
 module.exports = function() {
@@ -54599,7 +54653,7 @@ module.exports = function() {
 };
 
 }).call(this,require("buffer").Buffer)
-},{"buffer":1}],31:[function(require,module,exports){
+},{"buffer":1}],33:[function(require,module,exports){
 (function (Buffer){
 
 module.exports = function() {
@@ -54627,7 +54681,7 @@ module.exports = function() {
 };
 
 }).call(this,require("buffer").Buffer)
-},{"buffer":1}],32:[function(require,module,exports){
+},{"buffer":1}],34:[function(require,module,exports){
 (function (Buffer){
 
 module.exports = function() {
@@ -54659,7 +54713,7 @@ module.exports = function() {
 };
 
 }).call(this,require("buffer").Buffer)
-},{"buffer":1}],33:[function(require,module,exports){
+},{"buffer":1}],35:[function(require,module,exports){
 (function (Buffer){
 
 module.exports = function() {
@@ -54674,9 +54728,11 @@ module.exports = function() {
 };
 
 }).call(this,require("buffer").Buffer)
-},{"buffer":1}],34:[function(require,module,exports){
+},{"buffer":1}],36:[function(require,module,exports){
 module.exports = angular.module('appDirectives',[])
 		.directive('dsTraining', require('./directives/dsTrainingDirective.js'))
+		.directive('dsExercisesSelectList', require('./directives/dsExercisesSelectListDirective.js'))
+		.directive('dsExerciseSelectItem', require('./directives/dsExerciseSelectItemDirective.js'))
 		.directive('dsExercises', require('./directives/dsExercisesDirective.js'))
 		.directive('dsExercise', require('./directives/dsExerciseDirective.js'))
 		.directive('dsExerciseEdit', require('./directives/dsExerciseEditDirective.js'))
@@ -54685,7 +54741,7 @@ module.exports = angular.module('appDirectives',[])
 		.directive('dsPlan', require('./directives/dsPlanDirective.js'))
 		.directive('dsInfo', require('./directives/dsInfoDirective.js'));
 
-},{"./directives/dsExerciseDirective.js":26,"./directives/dsExerciseEditDirective.js":27,"./directives/dsExercisesDirective.js":28,"./directives/dsInfoDirective.js":29,"./directives/dsPlanDirective.js":30,"./directives/dsSerieDirective.js":31,"./directives/dsSerieEditDirective.js":32,"./directives/dsTrainingDirective.js":33}],35:[function(require,module,exports){
+},{"./directives/dsExerciseDirective.js":26,"./directives/dsExerciseEditDirective.js":27,"./directives/dsExerciseSelectItemDirective.js":28,"./directives/dsExercisesDirective.js":29,"./directives/dsExercisesSelectListDirective.js":30,"./directives/dsInfoDirective.js":31,"./directives/dsPlanDirective.js":32,"./directives/dsSerieDirective.js":33,"./directives/dsSerieEditDirective.js":34,"./directives/dsTrainingDirective.js":35}],37:[function(require,module,exports){
 
 
 module.exports = function ($stateProvider,$compileProvider,$animateProvider,$locationProvider,$urlRouterProvider,$breadcrumbProvider,ChartJsProvider, $mdThemingProvider) {
@@ -54783,7 +54839,7 @@ module.exports = function ($stateProvider,$compileProvider,$animateProvider,$loc
     });	
 };
 
-},{"./auth/authRoutes.js":37,"./core/coreRoutes.js":46,"./train/trainRoutes.js":59,"./user/userRoutes.js":63}],36:[function(require,module,exports){
+},{"./auth/authRoutes.js":39,"./core/coreRoutes.js":48,"./train/trainRoutes.js":61,"./user/userRoutes.js":65}],38:[function(require,module,exports){
 module.exports = function ($rootScope,UCURL,$location,$state,$stateParams,authModelService,coreEventsService) {
 
 	$rootScope.$state = $state;
@@ -54851,7 +54907,7 @@ module.exports = function ($rootScope,UCURL,$location,$state,$stateParams,authMo
 	// });
 };
 
-},{}],37:[function(require,module,exports){
+},{}],39:[function(require,module,exports){
 (function (Buffer){
 
 module.exports = {
@@ -54878,7 +54934,7 @@ module.exports = {
 
 
 }).call(this,require("buffer").Buffer)
-},{"buffer":1}],38:[function(require,module,exports){
+},{"buffer":1}],40:[function(require,module,exports){
 module.exports = function ($scope,$timeout,$location, authModelService,$firebaseArray,FBURL) {
 	$scope.email = null;
 	$scope.password = null;
@@ -54928,12 +54984,12 @@ module.exports = function ($scope,$timeout,$location, authModelService,$firebase
 	};
 };
 
-},{}],39:[function(require,module,exports){
+},{}],41:[function(require,module,exports){
 module.exports = angular.module('auth',[])
 			.factory('authModelService', require('./services/authModelService.js'))
 			.controller('loginController', require('./controllers/loginController.js'));
 
-},{"./controllers/loginController.js":38,"./services/authModelService.js":40}],40:[function(require,module,exports){
+},{"./controllers/loginController.js":40,"./services/authModelService.js":42}],42:[function(require,module,exports){
 module.exports = function ($firebaseAuth,FBURL) {
 	var ref = new Firebase(FBURL);
 	return $firebaseAuth(ref);
@@ -55003,7 +55059,7 @@ module.exports = function ($firebaseAuth,FBURL) {
 	// return authModel;
 };
 
-},{}],41:[function(require,module,exports){
+},{}],43:[function(require,module,exports){
 module.exports = function($scope,FBURL,$firebaseArray, coreEventsService, $mdDialog, $mdToast, $animate) {
 	var coreEvents = $scope.coreEvents = coreEventsService;
 	// $scope.user = RestangularCustom.all('usuario').getList().$object;
@@ -55040,7 +55096,7 @@ module.exports = function($scope,FBURL,$firebaseArray, coreEventsService, $mdDia
 
 };
 
-},{}],42:[function(require,module,exports){
+},{}],44:[function(require,module,exports){
 (function (Buffer){
 
 module.exports = function ($scope,$mdDialog,$location, coreEventsService, authModelService) {
@@ -55078,7 +55134,7 @@ module.exports = function ($scope,$mdDialog,$location, coreEventsService, authMo
 };
 
 }).call(this,require("buffer").Buffer)
-},{"buffer":1}],43:[function(require,module,exports){
+},{"buffer":1}],45:[function(require,module,exports){
 (function (Buffer){
 
 module.exports = function($scope,$mdDialog, $mdToast,$animate) {
@@ -55124,7 +55180,7 @@ module.exports = function($scope,$mdDialog, $mdToast,$animate) {
 };
 
 }).call(this,require("buffer").Buffer)
-},{"buffer":1}],44:[function(require,module,exports){
+},{"buffer":1}],46:[function(require,module,exports){
 module.exports = function($scope,$mdToast,$mdDialog,FBURL,$window,$firebaseObject) {
 	$scope.newUser = {
 		image:null,
@@ -55177,7 +55233,7 @@ module.exports = function($scope,$mdToast,$mdDialog,FBURL,$window,$firebaseObjec
 	};
 };
 
-},{}],45:[function(require,module,exports){
+},{}],47:[function(require,module,exports){
 module.exports = function($scope, coreEventsService,$state,$stateParams,$mdDialog) {
 	$scope.duracao=2;
 	$scope.frequencia=3;
@@ -55193,7 +55249,7 @@ module.exports = function($scope, coreEventsService,$state,$stateParams,$mdDialo
 
 };
 
-},{}],46:[function(require,module,exports){
+},{}],48:[function(require,module,exports){
 (function (Buffer){
 
 module.exports = {
@@ -55248,7 +55304,7 @@ module.exports = {
 
 
 }).call(this,require("buffer").Buffer)
-},{"buffer":1}],47:[function(require,module,exports){
+},{"buffer":1}],49:[function(require,module,exports){
 module.exports = angular.module('core',[])
 		.controller('headerController', require('./controllers/headerController.js'))
 		.controller('searchController', require('./controllers/searchController.js'))
@@ -55257,7 +55313,7 @@ module.exports = angular.module('core',[])
 		.controller('trainDialogController', require('./controllers/trainDialogController.js'))
 		.factory('coreEventsService', require('./services/coreEventsService.js'));
 
-},{"./controllers/asideController.js":41,"./controllers/headerController.js":42,"./controllers/searchController.js":43,"./controllers/searchDialogController.js":44,"./controllers/trainDialogController.js":45,"./services/coreEventsService.js":48}],48:[function(require,module,exports){
+},{"./controllers/asideController.js":43,"./controllers/headerController.js":44,"./controllers/searchController.js":45,"./controllers/searchDialogController.js":46,"./controllers/trainDialogController.js":47,"./services/coreEventsService.js":50}],50:[function(require,module,exports){
 module.exports = function () {
 	var eventsService = {
 		search: false,
@@ -55285,7 +55341,7 @@ module.exports = function () {
 	return eventsService;
 };
 
-},{}],49:[function(require,module,exports){
+},{}],51:[function(require,module,exports){
 module.exports = function($scope, coreEventsService,$state,$stateParams,$mdDialog) {
 	$scope.hide = function() {
 		$mdDialog.hide();
@@ -55298,13 +55354,13 @@ module.exports = function($scope, coreEventsService,$state,$stateParams,$mdDialo
 	};
 };
 
-},{}],50:[function(require,module,exports){
+},{}],52:[function(require,module,exports){
 module.exports = function($scope) {
 	$scope.duracao = 3;
 	$scope.frequencia =4;
 };
 
-},{}],51:[function(require,module,exports){
+},{}],53:[function(require,module,exports){
 (function (Buffer){
 
 module.exports = function($scope,$timeout,$q,$log, coreEventsService,$state,$stateParams,$mdDialog) {
@@ -55523,17 +55579,17 @@ module.exports = function($scope,$timeout,$q,$log, coreEventsService,$state,$sta
 };
 
 }).call(this,require("buffer").Buffer)
-},{"buffer":1}],52:[function(require,module,exports){
+},{"buffer":1}],54:[function(require,module,exports){
 module.exports = function($scope) {
 
 };
 
-},{}],53:[function(require,module,exports){
+},{}],55:[function(require,module,exports){
 module.exports = function ($scope) {
 
 };
 
-},{}],54:[function(require,module,exports){
+},{}],56:[function(require,module,exports){
 module.exports = function($scope, coreEventsService,$state,$stateParams,$mdDialog) {
 	$scope.hide = function() {
 		$mdDialog.hide();
@@ -55554,7 +55610,7 @@ module.exports = function($scope, coreEventsService,$state,$stateParams,$mdDialo
 
 };
 
-},{}],55:[function(require,module,exports){
+},{}],57:[function(require,module,exports){
 module.exports =  function($scope,$mdBottomSheet,$timeout, coreEventsService,$state,$stateParams) {
 	$scope.params = $stateParams;
 	$scope.state = $state.current;
@@ -55562,9 +55618,9 @@ module.exports =  function($scope,$mdBottomSheet,$timeout, coreEventsService,$st
 	// $scope.eventsService= eventsService;
 };
 
-},{}],56:[function(require,module,exports){
-arguments[4][52][0].apply(exports,arguments)
-},{"dup":52}],57:[function(require,module,exports){
+},{}],58:[function(require,module,exports){
+arguments[4][54][0].apply(exports,arguments)
+},{"dup":54}],59:[function(require,module,exports){
 module.exports = function($scope) {
 	$scope.train_menu= {menu: false};
 	$scope.close_train_menu = function(){
@@ -55576,7 +55632,7 @@ module.exports = function($scope) {
 
 };
 
-},{}],58:[function(require,module,exports){
+},{}],60:[function(require,module,exports){
 module.exports = angular.module('train',[])
 		.controller('listTrainingController', require('./controllers/listTrainingController.js'))
 		.controller('trainingTrainingController', require('./controllers/trainingTrainingController.js'))
@@ -55588,7 +55644,7 @@ module.exports = angular.module('train',[])
 		.controller('insertTrainingDialogController', require('./controllers/insertTrainingDialogController.js'))
 		.controller('ImportDialogController', require('./controllers/ImportDialogController.js'));
 
-},{"./controllers/ImportDialogController.js":49,"./controllers/addPlanController.js":50,"./controllers/addTrainingController.js":51,"./controllers/collectionTrainingController.js":52,"./controllers/historyTrainingController.js":53,"./controllers/insertTrainingDialogController.js":54,"./controllers/listTrainingController.js":55,"./controllers/plansController.js":56,"./controllers/trainingTrainingController.js":57}],59:[function(require,module,exports){
+},{"./controllers/ImportDialogController.js":51,"./controllers/addPlanController.js":52,"./controllers/addTrainingController.js":53,"./controllers/collectionTrainingController.js":54,"./controllers/historyTrainingController.js":55,"./controllers/insertTrainingDialogController.js":56,"./controllers/listTrainingController.js":57,"./controllers/plansController.js":58,"./controllers/trainingTrainingController.js":59}],61:[function(require,module,exports){
 (function (Buffer){
 
 module.exports = {
@@ -55707,22 +55763,22 @@ module.exports = {
 };
 
 }).call(this,require("buffer").Buffer)
-},{"buffer":1}],60:[function(require,module,exports){
+},{"buffer":1}],62:[function(require,module,exports){
 module.exports = function($scope) {
  $scope.labels = ["Dias Decorridos", "Dias Restantes"];
   $scope.data = [14,7];
 };
 
-},{}],61:[function(require,module,exports){
-arguments[4][52][0].apply(exports,arguments)
-},{"dup":52}],62:[function(require,module,exports){
+},{}],63:[function(require,module,exports){
+arguments[4][54][0].apply(exports,arguments)
+},{"dup":54}],64:[function(require,module,exports){
 module.exports = angular.module('user',[])
 		.controller('planController', require('./controllers/planController.js'))
 		.controller('scheduleController', require('./controllers/scheduleController.js'));
 		// .factory('userModel', require('./services/userModel.js'))
 		// .factory('RestangularCustom', require('./services/restangularCustom.js'));
 
-},{"./controllers/planController.js":60,"./controllers/scheduleController.js":61}],63:[function(require,module,exports){
+},{"./controllers/planController.js":62,"./controllers/scheduleController.js":63}],65:[function(require,module,exports){
 (function (Buffer){
 
 module.exports = {
@@ -55882,7 +55938,7 @@ module.exports = {
 				// 	// expect($stateParams).toBe({userId: 12});
 				// },
 				'admin-content-menu-content@administration': {
-					template: Buffer("CjxzZWN0aW9uIGNsYXNzPSJ0cmFpbi1jb250ZW50LWV4ZXJjaXNlcy13cmFwIj4KICA8c2VjdGlvbiBjbGFzcz0idHJhaW4tY29udGVudC1leGVyY2lzZXMtYWRkIj4KICAgIDxzZWN0aW9uIGNsYXNzPSJ0cmFpbi1jb250ZW50LWV4ZXJjaXNlcy1hZGQtaW5wdXQiPgogICAgICA8bWQtaW5wdXQtY29udGFpbmVyIG1kLW5vLWZsb2F0PSIiPgogICAgICAgIDxpbnB1dCBwbGFjZWhvbGRlcj0iTm9tZSBkbyBHcnVwbyBNdXNjdWxhciIgbmctbW9kZWw9Imdyb3VwIi8+CiAgICAgIDwvbWQtaW5wdXQtY29udGFpbmVyPgogICAgPC9zZWN0aW9uPgogICAgPHNlY3Rpb24gY2xhc3M9InRyYWluLWNvbnRlbnQtZXhlcmNpc2VzLWFkZC1hY3Rpb24iPgogICAgICA8bWQtYnV0dG9uIGNsYXNzPSJtZC1yYWlzZWQgbWQtcHJpbWFyeSI+QWRpY2lvbmFyIEdydXBvPC9tZC1idXR0b24+CiAgICA8L3NlY3Rpb24+CiAgPC9zZWN0aW9uPgo8L3NlY3Rpb24+","base64")  
+					template: Buffer("CjxzZWN0aW9uIGNsYXNzPSJ0cmFpbi1jb250ZW50LWV4ZXJjaXNlcy13cmFwIj4KICA8c2VjdGlvbiBjbGFzcz0idHJhaW4tY29udGVudC1leGVyY2lzZXMtYWRkIj4KICAgIDxzZWN0aW9uIGNsYXNzPSJ0cmFpbi1jb250ZW50LWV4ZXJjaXNlcy1hZGQtaW5wdXQiPgogICAgICA8bWQtaW5wdXQtY29udGFpbmVyIG1kLW5vLWZsb2F0PSIiPgogICAgICAgIDxpbnB1dCBwbGFjZWhvbGRlcj0iTm9tZSBkbyBHcnVwbyBNdXNjdWxhciIgbmctbW9kZWw9Imdyb3VwIi8+CiAgICAgIDwvbWQtaW5wdXQtY29udGFpbmVyPgogICAgPC9zZWN0aW9uPgogICAgPHNlY3Rpb24gY2xhc3M9InRyYWluLWNvbnRlbnQtZXhlcmNpc2VzLWFkZC1hY3Rpb24iPgogICAgICA8bWQtYnV0dG9uIGNsYXNzPSJtZC1yYWlzZWQgbWQtcHJpbWFyeSI+QWRpY2lvbmFyIEdydXBvPC9tZC1idXR0b24+CiAgICA8L3NlY3Rpb24+CiAgPC9zZWN0aW9uPgogIDxzZWN0aW9uIGNsYXNzPSJ0cmFpbi1jb250ZW50LWV4ZXJjaXNlcy1saXN0Ij4KICAgIDxkcy1leGVyY2lzZXMtc2VsZWN0LWxpc3Q+PC9kcy1leGVyY2lzZXMtc2VsZWN0LWxpc3Q+CiAgPC9zZWN0aW9uPgo8L3NlY3Rpb24+","base64")  
 				}
 			},
 		},

@@ -1,5 +1,7 @@
 module.exports = angular.module('appDirectives',[])
 		.directive('dsTraining', require('./directives/dsTrainingDirective.js'))
+		.directive('dsExercisesSelectList', require('./directives/dsExercisesSelectListDirective.js'))
+		.directive('dsExerciseSelectItem', require('./directives/dsExerciseSelectItemDirective.js'))
 		.directive('dsExercises', require('./directives/dsExercisesDirective.js'))
 		.directive('dsExercise', require('./directives/dsExerciseDirective.js'))
 		.directive('dsExerciseEdit', require('./directives/dsExerciseEditDirective.js'))
