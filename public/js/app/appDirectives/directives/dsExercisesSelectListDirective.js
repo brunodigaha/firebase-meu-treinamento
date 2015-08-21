@@ -17,6 +17,7 @@ module.exports = function() {
 					exercise.isOpened = false;
 				});
 			};
+			$scope.lista = [1,2,4,3,6];
 		}
 	};
 };
