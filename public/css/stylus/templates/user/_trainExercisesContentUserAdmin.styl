@@ -1,2 +1,58 @@
 .train-content-exercises-wrap
 	col(12/12,gutter:0)
+	box-sizing border-box
+	padding-right 2em
+	padding-left 2em
+	+desktop()
+		padding-right 3em
+		padding-left 3em
+	+hd()
+		padding-right 5em
+		padding-left 5em
+	.train-content-exercises-add
+		col(12/12,gutter:0)
+		box-sizing border-box
+		padding-top .8em
+		padding-bottom .8em
+		padding-right 2em
+		padding-left 2em
+		+desktop()
+			padding-right 3em
+			padding-left 3em
+			padding-top 1em
+			padding-bottom 1em
+		// border 1px solid palette('Grey','300')
+		box-shadow 0px 2px 4px 1px rgba(0,0,0,0.15)
+		// box-shadow: 0 8px 17px rgba(0,0,0,.2)
+		.train-content-exercises-add-input
+			col(8/12,gutter:0)
+			box-sizing border-box
+			padding-right 1em
+			+desktop()
+				padding-right 2em
+			md-input-container
+				padding 0
+		.train-content-exercises-add-action
+			col(4/12,gutter:0)
+			text-align center
+			button.md-button
+				width 100%
+				min-width 15px
+				min-height 30px
+				line-height 30px
+				font-size 90%
+				margin 0
+				span
+					font-size 110%
+				+desktop()
+					width 92%
+					min-width 15px
+					min-height 40px
+					line-height 40px
+					font-size 108%
+					margin 0
+					span
+						font-size 100%
+				+hd()
+					width 75%
+

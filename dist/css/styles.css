@@ -16295,6 +16295,7 @@ md-dialog md-dialog-content .train-dialog-wrap .train-dialog-content .action but
 .admin-wrap .admin-aside .administration-action-back p {
   position: relative;
   top: -21px;
+  font-size: 85%;
 }
 .admin-wrap .admin-aside .perfil-administration {
   *zoom: 1;
@@ -16584,6 +16585,12 @@ md-dialog md-dialog-content .train-dialog-wrap .train-dialog-content .action but
     margin-bottom: 2.5em;
   }
 }
+@media only screen and (min-width: 1800px) {
+  .gym-content-menu-wrap {
+    padding-right: 8em;
+    padding-left: 8em;
+  }
+}
 .gym-content-menu-wrap md-tabs {
   border-bottom: 1px solid #eee;
 }
@@ -16812,6 +16819,12 @@ md-dialog md-dialog-content .train-dialog-wrap .train-dialog-content .action but
     margin-bottom: 2.5em;
   }
 }
+@media only screen and (min-width: 1800px) {
+  .train-content-menu-wrap {
+    padding-right: 8em;
+    padding-left: 8em;
+  }
+}
 .train-content-menu-wrap md-tabs {
   border-bottom: 1px solid #eee;
 }
@@ -16840,6 +16853,9 @@ md-dialog md-dialog-content .train-dialog-wrap .train-dialog-content .action but
   width: 100%;
   margin-left: 0%;
   margin-right: 0%;
+  box-sizing: border-box;
+  padding-right: 2em;
+  padding-left: 2em;
 }
 .train-content-exercises-wrap:before,
 .train-content-exercises-wrap:after {
@@ -16851,6 +16867,132 @@ md-dialog md-dialog-content .train-dialog-wrap .train-dialog-content .action but
 }
 .train-content-exercises-wrap:last-child {
   margin-right: 0%;
+}
+@media only screen and (min-width: 1050px) {
+  .train-content-exercises-wrap {
+    padding-right: 3em;
+    padding-left: 3em;
+  }
+}
+@media only screen and (min-width: 1800px) {
+  .train-content-exercises-wrap {
+    padding-right: 5em;
+    padding-left: 5em;
+  }
+}
+.train-content-exercises-wrap .train-content-exercises-add {
+  *zoom: 1;
+  float: left;
+  clear: none;
+  text-align: inherit;
+  width: 100%;
+  margin-left: 0%;
+  margin-right: 0%;
+  box-sizing: border-box;
+  padding-top: 0.8em;
+  padding-bottom: 0.8em;
+  padding-right: 2em;
+  padding-left: 2em;
+  box-shadow: 0px 2px 4px 1px rgba(0,0,0,0.15);
+}
+.train-content-exercises-wrap .train-content-exercises-add:before,
+.train-content-exercises-wrap .train-content-exercises-add:after {
+  content: '';
+  display: table;
+}
+.train-content-exercises-wrap .train-content-exercises-add:after {
+  clear: both;
+}
+.train-content-exercises-wrap .train-content-exercises-add:last-child {
+  margin-right: 0%;
+}
+@media only screen and (min-width: 1050px) {
+  .train-content-exercises-wrap .train-content-exercises-add {
+    padding-right: 3em;
+    padding-left: 3em;
+    padding-top: 1em;
+    padding-bottom: 1em;
+  }
+}
+.train-content-exercises-wrap .train-content-exercises-add .train-content-exercises-add-input {
+  *zoom: 1;
+  float: left;
+  clear: none;
+  text-align: inherit;
+  width: 66.66666666666666%;
+  margin-left: 0%;
+  margin-right: 0%;
+  box-sizing: border-box;
+  padding-right: 1em;
+}
+.train-content-exercises-wrap .train-content-exercises-add .train-content-exercises-add-input:before,
+.train-content-exercises-wrap .train-content-exercises-add .train-content-exercises-add-input:after {
+  content: '';
+  display: table;
+}
+.train-content-exercises-wrap .train-content-exercises-add .train-content-exercises-add-input:after {
+  clear: both;
+}
+.train-content-exercises-wrap .train-content-exercises-add .train-content-exercises-add-input:last-child {
+  margin-right: 0%;
+}
+@media only screen and (min-width: 1050px) {
+  .train-content-exercises-wrap .train-content-exercises-add .train-content-exercises-add-input {
+    padding-right: 2em;
+  }
+}
+.train-content-exercises-wrap .train-content-exercises-add .train-content-exercises-add-input md-input-container {
+  padding: 0;
+}
+.train-content-exercises-wrap .train-content-exercises-add .train-content-exercises-add-action {
+  *zoom: 1;
+  float: left;
+  clear: none;
+  text-align: inherit;
+  width: 33.33333333333333%;
+  margin-left: 0%;
+  margin-right: 0%;
+  text-align: center;
+}
+.train-content-exercises-wrap .train-content-exercises-add .train-content-exercises-add-action:before,
+.train-content-exercises-wrap .train-content-exercises-add .train-content-exercises-add-action:after {
+  content: '';
+  display: table;
+}
+.train-content-exercises-wrap .train-content-exercises-add .train-content-exercises-add-action:after {
+  clear: both;
+}
+.train-content-exercises-wrap .train-content-exercises-add .train-content-exercises-add-action:last-child {
+  margin-right: 0%;
+}
+.train-content-exercises-wrap .train-content-exercises-add .train-content-exercises-add-action button.md-button {
+  width: 100%;
+  min-width: 15px;
+  min-height: 30px;
+  line-height: 30px;
+  font-size: 90%;
+  margin: 0;
+}
+.train-content-exercises-wrap .train-content-exercises-add .train-content-exercises-add-action button.md-button span {
+  font-size: 110%;
+}
+@media only screen and (min-width: 1050px) {
+  .train-content-exercises-wrap .train-content-exercises-add .train-content-exercises-add-action button.md-button {
+    width: 92%;
+    min-width: 15px;
+    min-height: 40px;
+    line-height: 40px;
+    font-size: 108%;
+    margin: 0;
+  }
+  .train-content-exercises-wrap .train-content-exercises-add .train-content-exercises-add-action button.md-button span {
+    font-size: 100%;
+  }
+}
+@media only screen and (min-width: 1800px) {
+  .train-content-exercises-wrap .train-content-exercises-add .train-content-exercises-add-action button.md-button {
+    width: 75%;
+  }
 }
 .train-content-method-wrap {
   *zoom: 1;
