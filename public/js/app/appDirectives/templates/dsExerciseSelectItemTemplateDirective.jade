@@ -12,7 +12,7 @@ section.ds-exercise-select-item
 				section.ds-exercise-item-opened-title(ng-click="close_exerc();")
 					p Costas
 				section.ds-exercise-item-opened-resume
-					p Exercluir Grupo
+					md-button.md-warn Excluir Grupo
 			section.ds-exercise-item-opened-content-wrap
 				section.ds-exercise-item-opened-content
 					span Supino Declinado
@@ -41,3 +41,9 @@ section.ds-exercise-select-item
 						ng-md-icon(icon="close" style="fill:black"  size="19")
 					span Crucifixo
 						ng-md-icon(icon="close" style="fill:black"  size="19")
+			section.ds-exercise-item-opened-header
+				section.ds-exercise-item-opened-input
+					md-input-container(md-no-float='')
+						input(placeholder='Digite nome do exercício para inserí-lo' ng-model="newExercise")
+				section.ds-exercise-item-opened-action
+					md-button.md-raised.md-primary(ng-disabled="!newExercise") Inserir Exercício

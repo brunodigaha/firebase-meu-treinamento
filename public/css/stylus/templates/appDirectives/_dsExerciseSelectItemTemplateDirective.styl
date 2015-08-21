@@ -7,10 +7,9 @@
 	.ds-exercise-item-wrap
 		col(12/12,gutter:0)
 		box-sizing border-box
-		// border 1px solid palette('Grey','300')
-		border 1px solid #b7c7cf
+		border 1px solid palette('Grey','300')
+		// border 1px solid #d8d8d8
 		&.active
-			// border 1px solid palette('Grey','400')
 			box-shadow 0px 1px 3px rgba(0,0,0,0.20)
 			margin-top 7px
 			margin-bottom 7px
@@ -19,14 +18,12 @@
 			.ds-exercise-item-closed
 				col(12/12,gutter:0)
 				box-sizing border-box
-				// border-bottom 1px solid palette('Grey','400')
 				padding-right 10px
 				padding-left 10px
 				line-height 40px
 				height 40px
 				color palette('Grey','800')
-				background-color  #E6F1F6
-				// background-color  #E2EBEF
+				background-color palette('Grey','200')
 				+desktop()
 					line-height 50px
 					height 50px
@@ -55,11 +52,8 @@
 					line-height 50px
 					height 50px
 				color palette('Grey','800')
-				// background-color palette('Grey','100')
-				background-color  #E6F1F6
-				// background-color  #E2EBEF
-				// border-bottom 1px solid palette('Grey','300')
-				border-bottom 1px solid #d8e6ec
+				background-color palette('Grey','200')
+				border-bottom 1px solid palette('Grey','300')
 				.ds-exercise-item-opened-title
 					col(5/12,gutter:0)
 					font-size 110%
@@ -72,8 +66,8 @@
 				box-sizing border-box
 				padding-right .5em
 				padding-left .5em
-				padding-top .2em
-				padding-bottom .8em
+				padding-top .5em
+				padding-bottom 1em
 				+desktop()
 					padding-right 1em
 					padding-left 1em
@@ -108,5 +102,28 @@
 								// margin-right 5px
 								&:hover
 									fill palette('Red','600')
-									background-color palette('Grey','200')
+									// background-color palette('Grey','200')
+			.ds-exercise-item-opened-header
+				col(12/12,gutter:0)
+				text-align right
+				padding-right 1em
+				padding-left 1em
+				+desktop()
+					padding-right 2em
+					padding-left 2em
+				box-sizing border-box
+				border-top 1px solid palette('Grey','200')
+				background-color palette('Grey','50')
+				.ds-exercise-item-opened-input
+					col(7/12,gutter:0)
+					+desktop()
+						col(8.5/12,gutter:0)
+					md-input-container
+						padding 0
+						padding-top 0.6em
+						margin 0
+				.ds-exercise-item-opened-action
+					col(5/12,gutter:0)
+					+desktop()
+						col(3.5/12,gutter:0)
 

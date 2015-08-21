@@ -16,7 +16,7 @@
           <p>Costas</p>
         </section>
         <section class="ds-exercise-item-opened-resume">
-          <p>Exercluir Grupo</p>
+          <md-button class="md-warn">Excluir Grupo</md-button>
         </section>
       </section>
       <section class="ds-exercise-item-opened-content-wrap">
@@ -34,6 +34,16 @@
             <ng-md-icon icon="close" style="fill:black" size="19"></ng-md-icon></span><span>Supino Alteres
             <ng-md-icon icon="close" style="fill:black" size="19"></ng-md-icon></span><span>Crucifixo
             <ng-md-icon icon="close" style="fill:black" size="19"></ng-md-icon></span></section>
+      </section>
+      <section class="ds-exercise-item-opened-header">
+        <section class="ds-exercise-item-opened-input">
+          <md-input-container md-no-float="">
+            <input placeholder="Digite nome do exercício para inserí-lo" ng-model="newExercise"/>
+          </md-input-container>
+        </section>
+        <section class="ds-exercise-item-opened-action">
+          <md-button ng-disabled="!newExercise" class="md-raised md-primary">Inserir Exercício</md-button>
+        </section>
       </section>
     </section>
   </section>
