@@ -61,7 +61,16 @@ module.exports = function ($stateProvider,$compileProvider,$animateProvider,$loc
 				{url:'/staff'},require('./user/userRoutes.js').user.gymAdminStaff))
 
 		.state('administration.adminGym.adminGymMembers',angular.extend(
-				{url:'/members'},require('./user/userRoutes.js').user.gymAdminMembers));
+				{url:'/members'},require('./user/userRoutes.js').user.gymAdminMembers))
+
+		.state('administration.adminTrain',angular.extend(
+				{url:'/training'},require('./user/userRoutes.js').user.trainAdmin))
+
+		.state('administration.adminTrain.adminTrainExercises',angular.extend(
+				{url:'/exercises'},require('./user/userRoutes.js').user.trainAdminExercises))
+
+		.state('administration.adminTrain.adminTrainMethod',angular.extend(
+				{url:'/training-method'},require('./user/userRoutes.js').user.trainAdminMethod));
 
    $mdThemingProvider.theme('default')
     .primaryPalette('blue');

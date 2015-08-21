@@ -15,7 +15,7 @@ section.admin-wrap
 				// li(ui-sref-active="active" ui-sref="administration.adminGym.adminGymOwner")
 				li(ng-class="{ active: $state.includes('administration.adminGym')}"  ui-sref="administration.adminGym.adminGymOwner")
 					a Academia
-				li
+				li(ng-class="{ active: $state.includes('administration.adminTrain')}"  ui-sref="administration.adminTrain.adminTrainExercises")
 					a Treino
 				li
 					a Idioma

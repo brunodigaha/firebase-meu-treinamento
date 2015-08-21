@@ -16781,6 +16781,97 @@ md-dialog md-dialog-content .train-dialog-wrap .train-dialog-content .action but
 .gym-content-members-wrap:last-child {
   margin-right: 0%;
 }
+.train-content-menu-wrap {
+  *zoom: 1;
+  float: left;
+  clear: none;
+  text-align: inherit;
+  width: 100%;
+  margin-left: 0%;
+  margin-right: 0%;
+  box-sizing: border-box;
+  padding-right: 3em;
+  padding-left: 3em;
+  margin-bottom: 1.5em;
+}
+.train-content-menu-wrap:before,
+.train-content-menu-wrap:after {
+  content: '';
+  display: table;
+}
+.train-content-menu-wrap:after {
+  clear: both;
+}
+.train-content-menu-wrap:last-child {
+  margin-right: 0%;
+}
+@media only screen and (min-width: 1050px) {
+  .train-content-menu-wrap {
+    padding-right: 5em;
+    padding-left: 5em;
+    margin-bottom: 2.5em;
+  }
+}
+.train-content-menu-wrap md-tabs {
+  border-bottom: 1px solid #eee;
+}
+.train-content-menu-wrap md-tabs md-tab-item.md-tab {
+  color: #2196f3;
+  font-size: 94%;
+  text-transform: none;
+}
+@media only screen and (min-width: 400px) and (max-width: 1050px) {
+  .train-content-menu-wrap md-tabs md-tab-item.md-tab {
+    padding: 13px 13px;
+    line-height: 27px;
+  }
+}
+.train-content-menu-wrap md-tabs .md-tab.md-active,
+.train-content-menu-wrap md-tabs md-tabs .md-tab.md-focused {
+  color: #000;
+  background-color: #fafafa;
+  font-weight: bold;
+}
+.train-content-exercises-wrap {
+  *zoom: 1;
+  float: left;
+  clear: none;
+  text-align: inherit;
+  width: 100%;
+  margin-left: 0%;
+  margin-right: 0%;
+}
+.train-content-exercises-wrap:before,
+.train-content-exercises-wrap:after {
+  content: '';
+  display: table;
+}
+.train-content-exercises-wrap:after {
+  clear: both;
+}
+.train-content-exercises-wrap:last-child {
+  margin-right: 0%;
+}
+.train-content-method-wrap {
+  *zoom: 1;
+  float: left;
+  clear: none;
+  text-align: inherit;
+  width: 100%;
+  margin-left: 0%;
+  margin-right: 0%;
+}
+.train-content-method-wrap:before,
+.train-content-method-wrap:after {
+  content: '';
+  display: table;
+}
+.train-content-method-wrap:after {
+  clear: both;
+}
+.train-content-method-wrap:last-child {
+  margin-right: 0%;
+}
 .training {
   *zoom: 1;
   float: left;

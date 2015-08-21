@@ -133,6 +133,49 @@ module.exports = {
 			},
 		},
 
+		trainAdmin : {
+			authenticate: true,
+			abstract: true,
+			views: {
+				// controller: function($stateParams) {
+				// 	// expect($stateParams).toBe({userId: 12});
+				// },
+				'admin-content-menu@administration': {
+					template: fs.readFileSync(__dirname + '/templates/trainMenuUserAdmin.html')  
+				}
+			},
+		},
+
+		trainAdminExercises : {
+			authenticate: true,
+			ncyBreadcrumb: {
+				label: 'Administração - Treinos'
+			},
+			views: {
+				// controller: function($stateParams) {
+				// 	// expect($stateParams).toBe({userId: 12});
+				// },
+				'admin-content-menu-content@administration': {
+					template: fs.readFileSync(__dirname + '/templates/trainExercisesContentUserAdmin.html')  
+				}
+			},
+		},
+
+		trainAdminMethod : {
+			authenticate: true,
+			ncyBreadcrumb: {
+				label: 'Administração - Treinos'
+			},
+			views: {
+				// controller: function($stateParams) {
+				// 	// expect($stateParams).toBe({userId: 12});
+				// },
+				'admin-content-menu-content@administration': {
+					template: fs.readFileSync(__dirname + '/templates/trainMethodContentUserAdmin.html')  
+				}
+			},
+		},
+
 		schedule : {
 			authenticate: true,
 			ncyBreadcrumb: {
