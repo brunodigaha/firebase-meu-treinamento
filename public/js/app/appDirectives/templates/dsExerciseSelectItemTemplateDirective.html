@@ -21,30 +21,18 @@
       </section>
       <section class="ds-exercise-item-opened-content-wrap">
         <section class="ds-exercise-item-opened-content">
-          <md-content class="ds-exercise-select-item-scroll"><span>Supino Declinado
-              <ng-md-icon icon="close" style="fill:black" size="19"></ng-md-icon></span><span>Supino Alteres
-              <ng-md-icon icon="close" style="fill:black" size="19"></ng-md-icon></span><span>Supino Alteres
-              <ng-md-icon icon="close" style="fill:black" size="19"></ng-md-icon></span><span>Crucifixo
-              <ng-md-icon icon="close" style="fill:black" size="19"></ng-md-icon></span><span>Supino Reto 
-              <ng-md-icon icon="close" style="fill:black" size="19"></ng-md-icon></span><span>Supino Inclinado
-              <ng-md-icon icon="close" style="fill:black" size="19"></ng-md-icon></span><span>Supino Declinado
-              <ng-md-icon icon="close" style="fill:black" size="19"></ng-md-icon></span><span>Supino Alteres
-              <ng-md-icon icon="close" style="fill:black" size="19"></ng-md-icon></span><span>Crucifixo
-              <ng-md-icon icon="close" style="fill:black" size="19"></ng-md-icon></span><span>Supino Inclinado Aberto
-              <ng-md-icon icon="close" style="fill:black" size="19"></ng-md-icon></span><span>Supino Declinado
-              <ng-md-icon icon="close" style="fill:black" size="19"></ng-md-icon></span><span>Supino Alteres
-              <ng-md-icon icon="close" style="fill:black" size="19"></ng-md-icon></span><span>Crucifixo
-              <ng-md-icon icon="close" style="fill:black" size="19"></ng-md-icon></span></md-content>
+          <md-content class="ds-exercise-select-item-scroll"><span ng-repeat="exercise in group.exercises">{{exercise}}
+              <ng-md-icon icon="close" style="fill:black" size="19" ng-click="remove_exer(exercise)"></ng-md-icon></span></md-content>
         </section>
       </section>
       <section class="ds-exercise-item-opened-header">
         <section class="ds-exercise-item-opened-input">
           <md-input-container md-no-float="">
-            <input placeholder="Digite nome do exercício para inserí-lo" ng-model="newExercise"/>
+            <input placeholder="Digite nome do exercício para inserí-lo" ng-model="newExercise.name"/>
           </md-input-container>
         </section>
         <section class="ds-exercise-item-opened-action">
-          <md-button ng-disabled="!newExercise" class="md-raised md-primary">Inserir Exercício</md-button>
+          <md-button ng-disabled="!newExercise" ng-click="add(group);" class="md-raised md-primary">Inserir Exercício</md-button>
         </section>
       </section>
     </section>

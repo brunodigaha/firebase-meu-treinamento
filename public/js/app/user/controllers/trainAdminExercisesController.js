@@ -19,12 +19,23 @@ module.exports = function($scope,FBURL, $window, $firebaseArray) {
 			console.log("removido");
 		});
 	 });
-	$scope.addExercise = function(group,exercise){
-		if ($scope.newGroup.exercises) {
-			$scope.groups.group.$add({
-				group: $scope.newGroup
-			});
-			$scope.newGroup.name = '';
-		}
-	};
+	// $scope.$on('removeExerc', function(event,exerc){
+	// 	$scope.groups.$remove(group).then(function(ref) {
+	// 		console.log("removido");
+	// 	});
+	//  });
+	$scope.$on('addExercise', function(event,params){
+		var ref = new $window.Firebase(FBURL);
+		var group_ref = ref.child("gym/"+params[0].$id+"/exercises");
+		group_ref.push(params[1],function(error) {
+			 if(error){
+				 console.log("erro ao salvar exercicio"+ error);
+			 }
+		 });
+		// group.exercises.push('inserir');
+		// $scope.groups.$save(group).then( function(ref){
+		// 	console.log("salvou");
+		// });
+	});
+
 };

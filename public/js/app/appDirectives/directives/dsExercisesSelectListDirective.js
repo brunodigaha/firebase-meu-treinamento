@@ -20,6 +20,12 @@ module.exports = function() {
 			this.remove = function(group){
 				 $scope.$emit('removeGroup', group);
 			};
+			// this.remove_exerc = function(exerc){
+			// 	 $scope.$emit('removeExer', exerc);
+			// };
+			this.add = function(group, exercise){
+				 $scope.$emit('addExercise',[group,exercise]);
+			};
 		}
 	};
 };
