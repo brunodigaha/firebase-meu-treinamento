@@ -3,11 +3,11 @@ module.exports = function() {
 	return{
 		template: fs.readFileSync(__dirname + '/../templates/dsExercisesSelectListTemplateDirective.html'),
 		// transclude:true,
-		// scope: {
-		// 	exercicios: "="
-		// },
-		controller: function($scope,$element,$attrs){
-			// console.log($scope.exercicios);
+		scope: {
+			groups: "="
+		},
+		controller: function($scope,$log,$element,$attrs){
+			$log.log($scope.exercises);
 			var exercisesItem = [];
 			this.registerExerciseItem = function(exercise){
 				exercisesItem.push(exercise);
@@ -17,7 +17,9 @@ module.exports = function() {
 					exercise.isOpened = false;
 				});
 			};
-			$scope.lista = [1,2,4,3,6];
+			this.remove = function(group){
+				 $scope.$emit('removeGroup', group);
+			};
 		}
 	};
 };

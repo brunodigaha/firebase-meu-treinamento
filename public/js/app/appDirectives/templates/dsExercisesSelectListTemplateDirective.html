@@ -2,8 +2,8 @@
 <section class="ds-exercises-select-list">
   <section sv-root="serie" sv-part="lista" class="ds-exercises-select-list-content">
     <md-content scroll-glue="scroll.glued" class="ds-exercise-select-list-scroll">
-      <section ng-repeat="serie in lista">
-        <ds-exercise-select-item></ds-exercise-select-item>
+      <section ng-repeat="group in groups">
+        <ds-exercise-select-item group="group"></ds-exercise-select-item>
       </section>
       <!-- ds-exercise-select-item(sv-element="serie")-->
     </md-content>

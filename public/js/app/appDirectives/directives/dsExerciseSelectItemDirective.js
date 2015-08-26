@@ -4,7 +4,7 @@ module.exports = function() {
 		template: fs.readFileSync(__dirname + '/../templates/dsExerciseSelectItemTemplateDirective.html'),
 		// transclude:true,
 		scope: {
-			// exercicio: "="
+			group: "="
 		},
 		require: "^dsExercisesSelectList",
 		link :function(scope, element,attrs,ctrl) {
@@ -15,6 +15,9 @@ module.exports = function() {
 			};
 			scope.close_exerc= function () {
 				scope.isOpened = false;
+			};
+			scope.remove = function(group) {
+				ctrl.remove(group);
 			};
 			// scope.remove = function(exercicio){
 			// 	scope.$emit('remove_exercise',exercicio);

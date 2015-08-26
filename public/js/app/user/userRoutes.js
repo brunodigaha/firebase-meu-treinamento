@@ -152,11 +152,9 @@ module.exports = {
 				label: 'Administração - Treinos'
 			},
 			views: {
-				// controller: function($stateParams) {
-				// 	// expect($stateParams).toBe({userId: 12});
-				// },
 				'admin-content-menu-content@administration': {
-					template: fs.readFileSync(__dirname + '/templates/trainExercisesContentUserAdmin.html')  
+					controller:'trainAdminExercisesController',
+					template: fs.readFileSync(__dirname + '/templates/trainExercisesContentUserAdmin.html')
 				}
 			},
 		},

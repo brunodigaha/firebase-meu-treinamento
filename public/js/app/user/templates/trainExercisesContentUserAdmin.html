@@ -1,16 +1,17 @@
 
-<section class="train-content-exercises-wrap">
+<section class="train-content-exercises-list-wrap">
   <section class="train-content-exercises-add">
     <section class="train-content-exercises-add-input">
       <md-input-container md-no-float="">
-        <input placeholder="Nome do Grupo Muscular" ng-model="group"/>
+        <input placeholder="Nome do Grupo Muscular" ng-model="newGroup.name"/>
       </md-input-container>
     </section>
     <section class="train-content-exercises-add-action">
-      <md-button class="md-raised md-primary">Adicionar Grupo</md-button>
+      <md-button ng-click="addGroup()" class="md-raised md-primary">Adicionar Grupo</md-button>
     </section>
   </section>
-  <section class="train-content-exercises-list">
-    <ds-exercises-select-list></ds-exercises-select-list>
+  <section class="train-content-exercises-list-content">
+    <!-- p(ng-repeat="group in groups") {{group}}-->
+    <ds-exercises-select-list groups="groups"></ds-exercises-select-list>
   </section>
 </section>

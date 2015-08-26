@@ -12573,7 +12573,7 @@ a:visited {
   margin-left: 0%;
   margin-right: 0%;
   box-sizing: border-box;
-  margin-bottom: 10px;
+  margin-bottom: 7px;
 }
 .ds-exercise-select-item:before,
 .ds-exercise-select-item:after {
@@ -12588,7 +12588,7 @@ a:visited {
 }
 @media only screen and (min-width: 1050px) {
   .ds-exercise-select-item {
-    margin-bottom: 15px;
+    margin-bottom: 13px;
   }
 }
 .ds-exercise-select-item .ds-exercise-item-wrap {
@@ -12600,7 +12600,6 @@ a:visited {
   margin-left: 0%;
   margin-right: 0%;
   box-sizing: border-box;
-  border: 1px solid #cfd8dc;
 }
 .ds-exercise-select-item .ds-exercise-item-wrap:before,
 .ds-exercise-select-item .ds-exercise-item-wrap:after {
@@ -12614,8 +12613,9 @@ a:visited {
   margin-right: 0%;
 }
 .ds-exercise-select-item .ds-exercise-item-wrap.active {
-  margin-top: 7px;
-  margin-bottom: 7px;
+  border: 2px solid #eceff1;
+  margin-top: 5px;
+  margin-bottom: 5px;
 }
 .ds-exercise-select-item .ds-exercise-item-wrap .ds-exercise-item-closed-wrap {
   *zoom: 1;
@@ -12647,7 +12647,7 @@ a:visited {
   margin-right: 0%;
   box-sizing: border-box;
   padding-right: 10px;
-  padding-left: 10px;
+  padding-left: 20px;
   line-height: 40px;
   height: 40px;
   color: #424242;
@@ -12678,8 +12678,7 @@ a:visited {
   width: 41.66666666666667%;
   margin-left: 0%;
   margin-right: 0%;
-  font-size: 110%;
-  font-weight: bold;
+  font-size: 120%;
 }
 .ds-exercise-select-item .ds-exercise-item-wrap .ds-exercise-item-closed-wrap .ds-exercise-item-closed .ds-exercise-item-closed-title:before,
 .ds-exercise-select-item .ds-exercise-item-wrap .ds-exercise-item-closed-wrap .ds-exercise-item-closed .ds-exercise-item-closed-title:after {
@@ -12700,6 +12699,7 @@ a:visited {
   width: 58.333333333333336%;
   margin-left: 0%;
   margin-right: 0%;
+  font-size: 90%;
 }
 .ds-exercise-select-item .ds-exercise-item-wrap .ds-exercise-item-closed-wrap .ds-exercise-item-closed .ds-exercise-item-closed-resume:before,
 .ds-exercise-select-item .ds-exercise-item-wrap .ds-exercise-item-closed-wrap .ds-exercise-item-closed .ds-exercise-item-closed-resume:after {
@@ -12751,10 +12751,9 @@ a:visited {
   line-height: 50px;
   height: 50px;
   padding-right: 10px;
-  padding-left: 10px;
+  padding-left: 20px;
   color: #424242;
   background-color: #eceff1;
-  border-bottom: 1px solid #cfd8dc;
 }
 .ds-exercise-select-item .ds-exercise-item-wrap .ds-exercise-item-opened-wrap .ds-exercise-item-opened:before,
 .ds-exercise-select-item .ds-exercise-item-wrap .ds-exercise-item-opened-wrap .ds-exercise-item-opened:after {
@@ -12775,8 +12774,7 @@ a:visited {
   width: 25%;
   margin-left: 0%;
   margin-right: 0%;
-  font-size: 110%;
-  font-weight: bold;
+  font-size: 120%;
   text-align: left !important;
 }
 .ds-exercise-select-item .ds-exercise-item-wrap .ds-exercise-item-opened-wrap .ds-exercise-item-opened .ds-exercise-item-opened-title:before,
@@ -12919,7 +12917,7 @@ a:visited {
   text-align: left;
   display: inline-block;
   background-color: #f5f5f5;
-  border: 1px solid #e0e0e0;
+  border: 1px solid #eee;
   font-size: 75%;
   color: #000;
 }
@@ -12944,7 +12942,6 @@ a:visited {
   padding-left: 1em;
   box-sizing: border-box;
   border-top: 1px solid #eee;
-  background-color: #fafafa;
 }
 .ds-exercise-select-item .ds-exercise-item-wrap .ds-exercise-item-opened-wrap .ds-exercise-item-opened-header:before,
 .ds-exercise-select-item .ds-exercise-item-wrap .ds-exercise-item-opened-wrap .ds-exercise-item-opened-header:after {
@@ -17382,7 +17379,7 @@ md-dialog md-dialog-content .train-dialog-wrap .train-dialog-content .action but
   background-color: #fafafa;
   font-weight: bold;
 }
-.train-content-exercises-wrap {
+.train-content-exercises-list-wrap {
   *zoom: 1;
   float: left;
   clear: none;
@@ -17394,30 +17391,30 @@ md-dialog md-dialog-content .train-dialog-wrap .train-dialog-content .action but
   padding-right: 2em;
   padding-left: 2em;
 }
-.train-content-exercises-wrap:before,
-.train-content-exercises-wrap:after {
+.train-content-exercises-list-wrap:before,
+.train-content-exercises-list-wrap:after {
   content: '';
   display: table;
 }
-.train-content-exercises-wrap:after {
+.train-content-exercises-list-wrap:after {
   clear: both;
 }
-.train-content-exercises-wrap:last-child {
+.train-content-exercises-list-wrap:last-child {
   margin-right: 0%;
 }
 @media only screen and (min-width: 1050px) {
-  .train-content-exercises-wrap {
+  .train-content-exercises-list-wrap {
     padding-right: 3em;
     padding-left: 3em;
   }
 }
 @media only screen and (min-width: 1800px) {
-  .train-content-exercises-wrap {
+  .train-content-exercises-list-wrap {
     padding-right: 5em;
     padding-left: 5em;
   }
 }
-.train-content-exercises-wrap .train-content-exercises-add {
+.train-content-exercises-list-wrap .train-content-exercises-add {
   *zoom: 1;
   float: left;
   clear: none;
@@ -17431,28 +17428,28 @@ md-dialog md-dialog-content .train-dialog-wrap .train-dialog-content .action but
   padding-right: 2em;
   padding-left: 2em;
   margin-bottom: 2em;
-  box-shadow: 0px 2px 4px 1px rgba(0,0,0,0.15);
+  border: 1px solid #e0e0e0;
 }
-.train-content-exercises-wrap .train-content-exercises-add:before,
-.train-content-exercises-wrap .train-content-exercises-add:after {
+.train-content-exercises-list-wrap .train-content-exercises-add:before,
+.train-content-exercises-list-wrap .train-content-exercises-add:after {
   content: '';
   display: table;
 }
-.train-content-exercises-wrap .train-content-exercises-add:after {
+.train-content-exercises-list-wrap .train-content-exercises-add:after {
   clear: both;
 }
-.train-content-exercises-wrap .train-content-exercises-add:last-child {
+.train-content-exercises-list-wrap .train-content-exercises-add:last-child {
   margin-right: 0%;
 }
 @media only screen and (min-width: 1050px) {
-  .train-content-exercises-wrap .train-content-exercises-add {
+  .train-content-exercises-list-wrap .train-content-exercises-add {
     padding-right: 3em;
     padding-left: 3em;
     padding-top: 1em;
     padding-bottom: 1em;
   }
 }
-.train-content-exercises-wrap .train-content-exercises-add .train-content-exercises-add-input {
+.train-content-exercises-list-wrap .train-content-exercises-add .train-content-exercises-add-input {
   *zoom: 1;
   float: left;
   clear: none;
@@ -17463,26 +17460,26 @@ md-dialog md-dialog-content .train-dialog-wrap .train-dialog-content .action but
   box-sizing: border-box;
   padding-right: 1em;
 }
-.train-content-exercises-wrap .train-content-exercises-add .train-content-exercises-add-input:before,
-.train-content-exercises-wrap .train-content-exercises-add .train-content-exercises-add-input:after {
+.train-content-exercises-list-wrap .train-content-exercises-add .train-content-exercises-add-input:before,
+.train-content-exercises-list-wrap .train-content-exercises-add .train-content-exercises-add-input:after {
   content: '';
   display: table;
 }
-.train-content-exercises-wrap .train-content-exercises-add .train-content-exercises-add-input:after {
+.train-content-exercises-list-wrap .train-content-exercises-add .train-content-exercises-add-input:after {
   clear: both;
 }
-.train-content-exercises-wrap .train-content-exercises-add .train-content-exercises-add-input:last-child {
+.train-content-exercises-list-wrap .train-content-exercises-add .train-content-exercises-add-input:last-child {
   margin-right: 0%;
 }
 @media only screen and (min-width: 1050px) {
-  .train-content-exercises-wrap .train-content-exercises-add .train-content-exercises-add-input {
+  .train-content-exercises-list-wrap .train-content-exercises-add .train-content-exercises-add-input {
     padding-right: 2em;
   }
 }
-.train-content-exercises-wrap .train-content-exercises-add .train-content-exercises-add-input md-input-container {
+.train-content-exercises-list-wrap .train-content-exercises-add .train-content-exercises-add-input md-input-container {
   padding: 0;
 }
-.train-content-exercises-wrap .train-content-exercises-add .train-content-exercises-add-action {
+.train-content-exercises-list-wrap .train-content-exercises-add .train-content-exercises-add-action {
   *zoom: 1;
   float: left;
   clear: none;
@@ -17492,18 +17489,18 @@ md-dialog md-dialog-content .train-dialog-wrap .train-dialog-content .action but
   margin-right: 0%;
   text-align: center;
 }
-.train-content-exercises-wrap .train-content-exercises-add .train-content-exercises-add-action:before,
-.train-content-exercises-wrap .train-content-exercises-add .train-content-exercises-add-action:after {
+.train-content-exercises-list-wrap .train-content-exercises-add .train-content-exercises-add-action:before,
+.train-content-exercises-list-wrap .train-content-exercises-add .train-content-exercises-add-action:after {
   content: '';
   display: table;
 }
-.train-content-exercises-wrap .train-content-exercises-add .train-content-exercises-add-action:after {
+.train-content-exercises-list-wrap .train-content-exercises-add .train-content-exercises-add-action:after {
   clear: both;
 }
-.train-content-exercises-wrap .train-content-exercises-add .train-content-exercises-add-action:last-child {
+.train-content-exercises-list-wrap .train-content-exercises-add .train-content-exercises-add-action:last-child {
   margin-right: 0%;
 }
-.train-content-exercises-wrap .train-content-exercises-add .train-content-exercises-add-action button.md-button {
+.train-content-exercises-list-wrap .train-content-exercises-add .train-content-exercises-add-action button.md-button {
   width: 100%;
   min-width: 15px;
   min-height: 30px;
@@ -17511,7 +17508,7 @@ md-dialog md-dialog-content .train-dialog-wrap .train-dialog-content .action but
   margin: 0;
 }
 @media only screen and (min-width: 1050px) {
-  .train-content-exercises-wrap .train-content-exercises-add .train-content-exercises-add-action button.md-button {
+  .train-content-exercises-list-wrap .train-content-exercises-add .train-content-exercises-add-action button.md-button {
     width: 92%;
     min-width: 15px;
     min-height: 40px;
@@ -17521,11 +17518,11 @@ md-dialog md-dialog-content .train-dialog-wrap .train-dialog-content .action but
   }
 }
 @media only screen and (min-width: 1800px) {
-  .train-content-exercises-wrap .train-content-exercises-add .train-content-exercises-add-action button.md-button {
+  .train-content-exercises-list-wrap .train-content-exercises-add .train-content-exercises-add-action button.md-button {
     width: 75%;
   }
 }
-.train-content-exercises-wrap .train-content-exercises-list {
+.train-content-exercises-list-wrap .train-content-exercises-list-content {
   *zoom: 1;
   float: left;
   clear: none;
@@ -17537,25 +17534,25 @@ md-dialog md-dialog-content .train-dialog-wrap .train-dialog-content .action but
   padding-right: 2em;
   padding-left: 2em;
 }
-.train-content-exercises-wrap .train-content-exercises-list:before,
-.train-content-exercises-wrap .train-content-exercises-list:after {
+.train-content-exercises-list-wrap .train-content-exercises-list-content:before,
+.train-content-exercises-list-wrap .train-content-exercises-list-content:after {
   content: '';
   display: table;
 }
-.train-content-exercises-wrap .train-content-exercises-list:after {
+.train-content-exercises-list-wrap .train-content-exercises-list-content:after {
   clear: both;
 }
-.train-content-exercises-wrap .train-content-exercises-list:last-child {
+.train-content-exercises-list-wrap .train-content-exercises-list-content:last-child {
   margin-right: 0%;
 }
 @media only screen and (min-width: 1050px) {
-  .train-content-exercises-wrap .train-content-exercises-list {
+  .train-content-exercises-list-wrap .train-content-exercises-list-content {
     padding-right: 3em;
     padding-left: 3em;
   }
 }
 @media only screen and (min-width: 1800px) {
-  .train-content-exercises-wrap .train-content-exercises-list {
+  .train-content-exercises-list-wrap .train-content-exercises-list-content {
     padding-right: 5em;
     padding-left: 5em;
   }
