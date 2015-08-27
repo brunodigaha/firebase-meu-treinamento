@@ -10,38 +10,19 @@ module.exports = function ($stateProvider,$compileProvider,$animateProvider,$loc
 
 		.state('core.user.edit',require('./core/coreRoutes.js').core.edit) 
 
+
+		.state('login',angular.extend(
+				{url:'/login'},require('./auth/authRoutes.js').auth.login))
+
+
 		.state('core.user',angular.extend(
 				{url:'/user/{userId:int}'},require('./user/userRoutes.js').user.user))
-
-		.state('core.user.plans',angular.extend(
-				{url:'/plans'},require('./train/trainRoutes.js').train.plans))
 
 		.state('core.user.planTraining',angular.extend(
 				{url:'/plan-training'},require('./user/userRoutes.js').user.planTraining))
 
 		.state('core.user.schedule',angular.extend(
 				{url:'/schedule'},require('./user/userRoutes.js').user.schedule))
-
-		.state('core.user.listTraining',angular.extend(
-				{url:'/list-training'},require('./train/trainRoutes.js').train.listTraining))
-
-		.state('core.user.listTraining.training',angular.extend(
-				{url:'/{trainId:int}'},require('./train/trainRoutes.js').train.training))
-
-		.state('core.user.edit.addtraining',angular.extend(
-				{url:'/training/add-training'},require('./train/trainRoutes.js').train.addtraining))
-
-		.state('core.user.edit.addPlan',angular.extend(
-				{url:'/add-plan'},require('./train/trainRoutes.js').train.addPlan))
-
-		.state('core.user.trainingHistory',angular.extend(
-				{url:'/training-history'},require('./train/trainRoutes.js').train.trainingHistory))
-
-		.state('core.user.collectionTraining',angular.extend(
-				{url:'/collection-training'},require('./train/trainRoutes.js').train.collectionTraining))
-
-		.state('login',angular.extend(
-				{url:'/login'},require('./auth/authRoutes.js').auth.login))
 
 		.state('administration',angular.extend(
 				{url:'/administration'},require('./user/userRoutes.js').user.administration))
@@ -68,7 +49,31 @@ module.exports = function ($stateProvider,$compileProvider,$animateProvider,$loc
 				{url:'/exercises'},require('./user/userRoutes.js').user.trainAdminExercises))
 
 		.state('administration.adminTrain.adminTrainMethod',angular.extend(
-				{url:'/training-method'},require('./user/userRoutes.js').user.trainAdminMethod));
+				{url:'/training-method'},require('./user/userRoutes.js').user.trainAdminMethod))
+
+
+		.state('core.user.plans',angular.extend(
+				{url:'/plans'},require('./train/trainRoutes.js').train.plans))
+
+		.state('core.user.listTraining',angular.extend(
+				{url:'/list-training'},require('./train/trainRoutes.js').train.listTraining))
+
+		.state('core.user.listTraining.training',angular.extend(
+				{url:'/{trainId:int}'},require('./train/trainRoutes.js').train.training))
+
+		.state('core.user.edit.addtraining',angular.extend(
+				{url:'/training/add-training'},require('./train/trainRoutes.js').train.addtraining))
+
+		.state('core.user.edit.addPlan',angular.extend(
+				{url:'/add-plan'},require('./train/trainRoutes.js').train.addPlan))
+
+		.state('core.user.trainingHistory',angular.extend(
+				{url:'/training-history'},require('./train/trainRoutes.js').train.trainingHistory))
+
+		.state('core.user.collectionTraining',angular.extend(
+				{url:'/collection-training'},require('./train/trainRoutes.js').train.collectionTraining));
+
+
 
    $mdThemingProvider.theme('default')
     .primaryPalette('blue');

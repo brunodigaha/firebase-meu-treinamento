@@ -19,7 +19,7 @@ module.exports = {
 			authenticate: true,
 			abstract: true,
 			views: {
-				'wrap': {
+				'wrap@': {
 					// controller: function($stateParams) {
 					// 	// expect($stateParams).toBe({userId: 12});
 					// },
@@ -113,12 +113,12 @@ module.exports = {
 				label: 'Painel Inicial'
 			},
 			views: {
+				'menu-content@core': {
+					template: fs.readFileSync(__dirname + '/templates/planUserHomeMenuContent.html')  
+				},
 				'content-content@core': {
 					controller:'planController',
 					template: fs.readFileSync(__dirname + '/templates/planUserHomeContent.html')  
-				},
-				'menu-content@core': {
-					template: fs.readFileSync(__dirname + '/templates/planUserHomeMenuContent.html')  
 				}
 			},
 		},
