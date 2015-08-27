@@ -59,34 +59,32 @@
 		.content
 			col(11/11,gutter:0)
 			box-sizing border-box
+			margin-top 5em
+			// padding-left .5em
+			// padding-right .5em
 			+desktop()
 				col(14/14,gutter:0)
 				padding-left 8%
 				padding-right 8%
+				margin-top 5.5em
 			+hd()
 				padding-left 12%
 				padding-right 12%
-			md-content.md-default-theme
-				background-color transparent 
-				box-sizing border-box
-				// z-index 9
-				md-card.grid
-					box-sizing border-box
-					border-radius 0
-					min-height:86vh
-					+tablet(orientation: portrait)
-						min-height:90vh
-					md-card-content
-						+tablet()
-							padding-top 7px
-							padding-bottom 7px
-					// box-shadow 0 1px 9px 0 rgba(0,0,0,.17)
-					// box-shadow 0 1px 9px 0 rgba(0,0,0,.23)
-			margin-top 5em
-			+desktop()
-				margin-top 5.5em
-			// padding-left .5em
-			// padding-right .5em
+			md-card
+				// box-shadow 0 1px 9px 0 rgba(0,0,0,.17)
+				// box-shadow 0 1px 9px 0 rgba(0,0,0,.23)
+				md-card-content
+					+tablet()
+						padding-top 7px
+						padding-bottom 7px
+					md-content.grid
+						background-color transparent 
+						box-sizing border-box
+						// z-index 9
+						border-radius 0
+						min-height:83vh
+						+tablet(orientation: portrait)
+							min-height:87vh
 	.content-main-open
 		@extend .content-main
 		col(9/12,gutter:0)

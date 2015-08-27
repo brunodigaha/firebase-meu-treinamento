@@ -90,7 +90,7 @@ module.exports = {
 				label: 'Histórico Treinos'
 			},
 			views: {
-				'content@core': {
+				'menu-content@core': {
 					controller: 'historyTrainingController',
 					template: fs.readFileSync(__dirname + '/templates/historyTrainingContent.html')
 				}

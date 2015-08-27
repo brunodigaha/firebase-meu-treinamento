@@ -2,11 +2,14 @@
 <section ng-if="!coreEvents.search">
   <section ui-view="header" class="header"></section>
   <section class="content">
-    <md-content>
-      <md-card class="grid">
-        <md-card-content ui-view="content"></md-card-content>
-      </md-card>
-    </md-content>
+    <md-card>
+      <md-card-content>
+        <md-content ui-view="content" class="grid">
+          <section ui-view="menu-content"></section>
+          <section ui-view="content-content"></section>
+        </md-content>
+      </md-card-content>
+    </md-card>
   </section>
 </section>
 <section ng-if="coreEvents.search">

@@ -15,7 +15,7 @@ module.exports = function ($rootScope,UCURL,$location,$state,$stateParams,authMo
 			$state.go("login");
 		}else if(toState.name == 'login' && authModelService.$getAuth()) {
 			event.preventDefault(); 
-			$state.go('core.user.home.planTraining', {userId:12});
+			$state.go('core.user.planTraining', {userId:12});
 		}
 		// if(toState.name == 'login' && authModelService.$getAuth()) {
 		// 	event.preventDefault(); 

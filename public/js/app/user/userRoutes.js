@@ -15,19 +15,6 @@ module.exports = {
 			// },
 		},
 
-		home : {
-			authenticate: true,
-			abstract: true,
-			views: {
-				// controller: function($stateParams) {
-				// 	// expect($stateParams).toBe({userId: 12});
-				// },
-				'content@core': {
-					template: fs.readFileSync(__dirname + '/templates/homeUserContent.html')  
-				}
-			},
-		},
-
 		administration : {
 			authenticate: true,
 			abstract: true,
@@ -126,9 +113,12 @@ module.exports = {
 				label: 'Painel Inicial'
 			},
 			views: {
-				'home-content@core.user.home': {
+				'content-content@core': {
 					controller:'planController',
 					template: fs.readFileSync(__dirname + '/templates/planUserHomeContent.html')  
+				},
+				'menu-content@core': {
+					template: fs.readFileSync(__dirname + '/templates/planUserHomeMenuContent.html')  
 				}
 			},
 		},

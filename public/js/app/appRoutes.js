@@ -13,12 +13,10 @@ module.exports = function ($stateProvider,$compileProvider,$animateProvider,$loc
 		.state('core.user',angular.extend(
 				{url:'/user/{userId:int}'},require('./user/userRoutes.js').user.user))
 
-		.state('core.user.home',require('./user/userRoutes.js').user.home)
-
 		.state('core.user.plans',angular.extend(
 				{url:'/plans'},require('./train/trainRoutes.js').train.plans))
 
-		.state('core.user.home.planTraining',angular.extend(
+		.state('core.user.planTraining',angular.extend(
 				{url:'/plan-training'},require('./user/userRoutes.js').user.planTraining))
 
 		.state('core.user.schedule',angular.extend(
