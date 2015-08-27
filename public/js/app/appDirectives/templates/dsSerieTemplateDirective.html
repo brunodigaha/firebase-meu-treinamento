@@ -15,7 +15,7 @@
             <section class="ds-serie-weight"><span>20kg</span></section>
           </section>
         </section>
-        <section ng-show="isOpened" class="ds-serie-view-wrap">
+        <section ng-if="isOpened" class="ds-serie-view-wrap">
           <section ng-class="{'animated flipInX': isOpened}" class="ds-serie-view">
             <section class="ds-serie-view-clone">
               <!-- md-button(class="md-raised sec"  ng-click="importTraining($event);") Clonar-->

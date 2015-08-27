@@ -15,7 +15,7 @@ section.ds-serie
 							span 10 Repts
 						section.ds-serie-weight
 							span 20kg
-				section.ds-serie-view-wrap(ng-show="isOpened")
+				section.ds-serie-view-wrap(ng-if="isOpened")
 					section.ds-serie-view(ng-class="{'animated flipInX': isOpened}")
 						section.ds-serie-view-clone
 							// md-button(class="md-raised sec"  ng-click="importTraining($event);") Clonar
