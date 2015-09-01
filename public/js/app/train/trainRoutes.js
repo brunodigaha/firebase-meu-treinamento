@@ -101,6 +101,12 @@ module.exports = {
 			ncyBreadcrumb: {
 				label: 'Coleção Treinos'
 			},
+			onEnter: function(){
+				console.log("entrou coleção"); 
+			},
+			onExit: function(){
+				console.log("Saiu Coleção"); 
+			},
 			views: {
 				'content@core': {
 					controller: 'collectionTrainingController',

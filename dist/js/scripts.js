@@ -54880,7 +54880,7 @@ module.exports = function ($stateProvider,$compileProvider,$animateProvider,$loc
     });	
 };
 
-},{"./auth/authRoutes.js":39,"./core/coreRoutes.js":48,"./train/trainRoutes.js":61,"./user/userRoutes.js":66}],38:[function(require,module,exports){
+},{"./auth/authRoutes.js":39,"./core/coreRoutes.js":48,"./train/trainRoutes.js":61,"./user/userRoutes.js":67}],38:[function(require,module,exports){
 module.exports = function ($rootScope,UCURL,$location,$state,$stateParams,authModelService,coreEventsService) {
 
 	$rootScope.$state = $state;
@@ -54896,10 +54896,12 @@ module.exports = function ($rootScope,UCURL,$location,$state,$stateParams,authMo
 		if(toState.authenticate && !authModelService.$getAuth()){
 			event.preventDefault();
 			$state.go("login");
-		}else if(toState.name == 'login' && authModelService.$getAuth()) {
-			event.preventDefault(); 
-			$state.go('core.user.planTraining', {userId:12});
+			console.log("tostate", toState);
 		}
+		// else if(toState.name == 'login' && authModelService.$getAuth()) {
+		// 	event.preventDefault(); 
+		// 	$state.go('core.user.planTraining', {userId:12});
+		// }
 		// if(toState.name == 'login' && authModelService.$getAuth()) {
 		// 	event.preventDefault(); 
 		// 	$state.go('core.user.home.planTraining', {userId:12});
@@ -54961,6 +54963,12 @@ module.exports = {
 						init: function(authModelService, $state,$stateParams){
 							// console.log("token",authModelService.token,"authenticated", authModelService.authenticated,$state.current );
 							// console.log("esatteParamssssss",$stateParams);
+							if (authModelService.$getAuth()) {
+								// event.preventDefault(); 
+								$state.go('core.user.planTraining', {userId:12});
+								console.log('já esta logado');
+							}
+
 							return {};
 						}
 					},
@@ -55790,6 +55798,12 @@ module.exports = {
 			ncyBreadcrumb: {
 				label: 'Coleção Treinos'
 			},
+			onEnter: function(){
+				console.log("entrou coleção"); 
+			},
+			onExit: function(){
+				console.log("Saiu Coleção"); 
+			},
 			views: {
 				'content@core': {
 					controller: 'collectionTrainingController',
@@ -55813,7 +55827,7 @@ module.exports = function($scope) {
 },{}],63:[function(require,module,exports){
 arguments[4][54][0].apply(exports,arguments)
 },{"dup":54}],64:[function(require,module,exports){
-module.exports = function($scope,FBURL, $window, $firebaseArray) {
+module.exports = function($scope,FBURL, $window, $firebaseArray,exercisePatternModel) {
 	// $scope.exercicios=[1,2,3,4];
 	$scope.newGroup = {
 		name: ''
@@ -55857,13 +55871,23 @@ module.exports = function($scope,FBURL, $window, $firebaseArray) {
 
 },{}],65:[function(require,module,exports){
 module.exports = angular.module('user',[])
+
+		.factory('exercisePatternModel', require('./services/exercisePatternModel.js'))
+
 		.controller('planController', require('./controllers/planController.js'))
 		.controller('trainAdminExercisesController', require('./controllers/trainAdminExercisesController.js'))
 		.controller('scheduleController', require('./controllers/scheduleController.js'));
 		// .factory('userModel', require('./services/userModel.js'))
 		// .factory('RestangularCustom', require('./services/restangularCustom.js'));
 
-},{"./controllers/planController.js":62,"./controllers/scheduleController.js":63,"./controllers/trainAdminExercisesController.js":64}],66:[function(require,module,exports){
+},{"./controllers/planController.js":62,"./controllers/scheduleController.js":63,"./controllers/trainAdminExercisesController.js":64,"./services/exercisePatternModel.js":66}],66:[function(require,module,exports){
+module.exports = function ($firebaseAuth,FBURL) {
+
+	console.log("passou");
+	return null;
+};
+
+},{}],67:[function(require,module,exports){
 (function (Buffer){
 
 module.exports = {

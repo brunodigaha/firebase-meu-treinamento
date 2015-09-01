@@ -1,4 +1,4 @@
-module.exports = function($scope,FBURL, $window, $firebaseArray) {
+module.exports = function($scope,FBURL, $window, $firebaseArray,exercisePatternModel) {
 	// $scope.exercicios=[1,2,3,4];
 	$scope.newGroup = {
 		name: ''
