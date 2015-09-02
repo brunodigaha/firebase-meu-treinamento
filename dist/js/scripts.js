@@ -54541,7 +54541,7 @@ angular
 
 
 
-},{"./appDirectives":36,"./appRoutes.js":37,"./appRun.js":38,"./auth":41,"./core":49,"./train":61,"./user":66,"angular":19,"angularBreadcrumb":8,"angularChart":9,"angularCookies":10,"angularFire":20,"angularHolderjs":11,"angularIcons":12,"angularMaterial":13,"angularMessages":14,"angularScroll":15,"angularSortableView":16,"angularUploadcare":18,"modernizr":24,"ui-router":17}],26:[function(require,module,exports){
+},{"./appDirectives":36,"./appRoutes.js":37,"./appRun.js":38,"./auth":41,"./core":49,"./train":61,"./user":68,"angular":19,"angularBreadcrumb":8,"angularChart":9,"angularCookies":10,"angularFire":20,"angularHolderjs":11,"angularIcons":12,"angularMaterial":13,"angularMessages":14,"angularScroll":15,"angularSortableView":16,"angularUploadcare":18,"modernizr":24,"ui-router":17}],26:[function(require,module,exports){
 (function (Buffer){
 
 module.exports = function() {
@@ -55181,7 +55181,7 @@ module.exports = function ($stateProvider,$compileProvider,$animateProvider,$loc
     });	
 };
 
-},{"./auth/authRoutes.js":39,"./core/coreRoutes.js":48,"./train/trainRoutes.js":62,"./user/userRoutes.js":68}],38:[function(require,module,exports){
+},{"./auth/authRoutes.js":39,"./core/coreRoutes.js":48,"./train/trainRoutes.js":62,"./user/userRoutes.js":70}],38:[function(require,module,exports){
 module.exports = function ($rootScope,UCURL,$location,$state,$stateParams,authModelService,coreEventsService) {
 
 	$rootScope.$state = $state;
@@ -56171,14 +56171,48 @@ module.exports = {
 
 }).call(this,require("buffer").Buffer)
 },{"buffer":1}],63:[function(require,module,exports){
+(function (Buffer){
+
+module.exports = function($scope,$mdDialog) {
+	$scope.ownerDialog = function(ev) {
+		$mdDialog.show({
+			controller: 'ownerAdminDialogController',
+			template: Buffer("CjxtZC1kaWFsb2cgZmxleD0iODUiIGFyaWEtbGFiZWw9InJlc3BvbnNhdmVsIj4KICA8bWQtdG9vbGJhciBtZC10aGVtZT0iZGVmYXVsdCI+IAogICAgPGRpdiBjbGFzcz0ibWQtdG9vbGJhci10b29scyI+CiAgICAgIDxoMT5Qcm9wcmlldMOhcmlvIGRhIEFjYWRlbWlhPC9oMT48c3BhbiBmbGV4PSIiPjwvc3Bhbj4KICAgICAgPG1kLWJ1dHRvbiBuZy1jbGljaz0iYW5zd2VyKCdub3QgYXBwbGljYWJsZScpIj5GZWNoYXI8L21kLWJ1dHRvbj4KICAgICAgPCEtLSBuZy1tZC1pY29uKGljb249ImNsb3NlIiBuZy1jbGljaz0iYW5zd2VyKCdub3QgYXBwbGljYWJsZScpIiBzdHlsZT0iZmlsbDp3aGl0ZSIgc2l6ZT0iMjUiKS0tPgogICAgPC9kaXY+CiAgPC9tZC10b29sYmFyPgogIDxtZC1kaWFsb2ctY29udGVudD4KICAgIDxzZWN0aW9uIGNsYXNzPSJvd25lci1hZG1pbi1kaWFsb2ctd3JhcCI+CiAgICAgIDxwPlByb3ByaWV0YXJpbzwvcD4KICAgIDwvc2VjdGlvbj4KICA8L21kLWRpYWxvZy1jb250ZW50PgogIDxkaXYgbGF5b3V0PSJyb3ciIGNsYXNzPSJtZC1hY3Rpb25zIj48c3BhbiBmbGV4PSIiPjwvc3Bhbj4KICAgIDwhLS0gbWQtYnV0dG9uLm1kLXByaW1hcnkobmctY2xpY2s9ImFuc3dlcignbm90IHVzZWZ1bCcpIiktLT4KICAgIDwhLS0gCXwgQ2FuY2VsYXItLT4KICAgIDxtZC1idXR0b24gbmctY2xpY2s9ImFuc3dlcigndXNlZnVsJykiIGNsYXNzPSJtZC1wcmltYXJ5IGJ1dHRvbi1zaWx2ZXIiPkNhbmNlbGFyPC9tZC1idXR0b24+CiAgPC9kaXY+CjwvbWQtZGlhbG9nPg==","base64"),
+			parent: angular.element(document.body),
+			targetEvent: ev,
+		})
+		.then(function(answer) {
+			$scope.alert = 'You said the information was "' + answer + '".';
+		}, function() {
+			$scope.alert = 'You cancelled the dialog.';
+		});
+	};
+
+};
+
+}).call(this,require("buffer").Buffer)
+},{"buffer":1}],64:[function(require,module,exports){
+module.exports = function($scope,$mdToast,$mdDialog,FBURL,$window,$firebaseObject) {
+	$scope.hide = function() {
+		$mdDialog.hide();
+	};
+	$scope.cancel = function() {
+		$mdDialog.cancel();
+	};
+	$scope.answer = function(answer) {
+		$mdDialog.hide(answer);
+	};
+};
+
+},{}],65:[function(require,module,exports){
 module.exports = function($scope) {
  $scope.labels = ["Dias Decorridos", "Dias Restantes"];
   $scope.data = [14,7];
 };
 
-},{}],64:[function(require,module,exports){
+},{}],66:[function(require,module,exports){
 arguments[4][55][0].apply(exports,arguments)
-},{"dup":55}],65:[function(require,module,exports){
+},{"dup":55}],67:[function(require,module,exports){
 module.exports = function($scope,FBURL, $window, $firebaseArray,exercisePatternModel) {
 
 	$scope.bindModel = exercisePatternModel.bindModel;
@@ -56189,18 +56223,20 @@ module.exports = function($scope,FBURL, $window, $firebaseArray,exercisePatternM
 
 };
 
-},{}],66:[function(require,module,exports){
+},{}],68:[function(require,module,exports){
 module.exports = angular.module('user',[])
 
 		.factory('exercisePatternModel', require('./services/exercisePatternModel.js'))
 
 		.controller('planController', require('./controllers/planController.js'))
 		.controller('trainAdminExercisesController', require('./controllers/trainAdminExercisesController.js'))
+		.controller('gymAdminOwnerController', require('./controllers/gymAdminOwnerController.js'))
+		.controller('ownerAdminDialogController', require('./controllers/ownerAdminDialogController.js'))
 		.controller('scheduleController', require('./controllers/scheduleController.js'));
 		// .factory('userModel', require('./services/userModel.js'))
 		// .factory('RestangularCustom', require('./services/restangularCustom.js'));
 
-},{"./controllers/planController.js":63,"./controllers/scheduleController.js":64,"./controllers/trainAdminExercisesController.js":65,"./services/exercisePatternModel.js":67}],67:[function(require,module,exports){
+},{"./controllers/gymAdminOwnerController.js":63,"./controllers/ownerAdminDialogController.js":64,"./controllers/planController.js":65,"./controllers/scheduleController.js":66,"./controllers/trainAdminExercisesController.js":67,"./services/exercisePatternModel.js":69}],69:[function(require,module,exports){
 module.exports = function (fbUtil,$mdDialog, $mdToast,$firebaseArray,FBURL) {
 
 	var bindModel = {
@@ -56278,7 +56314,7 @@ module.exports = function (fbUtil,$mdDialog, $mdToast,$firebaseArray,FBURL) {
 	};
 };
 
-},{}],68:[function(require,module,exports){
+},{}],70:[function(require,module,exports){
 (function (Buffer){
 
 module.exports = {
@@ -56354,7 +56390,8 @@ module.exports = {
 				// 	// expect($stateParams).toBe({userId: 12});
 				// },
 				'admin-content-menu-content@administration': {
-					template: Buffer("CjxzZWN0aW9uIGNsYXNzPSJneW0tY29udGVudC1vd25lci13cmFwIj4KICA8aDE+RGFsdG9uIE1vcmFpczwvaDE+CiAgPCEtLSBwLm93bmVyLXN1YnRpdGxlIEFjYWRlbWlhLS0+CiAgPHNlY3Rpb24gY2xhc3M9ImluZm8tZ3ltLW93bmVyIj4KICAgIDxwIGNsYXNzPSJpbmZvLWd5bS1pdGVtIj48c3BhbiBjbGFzcz0iaW5mby1neW0tYXR0cmlidXRlIj5SZXNwb25zw6F2ZWw6PC9zcGFuPjxzcGFuIGNsYXNzPSJpbmZvLWd5bS12YWx1ZSI+RGFsdG9uIE1vcmFpcyBTaWx2YTwvc3Bhbj48L3A+CiAgICA8cCBjbGFzcz0iaW5mby1neW0taXRlbSI+PHNwYW4gY2xhc3M9ImluZm8tZ3ltLWF0dHJpYnV0ZSI+RW5kZXJlw6dvOjwvc3Bhbj48c3BhbiBjbGFzcz0iaW5mby1neW0tdmFsdWUiPkV1Y2xpZGVzIENpbmhhIE5ldG8sIDU1LCBKYXJkaW0gQWx2b3JhZGEsIEd1YXh1cMOpLU1HPC9zcGFuPjwvcD4KICAgIDxwIGNsYXNzPSJpbmZvLWd5bS1pdGVtIj48c3BhbiBjbGFzcz0iaW5mby1neW0tYXR0cmlidXRlIj5Db250YXRvOjwvc3Bhbj48c3BhbiBjbGFzcz0iaW5mby1neW0tdmFsdWUiPjM1LTM1NTEyMDQzPC9zcGFuPjwvcD4KICA8L3NlY3Rpb24+CiAgPHNlY3Rpb24gY2xhc3M9ImFjdGlvbi1neW0tb3duZXIiPgogICAgPG1kLWJ1dHRvbiBjbGFzcz0ibWQtcmFpc2VkIG1kLXByaW1hcnkiPkVkaXRhcjwvbWQtYnV0dG9uPgogIDwvc2VjdGlvbj4KPC9zZWN0aW9uPg==","base64")  
+					controller:'gymAdminOwnerController',
+					template: Buffer("CjxzZWN0aW9uIGNsYXNzPSJneW0tY29udGVudC1vd25lci13cmFwIj4KICA8aDE+RGFsdG9uIE1vcmFpczwvaDE+CiAgPCEtLSBwLm93bmVyLXN1YnRpdGxlIEFjYWRlbWlhLS0+CiAgPHNlY3Rpb24gY2xhc3M9ImluZm8tZ3ltLW93bmVyIj4KICAgIDxwIGNsYXNzPSJpbmZvLWd5bS1pdGVtIj48c3BhbiBjbGFzcz0iaW5mby1neW0tYXR0cmlidXRlIj5SZXNwb25zw6F2ZWw6PC9zcGFuPjxzcGFuIGNsYXNzPSJpbmZvLWd5bS12YWx1ZSI+RGFsdG9uIE1vcmFpcyBTaWx2YTwvc3Bhbj48L3A+CiAgICA8cCBjbGFzcz0iaW5mby1neW0taXRlbSI+PHNwYW4gY2xhc3M9ImluZm8tZ3ltLWF0dHJpYnV0ZSI+RW5kZXJlw6dvOjwvc3Bhbj48c3BhbiBjbGFzcz0iaW5mby1neW0tdmFsdWUiPkV1Y2xpZGVzIENpbmhhIE5ldG8sIDU1LCBKYXJkaW0gQWx2b3JhZGEsIEd1YXh1cMOpLU1HPC9zcGFuPjwvcD4KICAgIDxwIGNsYXNzPSJpbmZvLWd5bS1pdGVtIj48c3BhbiBjbGFzcz0iaW5mby1neW0tYXR0cmlidXRlIj5Db250YXRvOjwvc3Bhbj48c3BhbiBjbGFzcz0iaW5mby1neW0tdmFsdWUiPjM1LTM1NTEyMDQzPC9zcGFuPjwvcD4KICA8L3NlY3Rpb24+CiAgPHNlY3Rpb24gY2xhc3M9ImFjdGlvbi1neW0tb3duZXIiPgogICAgPG1kLWJ1dHRvbiBuZy1jbGljaz0ib3duZXJEaWFsb2coJGV2ZW50KSIgY2xhc3M9Im1kLXJhaXNlZCBtZC1wcmltYXJ5Ij5FZGl0YXI8L21kLWJ1dHRvbj4KICA8L3NlY3Rpb24+Cjwvc2VjdGlvbj4=","base64")  
 				}
 			},
 		},

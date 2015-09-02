@@ -72,6 +72,7 @@ module.exports = {
 				// 	// expect($stateParams).toBe({userId: 12});
 				// },
 				'admin-content-menu-content@administration': {
+					controller:'gymAdminOwnerController',
 					template: fs.readFileSync(__dirname + '/templates/gymOwnerContentUserAdmin.html')  
 				}
 			},

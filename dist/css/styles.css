@@ -17548,6 +17548,27 @@ md-dialog md-dialog-content .train-dialog-wrap .train-dialog-content .action but
 .train-content-method-wrap:last-child {
   margin-right: 0%;
 }
+.owner-admin-dialog-wrap {
+  *zoom: 1;
+  float: left;
+  clear: none;
+  text-align: inherit;
+  width: 100%;
+  margin-left: 0%;
+  margin-right: 0%;
+  background: #00f;
+}
+.owner-admin-dialog-wrap:before,
+.owner-admin-dialog-wrap:after {
+  content: '';
+  display: table;
+}
+.owner-admin-dialog-wrap:after {
+  clear: both;
+}
+.owner-admin-dialog-wrap:last-child {
+  margin-right: 0%;
+}
 .training {
   *zoom: 1;
   float: left;
