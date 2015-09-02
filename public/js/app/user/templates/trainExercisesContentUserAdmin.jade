@@ -2,9 +2,9 @@ section.train-content-exercises-list-wrap
 	section.train-content-exercises-add
 		section.train-content-exercises-add-input
 			md-input-container(md-no-float='')
-				input(placeholder='Nome do Grupo Muscular' ng-model="newGroup.name")
+				input(placeholder='Nome do Grupo Muscular' ng-model="bindModel.groupName")
 		section.train-content-exercises-add-action
 			md-button(class="md-raised md-primary" ng-click="addGroup()") Adicionar Grupo
 	section.train-content-exercises-list-content
 		// p(ng-repeat="group in groups") {{group}}
-		ds-exercises-select-list(groups="groups")
+		ds-exercises-select-list

@@ -2,23 +2,24 @@ var fs = require('fs');
 module.exports = function() {
 	return{
 		template: fs.readFileSync(__dirname + '/../templates/dsExerciseSelectItemTemplateDirective.html'),
-		// transclude:true,
 		scope: {
 			group: "="
 		},
-		controller: function($scope){
+		controller: function($scope,exercisePatternModel){
 
-			$scope.newExercise = {
-				name : ""
+			$scope.bindModel = exercisePatternModel.bindModel;
+
+			$scope.removeGroup = function(group){
+				exercisePatternModel.removeGroup(group);
 			};
-			this.get = function(){
-				return $scope.newExercise.name;
+
+			$scope.removeExercise = function(group,exercise){
+				exercisePatternModel.removeExercise(group,exercise);
 			};
-			
-			// $scope.add = function(group) {
-			// 	console.log("passou", $scope.newExercise.name);
-			// 	$scope.$emit('addExercise',[group,$scope.newExercise.name]);
-			// };
+
+			$scope.addExercise = function(group){
+				exercisePatternModel.addExercise(group);
+			};
 
 		},
 		require: ["^dsExerciseSelectItem","^dsExercisesSelectList"],
@@ -31,23 +32,6 @@ module.exports = function() {
 			scope.close_exerc= function () {
 				scope.isOpened = false;
 			};
-			//remove group
-			scope.remove = function(group) {
-				ctrls[1].remove(group);
-			};
-			scope.add = function(group) {
-				ctrls[1].add(group,ctrls[0].get());
-				scope.newExercise = {
-					name : ""
-				};
-			};
-			scope.remove_exer = function(exer) {
-				console.log(exer);
-				// ctrls[1].remove_exer(group,ctrls[0].get());
-			};
-			// scope.remove = function(exercicio){
-			// 	scope.$emit('remove_exercise',exercicio);
-			// };
 		}
 	};
 };

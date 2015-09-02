@@ -31,6 +31,9 @@ module.exports = function (gulp,plugins){
 
 	function bundleShare(b) {
 		b.bundle()
+		.on("error", plugins.notify.onError(function(error) {
+			return error.message;
+		}))
 		.pipe(plugins.vinylSourceStream('./scripts.js'))
 		.pipe(gulp.dest('./dist/js'))
 		.pipe(plugins.browserSync.reload({stream: true, once: true}));

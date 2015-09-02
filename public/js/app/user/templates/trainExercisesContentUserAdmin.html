@@ -3,7 +3,7 @@
   <section class="train-content-exercises-add">
     <section class="train-content-exercises-add-input">
       <md-input-container md-no-float="">
-        <input placeholder="Nome do Grupo Muscular" ng-model="newGroup.name"/>
+        <input placeholder="Nome do Grupo Muscular" ng-model="bindModel.groupName"/>
       </md-input-container>
     </section>
     <section class="train-content-exercises-add-action">
@@ -12,6 +12,6 @@
   </section>
   <section class="train-content-exercises-list-content">
     <!-- p(ng-repeat="group in groups") {{group}}-->
-    <ds-exercises-select-list groups="groups"></ds-exercises-select-list>
+    <ds-exercises-select-list></ds-exercises-select-list>
   </section>
 </section>

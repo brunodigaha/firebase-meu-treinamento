@@ -1,6 +1,6 @@
 section.ds-exercises-select-list
 		section.ds-exercises-select-list-content(sv-root="serie" sv-part="lista")
 			md-content.ds-exercise-select-list-scroll(scroll-glue="scroll.glued")
-				section(ng-repeat="group in groups")
+				section(ng-repeat="group in bindModel.groups")
 					ds-exercise-select-item(group="group")
 				// ds-exercise-select-item(sv-element="serie")

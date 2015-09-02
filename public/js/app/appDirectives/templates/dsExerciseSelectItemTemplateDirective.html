@@ -4,7 +4,7 @@
     <section ng-if="!isOpened" ng-click="open_exerc();" class="ds-exercise-item-closed-wrap">
       <section class="ds-exercise-item-closed">
         <section class="ds-exercise-item-closed-title">
-          <p>{{group.group.name}}</p>
+          <p>{{group.group}}</p>
         </section>
         <section class="ds-exercise-item-closed-resume"><span>12 Exercícios
             <ng-md-icon icon="expand_more" style="fill:grey" size="17"></ng-md-icon></span></section>
@@ -13,26 +13,26 @@
     <section ng-if="isOpened" class="ds-exercise-item-opened-wrap animated fadeIn">
       <section class="ds-exercise-item-opened">
         <section ng-click="close_exerc();" class="ds-exercise-item-opened-title">
-          <p>{{group.group.name}}</p>
+          <p>{{group.group}}</p>
         </section>
         <section class="ds-exercise-item-opened-resume">
-          <md-button ng-click="remove(group);" class="md-warn">Excluir Grupo</md-button>
+          <md-button ng-click="removeGroup(group);" class="md-warn">Excluir Grupo</md-button>
         </section>
       </section>
       <section class="ds-exercise-item-opened-content-wrap">
         <section class="ds-exercise-item-opened-content">
-          <md-content class="ds-exercise-select-item-scroll"><span ng-repeat="exercise in group.exercises">{{exercise}}
-              <ng-md-icon icon="close" style="fill:black" size="19" ng-click="remove_exer(exercise)"></ng-md-icon></span></md-content>
+          <md-content class="ds-exercise-select-item-scroll"><span ng-repeat="(key,value) in group.exercises">{{value.name}}
+              <ng-md-icon icon="close" style="fill:black" size="19" ng-click="removeExercise(group.$id,key)"></ng-md-icon></span></md-content>
         </section>
       </section>
       <section class="ds-exercise-item-opened-header">
         <section class="ds-exercise-item-opened-input">
           <md-input-container md-no-float="">
-            <input placeholder="Digite nome do exercício para inserí-lo" ng-model="newExercise.name"/>
+            <input placeholder="Digite nome do exercício para inserí-lo" ng-model="bindModel.exerciseName"/>
           </md-input-container>
         </section>
         <section class="ds-exercise-item-opened-action">
-          <md-button ng-disabled="!newExercise" ng-click="add(group);" class="md-raised md-primary">Inserir Exercício</md-button>
+          <md-button ng-disabled="!bindModel.exerciseName" ng-click="addExercise(group);" class="md-raised md-primary">Inserir Exercício</md-button>
         </section>
       </section>
     </section>
