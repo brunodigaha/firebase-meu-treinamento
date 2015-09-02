@@ -141,6 +141,12 @@ module.exports = {
 			ncyBreadcrumb: {
 				label: 'Administração - Treinos'
 			},
+			onEnter: function(exercisePatternModel){
+				exercisePatternModel.init();
+			},
+			onExit: function(exercisePatternModel){
+				exercisePatternModel.destroy();
+			},
 			views: {
 				'admin-content-menu-content@administration': {
 					controller:'trainAdminExercisesController',

@@ -9,8 +9,8 @@ module.exports = function() {
 
 			$scope.bindModel = exercisePatternModel.bindModel;
 
-			$scope.removeGroup = function(group){
-				exercisePatternModel.removeGroup(group);
+			$scope.removeGroup = function(event,group){
+				exercisePatternModel.removeGroup(event,group);
 			};
 
 			$scope.removeExercise = function(group,exercise){

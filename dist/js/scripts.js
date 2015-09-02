@@ -54874,7 +54874,7 @@ module.exports = function() {
 
 module.exports = function() {
 	return{
-		template: Buffer("CjxzZWN0aW9uIGNsYXNzPSJkcy1leGVyY2lzZS1zZWxlY3QtaXRlbSI+CiAgPHNlY3Rpb24gbmctY2xhc3M9InsnYWN0aXZlJzogaXNPcGVuZWR9IiBjbGFzcz0iZHMtZXhlcmNpc2UtaXRlbS13cmFwIj4KICAgIDxzZWN0aW9uIG5nLWlmPSIhaXNPcGVuZWQiIG5nLWNsaWNrPSJvcGVuX2V4ZXJjKCk7IiBjbGFzcz0iZHMtZXhlcmNpc2UtaXRlbS1jbG9zZWQtd3JhcCI+CiAgICAgIDxzZWN0aW9uIGNsYXNzPSJkcy1leGVyY2lzZS1pdGVtLWNsb3NlZCI+CiAgICAgICAgPHNlY3Rpb24gY2xhc3M9ImRzLWV4ZXJjaXNlLWl0ZW0tY2xvc2VkLXRpdGxlIj4KICAgICAgICAgIDxwPnt7Z3JvdXAuZ3JvdXB9fTwvcD4KICAgICAgICA8L3NlY3Rpb24+CiAgICAgICAgPHNlY3Rpb24gY2xhc3M9ImRzLWV4ZXJjaXNlLWl0ZW0tY2xvc2VkLXJlc3VtZSI+PHNwYW4+MTIgRXhlcmPDrWNpb3MKICAgICAgICAgICAgPG5nLW1kLWljb24gaWNvbj0iZXhwYW5kX21vcmUiIHN0eWxlPSJmaWxsOmdyZXkiIHNpemU9IjE3Ij48L25nLW1kLWljb24+PC9zcGFuPjwvc2VjdGlvbj4KICAgICAgPC9zZWN0aW9uPgogICAgPC9zZWN0aW9uPgogICAgPHNlY3Rpb24gbmctaWY9ImlzT3BlbmVkIiBjbGFzcz0iZHMtZXhlcmNpc2UtaXRlbS1vcGVuZWQtd3JhcCBhbmltYXRlZCBmYWRlSW4iPgogICAgICA8c2VjdGlvbiBjbGFzcz0iZHMtZXhlcmNpc2UtaXRlbS1vcGVuZWQiPgogICAgICAgIDxzZWN0aW9uIG5nLWNsaWNrPSJjbG9zZV9leGVyYygpOyIgY2xhc3M9ImRzLWV4ZXJjaXNlLWl0ZW0tb3BlbmVkLXRpdGxlIj4KICAgICAgICAgIDxwPnt7Z3JvdXAuZ3JvdXB9fTwvcD4KICAgICAgICA8L3NlY3Rpb24+CiAgICAgICAgPHNlY3Rpb24gY2xhc3M9ImRzLWV4ZXJjaXNlLWl0ZW0tb3BlbmVkLXJlc3VtZSI+CiAgICAgICAgICA8bWQtYnV0dG9uIG5nLWNsaWNrPSJyZW1vdmVHcm91cChncm91cCk7IiBjbGFzcz0ibWQtd2FybiI+RXhjbHVpciBHcnVwbzwvbWQtYnV0dG9uPgogICAgICAgIDwvc2VjdGlvbj4KICAgICAgPC9zZWN0aW9uPgogICAgICA8c2VjdGlvbiBjbGFzcz0iZHMtZXhlcmNpc2UtaXRlbS1vcGVuZWQtY29udGVudC13cmFwIj4KICAgICAgICA8c2VjdGlvbiBjbGFzcz0iZHMtZXhlcmNpc2UtaXRlbS1vcGVuZWQtY29udGVudCI+CiAgICAgICAgICA8bWQtY29udGVudCBjbGFzcz0iZHMtZXhlcmNpc2Utc2VsZWN0LWl0ZW0tc2Nyb2xsIj48c3BhbiBuZy1yZXBlYXQ9IihrZXksdmFsdWUpIGluIGdyb3VwLmV4ZXJjaXNlcyI+e3t2YWx1ZS5uYW1lfX0KICAgICAgICAgICAgICA8bmctbWQtaWNvbiBpY29uPSJjbG9zZSIgc3R5bGU9ImZpbGw6YmxhY2siIHNpemU9IjE5IiBuZy1jbGljaz0icmVtb3ZlRXhlcmNpc2UoZ3JvdXAuJGlkLGtleSkiPjwvbmctbWQtaWNvbj48L3NwYW4+PC9tZC1jb250ZW50PgogICAgICAgIDwvc2VjdGlvbj4KICAgICAgPC9zZWN0aW9uPgogICAgICA8c2VjdGlvbiBjbGFzcz0iZHMtZXhlcmNpc2UtaXRlbS1vcGVuZWQtaGVhZGVyIj4KICAgICAgICA8c2VjdGlvbiBjbGFzcz0iZHMtZXhlcmNpc2UtaXRlbS1vcGVuZWQtaW5wdXQiPgogICAgICAgICAgPG1kLWlucHV0LWNvbnRhaW5lciBtZC1uby1mbG9hdD0iIj4KICAgICAgICAgICAgPGlucHV0IHBsYWNlaG9sZGVyPSJEaWdpdGUgbm9tZSBkbyBleGVyY8OtY2lvIHBhcmEgaW5zZXLDrS1sbyIgbmctbW9kZWw9ImJpbmRNb2RlbC5leGVyY2lzZU5hbWUiLz4KICAgICAgICAgIDwvbWQtaW5wdXQtY29udGFpbmVyPgogICAgICAgIDwvc2VjdGlvbj4KICAgICAgICA8c2VjdGlvbiBjbGFzcz0iZHMtZXhlcmNpc2UtaXRlbS1vcGVuZWQtYWN0aW9uIj4KICAgICAgICAgIDxtZC1idXR0b24gbmctZGlzYWJsZWQ9IiFiaW5kTW9kZWwuZXhlcmNpc2VOYW1lIiBuZy1jbGljaz0iYWRkRXhlcmNpc2UoZ3JvdXApOyIgY2xhc3M9Im1kLXJhaXNlZCBtZC1wcmltYXJ5Ij5JbnNlcmlyIEV4ZXJjw61jaW88L21kLWJ1dHRvbj4KICAgICAgICA8L3NlY3Rpb24+CiAgICAgIDwvc2VjdGlvbj4KICAgIDwvc2VjdGlvbj4KICA8L3NlY3Rpb24+Cjwvc2VjdGlvbj4=","base64"),
+		template: Buffer("CjxzZWN0aW9uIGNsYXNzPSJkcy1leGVyY2lzZS1zZWxlY3QtaXRlbSI+CiAgPHNlY3Rpb24gbmctY2xhc3M9InsnYWN0aXZlJzogaXNPcGVuZWR9IiBjbGFzcz0iZHMtZXhlcmNpc2UtaXRlbS13cmFwIj4KICAgIDxzZWN0aW9uIG5nLWlmPSIhaXNPcGVuZWQiIG5nLWNsaWNrPSJvcGVuX2V4ZXJjKCk7IiBjbGFzcz0iZHMtZXhlcmNpc2UtaXRlbS1jbG9zZWQtd3JhcCI+CiAgICAgIDxzZWN0aW9uIGNsYXNzPSJkcy1leGVyY2lzZS1pdGVtLWNsb3NlZCI+CiAgICAgICAgPHNlY3Rpb24gY2xhc3M9ImRzLWV4ZXJjaXNlLWl0ZW0tY2xvc2VkLXRpdGxlIj4KICAgICAgICAgIDxwPnt7Z3JvdXAuZ3JvdXB9fTwvcD4KICAgICAgICA8L3NlY3Rpb24+CiAgICAgICAgPHNlY3Rpb24gY2xhc3M9ImRzLWV4ZXJjaXNlLWl0ZW0tY2xvc2VkLXJlc3VtZSI+PHNwYW4+MTIgRXhlcmPDrWNpb3MKICAgICAgICAgICAgPG5nLW1kLWljb24gaWNvbj0iZXhwYW5kX21vcmUiIHN0eWxlPSJmaWxsOmdyZXkiIHNpemU9IjE3Ij48L25nLW1kLWljb24+PC9zcGFuPjwvc2VjdGlvbj4KICAgICAgPC9zZWN0aW9uPgogICAgPC9zZWN0aW9uPgogICAgPHNlY3Rpb24gbmctaWY9ImlzT3BlbmVkIiBjbGFzcz0iZHMtZXhlcmNpc2UtaXRlbS1vcGVuZWQtd3JhcCBhbmltYXRlZCBmYWRlSW4iPgogICAgICA8c2VjdGlvbiBjbGFzcz0iZHMtZXhlcmNpc2UtaXRlbS1vcGVuZWQiPgogICAgICAgIDxzZWN0aW9uIG5nLWNsaWNrPSJjbG9zZV9leGVyYygpOyIgY2xhc3M9ImRzLWV4ZXJjaXNlLWl0ZW0tb3BlbmVkLXRpdGxlIj4KICAgICAgICAgIDxwPnt7Z3JvdXAuZ3JvdXB9fTwvcD4KICAgICAgICA8L3NlY3Rpb24+CiAgICAgICAgPHNlY3Rpb24gY2xhc3M9ImRzLWV4ZXJjaXNlLWl0ZW0tb3BlbmVkLXJlc3VtZSI+CiAgICAgICAgICA8bWQtYnV0dG9uIG5nLWNsaWNrPSJyZW1vdmVHcm91cCgkZXZlbnQsZ3JvdXApOyIgY2xhc3M9Im1kLXdhcm4iPkV4Y2x1aXIgR3J1cG88L21kLWJ1dHRvbj4KICAgICAgICA8L3NlY3Rpb24+CiAgICAgIDwvc2VjdGlvbj4KICAgICAgPHNlY3Rpb24gY2xhc3M9ImRzLWV4ZXJjaXNlLWl0ZW0tb3BlbmVkLWNvbnRlbnQtd3JhcCI+CiAgICAgICAgPHNlY3Rpb24gY2xhc3M9ImRzLWV4ZXJjaXNlLWl0ZW0tb3BlbmVkLWNvbnRlbnQiPgogICAgICAgICAgPG1kLWNvbnRlbnQgY2xhc3M9ImRzLWV4ZXJjaXNlLXNlbGVjdC1pdGVtLXNjcm9sbCI+PHNwYW4gbmctcmVwZWF0PSIoa2V5LHZhbHVlKSBpbiBncm91cC5leGVyY2lzZXMiPnt7dmFsdWUubmFtZX19CiAgICAgICAgICAgICAgPG5nLW1kLWljb24gaWNvbj0iY2xvc2UiIHN0eWxlPSJmaWxsOmJsYWNrIiBzaXplPSIxOSIgbmctY2xpY2s9InJlbW92ZUV4ZXJjaXNlKGdyb3VwLiRpZCxrZXkpIj48L25nLW1kLWljb24+PC9zcGFuPjwvbWQtY29udGVudD4KICAgICAgICA8L3NlY3Rpb24+CiAgICAgIDwvc2VjdGlvbj4KICAgICAgPHNlY3Rpb24gY2xhc3M9ImRzLWV4ZXJjaXNlLWl0ZW0tb3BlbmVkLWhlYWRlciI+CiAgICAgICAgPHNlY3Rpb24gY2xhc3M9ImRzLWV4ZXJjaXNlLWl0ZW0tb3BlbmVkLWlucHV0Ij4KICAgICAgICAgIDxtZC1pbnB1dC1jb250YWluZXIgbWQtbm8tZmxvYXQ9IiI+CiAgICAgICAgICAgIDxpbnB1dCBwbGFjZWhvbGRlcj0iRGlnaXRlIG5vbWUgZG8gZXhlcmPDrWNpbyBwYXJhIGluc2Vyw60tbG8iIG5nLW1vZGVsPSJiaW5kTW9kZWwuZXhlcmNpc2VOYW1lIi8+CiAgICAgICAgICA8L21kLWlucHV0LWNvbnRhaW5lcj4KICAgICAgICA8L3NlY3Rpb24+CiAgICAgICAgPHNlY3Rpb24gY2xhc3M9ImRzLWV4ZXJjaXNlLWl0ZW0tb3BlbmVkLWFjdGlvbiI+CiAgICAgICAgICA8bWQtYnV0dG9uIG5nLWRpc2FibGVkPSIhYmluZE1vZGVsLmV4ZXJjaXNlTmFtZSIgbmctY2xpY2s9ImFkZEV4ZXJjaXNlKGdyb3VwKTsiIGNsYXNzPSJtZC1yYWlzZWQgbWQtcHJpbWFyeSI+SW5zZXJpciBFeGVyY8OtY2lvPC9tZC1idXR0b24+CiAgICAgICAgPC9zZWN0aW9uPgogICAgICA8L3NlY3Rpb24+CiAgICA8L3NlY3Rpb24+CiAgPC9zZWN0aW9uPgo8L3NlY3Rpb24+","base64"),
 		scope: {
 			group: "="
 		},
@@ -54882,8 +54882,8 @@ module.exports = function() {
 
 			$scope.bindModel = exercisePatternModel.bindModel;
 
-			$scope.removeGroup = function(group){
-				exercisePatternModel.removeGroup(group);
+			$scope.removeGroup = function(event,group){
+				exercisePatternModel.removeGroup(event,group);
 			};
 
 			$scope.removeExercise = function(group,exercise){
@@ -56201,20 +56201,13 @@ module.exports = angular.module('user',[])
 		// .factory('RestangularCustom', require('./services/restangularCustom.js'));
 
 },{"./controllers/planController.js":63,"./controllers/scheduleController.js":64,"./controllers/trainAdminExercisesController.js":65,"./services/exercisePatternModel.js":67}],67:[function(require,module,exports){
-module.exports = function (fbUtil,$firebaseArray,FBURL) {
+module.exports = function (fbUtil,$mdDialog, $mdToast,$firebaseArray,FBURL) {
 
 	var bindModel = {
 		groupName: '',
 		exerciseName: '',
 		isLoaded: false
 	};
-
-	bindModel.groups = $firebaseArray(fbUtil.ref('gym'));
-
-	bindModel.groups.$loaded().then(function(x) {
-		console.log("carregou grupos");
-		bindModel.isLoaded = true;
-	});
 
 
 	var addGroup = function() {
@@ -56225,8 +56218,25 @@ module.exports = function (fbUtil,$firebaseArray,FBURL) {
 			bindModel.groupName = '';
 		}
 	};
-	var removeGroup = function(group){
-		bindModel.groups.$remove(group);
+	var removeGroup = function(event,group){
+		var confirm = $mdDialog.confirm()
+			.title('Deseja Realmente Excluir o Grupo: '+ group.group.toString() )
+			.content('Ao ser confirmada essa ação não pode ser desfeita!')
+			.ariaLabel('Remover Grupo')
+			.ok('Excluir Grupo')
+			.cancel('Cancelar')
+			.targetEvent(event);
+			$mdDialog.show(confirm).then(function() {
+				bindModel.groups.$remove(group).then( function(ref) {
+					$mdToast.show(
+						$mdToast.simple()
+							.content("Grupo "+ group.group.toString()+' Excluído')
+							.position("top right")
+							.action('x')
+							.hideDelay(2500)
+					);
+				});
+			});
 	};
 	var addExercise = function(group) {
 		if (bindModel.exerciseName) {
@@ -56246,13 +56256,25 @@ module.exports = function (fbUtil,$firebaseArray,FBURL) {
 		var refExercise = bindModel.groups.$ref().child(group+'/exercises/'+exercise);
 		refExercise.remove();
 	};
+	var init = function() {
+		bindModel.groups = $firebaseArray(fbUtil.ref('gym'));
+		bindModel.groups.$loaded().then(function(x) {
+			console.log("carregou grupos");
+			bindModel.isLoaded = true;
+		});
+	};
+	var destroy = function() {
+		bindModel.groups.$destroy();
+	};
 
 	return {  
 		bindModel : bindModel,
 		addGroup: addGroup,
 		removeGroup: removeGroup,
 		addExercise: addExercise,
-		removeExercise: removeExercise
+		removeExercise: removeExercise,
+		init: init,
+		destroy: destroy
 	};
 };
 
@@ -56400,6 +56422,12 @@ module.exports = {
 			authenticate: true,
 			ncyBreadcrumb: {
 				label: 'Administração - Treinos'
+			},
+			onEnter: function(exercisePatternModel){
+				exercisePatternModel.init();
+			},
+			onExit: function(exercisePatternModel){
+				exercisePatternModel.destroy();
 			},
 			views: {
 				'admin-content-menu-content@administration': {

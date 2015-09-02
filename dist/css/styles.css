@@ -12604,7 +12604,7 @@ a:visited {
   margin-right: 0%;
 }
 .ds-exercise-select-item .ds-exercise-item-wrap.active {
-  border: 2px solid #eceff1;
+  border: 3px solid #eceff1;
   margin-top: 5px;
   margin-bottom: 5px;
 }
@@ -17399,7 +17399,7 @@ md-dialog md-dialog-content .train-dialog-wrap .train-dialog-content .action but
   padding-right: 2em;
   padding-left: 2em;
   margin-bottom: 2em;
-  border: 1px solid #e0e0e0;
+  border: 1px solid #f5f5f5;
 }
 .train-content-exercises-list-wrap .train-content-exercises-add:before,
 .train-content-exercises-list-wrap .train-content-exercises-add:after {

@@ -1,17 +1,10 @@
-module.exports = function (fbUtil,$firebaseArray,FBURL) {
+module.exports = function (fbUtil,$mdDialog, $mdToast,$firebaseArray,FBURL) {
 
 	var bindModel = {
 		groupName: '',
 		exerciseName: '',
 		isLoaded: false
 	};
-
-	bindModel.groups = $firebaseArray(fbUtil.ref('gym'));
-
-	bindModel.groups.$loaded().then(function(x) {
-		console.log("carregou grupos");
-		bindModel.isLoaded = true;
-	});
 
 
 	var addGroup = function() {
@@ -22,8 +15,25 @@ module.exports = function (fbUtil,$firebaseArray,FBURL) {
 			bindModel.groupName = '';
 		}
 	};
-	var removeGroup = function(group){
-		bindModel.groups.$remove(group);
+	var removeGroup = function(event,group){
+		var confirm = $mdDialog.confirm()
+			.title('Deseja Realmente Excluir o Grupo: '+ group.group.toString() )
+			.content('Ao ser confirmada essa ação não pode ser desfeita!')
+			.ariaLabel('Remover Grupo')
+			.ok('Excluir Grupo')
+			.cancel('Cancelar')
+			.targetEvent(event);
+			$mdDialog.show(confirm).then(function() {
+				bindModel.groups.$remove(group).then( function(ref) {
+					$mdToast.show(
+						$mdToast.simple()
+							.content("Grupo "+ group.group.toString()+' Excluído')
+							.position("top right")
+							.action('x')
+							.hideDelay(2500)
+					);
+				});
+			});
 	};
 	var addExercise = function(group) {
 		if (bindModel.exerciseName) {
@@ -43,12 +53,24 @@ module.exports = function (fbUtil,$firebaseArray,FBURL) {
 		var refExercise = bindModel.groups.$ref().child(group+'/exercises/'+exercise);
 		refExercise.remove();
 	};
+	var init = function() {
+		bindModel.groups = $firebaseArray(fbUtil.ref('gym'));
+		bindModel.groups.$loaded().then(function(x) {
+			console.log("carregou grupos");
+			bindModel.isLoaded = true;
+		});
+	};
+	var destroy = function() {
+		bindModel.groups.$destroy();
+	};
 
 	return {  
 		bindModel : bindModel,
 		addGroup: addGroup,
 		removeGroup: removeGroup,
 		addExercise: addExercise,
-		removeExercise: removeExercise
+		removeExercise: removeExercise,
+		init: init,
+		destroy: destroy
 	};
 };

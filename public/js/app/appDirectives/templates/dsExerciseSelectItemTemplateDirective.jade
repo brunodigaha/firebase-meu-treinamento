@@ -12,7 +12,7 @@ section.ds-exercise-select-item
 				section.ds-exercise-item-opened-title(ng-click="close_exerc();")
 					p {{group.group}}
 				section.ds-exercise-item-opened-resume
-					md-button.md-warn(ng-click="removeGroup(group);") Excluir Grupo
+					md-button.md-warn(ng-click="removeGroup($event,group);") Excluir Grupo
 			section.ds-exercise-item-opened-content-wrap
 				section.ds-exercise-item-opened-content
 					md-content.ds-exercise-select-item-scroll
