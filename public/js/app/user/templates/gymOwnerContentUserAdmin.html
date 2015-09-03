@@ -1,11 +1,12 @@
 
 <section class="gym-content-owner-wrap">
-  <h1>Dalton Morais</h1>
+  <h1>{{gym.gym}}</h1>
   <!-- p.owner-subtitle Academia-->
+  <p>{{alert}}</p>
   <section class="info-gym-owner">
-    <p class="info-gym-item"><span class="info-gym-attribute">Responsável:</span><span class="info-gym-value">Dalton Morais Silva</span></p>
-    <p class="info-gym-item"><span class="info-gym-attribute">Endereço:</span><span class="info-gym-value">Euclides Cinha Neto, 55, Jardim Alvorada, Guaxupé-MG</span></p>
-    <p class="info-gym-item"><span class="info-gym-attribute">Contato:</span><span class="info-gym-value">35-35512043</span></p>
+    <p class="info-gym-item"><span class="info-gym-attribute">Responsável:</span><span class="info-gym-value">{{gym.owner}}</span></p>
+    <p class="info-gym-item"><span class="info-gym-attribute">Endereço:</span><span class="info-gym-value">{{gym.address}}</span></p>
+    <p class="info-gym-item"><span class="info-gym-attribute">Contato:</span><span class="info-gym-value">{{gym.contact}}</span></p>
   </section>
   <section class="action-gym-owner">
     <md-button ng-click="ownerDialog($event)" class="md-raised md-primary">Editar</md-button>

@@ -17556,7 +17556,9 @@ md-dialog md-dialog-content .train-dialog-wrap .train-dialog-content .action but
   width: 100%;
   margin-left: 0%;
   margin-right: 0%;
-  background: #00f;
+  box-sizing: border-box;
+  padding-right: 2em;
+  padding-left: 2em;
 }
 .owner-admin-dialog-wrap:before,
 .owner-admin-dialog-wrap:after {
@@ -17568,6 +17570,18 @@ md-dialog md-dialog-content .train-dialog-wrap .train-dialog-content .action but
 }
 .owner-admin-dialog-wrap:last-child {
   margin-right: 0%;
+}
+@media only screen and (min-width: 1050px) {
+  .owner-admin-dialog-wrap {
+    padding-right: 4em;
+    padding-left: 4em;
+  }
+}
+@media only screen and (min-width: 1800px) {
+  .owner-admin-dialog-wrap {
+    padding-right: 5em;
+    padding-left: 5em;
+  }
 }
 .training {
   *zoom: 1;

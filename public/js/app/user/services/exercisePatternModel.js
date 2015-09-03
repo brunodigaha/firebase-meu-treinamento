@@ -35,6 +35,13 @@ module.exports = function (fbUtil,$mdDialog, $mdToast,$firebaseArray,FBURL) {
 				});
 			});
 	};
+	var init = function() {
+		bindModel.groups = $firebaseArray(fbUtil.ref('gym','namesexercises'));
+		bindModel.groups.$loaded().then(function(x) {
+			console.log("carregou grupos");
+			bindModel.isLoaded = true;
+		});
+	};
 	var addExercise = function(group) {
 		if (bindModel.exerciseName) {
 			// retorna 0, 1 , 2 posição na matrix
@@ -52,13 +59,6 @@ module.exports = function (fbUtil,$mdDialog, $mdToast,$firebaseArray,FBURL) {
 		// bindModel.groups.$remove(group);
 		var refExercise = bindModel.groups.$ref().child(group+'/exercises/'+exercise);
 		refExercise.remove();
-	};
-	var init = function() {
-		bindModel.groups = $firebaseArray(fbUtil.ref('gym'));
-		bindModel.groups.$loaded().then(function(x) {
-			console.log("carregou grupos");
-			bindModel.isLoaded = true;
-		});
 	};
 	var destroy = function() {
 		bindModel.groups.$destroy();

@@ -1,16 +1,17 @@
 section.gym-content-owner-wrap
-	h1 Dalton Morais
+	h1 {{gym.gym}}
 	// p.owner-subtitle Academia
+	p {{alert}}
 	section.info-gym-owner
 		p.info-gym-item
 			span.info-gym-attribute Responsável:
-			span.info-gym-value Dalton Morais Silva
+			span.info-gym-value {{gym.owner}}
 		p.info-gym-item
 			span.info-gym-attribute Endereço:
-			span.info-gym-value Euclides Cinha Neto, 55, Jardim Alvorada, Guaxupé-MG
+			span.info-gym-value {{gym.address}}
 		p.info-gym-item
 			span.info-gym-attribute Contato:
-			span.info-gym-value 35-35512043
+			span.info-gym-value {{gym.contact}}
 	section.action-gym-owner
 		md-button(class="md-raised md-primary" ng-click="ownerDialog($event)") Editar
 

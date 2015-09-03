@@ -1,11 +1,12 @@
-module.exports = function($scope,$mdToast,$mdDialog,FBURL,$window,$firebaseObject) {
-	$scope.hide = function() {
-		$mdDialog.hide();
-	};
+module.exports = function($scope,$mdDialog) {
+	// console.log(gymBackup);
+	// $scope.save = function() {
+	// 	$mdDialog.hide();
+	// };
 	$scope.cancel = function() {
 		$mdDialog.cancel();
 	};
-	$scope.answer = function(answer) {
+	$scope.save = function(answer) {
 		$mdDialog.hide(answer);
 	};
 };
