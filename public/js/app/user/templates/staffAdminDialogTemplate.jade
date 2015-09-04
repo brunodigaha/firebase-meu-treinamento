@@ -3,7 +3,7 @@ md-dialog(flex="85" aria-label="funcionário")
 		.md-toolbar-tools
 			h1 Adicionar Funcionário
 			span(flex="")
-			md-button(ng-click="answer('not applicable')") Fechar
+			md-button(ng-click="cancel()") Fechar
 			// ng-md-icon(icon="close" ng-click="answer('not applicable')" style="fill:white" size="25")
 	md-dialog-content
 		section.staff-admin-dialog-wrap
@@ -53,6 +53,11 @@ md-dialog(flex="85" aria-label="funcionário")
 								div(ng-message="required") Este campo é obrigatório.
 							div(ng-message="md-maxlength") Nome com no máximo 30 caracteres
 				section.staff-admin-dialog-content--permission
+					p.staff-admin-dialog-content--permission-title Cargo:
+					md-radio-group(ng-model='staff.permission')
+						md-radio-button.md-primary(value='Administrador') Administrador
+						md-radio-button.md-primary(value='Professor') Professor
+
 
 	.md-actions(layout="row")
 		span(flex="")
