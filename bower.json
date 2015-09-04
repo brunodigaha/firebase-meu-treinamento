@@ -31,7 +31,7 @@
     "typographic": "~2.9.3",
     "animate.css": "https://github.com/daneden/animate.css.git#3.3.0",
     "angular-material-icons": "~0.5.0",
-    "angular-uploadcare": "~0.1.2",
+    "angular-uploadcare": "~0.2.0",
     "angular-breadcrumb": "~0.4.0",
     "angular-sortable-view": "~0.0.13",
     "angular-scroll-glue": "~2.0.6",

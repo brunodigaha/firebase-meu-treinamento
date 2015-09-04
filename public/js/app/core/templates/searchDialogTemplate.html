@@ -11,7 +11,7 @@
     <md-dialog-content>
       <section class="new-user">
         <section class="avatar"><img ng-if="!newUser.image" class="icon-avatar"/><img ng-src="{{UCURL.url}}{{newUser.image}}" ng-if="newUser.image" class="img-responsive img-selected"/>
-          <uploadcare-widget ng-model="object.image.info.uuid" data-public-key="eb39c5def657fcd88946" data-locale="pt" data-tabs="file facebook gdrive dropbox instagram evernote flickr skydrive" data-images-only="true" data-path-value="true" data-preview-step="true" data-clearable="true" data-multiple="false" data-crop="4:4" on-upload-complete="onUCUploadComplete(info)" on-widget-ready="onUCWidgetReady(widget)" value="{{ object.image.info.cdnUrl }}"></uploadcare-widget>
+          <input uploadcare-widget="uploadcare-widget" ng-model="object.image.info.uuid" data-public-key="eb39c5def657fcd88946" data-locale="pt" data-tabs="file facebook gdrive dropbox instagram evernote flickr skydrive" data-images-only="true" data-path-value="true" data-preview-step="true" data-clearable="true" data-multiple="false" data-crop="4:4" on-upload-complete="onUCUploadComplete(info)" on-widget-ready="onUCWidgetReady(widget)" value="{{ object.image.info.cdnUrl }}"/>
         </section>
         <section class="attributes">
           <section class="login-name">
