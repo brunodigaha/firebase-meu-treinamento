@@ -1,4 +1,36 @@
 
 <section class="gym-content-staff-wrap">
-  <p>Funcionarios</p>
+  <section class="gym-content-staff-add-action">
+    <md-button title="Adicionar Funcionário" ng-click="addGroup()" class="md-raised md-primary"> 
+      <ng-md-icon icon="add_circle_outline" style="fill:white" size="25"></ng-md-icon>Funcionário
+    </md-button>
+  </section>
+  <section class="gym-content-staff-search">
+    <md-input-container md-no-float="">
+      <input placeholder="Pesquisar Funcionário" ng-model="bindModel.groupName"/>
+    </md-input-container>
+  </section>
+  <section class="gym-content-staff-content-wrap">
+    <section class="gym-content-staff-content">
+      <ul class="gym-content-staff-list">
+        <li ng-repeat="n in [42, 42, 43, 43] track by $index" class="gym-content-staff-item">
+          <section class="gym-content-staff-item--image"><img ng-src="https://www.ucarecdn.com/ae73a3d6-f816-4a0e-9d21-18528234b2cc/-/crop/175x175/89,0/-/preview/53x53/" holder="holder.js/53x53?auto=yes&amp;theme=sky&amp;text=BRU"/></section>
+          <section class="gym-content-staff-item--name">
+            <p>Bruno Alexandre</p>
+          </section>
+          <section class="gym-content-staff-item--switch">
+            <md-switch md-no-ink="" aria-label="ativar Professor" ng-init="active=true" ng-model="active" class="md-primary">
+              <!-- | Switch (md-primary): No Ink-->
+            </md-switch>
+          </section>
+          <section class="gym-content-staff-item--edit">
+            <ng-md-icon icon="mode_edit" title="Editar Funcionário" style="fill:grey" size="25"></ng-md-icon>
+          </section>
+          <section class="gym-content-staff-item--delete">
+            <ng-md-icon icon="clear" title="Excluir Funcionário" style="fill:grey" size="25"></ng-md-icon>
+          </section>
+        </li>
+      </ul>
+    </section>
+  </section>
 </section>

@@ -1,2 +1,133 @@
 .gym-content-staff-wrap
 	col(12/12,gutter:0)
+	box-sizing border-box
+	padding-right 1em
+	padding-left 1em
+	+desktop()
+		padding-right 3em
+		padding-left 3em
+	+hd()
+		padding-right 5em
+		padding-left 5em
+	.gym-content-staff-add-action
+		col(12/12,gutter:0)
+		text-align right
+		button.md-button
+			width 36%
+			min-width 15px
+			min-height 34px
+			font-weight bold
+			line-height 34px
+			margin 0
+			font-size 100%
+			+desktop()
+				width 28%
+				min-height 44px
+				line-height 44px
+				// font-size 100%
+			+hd()
+				width 22%
+			ng-md-icon
+				svg
+					position relative
+					vertical-align middle
+					top -1px
+					left -5px
+					+desktop()
+						width 30px
+						height 30px
+					
+	.gym-content-staff-search
+		col(12/12,gutter:0)
+		box-sizing border-box
+		margin-top 1em
+		padding-right 1.5em
+		padding-left 1.5em
+		+desktop()
+			margin-top 1.5em
+			padding-right 3em
+			padding-left 3em
+	.gym-content-staff-content-wrap
+		col(12/12,gutter:0)
+		box-sizing border-box
+		margin-top 2em
+		.gym-content-staff-content
+			col(12/12,gutter:0)
+			ul.gym-content-staff-list
+				margin 0
+				padding 0
+				// margin-top .7em
+				padding-left 4em
+				padding-right 4em
+				+desktop()
+					padding-left 6em
+					padding-right 6em
+				+hd()
+					padding-left 10em
+					padding-right 10em
+				list-style none
+				li.gym-content-staff-item
+					col(12/12,gutter:0)
+					box-sizing border-box
+					margin-bottom 18px
+					padding-left 5px
+					padding-right 5px
+					line-height 55px
+					// border 1px solid palette('Grey','300')
+					box-shadow 0 1px 2px 1px rgba(0,0,0,.25)
+					ng-md-icon
+						svg
+							position relative
+							vertical-align middle
+							+desktop()
+								width 28px
+								height 28px
+					+below(700px)
+						line-height 43px
+						margin-bottom 15px
+					+desktop()
+						line-height 63px
+						margin-bottom 23px
+					.gym-content-staff-item--image
+						col(1.5/12,gutter:0)
+						text-align center
+						img
+							display inline-block
+							position relative
+							top -1px
+							max-width 65%
+							vertical-align middle
+							+below(800px)
+								max-width 90%
+							+desktop()
+								max-width 95%
+					.gym-content-staff-item--name
+						col(5.5/12,gutter:0)
+						text-align left
+						font-weight bold
+						p
+							margin 0
+					.gym-content-staff-item--switch
+						col(3/12,gutter:0)
+						text-align center
+						md-switch.md-primary
+							display inline-block
+							margin 0
+							vertical-align middle
+						+desktop()
+							col(2.8/12,gutter:0)
+					.gym-content-staff-item--edit
+						col(1/12,gutter:0)
+						text-align center
+						+desktop()
+							col(1.1/12,gutter:0)
+					.gym-content-staff-item--delete
+						col(1/12,gutter:0)
+						text-align center
+						+desktop()
+							col(1.1/12,gutter:0)
+						ng-md-icon
+							svg
+								&:hover
+									fill: palette('Red','A400')
+									
