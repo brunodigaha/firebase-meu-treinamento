@@ -90,9 +90,12 @@
 						margin-bottom 23px
 					.gym-content-staff-item--image
 						col(1.5/12,gutter:0)
+						box-sizing border-box
 						text-align center
 						img
 							display inline-block
+							box-sizing border-box
+							border 1px solid palette('Grey','300')
 							position relative
 							top -1px
 							max-width 65%
@@ -115,7 +118,7 @@
 							position absolute
 							top .9em
 							left 0
-							color palette('Grey', '500') 
+							color palette('Grey', '600') 
 							font-size 70%
 							margin 0
 							+desktop()

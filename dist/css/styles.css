@@ -11347,6 +11347,7 @@ button.md-button {
   font-size: 90%;
   padding-right: 12px;
   padding-left: 12px;
+  font-weight: bold;
 }
 button.md-button.sec {
   margin-right: 20px;
@@ -17203,13 +17204,12 @@ md-dialog md-dialog-content .train-dialog-wrap .train-dialog-content .action but
   margin-right: 0%;
 }
 .gym-content-owner-wrap .info-gym-owner .info-gym-item span.info-gym-attribute {
-  font-size: 100%;
   padding-right: 0.5em;
   color: #757575;
 }
 .gym-content-owner-wrap .info-gym-owner .info-gym-item span.info-gym-value {
-  font-size: 110%;
-  color: #424242;
+  color: #000;
+  font-weight: bold;
 }
 .gym-content-owner-wrap .action-gym-owner {
   *zoom: 1;
@@ -17490,6 +17490,7 @@ md-dialog md-dialog-content .train-dialog-wrap .train-dialog-content .action but
   width: 12.5%;
   margin-left: 0%;
   margin-right: 0%;
+  box-sizing: border-box;
   text-align: center;
 }
 .gym-content-staff-wrap .gym-content-staff-content-wrap .gym-content-staff-content ul.gym-content-staff-list li.gym-content-staff-item .gym-content-staff-item--image:before,
@@ -17505,6 +17506,8 @@ md-dialog md-dialog-content .train-dialog-wrap .train-dialog-content .action but
 }
 .gym-content-staff-wrap .gym-content-staff-content-wrap .gym-content-staff-content ul.gym-content-staff-list li.gym-content-staff-item .gym-content-staff-item--image img {
   display: inline-block;
+  box-sizing: border-box;
+  border: 1px solid #e0e0e0;
   position: relative;
   top: -1px;
   max-width: 65%;
@@ -17553,7 +17556,7 @@ md-dialog md-dialog-content .train-dialog-wrap .train-dialog-content .action but
   position: absolute;
   top: 0.9em;
   left: 0;
-  color: #9e9e9e;
+  color: #757575;
   font-size: 70%;
   margin: 0;
 }
@@ -18044,6 +18047,199 @@ md-dialog md-dialog-content .train-dialog-wrap .train-dialog-content .action but
     padding-right: 5em;
     padding-left: 5em;
   }
+}
+.staff-admin-dialog-wrap .staff-admin-dialog-content {
+  *zoom: 1;
+  float: left;
+  clear: none;
+  text-align: inherit;
+  width: 100%;
+  margin-left: 0%;
+  margin-right: 0%;
+}
+.staff-admin-dialog-wrap .staff-admin-dialog-content:before,
+.staff-admin-dialog-wrap .staff-admin-dialog-content:after {
+  content: '';
+  display: table;
+}
+.staff-admin-dialog-wrap .staff-admin-dialog-content:after {
+  clear: both;
+}
+.staff-admin-dialog-wrap .staff-admin-dialog-content:last-child {
+  margin-right: 0%;
+}
+.staff-admin-dialog-wrap .staff-admin-dialog-content .staff-admin-dialog-content--image {
+  *zoom: 1;
+  float: left;
+  clear: none;
+  text-align: inherit;
+  width: 50%;
+  margin-left: 0%;
+  margin-right: 0%;
+  box-sizing: border-box;
+  text-align: center;
+  padding-top: 1em;
+  display: block;
+}
+.staff-admin-dialog-wrap .staff-admin-dialog-content .staff-admin-dialog-content--image:before,
+.staff-admin-dialog-wrap .staff-admin-dialog-content .staff-admin-dialog-content--image:after {
+  content: '';
+  display: table;
+}
+.staff-admin-dialog-wrap .staff-admin-dialog-content .staff-admin-dialog-content--image:after {
+  clear: both;
+}
+.staff-admin-dialog-wrap .staff-admin-dialog-content .staff-admin-dialog-content--image:last-child {
+  margin-right: 0%;
+}
+.staff-admin-dialog-wrap .staff-admin-dialog-content .staff-admin-dialog-content--image img {
+  max-width: 90%;
+  display: inline-block;
+  border: 1px solid #e0e0e0;
+}
+.staff-admin-dialog-wrap .staff-admin-dialog-content .staff-admin-dialog-content--perfil {
+  *zoom: 1;
+  float: left;
+  clear: none;
+  text-align: inherit;
+  width: 50%;
+  margin-left: 0%;
+  margin-right: 0%;
+}
+.staff-admin-dialog-wrap .staff-admin-dialog-content .staff-admin-dialog-content--perfil:before,
+.staff-admin-dialog-wrap .staff-admin-dialog-content .staff-admin-dialog-content--perfil:after {
+  content: '';
+  display: table;
+}
+.staff-admin-dialog-wrap .staff-admin-dialog-content .staff-admin-dialog-content--perfil:after {
+  clear: both;
+}
+.staff-admin-dialog-wrap .staff-admin-dialog-content .staff-admin-dialog-content--perfil:last-child {
+  margin-right: 0%;
+}
+.staff-admin-dialog-wrap .staff-admin-dialog-content .staff-admin-dialog-content--perfil .staff-admin-dialog-content--name {
+  *zoom: 1;
+  float: left;
+  clear: none;
+  text-align: inherit;
+  width: 100%;
+  margin-left: 0%;
+  margin-right: 0%;
+}
+.staff-admin-dialog-wrap .staff-admin-dialog-content .staff-admin-dialog-content--perfil .staff-admin-dialog-content--name:before,
+.staff-admin-dialog-wrap .staff-admin-dialog-content .staff-admin-dialog-content--perfil .staff-admin-dialog-content--name:after {
+  content: '';
+  display: table;
+}
+.staff-admin-dialog-wrap .staff-admin-dialog-content .staff-admin-dialog-content--perfil .staff-admin-dialog-content--name:after {
+  clear: both;
+}
+.staff-admin-dialog-wrap .staff-admin-dialog-content .staff-admin-dialog-content--perfil .staff-admin-dialog-content--name:last-child {
+  margin-right: 0%;
+}
+.staff-admin-dialog-wrap .staff-admin-dialog-content .staff-admin-dialog-content--perfil .staff-admin-dialog-content--surname {
+  *zoom: 1;
+  float: left;
+  clear: none;
+  text-align: inherit;
+  width: 100%;
+  margin-left: 0%;
+  margin-right: 0%;
+}
+.staff-admin-dialog-wrap .staff-admin-dialog-content .staff-admin-dialog-content--perfil .staff-admin-dialog-content--surname:before,
+.staff-admin-dialog-wrap .staff-admin-dialog-content .staff-admin-dialog-content--perfil .staff-admin-dialog-content--surname:after {
+  content: '';
+  display: table;
+}
+.staff-admin-dialog-wrap .staff-admin-dialog-content .staff-admin-dialog-content--perfil .staff-admin-dialog-content--surname:after {
+  clear: both;
+}
+.staff-admin-dialog-wrap .staff-admin-dialog-content .staff-admin-dialog-content--perfil .staff-admin-dialog-content--surname:last-child {
+  margin-right: 0%;
+}
+.staff-admin-dialog-wrap .staff-admin-dialog-content .staff-admin-dialog-content--email {
+  *zoom: 1;
+  float: left;
+  clear: none;
+  text-align: inherit;
+  width: 100%;
+  margin-left: 0%;
+  margin-right: 0%;
+}
+.staff-admin-dialog-wrap .staff-admin-dialog-content .staff-admin-dialog-content--email:before,
+.staff-admin-dialog-wrap .staff-admin-dialog-content .staff-admin-dialog-content--email:after {
+  content: '';
+  display: table;
+}
+.staff-admin-dialog-wrap .staff-admin-dialog-content .staff-admin-dialog-content--email:after {
+  clear: both;
+}
+.staff-admin-dialog-wrap .staff-admin-dialog-content .staff-admin-dialog-content--email:last-child {
+  margin-right: 0%;
+}
+.staff-admin-dialog-wrap .staff-admin-dialog-content .staff-admin-dialog-content--birthday {
+  *zoom: 1;
+  float: left;
+  clear: none;
+  text-align: inherit;
+  width: 50%;
+  margin-left: 0%;
+  margin-right: 0%;
+  box-sizing: border-box;
+  padding-right: 1em;
+}
+.staff-admin-dialog-wrap .staff-admin-dialog-content .staff-admin-dialog-content--birthday:before,
+.staff-admin-dialog-wrap .staff-admin-dialog-content .staff-admin-dialog-content--birthday:after {
+  content: '';
+  display: table;
+}
+.staff-admin-dialog-wrap .staff-admin-dialog-content .staff-admin-dialog-content--birthday:after {
+  clear: both;
+}
+.staff-admin-dialog-wrap .staff-admin-dialog-content .staff-admin-dialog-content--birthday:last-child {
+  margin-right: 0%;
+}
+.staff-admin-dialog-wrap .staff-admin-dialog-content .staff-admin-dialog-content--phone {
+  *zoom: 1;
+  float: left;
+  clear: none;
+  text-align: inherit;
+  width: 50%;
+  margin-left: 0%;
+  margin-right: 0%;
+  box-sizing: border-box;
+  padding-left: 1em;
+}
+.staff-admin-dialog-wrap .staff-admin-dialog-content .staff-admin-dialog-content--phone:before,
+.staff-admin-dialog-wrap .staff-admin-dialog-content .staff-admin-dialog-content--phone:after {
+  content: '';
+  display: table;
+}
+.staff-admin-dialog-wrap .staff-admin-dialog-content .staff-admin-dialog-content--phone:after {
+  clear: both;
+}
+.staff-admin-dialog-wrap .staff-admin-dialog-content .staff-admin-dialog-content--phone:last-child {
+  margin-right: 0%;
+}
+.staff-admin-dialog-wrap .staff-admin-dialog-content .staff-admin-dialog-content--permission {
+  *zoom: 1;
+  float: left;
+  clear: none;
+  text-align: inherit;
+  width: 100%;
+  margin-left: 0%;
+  margin-right: 0%;
+}
+.staff-admin-dialog-wrap .staff-admin-dialog-content .staff-admin-dialog-content--permission:before,
+.staff-admin-dialog-wrap .staff-admin-dialog-content .staff-admin-dialog-content--permission:after {
+  content: '';
+  display: table;
+}
+.staff-admin-dialog-wrap .staff-admin-dialog-content .staff-admin-dialog-content--permission:after {
+  clear: both;
+}
+.staff-admin-dialog-wrap .staff-admin-dialog-content .staff-admin-dialog-content--permission:last-child {
+  margin-right: 0%;
 }
 .training {
   *zoom: 1;
