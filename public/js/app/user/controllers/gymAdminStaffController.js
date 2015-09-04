@@ -3,8 +3,10 @@ module.exports = function($scope,$timeout,fbUtil,$mdDialog) {
 	$scope.staffDialog = function(ev) {
 		$mdDialog.show({
 			controller: 'staffAdminDialogController',
-			scope: $scope,
-			preserveScope: true,
+			// scope: $scope,
+			// preserveScope: true,
+			locals: {bruno:"Alexandre"},
+			// bindToController: true,
 			template: fs.readFileSync(__dirname + '/../templates/staffAdminDialogTemplate.html'),
 			parent: angular.element(document.body),
 			targetEvent: ev,

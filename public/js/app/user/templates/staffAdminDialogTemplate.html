@@ -9,7 +9,16 @@
   </md-toolbar>
   <md-dialog-content>
     <section class="staff-admin-dialog-wrap">
-      <p>Funcionarios</p>
+      <md-input-container>
+        <label>Nome Academia</label>
+        <input md-maxlength="30" required="required" name="name" ng-change="change('gym')" ng-model="gym.gym"/>
+        <div ng-messages="gymForm.name.$error" role="alert">
+          <div ng-if="ishowRequiredError">
+            <div ng-message="required">Este campo é obrigatório.</div>
+          </div>
+          <div ng-message="md-maxlength">Nome com no máximo 30 caracteres</div>
+        </div>
+      </md-input-container>
     </section>
   </md-dialog-content>
   <div layout="row" class="md-actions"><span flex=""></span>

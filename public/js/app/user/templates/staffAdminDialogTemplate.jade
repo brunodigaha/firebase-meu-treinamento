@@ -7,7 +7,13 @@ md-dialog(flex="85" aria-label="funcionário")
 			// ng-md-icon(icon="close" ng-click="answer('not applicable')" style="fill:white" size="25")
 	md-dialog-content
 		section.staff-admin-dialog-wrap
-			p Funcionarios
+			md-input-container
+				label Nome Academia
+				input(md-maxlength="30" required name="name" ng-change="change('gym')" ng-model="gym.gym")
+				div(ng-messages="gymForm.name.$error" role="alert")
+					div(ng-if="ishowRequiredError")
+						div(ng-message="required") Este campo é obrigatório.
+					div(ng-message="md-maxlength") Nome com no máximo 30 caracteres
 	.md-actions(layout="row")
 		span(flex="")
 		md-button.md-primary(ng-click="cancel()")
