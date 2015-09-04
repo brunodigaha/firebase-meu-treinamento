@@ -1,0 +1,16 @@
+md-dialog(flex="85" aria-label="funcionário")
+	md-toolbar(md-theme="default") 
+		.md-toolbar-tools
+			h1 Adicionar Funcionário
+			span(flex="")
+			md-button(ng-click="answer('not applicable')") Fechar
+			// ng-md-icon(icon="close" ng-click="answer('not applicable')" style="fill:white" size="25")
+	md-dialog-content
+		section.staff-admin-dialog-wrap
+			p Funcionarios
+	.md-actions(layout="row")
+		span(flex="")
+		md-button.md-primary(ng-click="cancel()")
+			| Cancelar
+		md-button.md-primary.button-silver(ng-click="save()")
+			| Salvar

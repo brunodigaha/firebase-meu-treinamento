@@ -17992,6 +17992,26 @@ md-dialog md-dialog-content .train-dialog-wrap .train-dialog-content .action but
     padding-left: 5em;
   }
 }
+.staff-admin-dialog-wrap {
+  *zoom: 1;
+  float: left;
+  clear: none;
+  text-align: inherit;
+  width: 100%;
+  margin-left: 0%;
+  margin-right: 0%;
+}
+.staff-admin-dialog-wrap:before,
+.staff-admin-dialog-wrap:after {
+  content: '';
+  display: table;
+}
+.staff-admin-dialog-wrap:after {
+  clear: both;
+}
+.staff-admin-dialog-wrap:last-child {
+  margin-right: 0%;
+}
 .training {
   *zoom: 1;
   float: left;
