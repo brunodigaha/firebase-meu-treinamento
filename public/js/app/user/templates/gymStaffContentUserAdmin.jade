@@ -19,6 +19,6 @@ section.gym-content-staff-wrap
 						md-switch.md-primary(md-no-ink='' title="{{active}}" aria-label='ativar Professor' ng-init='active=true' ng-model='active')
 							// | Switch (md-primary): No Ink
 					section.gym-content-staff-item--edit
-						ng-md-icon(icon="mode_edit" title="Editar Funcionário" style="fill:grey"  size="25")
+						ng-md-icon(icon="mode_edit"  tooltip-delay="900" title="Editar Funcionário" tooltip-size="small" style="fill:grey"  size="25")
 					section.gym-content-staff-item--delete
-						ng-md-icon(icon="clear" title="Excluir Funcionário" style="fill:grey"  size="25")
+						ng-md-icon(icon="clear" tooltips  tooltip-lazy="true"  tooltip-title="Excluir Funcionário" tooltip-size="small" style="fill:grey"  size="25")

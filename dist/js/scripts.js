@@ -1796,7 +1796,7 @@ window.angular);
 }).call(global, undefined, undefined, undefined, undefined, function defineExport(ex) { module.exports = ex; });
 
 }).call(this,typeof global !== "undefined" ? global : typeof self !== "undefined" ? self : typeof window !== "undefined" ? window : {})
-},{"/home/bruno/ProjNode/FirebaseMeuTreinamento/firebase-meu-treinamento/public/bower_components/angular/angular.js":19}],7:[function(require,module,exports){
+},{"/home/bruno/ProjNode/FirebaseMeuTreinamento/firebase-meu-treinamento/public/bower_components/angular/angular.js":20}],7:[function(require,module,exports){
 (function (global){
 
 ; require("/home/bruno/ProjNode/FirebaseMeuTreinamento/firebase-meu-treinamento/public/bower_components/angular/angular.js");
@@ -1820,7 +1820,7 @@ function(a){b.attr("aria-valuemin",a)});q&&h.$observe("max",function(a){b.attr("
 }).call(global, undefined, undefined, undefined, undefined, function defineExport(ex) { module.exports = ex; });
 
 }).call(this,typeof global !== "undefined" ? global : typeof self !== "undefined" ? self : typeof window !== "undefined" ? window : {})
-},{"/home/bruno/ProjNode/FirebaseMeuTreinamento/firebase-meu-treinamento/public/bower_components/angular/angular.js":19}],8:[function(require,module,exports){
+},{"/home/bruno/ProjNode/FirebaseMeuTreinamento/firebase-meu-treinamento/public/bower_components/angular/angular.js":20}],8:[function(require,module,exports){
 (function (global){
 
 ; require("/home/bruno/ProjNode/FirebaseMeuTreinamento/firebase-meu-treinamento/public/bower_components/angular/angular.js");
@@ -1834,7 +1834,7 @@ function(a){b.attr("aria-valuemin",a)});q&&h.$observe("max",function(a){b.attr("
 }).call(global, undefined, undefined, undefined, undefined, function defineExport(ex) { module.exports = ex; });
 
 }).call(this,typeof global !== "undefined" ? global : typeof self !== "undefined" ? self : typeof window !== "undefined" ? window : {})
-},{"/home/bruno/ProjNode/FirebaseMeuTreinamento/firebase-meu-treinamento/public/bower_components/angular/angular.js":19}],9:[function(require,module,exports){
+},{"/home/bruno/ProjNode/FirebaseMeuTreinamento/firebase-meu-treinamento/public/bower_components/angular/angular.js":20}],9:[function(require,module,exports){
 (function (global){
 
 ; require("/home/bruno/ProjNode/FirebaseMeuTreinamento/firebase-meu-treinamento/public/bower_components/Chart.js/Chart.min.js");
@@ -1847,7 +1847,7 @@ require("/home/bruno/ProjNode/FirebaseMeuTreinamento/firebase-meu-treinamento/pu
 }).call(global, undefined, undefined, undefined, undefined, function defineExport(ex) { module.exports = ex; });
 
 }).call(this,typeof global !== "undefined" ? global : typeof self !== "undefined" ? self : typeof window !== "undefined" ? window : {})
-},{"/home/bruno/ProjNode/FirebaseMeuTreinamento/firebase-meu-treinamento/public/bower_components/Chart.js/Chart.min.js":5,"/home/bruno/ProjNode/FirebaseMeuTreinamento/firebase-meu-treinamento/public/bower_components/angular/angular.js":19}],10:[function(require,module,exports){
+},{"/home/bruno/ProjNode/FirebaseMeuTreinamento/firebase-meu-treinamento/public/bower_components/Chart.js/Chart.min.js":5,"/home/bruno/ProjNode/FirebaseMeuTreinamento/firebase-meu-treinamento/public/bower_components/angular/angular.js":20}],10:[function(require,module,exports){
 (function (global){
 
 ; require("/home/bruno/ProjNode/FirebaseMeuTreinamento/firebase-meu-treinamento/public/bower_components/angular/angular.js");
@@ -1867,7 +1867,7 @@ e+" > 4096 bytes)!");k.cookie=d}}g.module("ngCookies",["ng"]).provider("$cookies
 }).call(global, undefined, undefined, undefined, undefined, function defineExport(ex) { module.exports = ex; });
 
 }).call(this,typeof global !== "undefined" ? global : typeof self !== "undefined" ? self : typeof window !== "undefined" ? window : {})
-},{"/home/bruno/ProjNode/FirebaseMeuTreinamento/firebase-meu-treinamento/public/bower_components/angular/angular.js":19}],11:[function(require,module,exports){
+},{"/home/bruno/ProjNode/FirebaseMeuTreinamento/firebase-meu-treinamento/public/bower_components/angular/angular.js":20}],11:[function(require,module,exports){
 (function (global){
 
 ; require("/home/bruno/ProjNode/FirebaseMeuTreinamento/firebase-meu-treinamento/public/bower_components/angular/angular.js");
@@ -1896,7 +1896,7 @@ module.directive('holder', [
 }).call(global, undefined, undefined, undefined, undefined, function defineExport(ex) { module.exports = ex; });
 
 }).call(this,typeof global !== "undefined" ? global : typeof self !== "undefined" ? self : typeof window !== "undefined" ? window : {})
-},{"/home/bruno/ProjNode/FirebaseMeuTreinamento/firebase-meu-treinamento/public/bower_components/angular/angular.js":19,"/home/bruno/ProjNode/FirebaseMeuTreinamento/firebase-meu-treinamento/public/bower_components/holderjs/holder.min.js":22}],12:[function(require,module,exports){
+},{"/home/bruno/ProjNode/FirebaseMeuTreinamento/firebase-meu-treinamento/public/bower_components/angular/angular.js":20,"/home/bruno/ProjNode/FirebaseMeuTreinamento/firebase-meu-treinamento/public/bower_components/holderjs/holder.min.js":23}],12:[function(require,module,exports){
 (function (global){
 
 ; require("/home/bruno/ProjNode/FirebaseMeuTreinamento/firebase-meu-treinamento/public/bower_components/angular/angular.js");
@@ -2185,7 +2185,7 @@ a&&(c=a[1],b=a[2])}else c="help";void 0===e[c]&&(c="help");void 0!==d.size?b=d.s
 }).call(global, undefined, undefined, undefined, undefined, function defineExport(ex) { module.exports = ex; });
 
 }).call(this,typeof global !== "undefined" ? global : typeof self !== "undefined" ? self : typeof window !== "undefined" ? window : {})
-},{"/home/bruno/ProjNode/FirebaseMeuTreinamento/firebase-meu-treinamento/public/bower_components/angular/angular.js":19}],13:[function(require,module,exports){
+},{"/home/bruno/ProjNode/FirebaseMeuTreinamento/firebase-meu-treinamento/public/bower_components/angular/angular.js":20}],13:[function(require,module,exports){
 (function (global){
 
 ; require("/home/bruno/ProjNode/FirebaseMeuTreinamento/firebase-meu-treinamento/public/bower_components/angular/angular.js");
@@ -19365,7 +19365,7 @@ angular.module("material.core").constant("$MD_THEME_CSS", "/* mixin definition ;
 }).call(global, undefined, undefined, undefined, undefined, function defineExport(ex) { module.exports = ex; });
 
 }).call(this,typeof global !== "undefined" ? global : typeof self !== "undefined" ? self : typeof window !== "undefined" ? window : {})
-},{"/home/bruno/ProjNode/FirebaseMeuTreinamento/firebase-meu-treinamento/public/bower_components/angular-animate/angular-animate.min.js":6,"/home/bruno/ProjNode/FirebaseMeuTreinamento/firebase-meu-treinamento/public/bower_components/angular-aria/angular-aria.min.js":7,"/home/bruno/ProjNode/FirebaseMeuTreinamento/firebase-meu-treinamento/public/bower_components/angular/angular.js":19}],14:[function(require,module,exports){
+},{"/home/bruno/ProjNode/FirebaseMeuTreinamento/firebase-meu-treinamento/public/bower_components/angular-animate/angular-animate.min.js":6,"/home/bruno/ProjNode/FirebaseMeuTreinamento/firebase-meu-treinamento/public/bower_components/angular-aria/angular-aria.min.js":7,"/home/bruno/ProjNode/FirebaseMeuTreinamento/firebase-meu-treinamento/public/bower_components/angular/angular.js":20}],14:[function(require,module,exports){
 (function (global){
 
 ; require("/home/bruno/ProjNode/FirebaseMeuTreinamento/firebase-meu-treinamento/public/bower_components/angular/angular.js");
@@ -19387,7 +19387,7 @@ k(e[0],a))?a.next=b.next:c.head=b.next;delete l[d];c.reRender()}}]}}]).directive
 }).call(global, undefined, undefined, undefined, undefined, function defineExport(ex) { module.exports = ex; });
 
 }).call(this,typeof global !== "undefined" ? global : typeof self !== "undefined" ? self : typeof window !== "undefined" ? window : {})
-},{"/home/bruno/ProjNode/FirebaseMeuTreinamento/firebase-meu-treinamento/public/bower_components/angular/angular.js":19}],15:[function(require,module,exports){
+},{"/home/bruno/ProjNode/FirebaseMeuTreinamento/firebase-meu-treinamento/public/bower_components/angular/angular.js":20}],15:[function(require,module,exports){
 (function (global){
 
 ; require("/home/bruno/ProjNode/FirebaseMeuTreinamento/firebase-meu-treinamento/public/bower_components/angular/angular.js");
@@ -19530,7 +19530,7 @@ k(e[0],a))?a.next=b.next:c.head=b.next;delete l[d];c.reRender()}}]}}]).directive
 }).call(global, undefined, undefined, undefined, undefined, function defineExport(ex) { module.exports = ex; });
 
 }).call(this,typeof global !== "undefined" ? global : typeof self !== "undefined" ? self : typeof window !== "undefined" ? window : {})
-},{"/home/bruno/ProjNode/FirebaseMeuTreinamento/firebase-meu-treinamento/public/bower_components/angular/angular.js":19}],16:[function(require,module,exports){
+},{"/home/bruno/ProjNode/FirebaseMeuTreinamento/firebase-meu-treinamento/public/bower_components/angular/angular.js":20}],16:[function(require,module,exports){
 (function (global){
 
 ; require("/home/bruno/ProjNode/FirebaseMeuTreinamento/firebase-meu-treinamento/public/bower_components/angular/angular.js");
@@ -19545,7 +19545,31 @@ k(e[0],a))?a.next=b.next:c.head=b.next;delete l[d];c.reRender()}}]}}]).directive
 }).call(global, undefined, undefined, undefined, undefined, function defineExport(ex) { module.exports = ex; });
 
 }).call(this,typeof global !== "undefined" ? global : typeof self !== "undefined" ? self : typeof window !== "undefined" ? window : {})
-},{"/home/bruno/ProjNode/FirebaseMeuTreinamento/firebase-meu-treinamento/public/bower_components/angular/angular.js":19}],17:[function(require,module,exports){
+},{"/home/bruno/ProjNode/FirebaseMeuTreinamento/firebase-meu-treinamento/public/bower_components/angular/angular.js":20}],17:[function(require,module,exports){
+(function (global){
+
+; require("/home/bruno/ProjNode/FirebaseMeuTreinamento/firebase-meu-treinamento/public/bower_components/angular/angular.js");
+; var __browserify_shim_require__=require;(function browserifyShim(module, exports, require, define, browserify_shim__define__module__export__) {
+/*!
+ * Angular Tooltips v0.1.22
+ *
+ * Released under the MIT license
+ * www.opensource.org/licenses/MIT
+ *
+ * Brought to you by 720kb.net
+ *
+ * 2015-08-21
+ */
+
+
+!function(a){"use strict";a.module("720kb.tooltips",[]).provider("tooltipsConfig",function(){var b={scroll:!1,showTrigger:"mouseover",hideTrigger:"mouseleave",hideTarget:"element",side:"top",size:"medium","try":!0,"class":"",speed:"medium",delay:0,lazy:!0,closeButton:null};this.options=function(){return 1===arguments.length&&a.extend(b,arguments[0]),a.copy(b)},this.$get=function(){return b}}).directive("tooltips",["$window","$compile","$interpolate","$interval","$sce","tooltipsConfig",function(b,c,d,e,f,g){var h=8,i=9,j=10,k=20,l="_720kb-tooltip-",m=d.startSymbol(),n=d.endSymbol();return{restrict:"A",scope:{},link:function(d,o,p){function q(){U&&D||(D=!0,d.initTooltip(O)),Q&&d.tooltipTryPosition(),d.showTooltip()}function r(){d.hideTooltip()}function s(){d.hideTooltip(),d.initTooltip(N)}var t,u,v,w,x,y,z,A,B,C,D=!1,E=a.element(o[0]),F=a.element(b.document.getElementsByTagName("body")[0]),G=p.tooltipTitle||p.title||"",H=p.tooltipScroll||g.scroll,I=p.tooltipContent||"",J=p.tooltipHtml||"",K=p.tooltipShowTrigger||g.showTrigger,L=p.tooltipHideTrigger||g.hideTrigger,M="undefined"!=typeof p.tooltipHideTarget&&null!==p.tooltipHideTarget?p.tooltipHideTarget:g.hideTarget,N=p.tooltipSide||g.side,O=N,P=p.tooltipSize||g.size,Q="undefined"!=typeof p.tooltipTry&&null!==p.tooltipTry?d.$eval(p.tooltipTry):g["try"],R=p.tooltipClass||g["class"],S=(p.tooltipSpeed||g.speed).toLowerCase(),T=p.tooltipDelay||g.delay,U="undefined"!=typeof p.tooltipLazy&&null!==p.tooltipLazy?d.$eval(p.tooltipLazy):g.lazy,V=p.tooltipCloseButton||g.closeButton,W="undefined"!=typeof V&&null!==V,X='<div class="_720kb-tooltip '+l+P+'">';"element"!==M&&"tooltip"!==M&&(M="element"),W&&(X=X+'<span class="'+l+'close-button" ng-click="hideTooltip()"> '+V+" </span>"),p.tooltipView&&(X=p.tooltipViewCtrl?X+'<div ng-controller="'+p.tooltipViewCtrl+'" ng-include="\''+p.tooltipView+"'\"></div>":X+"<div ng-include=\"'"+p.tooltipView+"'\"></div>"),X=X+'<div class="'+l+'title"> '+m+"title"+n+"</div>"+m+"content"+n+' <span class="'+l+'html_content" ng-bind-html="getHtml()"></span> <span class="'+l+'caret"></span></div>',d.title=G,d.content=I,d.html=J,d.getHtml=function(){return f.trustAsHtml(d.html)},d.parseSpeed=function(){switch(S){case"fast":S=100;break;case"medium":S=450;break;case"slow":S=800;break;default:S=Number(S)}},t=c(X)(d),t.addClass(R),F.append(t),d.isTooltipEmpty=function(){return d.title||d.content||d.html?void 0:!0},d.initTooltip=function(a){d.isTooltipEmpty()?t.css("visibility","hidden"):(t.css("visibility","visible"),x=E[0].offsetHeight,y=E[0].offsetWidth,u=t[0].offsetHeight,v=t[0].offsetWidth,d.parseSpeed(),d.tooltipPositioning(a))},d.getOffsets=function(){z=d.getOffsetTop(E[0]),A=d.getOffsetLeft(E[0])},d.getOffsetTop=function(a){var c=a.getBoundingClientRect().top+b.scrollY;return isNaN(c)&&(c=a.getBoundingClientRect().top+b.pageYOffset),c},d.getOffsetLeft=function(a){var c=a.getBoundingClientRect().left+b.scrollX;return isNaN(c)&&(c=a.getBoundingClientRect().left+b.pageXOffset),c},d.bindShowTriggers=function(){E.bind(K,q)},d.bindHideTriggers=function(){"tooltip"===M?t.bind(L,r):E.bind(L,r)},d.clearTriggers=function(){E.unbind(K,q),E.unbind(L,r)},d.bindShowTriggers(),d.showTooltip=function(){H&&(C=E[0].getBoundingClientRect(),B=e(function(){var b=E[0].getBoundingClientRect();a.equals(C,b)||d.tooltipPositioning(O),C=b},k)),t.addClass(l+"open"),t.css("transition","opacity "+S+"ms linear"),T&&t.css("transition-delay",T+"ms"),d.clearTriggers(),d.bindHideTriggers()},d.hideTooltip=function(){t.css("transition","opacity "+S+"ms linear, visibility 0s linear "+S+"ms"),t.removeClass(l+"open"),d.clearTriggers(),d.bindShowTriggers(),a.isDefined(d.positionInterval)&&(e.cancel(B),B=void 0)},d.removePosition=function(){t.removeClass(l+"left").removeClass(l+"right").removeClass(l+"top").removeClass(l+"bottom ")},d.tooltipPositioning=function(a){d.removePosition(),d.getOffsets();var b,c;"small"===P?w=h:"medium"===P?w=i:"large"===P&&(w=j),"left"===a&&(b=z+x/2-u/2,c=A-(v+w),t.css("top",b+"px"),t.css("left",c+"px"),t.addClass(l+"left")),"right"===a&&(b=z+x/2-u/2,c=A+y+w,t.css("top",b+"px"),t.css("left",c+"px"),t.addClass(l+"right")),"top"===a&&(b=z-w-u,c=A+y/2-v/2,t.css("top",b+"px"),t.css("left",c+"px"),t.addClass(l+"top")),"bottom"===a&&(b=z+x+w,c=A+y/2-v/2,t.css("top",b+"px"),t.css("left",c+"px"),t.addClass(l+"bottom"))},d.tooltipTryPosition=function(){var a=t[0].offsetHeight,c=t[0].offsetWidth,e=t[0].offsetTop,f=t[0].offsetLeft,g=b.innerWidth,h=b.innerHeight,i=g-(c+f),j=h-(a+e),k=E[0].offsetHeight,l=E[0].offsetWidth,m=E[0].offsetLeft,n=E[0].offsetTop,o=g-(m+l),p=h-(k+n),q={left:f,top:e,bottom:j,right:i},r={left:m,right:o,top:n,bottom:p},s=Object.keys(r).reduce(function(a,b){return r[a]>r[b]?a:b}),u=Object.keys(q).reduce(function(a,b){return q[a]<q[b]?a:b});N!==s&&q[u]<20&&(O=s,d.tooltipPositioning(O),d.initTooltip(s))},a.element(b).bind("resize",s),d.$on("$destroy",function(){a.element(b).unbind("resize",s),d.clearTriggers(),t.remove()}),p.tooltipTitle&&p.$observe("tooltipTitle",function(a){d.title=a,d.initTooltip(O)}),p.title&&p.$observe("title",function(a){d.title=a,d.initTooltip(O)}),p.tooltipContent&&p.$observe("tooltipContent",function(a){d.content=a,d.initTooltip(O)}),p.tooltipHtml&&p.$observe("tooltipHtml",function(a){d.html=a,d.initTooltip(O)})}}}])}(angular);
+
+; browserify_shim__define__module__export__(typeof angular.module('720kb.tooltips') != "undefined" ? angular.module('720kb.tooltips') : window.angular.module('720kb.tooltips'));
+
+}).call(global, undefined, undefined, undefined, undefined, function defineExport(ex) { module.exports = ex; });
+
+}).call(this,typeof global !== "undefined" ? global : typeof self !== "undefined" ? self : typeof window !== "undefined" ? window : {})
+},{"/home/bruno/ProjNode/FirebaseMeuTreinamento/firebase-meu-treinamento/public/bower_components/angular/angular.js":20}],18:[function(require,module,exports){
 (function (global){
 
 ; require("/home/bruno/ProjNode/FirebaseMeuTreinamento/firebase-meu-treinamento/public/bower_components/angular/angular.js");
@@ -23925,7 +23949,7 @@ angular.module('ui.router.state')
 }).call(global, undefined, undefined, undefined, undefined, function defineExport(ex) { module.exports = ex; });
 
 }).call(this,typeof global !== "undefined" ? global : typeof self !== "undefined" ? self : typeof window !== "undefined" ? window : {})
-},{"/home/bruno/ProjNode/FirebaseMeuTreinamento/firebase-meu-treinamento/public/bower_components/angular/angular.js":19}],18:[function(require,module,exports){
+},{"/home/bruno/ProjNode/FirebaseMeuTreinamento/firebase-meu-treinamento/public/bower_components/angular/angular.js":20}],19:[function(require,module,exports){
 (function (global){
 
 ; require("/home/bruno/ProjNode/FirebaseMeuTreinamento/firebase-meu-treinamento/public/bower_components/angular/angular.js");
@@ -23972,7 +23996,7 @@ angular.module('ng-uploadcare', [])
 }).call(global, undefined, undefined, undefined, undefined, function defineExport(ex) { module.exports = ex; });
 
 }).call(this,typeof global !== "undefined" ? global : typeof self !== "undefined" ? self : typeof window !== "undefined" ? window : {})
-},{"/home/bruno/ProjNode/FirebaseMeuTreinamento/firebase-meu-treinamento/public/bower_components/angular/angular.js":19}],19:[function(require,module,exports){
+},{"/home/bruno/ProjNode/FirebaseMeuTreinamento/firebase-meu-treinamento/public/bower_components/angular/angular.js":20}],20:[function(require,module,exports){
 (function (global){
 
 ; require("/home/bruno/ProjNode/FirebaseMeuTreinamento/firebase-meu-treinamento/public/bower_components/lodash/lodash.min.js");
@@ -52670,7 +52694,7 @@ $provide.value("$locale", {
 }).call(global, undefined, undefined, undefined, undefined, function defineExport(ex) { module.exports = ex; });
 
 }).call(this,typeof global !== "undefined" ? global : typeof self !== "undefined" ? self : typeof window !== "undefined" ? window : {})
-},{"/home/bruno/ProjNode/FirebaseMeuTreinamento/firebase-meu-treinamento/public/bower_components/lodash/lodash.min.js":23}],20:[function(require,module,exports){
+},{"/home/bruno/ProjNode/FirebaseMeuTreinamento/firebase-meu-treinamento/public/bower_components/lodash/lodash.min.js":24}],21:[function(require,module,exports){
 (function (global){
 
 ; require("/home/bruno/ProjNode/FirebaseMeuTreinamento/firebase-meu-treinamento/public/bower_components/angular/angular.js");
@@ -52693,7 +52717,7 @@ require("/home/bruno/ProjNode/FirebaseMeuTreinamento/firebase-meu-treinamento/pu
 }).call(global, undefined, undefined, undefined, undefined, function defineExport(ex) { module.exports = ex; });
 
 }).call(this,typeof global !== "undefined" ? global : typeof self !== "undefined" ? self : typeof window !== "undefined" ? window : {})
-},{"/home/bruno/ProjNode/FirebaseMeuTreinamento/firebase-meu-treinamento/public/bower_components/angular/angular.js":19,"/home/bruno/ProjNode/FirebaseMeuTreinamento/firebase-meu-treinamento/public/bower_components/firebase/firebase.js":21}],21:[function(require,module,exports){
+},{"/home/bruno/ProjNode/FirebaseMeuTreinamento/firebase-meu-treinamento/public/bower_components/angular/angular.js":20,"/home/bruno/ProjNode/FirebaseMeuTreinamento/firebase-meu-treinamento/public/bower_components/firebase/firebase.js":22}],22:[function(require,module,exports){
 (function (global){
 ; var __browserify_shim_require__=require;(function browserifyShim(module, exports, require, define, browserify_shim__define__module__export__) {
 /*! @license Firebase v2.2.9
@@ -52966,7 +52990,7 @@ U.prototype.We=function(a,b){x("Firebase.resetPassword",2,2,arguments.length);fg
 }).call(global, undefined, undefined, undefined, undefined, function defineExport(ex) { module.exports = ex; });
 
 }).call(this,typeof global !== "undefined" ? global : typeof self !== "undefined" ? self : typeof window !== "undefined" ? window : {})
-},{}],22:[function(require,module,exports){
+},{}],23:[function(require,module,exports){
 (function (global){
 ; var __browserify_shim_require__=require;(function browserifyShim(module, exports, require, define, browserify_shim__define__module__export__) {
 /*!
@@ -52986,7 +53010,7 @@ License:  http://opensource.org/licenses/MIT
 }).call(global, undefined, undefined, undefined, undefined, function defineExport(ex) { module.exports = ex; });
 
 }).call(this,typeof global !== "undefined" ? global : typeof self !== "undefined" ? self : typeof window !== "undefined" ? window : {})
-},{}],23:[function(require,module,exports){
+},{}],24:[function(require,module,exports){
 (function (global){
 ; var __browserify_shim_require__=require;(function browserifyShim(module, exports, require, define, browserify_shim__define__module__export__) {
 /**
@@ -53092,7 +53116,7 @@ return Yn})):Mn&&qn?Vn?(qn.exports=Yn)._=Yn:Mn._=Yn:Zn._=Yn}).call(this);
 }).call(global, undefined, undefined, undefined, undefined, function defineExport(ex) { module.exports = ex; });
 
 }).call(this,typeof global !== "undefined" ? global : typeof self !== "undefined" ? self : typeof window !== "undefined" ? window : {})
-},{}],24:[function(require,module,exports){
+},{}],25:[function(require,module,exports){
 (function (global){
 ; var __browserify_shim_require__=require;(function browserifyShim(module, exports, require, define, browserify_shim__define__module__export__) {
 /*!
@@ -54507,7 +54531,7 @@ window.Modernizr = (function( window, document, undefined ) {
 }).call(global, undefined, undefined, undefined, undefined, function defineExport(ex) { module.exports = ex; });
 
 }).call(this,typeof global !== "undefined" ? global : typeof self !== "undefined" ? self : typeof window !== "undefined" ? window : {})
-},{}],25:[function(require,module,exports){
+},{}],26:[function(require,module,exports){
 //other dependencies
 require('modernizr');
 require('angular');
@@ -54526,6 +54550,7 @@ angular
 	require('angularChart').name,
 	require('angularHolderjs').name,
 	require('angularUploadcare').name,
+	require('angularTooltips').name,
 	require('./appDirectives').name,
 	require('./auth').name,
 	require('./core').name,
@@ -54541,7 +54566,7 @@ angular
 
 
 
-},{"./appDirectives":36,"./appRoutes.js":37,"./appRun.js":38,"./auth":41,"./core":49,"./train":61,"./user":70,"angular":19,"angularBreadcrumb":8,"angularChart":9,"angularCookies":10,"angularFire":20,"angularHolderjs":11,"angularIcons":12,"angularMaterial":13,"angularMessages":14,"angularScroll":15,"angularSortableView":16,"angularUploadcare":18,"modernizr":24,"ui-router":17}],26:[function(require,module,exports){
+},{"./appDirectives":37,"./appRoutes.js":38,"./appRun.js":39,"./auth":42,"./core":50,"./train":62,"./user":71,"angular":20,"angularBreadcrumb":8,"angularChart":9,"angularCookies":10,"angularFire":21,"angularHolderjs":11,"angularIcons":12,"angularMaterial":13,"angularMessages":14,"angularScroll":15,"angularSortableView":16,"angularTooltips":17,"angularUploadcare":19,"modernizr":25,"ui-router":18}],27:[function(require,module,exports){
 (function (Buffer){
 
 module.exports = function() {
@@ -54569,7 +54594,7 @@ module.exports = function() {
 };
 
 }).call(this,require("buffer").Buffer)
-},{"buffer":1}],27:[function(require,module,exports){
+},{"buffer":1}],28:[function(require,module,exports){
 (function (Buffer){
 
 module.exports = function() {
@@ -54869,7 +54894,7 @@ module.exports = function() {
 };
 
 }).call(this,require("buffer").Buffer)
-},{"buffer":1}],28:[function(require,module,exports){
+},{"buffer":1}],29:[function(require,module,exports){
 (function (Buffer){
 
 module.exports = function() {
@@ -54910,7 +54935,7 @@ module.exports = function() {
 };
 
 }).call(this,require("buffer").Buffer)
-},{"buffer":1}],29:[function(require,module,exports){
+},{"buffer":1}],30:[function(require,module,exports){
 (function (Buffer){
 
 module.exports = function() {
@@ -54936,7 +54961,7 @@ module.exports = function() {
 };
 
 }).call(this,require("buffer").Buffer)
-},{"buffer":1}],30:[function(require,module,exports){
+},{"buffer":1}],31:[function(require,module,exports){
 (function (Buffer){
 
 module.exports = function() {
@@ -54960,7 +54985,7 @@ module.exports = function() {
 };
 
 }).call(this,require("buffer").Buffer)
-},{"buffer":1}],31:[function(require,module,exports){
+},{"buffer":1}],32:[function(require,module,exports){
 (function (Buffer){
 
 module.exports = function() {
@@ -54976,7 +55001,7 @@ module.exports = function() {
 };
 
 }).call(this,require("buffer").Buffer)
-},{"buffer":1}],32:[function(require,module,exports){
+},{"buffer":1}],33:[function(require,module,exports){
 (function (Buffer){
 
 module.exports = function() {
@@ -54992,7 +55017,7 @@ module.exports = function() {
 };
 
 }).call(this,require("buffer").Buffer)
-},{"buffer":1}],33:[function(require,module,exports){
+},{"buffer":1}],34:[function(require,module,exports){
 (function (Buffer){
 
 module.exports = function() {
@@ -55020,7 +55045,7 @@ module.exports = function() {
 };
 
 }).call(this,require("buffer").Buffer)
-},{"buffer":1}],34:[function(require,module,exports){
+},{"buffer":1}],35:[function(require,module,exports){
 (function (Buffer){
 
 module.exports = function() {
@@ -55052,7 +55077,7 @@ module.exports = function() {
 };
 
 }).call(this,require("buffer").Buffer)
-},{"buffer":1}],35:[function(require,module,exports){
+},{"buffer":1}],36:[function(require,module,exports){
 (function (Buffer){
 
 module.exports = function() {
@@ -55067,7 +55092,7 @@ module.exports = function() {
 };
 
 }).call(this,require("buffer").Buffer)
-},{"buffer":1}],36:[function(require,module,exports){
+},{"buffer":1}],37:[function(require,module,exports){
 module.exports = angular.module('appDirectives',[])
 		.directive('dsTraining', require('./directives/dsTrainingDirective.js'))
 		.directive('dsExercisesSelectList', require('./directives/dsExercisesSelectListDirective.js'))
@@ -55080,7 +55105,7 @@ module.exports = angular.module('appDirectives',[])
 		.directive('dsPlan', require('./directives/dsPlanDirective.js'))
 		.directive('dsInfo', require('./directives/dsInfoDirective.js'));
 
-},{"./directives/dsExerciseDirective.js":26,"./directives/dsExerciseEditDirective.js":27,"./directives/dsExerciseSelectItemDirective.js":28,"./directives/dsExercisesDirective.js":29,"./directives/dsExercisesSelectListDirective.js":30,"./directives/dsInfoDirective.js":31,"./directives/dsPlanDirective.js":32,"./directives/dsSerieDirective.js":33,"./directives/dsSerieEditDirective.js":34,"./directives/dsTrainingDirective.js":35}],37:[function(require,module,exports){
+},{"./directives/dsExerciseDirective.js":27,"./directives/dsExerciseEditDirective.js":28,"./directives/dsExerciseSelectItemDirective.js":29,"./directives/dsExercisesDirective.js":30,"./directives/dsExercisesSelectListDirective.js":31,"./directives/dsInfoDirective.js":32,"./directives/dsPlanDirective.js":33,"./directives/dsSerieDirective.js":34,"./directives/dsSerieEditDirective.js":35,"./directives/dsTrainingDirective.js":36}],38:[function(require,module,exports){
 
 
 module.exports = function ($stateProvider,$compileProvider,$animateProvider,$locationProvider,$urlRouterProvider,$breadcrumbProvider,ChartJsProvider, $mdThemingProvider) {
@@ -55181,7 +55206,7 @@ module.exports = function ($stateProvider,$compileProvider,$animateProvider,$loc
     });	
 };
 
-},{"./auth/authRoutes.js":39,"./core/coreRoutes.js":48,"./train/trainRoutes.js":62,"./user/userRoutes.js":72}],38:[function(require,module,exports){
+},{"./auth/authRoutes.js":40,"./core/coreRoutes.js":49,"./train/trainRoutes.js":63,"./user/userRoutes.js":73}],39:[function(require,module,exports){
 module.exports = function ($rootScope,UCURL,$location,$state,$stateParams,authModelService,coreEventsService) {
 
 	$rootScope.$state = $state;
@@ -55251,7 +55276,7 @@ module.exports = function ($rootScope,UCURL,$location,$state,$stateParams,authMo
 	// });
 };
 
-},{}],39:[function(require,module,exports){
+},{}],40:[function(require,module,exports){
 (function (Buffer){
 
 module.exports = {
@@ -55284,7 +55309,7 @@ module.exports = {
 
 
 }).call(this,require("buffer").Buffer)
-},{"buffer":1}],40:[function(require,module,exports){
+},{"buffer":1}],41:[function(require,module,exports){
 module.exports = function ($scope,$timeout,$location, authModelService,$firebaseArray,FBURL) {
 	$scope.email = null;
 	$scope.password = null;
@@ -55334,12 +55359,12 @@ module.exports = function ($scope,$timeout,$location, authModelService,$firebase
 	};
 };
 
-},{}],41:[function(require,module,exports){
+},{}],42:[function(require,module,exports){
 module.exports = angular.module('auth',[])
 			.factory('authModelService', require('./services/authModelService.js'))
 			.controller('loginController', require('./controllers/loginController.js'));
 
-},{"./controllers/loginController.js":40,"./services/authModelService.js":42}],42:[function(require,module,exports){
+},{"./controllers/loginController.js":41,"./services/authModelService.js":43}],43:[function(require,module,exports){
 module.exports = function ($firebaseAuth,FBURL) {
 	var ref = new Firebase(FBURL);
 	return $firebaseAuth(ref);
@@ -55409,7 +55434,7 @@ module.exports = function ($firebaseAuth,FBURL) {
 	// return authModel;
 };
 
-},{}],43:[function(require,module,exports){
+},{}],44:[function(require,module,exports){
 module.exports = function($scope,FBURL,$firebaseArray, coreEventsService, $mdDialog, $mdToast, $animate) {
 	var coreEvents = $scope.coreEvents = coreEventsService;
 	// $scope.user = RestangularCustom.all('usuario').getList().$object;
@@ -55446,7 +55471,7 @@ module.exports = function($scope,FBURL,$firebaseArray, coreEventsService, $mdDia
 
 };
 
-},{}],44:[function(require,module,exports){
+},{}],45:[function(require,module,exports){
 (function (Buffer){
 
 module.exports = function ($scope,$mdDialog,$location, coreEventsService, authModelService) {
@@ -55484,7 +55509,7 @@ module.exports = function ($scope,$mdDialog,$location, coreEventsService, authMo
 };
 
 }).call(this,require("buffer").Buffer)
-},{"buffer":1}],45:[function(require,module,exports){
+},{"buffer":1}],46:[function(require,module,exports){
 (function (Buffer){
 
 module.exports = function($scope,$mdDialog, $mdToast,$animate) {
@@ -55530,7 +55555,7 @@ module.exports = function($scope,$mdDialog, $mdToast,$animate) {
 };
 
 }).call(this,require("buffer").Buffer)
-},{"buffer":1}],46:[function(require,module,exports){
+},{"buffer":1}],47:[function(require,module,exports){
 module.exports = function($scope,$mdToast,$mdDialog,FBURL,$window,$firebaseObject) {
 	$scope.newUser = {
 		image:null,
@@ -55583,7 +55608,7 @@ module.exports = function($scope,$mdToast,$mdDialog,FBURL,$window,$firebaseObjec
 	};
 };
 
-},{}],47:[function(require,module,exports){
+},{}],48:[function(require,module,exports){
 module.exports = function($scope, coreEventsService,$state,$stateParams,$mdDialog) {
 	$scope.duracao=2;
 	$scope.frequencia=3;
@@ -55599,7 +55624,7 @@ module.exports = function($scope, coreEventsService,$state,$stateParams,$mdDialo
 
 };
 
-},{}],48:[function(require,module,exports){
+},{}],49:[function(require,module,exports){
 (function (Buffer){
 
 module.exports = {
@@ -55654,7 +55679,7 @@ module.exports = {
 
 
 }).call(this,require("buffer").Buffer)
-},{"buffer":1}],49:[function(require,module,exports){
+},{"buffer":1}],50:[function(require,module,exports){
 module.exports = angular.module('core',[])
 		.controller('headerController', require('./controllers/headerController.js'))
 		.controller('searchController', require('./controllers/searchController.js'))
@@ -55666,7 +55691,7 @@ module.exports = angular.module('core',[])
 		.factory('coreEventsService', require('./services/coreEventsService.js'));
 
 
-},{"./controllers/asideController.js":43,"./controllers/headerController.js":44,"./controllers/searchController.js":45,"./controllers/searchDialogController.js":46,"./controllers/trainDialogController.js":47,"./services/coreEventsService.js":50,"./services/fbUtil.js":51}],50:[function(require,module,exports){
+},{"./controllers/asideController.js":44,"./controllers/headerController.js":45,"./controllers/searchController.js":46,"./controllers/searchDialogController.js":47,"./controllers/trainDialogController.js":48,"./services/coreEventsService.js":51,"./services/fbUtil.js":52}],51:[function(require,module,exports){
 module.exports = function () {
 	var eventsService = {
 		search: false,
@@ -55694,7 +55719,7 @@ module.exports = function () {
 	return eventsService;
 };
 
-},{}],51:[function(require,module,exports){
+},{}],52:[function(require,module,exports){
 module.exports = function (FBURL,$window, $q) {
 
 	var utils = {
@@ -55742,7 +55767,7 @@ module.exports = function (FBURL,$window, $q) {
 	}
 };
 
-},{}],52:[function(require,module,exports){
+},{}],53:[function(require,module,exports){
 module.exports = function($scope, coreEventsService,$state,$stateParams,$mdDialog) {
 	$scope.hide = function() {
 		$mdDialog.hide();
@@ -55755,13 +55780,13 @@ module.exports = function($scope, coreEventsService,$state,$stateParams,$mdDialo
 	};
 };
 
-},{}],53:[function(require,module,exports){
+},{}],54:[function(require,module,exports){
 module.exports = function($scope) {
 	$scope.duracao = 3;
 	$scope.frequencia =4;
 };
 
-},{}],54:[function(require,module,exports){
+},{}],55:[function(require,module,exports){
 (function (Buffer){
 
 module.exports = function($scope,$timeout,$q,$log, coreEventsService,$state,$stateParams,$mdDialog) {
@@ -55980,17 +56005,17 @@ module.exports = function($scope,$timeout,$q,$log, coreEventsService,$state,$sta
 };
 
 }).call(this,require("buffer").Buffer)
-},{"buffer":1}],55:[function(require,module,exports){
+},{"buffer":1}],56:[function(require,module,exports){
 module.exports = function($scope) {
 
 };
 
-},{}],56:[function(require,module,exports){
+},{}],57:[function(require,module,exports){
 module.exports = function ($scope) {
 
 };
 
-},{}],57:[function(require,module,exports){
+},{}],58:[function(require,module,exports){
 module.exports = function($scope, coreEventsService,$state,$stateParams,$mdDialog) {
 	$scope.hide = function() {
 		$mdDialog.hide();
@@ -56011,7 +56036,7 @@ module.exports = function($scope, coreEventsService,$state,$stateParams,$mdDialo
 
 };
 
-},{}],58:[function(require,module,exports){
+},{}],59:[function(require,module,exports){
 module.exports =  function($scope,$mdBottomSheet,$timeout, coreEventsService,$state,$stateParams) {
 	$scope.params = $stateParams;
 	$scope.state = $state.current;
@@ -56019,9 +56044,9 @@ module.exports =  function($scope,$mdBottomSheet,$timeout, coreEventsService,$st
 	// $scope.eventsService= eventsService;
 };
 
-},{}],59:[function(require,module,exports){
-arguments[4][55][0].apply(exports,arguments)
-},{"dup":55}],60:[function(require,module,exports){
+},{}],60:[function(require,module,exports){
+arguments[4][56][0].apply(exports,arguments)
+},{"dup":56}],61:[function(require,module,exports){
 module.exports = function($scope) {
 	$scope.train_menu= {menu: false};
 	$scope.close_train_menu = function(){
@@ -56033,7 +56058,7 @@ module.exports = function($scope) {
 
 };
 
-},{}],61:[function(require,module,exports){
+},{}],62:[function(require,module,exports){
 module.exports = angular.module('train',[])
 		.controller('listTrainingController', require('./controllers/listTrainingController.js'))
 		.controller('trainingTrainingController', require('./controllers/trainingTrainingController.js'))
@@ -56045,7 +56070,7 @@ module.exports = angular.module('train',[])
 		.controller('insertTrainingDialogController', require('./controllers/insertTrainingDialogController.js'))
 		.controller('ImportDialogController', require('./controllers/ImportDialogController.js'));
 
-},{"./controllers/ImportDialogController.js":52,"./controllers/addPlanController.js":53,"./controllers/addTrainingController.js":54,"./controllers/collectionTrainingController.js":55,"./controllers/historyTrainingController.js":56,"./controllers/insertTrainingDialogController.js":57,"./controllers/listTrainingController.js":58,"./controllers/plansController.js":59,"./controllers/trainingTrainingController.js":60}],62:[function(require,module,exports){
+},{"./controllers/ImportDialogController.js":53,"./controllers/addPlanController.js":54,"./controllers/addTrainingController.js":55,"./controllers/collectionTrainingController.js":56,"./controllers/historyTrainingController.js":57,"./controllers/insertTrainingDialogController.js":58,"./controllers/listTrainingController.js":59,"./controllers/plansController.js":60,"./controllers/trainingTrainingController.js":61}],63:[function(require,module,exports){
 (function (Buffer){
 
 module.exports = {
@@ -56170,7 +56195,7 @@ module.exports = {
 };
 
 }).call(this,require("buffer").Buffer)
-},{"buffer":1}],63:[function(require,module,exports){
+},{"buffer":1}],64:[function(require,module,exports){
 (function (Buffer){
 
 module.exports = function($scope,$timeout,fbUtil,$mdDialog) {
@@ -56233,7 +56258,7 @@ module.exports = function($scope,$timeout,fbUtil,$mdDialog) {
 };
 
 }).call(this,require("buffer").Buffer)
-},{"buffer":1}],64:[function(require,module,exports){
+},{"buffer":1}],65:[function(require,module,exports){
 (function (Buffer){
 
 module.exports = function($scope,$timeout,fbUtil,$mdDialog) {
@@ -56261,7 +56286,7 @@ module.exports = function($scope,$timeout,fbUtil,$mdDialog) {
 };
 
 }).call(this,require("buffer").Buffer)
-},{"buffer":1}],65:[function(require,module,exports){
+},{"buffer":1}],66:[function(require,module,exports){
 module.exports = function($scope,$mdDialog) {
 	// console.log(gymBackup);
 	// $scope.save = function() {
@@ -56275,15 +56300,15 @@ module.exports = function($scope,$mdDialog) {
 	};
 };
 
-},{}],66:[function(require,module,exports){
+},{}],67:[function(require,module,exports){
 module.exports = function($scope) {
  $scope.labels = ["Dias Decorridos", "Dias Restantes"];
   $scope.data = [14,7];
 };
 
-},{}],67:[function(require,module,exports){
-arguments[4][55][0].apply(exports,arguments)
-},{"dup":55}],68:[function(require,module,exports){
+},{}],68:[function(require,module,exports){
+arguments[4][56][0].apply(exports,arguments)
+},{"dup":56}],69:[function(require,module,exports){
 module.exports = function($scope,bruno,$mdDialog) {
 	// console.log(gymBackup);
 	// $scope.save = function() {
@@ -56299,7 +56324,7 @@ module.exports = function($scope,bruno,$mdDialog) {
 	};
 };
 
-},{}],69:[function(require,module,exports){
+},{}],70:[function(require,module,exports){
 module.exports = function($scope,FBURL, $window, $firebaseArray,exercisePatternModel) {
 
 	$scope.bindModel = exercisePatternModel.bindModel;
@@ -56310,7 +56335,7 @@ module.exports = function($scope,FBURL, $window, $firebaseArray,exercisePatternM
 
 };
 
-},{}],70:[function(require,module,exports){
+},{}],71:[function(require,module,exports){
 module.exports = angular.module('user',[])
 
 		.factory('exercisePatternModel', require('./services/exercisePatternModel.js'))
@@ -56325,7 +56350,7 @@ module.exports = angular.module('user',[])
 		// .factory('userModel', require('./services/userModel.js'))
 		// .factory('RestangularCustom', require('./services/restangularCustom.js'));
 
-},{"./controllers/gymAdminOwnerController.js":63,"./controllers/gymAdminStaffController.js":64,"./controllers/ownerAdminDialogController.js":65,"./controllers/planController.js":66,"./controllers/scheduleController.js":67,"./controllers/staffAdminDialogController.js":68,"./controllers/trainAdminExercisesController.js":69,"./services/exercisePatternModel.js":71}],71:[function(require,module,exports){
+},{"./controllers/gymAdminOwnerController.js":64,"./controllers/gymAdminStaffController.js":65,"./controllers/ownerAdminDialogController.js":66,"./controllers/planController.js":67,"./controllers/scheduleController.js":68,"./controllers/staffAdminDialogController.js":69,"./controllers/trainAdminExercisesController.js":70,"./services/exercisePatternModel.js":72}],72:[function(require,module,exports){
 module.exports = function (fbUtil,$mdDialog, $mdToast,$firebaseArray,FBURL) {
 
 	var bindModel = {
@@ -56403,7 +56428,7 @@ module.exports = function (fbUtil,$mdDialog, $mdToast,$firebaseArray,FBURL) {
 	};
 };
 
-},{}],72:[function(require,module,exports){
+},{}],73:[function(require,module,exports){
 (function (Buffer){
 
 module.exports = {
@@ -56496,7 +56521,7 @@ module.exports = {
 				// },
 				'admin-content-menu-content@administration': {
 					controller:'gymAdminStaffController',
-					template: Buffer("CjxzZWN0aW9uIGNsYXNzPSJneW0tY29udGVudC1zdGFmZi13cmFwIj4KICA8c2VjdGlvbiBjbGFzcz0iZ3ltLWNvbnRlbnQtc3RhZmYtYWRkLWFjdGlvbiI+CiAgICA8bWQtYnV0dG9uIHRpdGxlPSJBZGljaW9uYXIgRnVuY2lvbsOhcmlvIiBuZy1jbGljaz0ic3RhZmZEaWFsb2coJGV2ZW50KSIgY2xhc3M9Im1kLXJhaXNlZCBtZC1wcmltYXJ5Ij4gCiAgICAgIDxuZy1tZC1pY29uIGljb249ImFkZF9jaXJjbGVfb3V0bGluZSIgc3R5bGU9ImZpbGw6d2hpdGUiIHNpemU9IjI1Ij48L25nLW1kLWljb24+RnVuY2lvbsOhcmlvCiAgICA8L21kLWJ1dHRvbj4KICA8L3NlY3Rpb24+CiAgPHNlY3Rpb24gY2xhc3M9Imd5bS1jb250ZW50LXN0YWZmLXNlYXJjaCI+CiAgICA8bWQtaW5wdXQtY29udGFpbmVyIG1kLW5vLWZsb2F0PSIiPgogICAgICA8aW5wdXQgcGxhY2Vob2xkZXI9IlBlc3F1aXNhciBGdW5jaW9uw6FyaW8iIG5nLW1vZGVsPSJiaW5kTW9kZWwuZ3JvdXBOYW1lIi8+CiAgICA8L21kLWlucHV0LWNvbnRhaW5lcj4KICA8L3NlY3Rpb24+CiAgPHNlY3Rpb24gY2xhc3M9Imd5bS1jb250ZW50LXN0YWZmLWNvbnRlbnQtd3JhcCI+CiAgICA8c2VjdGlvbiBjbGFzcz0iZ3ltLWNvbnRlbnQtc3RhZmYtY29udGVudCI+CiAgICAgIDx1bCBjbGFzcz0iZ3ltLWNvbnRlbnQtc3RhZmYtbGlzdCI+CiAgICAgICAgPGxpIG5nLXJlcGVhdD0ibiBpbiBsaXN0YSB0cmFjayBieSAkaW5kZXgiIGNsYXNzPSJneW0tY29udGVudC1zdGFmZi1pdGVtIj4KICAgICAgICAgIDxzZWN0aW9uIGNsYXNzPSJneW0tY29udGVudC1zdGFmZi1pdGVtLS1pbWFnZSI+PGltZyBuZy1zcmM9Imh0dHBzOi8vd3d3LnVjYXJlY2RuLmNvbS9hZTczYTNkNi1mODE2LTRhMGUtOWQyMS0xODUyODIzNGIyY2MvLS9jcm9wLzE3NXgxNzUvODksMC8tL3ByZXZpZXcvNTN4NTMvIiBob2xkZXI9ImhvbGRlci5qcy81M3g1Mz9hdXRvPXllcyZhbXA7dGhlbWU9c2t5JmFtcDt0ZXh0PUJSVSIvPjwvc2VjdGlvbj4KICAgICAgICAgIDxzZWN0aW9uIGNsYXNzPSJneW0tY29udGVudC1zdGFmZi1pdGVtLS1uYW1lIj4KICAgICAgICAgICAgPHA+QnJ1bm8gQWxleGFuZHJlPC9wPjxzcGFuIGNsYXNzPSJneW0tY29udGVudC1zdGFmZi1pdGVtLS10eXBlIj5Qcm9mZXNzb3I8L3NwYW4+CiAgICAgICAgICA8L3NlY3Rpb24+CiAgICAgICAgICA8c2VjdGlvbiBjbGFzcz0iZ3ltLWNvbnRlbnQtc3RhZmYtaXRlbS0tc3dpdGNoIj4KICAgICAgICAgICAgPG1kLXN3aXRjaCBtZC1uby1pbms9IiIgdGl0bGU9Int7YWN0aXZlfX0iIGFyaWEtbGFiZWw9ImF0aXZhciBQcm9mZXNzb3IiIG5nLWluaXQ9ImFjdGl2ZT10cnVlIiBuZy1tb2RlbD0iYWN0aXZlIiBjbGFzcz0ibWQtcHJpbWFyeSI+CiAgICAgICAgICAgICAgPCEtLSB8IFN3aXRjaCAobWQtcHJpbWFyeSk6IE5vIEluay0tPgogICAgICAgICAgICA8L21kLXN3aXRjaD4KICAgICAgICAgIDwvc2VjdGlvbj4KICAgICAgICAgIDxzZWN0aW9uIGNsYXNzPSJneW0tY29udGVudC1zdGFmZi1pdGVtLS1lZGl0Ij4KICAgICAgICAgICAgPG5nLW1kLWljb24gaWNvbj0ibW9kZV9lZGl0IiB0aXRsZT0iRWRpdGFyIEZ1bmNpb27DoXJpbyIgc3R5bGU9ImZpbGw6Z3JleSIgc2l6ZT0iMjUiPjwvbmctbWQtaWNvbj4KICAgICAgICAgIDwvc2VjdGlvbj4KICAgICAgICAgIDxzZWN0aW9uIGNsYXNzPSJneW0tY29udGVudC1zdGFmZi1pdGVtLS1kZWxldGUiPgogICAgICAgICAgICA8bmctbWQtaWNvbiBpY29uPSJjbGVhciIgdGl0bGU9IkV4Y2x1aXIgRnVuY2lvbsOhcmlvIiBzdHlsZT0iZmlsbDpncmV5IiBzaXplPSIyNSI+PC9uZy1tZC1pY29uPgogICAgICAgICAgPC9zZWN0aW9uPgogICAgICAgIDwvbGk+CiAgICAgIDwvdWw+CiAgICA8L3NlY3Rpb24+CiAgPC9zZWN0aW9uPgo8L3NlY3Rpb24+","base64")  
+					template: Buffer("CjxzZWN0aW9uIGNsYXNzPSJneW0tY29udGVudC1zdGFmZi13cmFwIj4KICA8c2VjdGlvbiBjbGFzcz0iZ3ltLWNvbnRlbnQtc3RhZmYtYWRkLWFjdGlvbiI+CiAgICA8bWQtYnV0dG9uIHRpdGxlPSJBZGljaW9uYXIgRnVuY2lvbsOhcmlvIiBuZy1jbGljaz0ic3RhZmZEaWFsb2coJGV2ZW50KSIgY2xhc3M9Im1kLXJhaXNlZCBtZC1wcmltYXJ5Ij4gCiAgICAgIDxuZy1tZC1pY29uIGljb249ImFkZF9jaXJjbGVfb3V0bGluZSIgc3R5bGU9ImZpbGw6d2hpdGUiIHNpemU9IjI1Ij48L25nLW1kLWljb24+RnVuY2lvbsOhcmlvCiAgICA8L21kLWJ1dHRvbj4KICA8L3NlY3Rpb24+CiAgPHNlY3Rpb24gY2xhc3M9Imd5bS1jb250ZW50LXN0YWZmLXNlYXJjaCI+CiAgICA8bWQtaW5wdXQtY29udGFpbmVyIG1kLW5vLWZsb2F0PSIiPgogICAgICA8aW5wdXQgcGxhY2Vob2xkZXI9IlBlc3F1aXNhciBGdW5jaW9uw6FyaW8iIG5nLW1vZGVsPSJiaW5kTW9kZWwuZ3JvdXBOYW1lIi8+CiAgICA8L21kLWlucHV0LWNvbnRhaW5lcj4KICA8L3NlY3Rpb24+CiAgPHNlY3Rpb24gY2xhc3M9Imd5bS1jb250ZW50LXN0YWZmLWNvbnRlbnQtd3JhcCI+CiAgICA8c2VjdGlvbiBjbGFzcz0iZ3ltLWNvbnRlbnQtc3RhZmYtY29udGVudCI+CiAgICAgIDx1bCBjbGFzcz0iZ3ltLWNvbnRlbnQtc3RhZmYtbGlzdCI+CiAgICAgICAgPGxpIG5nLXJlcGVhdD0ibiBpbiBsaXN0YSB0cmFjayBieSAkaW5kZXgiIGNsYXNzPSJneW0tY29udGVudC1zdGFmZi1pdGVtIj4KICAgICAgICAgIDxzZWN0aW9uIGNsYXNzPSJneW0tY29udGVudC1zdGFmZi1pdGVtLS1pbWFnZSI+PGltZyBuZy1zcmM9Imh0dHBzOi8vd3d3LnVjYXJlY2RuLmNvbS9hZTczYTNkNi1mODE2LTRhMGUtOWQyMS0xODUyODIzNGIyY2MvLS9jcm9wLzE3NXgxNzUvODksMC8tL3ByZXZpZXcvNTN4NTMvIiBob2xkZXI9ImhvbGRlci5qcy81M3g1Mz9hdXRvPXllcyZhbXA7dGhlbWU9c2t5JmFtcDt0ZXh0PUJSVSIvPjwvc2VjdGlvbj4KICAgICAgICAgIDxzZWN0aW9uIGNsYXNzPSJneW0tY29udGVudC1zdGFmZi1pdGVtLS1uYW1lIj4KICAgICAgICAgICAgPHA+QnJ1bm8gQWxleGFuZHJlPC9wPjxzcGFuIGNsYXNzPSJneW0tY29udGVudC1zdGFmZi1pdGVtLS10eXBlIj5Qcm9mZXNzb3I8L3NwYW4+CiAgICAgICAgICA8L3NlY3Rpb24+CiAgICAgICAgICA8c2VjdGlvbiBjbGFzcz0iZ3ltLWNvbnRlbnQtc3RhZmYtaXRlbS0tc3dpdGNoIj4KICAgICAgICAgICAgPG1kLXN3aXRjaCBtZC1uby1pbms9IiIgdGl0bGU9Int7YWN0aXZlfX0iIGFyaWEtbGFiZWw9ImF0aXZhciBQcm9mZXNzb3IiIG5nLWluaXQ9ImFjdGl2ZT10cnVlIiBuZy1tb2RlbD0iYWN0aXZlIiBjbGFzcz0ibWQtcHJpbWFyeSI+CiAgICAgICAgICAgICAgPCEtLSB8IFN3aXRjaCAobWQtcHJpbWFyeSk6IE5vIEluay0tPgogICAgICAgICAgICA8L21kLXN3aXRjaD4KICAgICAgICAgIDwvc2VjdGlvbj4KICAgICAgICAgIDxzZWN0aW9uIGNsYXNzPSJneW0tY29udGVudC1zdGFmZi1pdGVtLS1lZGl0Ij4KICAgICAgICAgICAgPG5nLW1kLWljb24gaWNvbj0ibW9kZV9lZGl0IiB0b29sdGlwLWRlbGF5PSI5MDAiIHRpdGxlPSJFZGl0YXIgRnVuY2lvbsOhcmlvIiB0b29sdGlwLXNpemU9InNtYWxsIiBzdHlsZT0iZmlsbDpncmV5IiBzaXplPSIyNSI+PC9uZy1tZC1pY29uPgogICAgICAgICAgPC9zZWN0aW9uPgogICAgICAgICAgPHNlY3Rpb24gY2xhc3M9Imd5bS1jb250ZW50LXN0YWZmLWl0ZW0tLWRlbGV0ZSI+CiAgICAgICAgICAgIDxuZy1tZC1pY29uIGljb249ImNsZWFyIiB0b29sdGlwcz0idG9vbHRpcHMiIHRvb2x0aXAtbGF6eT0idHJ1ZSIgdG9vbHRpcC10aXRsZT0iRXhjbHVpciBGdW5jaW9uw6FyaW8iIHRvb2x0aXAtc2l6ZT0ic21hbGwiIHN0eWxlPSJmaWxsOmdyZXkiIHNpemU9IjI1Ij48L25nLW1kLWljb24+CiAgICAgICAgICA8L3NlY3Rpb24+CiAgICAgICAgPC9saT4KICAgICAgPC91bD4KICAgIDwvc2VjdGlvbj4KICA8L3NlY3Rpb24+Cjwvc2VjdGlvbj4=","base64")  
 				}
 			},
 		},
@@ -56595,4 +56620,4 @@ module.exports = {
 };
 
 }).call(this,require("buffer").Buffer)
-},{"buffer":1}]},{},[25]);
+},{"buffer":1}]},{},[26]);
