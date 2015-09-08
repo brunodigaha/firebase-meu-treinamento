@@ -17,6 +17,7 @@ angular
 	require('angularHolderjs').name,
 	require('angularUploadcare').name,
 	require('angularTooltips').name,
+	require('angularLoadingBar').name,
 	require('./appDirectives').name,
 	require('./auth').name,
 	require('./core').name,

@@ -1,5 +1,5 @@
 var fs = require('fs');
-module.exports = function($scope,$timeout,fbUtil,$mdDialog) {
+module.exports = function($scope,$timeout,cfpLoadingBar,fbUtil,$mdDialog) {
 
 	var changeList = {};
 	var gymBackup = {};
@@ -24,11 +24,13 @@ module.exports = function($scope,$timeout,fbUtil,$mdDialog) {
 			}
 		});
 	};
-
+	
+	cfpLoadingBar.start();
 	var gymRef = fbUtil.ref('gym','-JyEh-WIYou07h4IZkas');
 	gymRef.once('value', function(data) {
 		$timeout(function() {
 			$scope.gym = data.val();
+			cfpLoadingBar.complete();
 		});
 	});
 	$scope.addGym = function() {

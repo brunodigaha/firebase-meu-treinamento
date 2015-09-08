@@ -1796,7 +1796,7 @@ window.angular);
 }).call(global, undefined, undefined, undefined, undefined, function defineExport(ex) { module.exports = ex; });
 
 }).call(this,typeof global !== "undefined" ? global : typeof self !== "undefined" ? self : typeof window !== "undefined" ? window : {})
-},{"/home/bruno/ProjNode/FirebaseMeuTreinamento/firebase-meu-treinamento/public/bower_components/angular/angular.js":20}],7:[function(require,module,exports){
+},{"/home/bruno/ProjNode/FirebaseMeuTreinamento/firebase-meu-treinamento/public/bower_components/angular/angular.js":21}],7:[function(require,module,exports){
 (function (global){
 
 ; require("/home/bruno/ProjNode/FirebaseMeuTreinamento/firebase-meu-treinamento/public/bower_components/angular/angular.js");
@@ -1820,7 +1820,7 @@ function(a){b.attr("aria-valuemin",a)});q&&h.$observe("max",function(a){b.attr("
 }).call(global, undefined, undefined, undefined, undefined, function defineExport(ex) { module.exports = ex; });
 
 }).call(this,typeof global !== "undefined" ? global : typeof self !== "undefined" ? self : typeof window !== "undefined" ? window : {})
-},{"/home/bruno/ProjNode/FirebaseMeuTreinamento/firebase-meu-treinamento/public/bower_components/angular/angular.js":20}],8:[function(require,module,exports){
+},{"/home/bruno/ProjNode/FirebaseMeuTreinamento/firebase-meu-treinamento/public/bower_components/angular/angular.js":21}],8:[function(require,module,exports){
 (function (global){
 
 ; require("/home/bruno/ProjNode/FirebaseMeuTreinamento/firebase-meu-treinamento/public/bower_components/angular/angular.js");
@@ -1834,7 +1834,7 @@ function(a){b.attr("aria-valuemin",a)});q&&h.$observe("max",function(a){b.attr("
 }).call(global, undefined, undefined, undefined, undefined, function defineExport(ex) { module.exports = ex; });
 
 }).call(this,typeof global !== "undefined" ? global : typeof self !== "undefined" ? self : typeof window !== "undefined" ? window : {})
-},{"/home/bruno/ProjNode/FirebaseMeuTreinamento/firebase-meu-treinamento/public/bower_components/angular/angular.js":20}],9:[function(require,module,exports){
+},{"/home/bruno/ProjNode/FirebaseMeuTreinamento/firebase-meu-treinamento/public/bower_components/angular/angular.js":21}],9:[function(require,module,exports){
 (function (global){
 
 ; require("/home/bruno/ProjNode/FirebaseMeuTreinamento/firebase-meu-treinamento/public/bower_components/Chart.js/Chart.min.js");
@@ -1847,7 +1847,7 @@ require("/home/bruno/ProjNode/FirebaseMeuTreinamento/firebase-meu-treinamento/pu
 }).call(global, undefined, undefined, undefined, undefined, function defineExport(ex) { module.exports = ex; });
 
 }).call(this,typeof global !== "undefined" ? global : typeof self !== "undefined" ? self : typeof window !== "undefined" ? window : {})
-},{"/home/bruno/ProjNode/FirebaseMeuTreinamento/firebase-meu-treinamento/public/bower_components/Chart.js/Chart.min.js":5,"/home/bruno/ProjNode/FirebaseMeuTreinamento/firebase-meu-treinamento/public/bower_components/angular/angular.js":20}],10:[function(require,module,exports){
+},{"/home/bruno/ProjNode/FirebaseMeuTreinamento/firebase-meu-treinamento/public/bower_components/Chart.js/Chart.min.js":5,"/home/bruno/ProjNode/FirebaseMeuTreinamento/firebase-meu-treinamento/public/bower_components/angular/angular.js":21}],10:[function(require,module,exports){
 (function (global){
 
 ; require("/home/bruno/ProjNode/FirebaseMeuTreinamento/firebase-meu-treinamento/public/bower_components/angular/angular.js");
@@ -1867,7 +1867,7 @@ e+" > 4096 bytes)!");k.cookie=d}}g.module("ngCookies",["ng"]).provider("$cookies
 }).call(global, undefined, undefined, undefined, undefined, function defineExport(ex) { module.exports = ex; });
 
 }).call(this,typeof global !== "undefined" ? global : typeof self !== "undefined" ? self : typeof window !== "undefined" ? window : {})
-},{"/home/bruno/ProjNode/FirebaseMeuTreinamento/firebase-meu-treinamento/public/bower_components/angular/angular.js":20}],11:[function(require,module,exports){
+},{"/home/bruno/ProjNode/FirebaseMeuTreinamento/firebase-meu-treinamento/public/bower_components/angular/angular.js":21}],11:[function(require,module,exports){
 (function (global){
 
 ; require("/home/bruno/ProjNode/FirebaseMeuTreinamento/firebase-meu-treinamento/public/bower_components/angular/angular.js");
@@ -1896,7 +1896,341 @@ module.directive('holder', [
 }).call(global, undefined, undefined, undefined, undefined, function defineExport(ex) { module.exports = ex; });
 
 }).call(this,typeof global !== "undefined" ? global : typeof self !== "undefined" ? self : typeof window !== "undefined" ? window : {})
-},{"/home/bruno/ProjNode/FirebaseMeuTreinamento/firebase-meu-treinamento/public/bower_components/angular/angular.js":20,"/home/bruno/ProjNode/FirebaseMeuTreinamento/firebase-meu-treinamento/public/bower_components/holderjs/holder.min.js":23}],12:[function(require,module,exports){
+},{"/home/bruno/ProjNode/FirebaseMeuTreinamento/firebase-meu-treinamento/public/bower_components/angular/angular.js":21,"/home/bruno/ProjNode/FirebaseMeuTreinamento/firebase-meu-treinamento/public/bower_components/holderjs/holder.min.js":24}],12:[function(require,module,exports){
+(function (global){
+
+; require("/home/bruno/ProjNode/FirebaseMeuTreinamento/firebase-meu-treinamento/public/bower_components/angular/angular.js");
+; var __browserify_shim_require__=require;(function browserifyShim(module, exports, require, define, browserify_shim__define__module__export__) {
+/*
+ * angular-loading-bar
+ *
+ * intercepts XHR requests and creates a loading bar.
+ * Based on the excellent nprogress work by rstacruz (more info in readme)
+ *
+ * (c) 2013 Wes Cruver
+ * License: MIT
+ */
+
+
+(function() {
+
+'use strict';
+
+// Alias the loading bar for various backwards compatibilities since the project has matured:
+angular.module('angular-loading-bar', ['cfp.loadingBarInterceptor']);
+angular.module('chieffancypants.loadingBar', ['cfp.loadingBarInterceptor']);
+
+
+/**
+ * loadingBarInterceptor service
+ *
+ * Registers itself as an Angular interceptor and listens for XHR requests.
+ */
+angular.module('cfp.loadingBarInterceptor', ['cfp.loadingBar'])
+  .config(['$httpProvider', function ($httpProvider) {
+
+    var interceptor = ['$q', '$cacheFactory', '$timeout', '$rootScope', '$log', 'cfpLoadingBar', function ($q, $cacheFactory, $timeout, $rootScope, $log, cfpLoadingBar) {
+
+      /**
+       * The total number of requests made
+       */
+      var reqsTotal = 0;
+
+      /**
+       * The number of requests completed (either successfully or not)
+       */
+      var reqsCompleted = 0;
+
+      /**
+       * The amount of time spent fetching before showing the loading bar
+       */
+      var latencyThreshold = cfpLoadingBar.latencyThreshold;
+
+      /**
+       * $timeout handle for latencyThreshold
+       */
+      var startTimeout;
+
+
+      /**
+       * calls cfpLoadingBar.complete() which removes the
+       * loading bar from the DOM.
+       */
+      function setComplete() {
+        $timeout.cancel(startTimeout);
+        cfpLoadingBar.complete();
+        reqsCompleted = 0;
+        reqsTotal = 0;
+      }
+
+      /**
+       * Determine if the response has already been cached
+       * @param  {Object}  config the config option from the request
+       * @return {Boolean} retrns true if cached, otherwise false
+       */
+      function isCached(config) {
+        var cache;
+        var defaultCache = $cacheFactory.get('$http');
+        var defaults = $httpProvider.defaults;
+
+        // Choose the proper cache source. Borrowed from angular: $http service
+        if ((config.cache || defaults.cache) && config.cache !== false &&
+          (config.method === 'GET' || config.method === 'JSONP')) {
+            cache = angular.isObject(config.cache) ? config.cache
+              : angular.isObject(defaults.cache) ? defaults.cache
+              : defaultCache;
+        }
+
+        var cached = cache !== undefined ?
+          cache.get(config.url) !== undefined : false;
+
+        if (config.cached !== undefined && cached !== config.cached) {
+          return config.cached;
+        }
+        config.cached = cached;
+        return cached;
+      }
+
+
+      return {
+        'request': function(config) {
+          // Check to make sure this request hasn't already been cached and that
+          // the requester didn't explicitly ask us to ignore this request:
+          if (!config.ignoreLoadingBar && !isCached(config)) {
+            $rootScope.$broadcast('cfpLoadingBar:loading', {url: config.url});
+            if (reqsTotal === 0) {
+              startTimeout = $timeout(function() {
+                cfpLoadingBar.start();
+              }, latencyThreshold);
+            }
+            reqsTotal++;
+            cfpLoadingBar.set(reqsCompleted / reqsTotal);
+          }
+          return config;
+        },
+
+        'response': function(response) {
+          if (!response || !response.config) {
+            $log.error('Broken interceptor detected: Config object not supplied in response:\n https://github.com/chieffancypants/angular-loading-bar/pull/50');
+            return response;
+          }
+
+          if (!response.config.ignoreLoadingBar && !isCached(response.config)) {
+            reqsCompleted++;
+            $rootScope.$broadcast('cfpLoadingBar:loaded', {url: response.config.url, result: response});
+            if (reqsCompleted >= reqsTotal) {
+              setComplete();
+            } else {
+              cfpLoadingBar.set(reqsCompleted / reqsTotal);
+            }
+          }
+          return response;
+        },
+
+        'responseError': function(rejection) {
+          if (!rejection || !rejection.config) {
+            $log.error('Broken interceptor detected: Config object not supplied in rejection:\n https://github.com/chieffancypants/angular-loading-bar/pull/50');
+            return $q.reject(rejection);
+          }
+
+          if (!rejection.config.ignoreLoadingBar && !isCached(rejection.config)) {
+            reqsCompleted++;
+            $rootScope.$broadcast('cfpLoadingBar:loaded', {url: rejection.config.url, result: rejection});
+            if (reqsCompleted >= reqsTotal) {
+              setComplete();
+            } else {
+              cfpLoadingBar.set(reqsCompleted / reqsTotal);
+            }
+          }
+          return $q.reject(rejection);
+        }
+      };
+    }];
+
+    $httpProvider.interceptors.push(interceptor);
+  }]);
+
+
+/**
+ * Loading Bar
+ *
+ * This service handles adding and removing the actual element in the DOM.
+ * Generally, best practices for DOM manipulation is to take place in a
+ * directive, but because the element itself is injected in the DOM only upon
+ * XHR requests, and it's likely needed on every view, the best option is to
+ * use a service.
+ */
+angular.module('cfp.loadingBar', [])
+  .provider('cfpLoadingBar', function() {
+
+    this.autoIncrement = true;
+    this.includeSpinner = true;
+    this.includeBar = true;
+    this.latencyThreshold = 100;
+    this.startSize = 0.02;
+    this.parentSelector = 'body';
+    this.spinnerTemplate = '<div id="loading-bar-spinner"><div class="spinner-icon"></div></div>';
+    this.loadingBarTemplate = '<div id="loading-bar"><div class="bar"><div class="peg"></div></div></div>';
+
+    this.$get = ['$injector', '$document', '$timeout', '$rootScope', function ($injector, $document, $timeout, $rootScope) {
+      var $animate;
+      var $parentSelector = this.parentSelector,
+        loadingBarContainer = angular.element(this.loadingBarTemplate),
+        loadingBar = loadingBarContainer.find('div').eq(0),
+        spinner = angular.element(this.spinnerTemplate);
+
+      var incTimeout,
+        completeTimeout,
+        started = false,
+        status = 0;
+
+      var autoIncrement = this.autoIncrement;
+      var includeSpinner = this.includeSpinner;
+      var includeBar = this.includeBar;
+      var startSize = this.startSize;
+
+      /**
+       * Inserts the loading bar element into the dom, and sets it to 2%
+       */
+      function _start() {
+        if (!$animate) {
+          $animate = $injector.get('$animate');
+        }
+
+        var $parent = $document.find($parentSelector).eq(0);
+        $timeout.cancel(completeTimeout);
+
+        // do not continually broadcast the started event:
+        if (started) {
+          return;
+        }
+
+        $rootScope.$broadcast('cfpLoadingBar:started');
+        started = true;
+
+        if (includeBar) {
+          $animate.enter(loadingBarContainer, $parent, angular.element($parent[0].lastChild));
+        }
+
+        if (includeSpinner) {
+          $animate.enter(spinner, $parent, angular.element($parent[0].lastChild));
+        }
+
+        _set(startSize);
+      }
+
+      /**
+       * Set the loading bar's width to a certain percent.
+       *
+       * @param n any value between 0 and 1
+       */
+      function _set(n) {
+        if (!started) {
+          return;
+        }
+        var pct = (n * 100) + '%';
+        loadingBar.css('width', pct);
+        status = n;
+
+        // increment loadingbar to give the illusion that there is always
+        // progress but make sure to cancel the previous timeouts so we don't
+        // have multiple incs running at the same time.
+        if (autoIncrement) {
+          $timeout.cancel(incTimeout);
+          incTimeout = $timeout(function() {
+            _inc();
+          }, 250);
+        }
+      }
+
+      /**
+       * Increments the loading bar by a random amount
+       * but slows down as it progresses
+       */
+      function _inc() {
+        if (_status() >= 1) {
+          return;
+        }
+
+        var rnd = 0;
+
+        // TODO: do this mathmatically instead of through conditions
+
+        var stat = _status();
+        if (stat >= 0 && stat < 0.25) {
+          // Start out between 3 - 6% increments
+          rnd = (Math.random() * (5 - 3 + 1) + 3) / 100;
+        } else if (stat >= 0.25 && stat < 0.65) {
+          // increment between 0 - 3%
+          rnd = (Math.random() * 3) / 100;
+        } else if (stat >= 0.65 && stat < 0.9) {
+          // increment between 0 - 2%
+          rnd = (Math.random() * 2) / 100;
+        } else if (stat >= 0.9 && stat < 0.99) {
+          // finally, increment it .5 %
+          rnd = 0.005;
+        } else {
+          // after 99%, don't increment:
+          rnd = 0;
+        }
+
+        var pct = _status() + rnd;
+        _set(pct);
+      }
+
+      function _status() {
+        return status;
+      }
+
+      function _completeAnimation() {
+        status = 0;
+        started = false;
+      }
+
+      function _complete() {
+        if (!$animate) {
+          $animate = $injector.get('$animate');
+        }
+
+        $rootScope.$broadcast('cfpLoadingBar:completed');
+        _set(1);
+
+        $timeout.cancel(completeTimeout);
+
+        // Attempt to aggregate any start/complete calls within 500ms:
+        completeTimeout = $timeout(function() {
+          var promise = $animate.leave(loadingBarContainer, _completeAnimation);
+          if (promise && promise.then) {
+            promise.then(_completeAnimation);
+          }
+          $animate.leave(spinner);
+        }, 500);
+      }
+
+      return {
+        start            : _start,
+        set              : _set,
+        status           : _status,
+        inc              : _inc,
+        complete         : _complete,
+        autoIncrement    : this.autoIncrement,
+        includeSpinner   : this.includeSpinner,
+        latencyThreshold : this.latencyThreshold,
+        parentSelector   : this.parentSelector,
+        startSize        : this.startSize
+      };
+
+
+    }];     //
+  });       // wtf javascript. srsly
+})();       //
+
+; browserify_shim__define__module__export__(typeof angular.module('angular-loading-bar') != "undefined" ? angular.module('angular-loading-bar') : window.angular.module('angular-loading-bar'));
+
+}).call(global, undefined, undefined, undefined, undefined, function defineExport(ex) { module.exports = ex; });
+
+}).call(this,typeof global !== "undefined" ? global : typeof self !== "undefined" ? self : typeof window !== "undefined" ? window : {})
+},{"/home/bruno/ProjNode/FirebaseMeuTreinamento/firebase-meu-treinamento/public/bower_components/angular/angular.js":21}],13:[function(require,module,exports){
 (function (global){
 
 ; require("/home/bruno/ProjNode/FirebaseMeuTreinamento/firebase-meu-treinamento/public/bower_components/angular/angular.js");
@@ -2185,7 +2519,7 @@ a&&(c=a[1],b=a[2])}else c="help";void 0===e[c]&&(c="help");void 0!==d.size?b=d.s
 }).call(global, undefined, undefined, undefined, undefined, function defineExport(ex) { module.exports = ex; });
 
 }).call(this,typeof global !== "undefined" ? global : typeof self !== "undefined" ? self : typeof window !== "undefined" ? window : {})
-},{"/home/bruno/ProjNode/FirebaseMeuTreinamento/firebase-meu-treinamento/public/bower_components/angular/angular.js":20}],13:[function(require,module,exports){
+},{"/home/bruno/ProjNode/FirebaseMeuTreinamento/firebase-meu-treinamento/public/bower_components/angular/angular.js":21}],14:[function(require,module,exports){
 (function (global){
 
 ; require("/home/bruno/ProjNode/FirebaseMeuTreinamento/firebase-meu-treinamento/public/bower_components/angular/angular.js");
@@ -19365,7 +19699,7 @@ angular.module("material.core").constant("$MD_THEME_CSS", "/* mixin definition ;
 }).call(global, undefined, undefined, undefined, undefined, function defineExport(ex) { module.exports = ex; });
 
 }).call(this,typeof global !== "undefined" ? global : typeof self !== "undefined" ? self : typeof window !== "undefined" ? window : {})
-},{"/home/bruno/ProjNode/FirebaseMeuTreinamento/firebase-meu-treinamento/public/bower_components/angular-animate/angular-animate.min.js":6,"/home/bruno/ProjNode/FirebaseMeuTreinamento/firebase-meu-treinamento/public/bower_components/angular-aria/angular-aria.min.js":7,"/home/bruno/ProjNode/FirebaseMeuTreinamento/firebase-meu-treinamento/public/bower_components/angular/angular.js":20}],14:[function(require,module,exports){
+},{"/home/bruno/ProjNode/FirebaseMeuTreinamento/firebase-meu-treinamento/public/bower_components/angular-animate/angular-animate.min.js":6,"/home/bruno/ProjNode/FirebaseMeuTreinamento/firebase-meu-treinamento/public/bower_components/angular-aria/angular-aria.min.js":7,"/home/bruno/ProjNode/FirebaseMeuTreinamento/firebase-meu-treinamento/public/bower_components/angular/angular.js":21}],15:[function(require,module,exports){
 (function (global){
 
 ; require("/home/bruno/ProjNode/FirebaseMeuTreinamento/firebase-meu-treinamento/public/bower_components/angular/angular.js");
@@ -19387,7 +19721,7 @@ k(e[0],a))?a.next=b.next:c.head=b.next;delete l[d];c.reRender()}}]}}]).directive
 }).call(global, undefined, undefined, undefined, undefined, function defineExport(ex) { module.exports = ex; });
 
 }).call(this,typeof global !== "undefined" ? global : typeof self !== "undefined" ? self : typeof window !== "undefined" ? window : {})
-},{"/home/bruno/ProjNode/FirebaseMeuTreinamento/firebase-meu-treinamento/public/bower_components/angular/angular.js":20}],15:[function(require,module,exports){
+},{"/home/bruno/ProjNode/FirebaseMeuTreinamento/firebase-meu-treinamento/public/bower_components/angular/angular.js":21}],16:[function(require,module,exports){
 (function (global){
 
 ; require("/home/bruno/ProjNode/FirebaseMeuTreinamento/firebase-meu-treinamento/public/bower_components/angular/angular.js");
@@ -19530,7 +19864,7 @@ k(e[0],a))?a.next=b.next:c.head=b.next;delete l[d];c.reRender()}}]}}]).directive
 }).call(global, undefined, undefined, undefined, undefined, function defineExport(ex) { module.exports = ex; });
 
 }).call(this,typeof global !== "undefined" ? global : typeof self !== "undefined" ? self : typeof window !== "undefined" ? window : {})
-},{"/home/bruno/ProjNode/FirebaseMeuTreinamento/firebase-meu-treinamento/public/bower_components/angular/angular.js":20}],16:[function(require,module,exports){
+},{"/home/bruno/ProjNode/FirebaseMeuTreinamento/firebase-meu-treinamento/public/bower_components/angular/angular.js":21}],17:[function(require,module,exports){
 (function (global){
 
 ; require("/home/bruno/ProjNode/FirebaseMeuTreinamento/firebase-meu-treinamento/public/bower_components/angular/angular.js");
@@ -19545,7 +19879,7 @@ k(e[0],a))?a.next=b.next:c.head=b.next;delete l[d];c.reRender()}}]}}]).directive
 }).call(global, undefined, undefined, undefined, undefined, function defineExport(ex) { module.exports = ex; });
 
 }).call(this,typeof global !== "undefined" ? global : typeof self !== "undefined" ? self : typeof window !== "undefined" ? window : {})
-},{"/home/bruno/ProjNode/FirebaseMeuTreinamento/firebase-meu-treinamento/public/bower_components/angular/angular.js":20}],17:[function(require,module,exports){
+},{"/home/bruno/ProjNode/FirebaseMeuTreinamento/firebase-meu-treinamento/public/bower_components/angular/angular.js":21}],18:[function(require,module,exports){
 (function (global){
 
 ; require("/home/bruno/ProjNode/FirebaseMeuTreinamento/firebase-meu-treinamento/public/bower_components/angular/angular.js");
@@ -19569,7 +19903,7 @@ k(e[0],a))?a.next=b.next:c.head=b.next;delete l[d];c.reRender()}}]}}]).directive
 }).call(global, undefined, undefined, undefined, undefined, function defineExport(ex) { module.exports = ex; });
 
 }).call(this,typeof global !== "undefined" ? global : typeof self !== "undefined" ? self : typeof window !== "undefined" ? window : {})
-},{"/home/bruno/ProjNode/FirebaseMeuTreinamento/firebase-meu-treinamento/public/bower_components/angular/angular.js":20}],18:[function(require,module,exports){
+},{"/home/bruno/ProjNode/FirebaseMeuTreinamento/firebase-meu-treinamento/public/bower_components/angular/angular.js":21}],19:[function(require,module,exports){
 (function (global){
 
 ; require("/home/bruno/ProjNode/FirebaseMeuTreinamento/firebase-meu-treinamento/public/bower_components/angular/angular.js");
@@ -23949,7 +24283,7 @@ angular.module('ui.router.state')
 }).call(global, undefined, undefined, undefined, undefined, function defineExport(ex) { module.exports = ex; });
 
 }).call(this,typeof global !== "undefined" ? global : typeof self !== "undefined" ? self : typeof window !== "undefined" ? window : {})
-},{"/home/bruno/ProjNode/FirebaseMeuTreinamento/firebase-meu-treinamento/public/bower_components/angular/angular.js":20}],19:[function(require,module,exports){
+},{"/home/bruno/ProjNode/FirebaseMeuTreinamento/firebase-meu-treinamento/public/bower_components/angular/angular.js":21}],20:[function(require,module,exports){
 (function (global){
 
 ; require("/home/bruno/ProjNode/FirebaseMeuTreinamento/firebase-meu-treinamento/public/bower_components/angular/angular.js");
@@ -23996,7 +24330,7 @@ angular.module('ng-uploadcare', [])
 }).call(global, undefined, undefined, undefined, undefined, function defineExport(ex) { module.exports = ex; });
 
 }).call(this,typeof global !== "undefined" ? global : typeof self !== "undefined" ? self : typeof window !== "undefined" ? window : {})
-},{"/home/bruno/ProjNode/FirebaseMeuTreinamento/firebase-meu-treinamento/public/bower_components/angular/angular.js":20}],20:[function(require,module,exports){
+},{"/home/bruno/ProjNode/FirebaseMeuTreinamento/firebase-meu-treinamento/public/bower_components/angular/angular.js":21}],21:[function(require,module,exports){
 (function (global){
 
 ; require("/home/bruno/ProjNode/FirebaseMeuTreinamento/firebase-meu-treinamento/public/bower_components/lodash/lodash.min.js");
@@ -52694,7 +53028,7 @@ $provide.value("$locale", {
 }).call(global, undefined, undefined, undefined, undefined, function defineExport(ex) { module.exports = ex; });
 
 }).call(this,typeof global !== "undefined" ? global : typeof self !== "undefined" ? self : typeof window !== "undefined" ? window : {})
-},{"/home/bruno/ProjNode/FirebaseMeuTreinamento/firebase-meu-treinamento/public/bower_components/lodash/lodash.min.js":24}],21:[function(require,module,exports){
+},{"/home/bruno/ProjNode/FirebaseMeuTreinamento/firebase-meu-treinamento/public/bower_components/lodash/lodash.min.js":25}],22:[function(require,module,exports){
 (function (global){
 
 ; require("/home/bruno/ProjNode/FirebaseMeuTreinamento/firebase-meu-treinamento/public/bower_components/angular/angular.js");
@@ -52717,7 +53051,7 @@ require("/home/bruno/ProjNode/FirebaseMeuTreinamento/firebase-meu-treinamento/pu
 }).call(global, undefined, undefined, undefined, undefined, function defineExport(ex) { module.exports = ex; });
 
 }).call(this,typeof global !== "undefined" ? global : typeof self !== "undefined" ? self : typeof window !== "undefined" ? window : {})
-},{"/home/bruno/ProjNode/FirebaseMeuTreinamento/firebase-meu-treinamento/public/bower_components/angular/angular.js":20,"/home/bruno/ProjNode/FirebaseMeuTreinamento/firebase-meu-treinamento/public/bower_components/firebase/firebase.js":22}],22:[function(require,module,exports){
+},{"/home/bruno/ProjNode/FirebaseMeuTreinamento/firebase-meu-treinamento/public/bower_components/angular/angular.js":21,"/home/bruno/ProjNode/FirebaseMeuTreinamento/firebase-meu-treinamento/public/bower_components/firebase/firebase.js":23}],23:[function(require,module,exports){
 (function (global){
 ; var __browserify_shim_require__=require;(function browserifyShim(module, exports, require, define, browserify_shim__define__module__export__) {
 /*! @license Firebase v2.2.9
@@ -52990,7 +53324,7 @@ U.prototype.We=function(a,b){x("Firebase.resetPassword",2,2,arguments.length);fg
 }).call(global, undefined, undefined, undefined, undefined, function defineExport(ex) { module.exports = ex; });
 
 }).call(this,typeof global !== "undefined" ? global : typeof self !== "undefined" ? self : typeof window !== "undefined" ? window : {})
-},{}],23:[function(require,module,exports){
+},{}],24:[function(require,module,exports){
 (function (global){
 ; var __browserify_shim_require__=require;(function browserifyShim(module, exports, require, define, browserify_shim__define__module__export__) {
 /*!
@@ -53010,7 +53344,7 @@ License:  http://opensource.org/licenses/MIT
 }).call(global, undefined, undefined, undefined, undefined, function defineExport(ex) { module.exports = ex; });
 
 }).call(this,typeof global !== "undefined" ? global : typeof self !== "undefined" ? self : typeof window !== "undefined" ? window : {})
-},{}],24:[function(require,module,exports){
+},{}],25:[function(require,module,exports){
 (function (global){
 ; var __browserify_shim_require__=require;(function browserifyShim(module, exports, require, define, browserify_shim__define__module__export__) {
 /**
@@ -53116,7 +53450,7 @@ return Yn})):Mn&&qn?Vn?(qn.exports=Yn)._=Yn:Mn._=Yn:Zn._=Yn}).call(this);
 }).call(global, undefined, undefined, undefined, undefined, function defineExport(ex) { module.exports = ex; });
 
 }).call(this,typeof global !== "undefined" ? global : typeof self !== "undefined" ? self : typeof window !== "undefined" ? window : {})
-},{}],25:[function(require,module,exports){
+},{}],26:[function(require,module,exports){
 (function (global){
 ; var __browserify_shim_require__=require;(function browserifyShim(module, exports, require, define, browserify_shim__define__module__export__) {
 /*!
@@ -54531,7 +54865,7 @@ window.Modernizr = (function( window, document, undefined ) {
 }).call(global, undefined, undefined, undefined, undefined, function defineExport(ex) { module.exports = ex; });
 
 }).call(this,typeof global !== "undefined" ? global : typeof self !== "undefined" ? self : typeof window !== "undefined" ? window : {})
-},{}],26:[function(require,module,exports){
+},{}],27:[function(require,module,exports){
 //other dependencies
 require('modernizr');
 require('angular');
@@ -54551,6 +54885,7 @@ angular
 	require('angularHolderjs').name,
 	require('angularUploadcare').name,
 	require('angularTooltips').name,
+	require('angularLoadingBar').name,
 	require('./appDirectives').name,
 	require('./auth').name,
 	require('./core').name,
@@ -54566,7 +54901,7 @@ angular
 
 
 
-},{"./appDirectives":37,"./appRoutes.js":38,"./appRun.js":39,"./auth":42,"./core":50,"./train":62,"./user":71,"angular":20,"angularBreadcrumb":8,"angularChart":9,"angularCookies":10,"angularFire":21,"angularHolderjs":11,"angularIcons":12,"angularMaterial":13,"angularMessages":14,"angularScroll":15,"angularSortableView":16,"angularTooltips":17,"angularUploadcare":19,"modernizr":25,"ui-router":18}],27:[function(require,module,exports){
+},{"./appDirectives":38,"./appRoutes.js":39,"./appRun.js":40,"./auth":43,"./core":51,"./train":63,"./user":72,"angular":21,"angularBreadcrumb":8,"angularChart":9,"angularCookies":10,"angularFire":22,"angularHolderjs":11,"angularIcons":13,"angularLoadingBar":12,"angularMaterial":14,"angularMessages":15,"angularScroll":16,"angularSortableView":17,"angularTooltips":18,"angularUploadcare":20,"modernizr":26,"ui-router":19}],28:[function(require,module,exports){
 (function (Buffer){
 
 module.exports = function() {
@@ -54594,7 +54929,7 @@ module.exports = function() {
 };
 
 }).call(this,require("buffer").Buffer)
-},{"buffer":1}],28:[function(require,module,exports){
+},{"buffer":1}],29:[function(require,module,exports){
 (function (Buffer){
 
 module.exports = function() {
@@ -54894,7 +55229,7 @@ module.exports = function() {
 };
 
 }).call(this,require("buffer").Buffer)
-},{"buffer":1}],29:[function(require,module,exports){
+},{"buffer":1}],30:[function(require,module,exports){
 (function (Buffer){
 
 module.exports = function() {
@@ -54935,7 +55270,7 @@ module.exports = function() {
 };
 
 }).call(this,require("buffer").Buffer)
-},{"buffer":1}],30:[function(require,module,exports){
+},{"buffer":1}],31:[function(require,module,exports){
 (function (Buffer){
 
 module.exports = function() {
@@ -54961,7 +55296,7 @@ module.exports = function() {
 };
 
 }).call(this,require("buffer").Buffer)
-},{"buffer":1}],31:[function(require,module,exports){
+},{"buffer":1}],32:[function(require,module,exports){
 (function (Buffer){
 
 module.exports = function() {
@@ -54985,7 +55320,7 @@ module.exports = function() {
 };
 
 }).call(this,require("buffer").Buffer)
-},{"buffer":1}],32:[function(require,module,exports){
+},{"buffer":1}],33:[function(require,module,exports){
 (function (Buffer){
 
 module.exports = function() {
@@ -55001,7 +55336,7 @@ module.exports = function() {
 };
 
 }).call(this,require("buffer").Buffer)
-},{"buffer":1}],33:[function(require,module,exports){
+},{"buffer":1}],34:[function(require,module,exports){
 (function (Buffer){
 
 module.exports = function() {
@@ -55017,7 +55352,7 @@ module.exports = function() {
 };
 
 }).call(this,require("buffer").Buffer)
-},{"buffer":1}],34:[function(require,module,exports){
+},{"buffer":1}],35:[function(require,module,exports){
 (function (Buffer){
 
 module.exports = function() {
@@ -55045,7 +55380,7 @@ module.exports = function() {
 };
 
 }).call(this,require("buffer").Buffer)
-},{"buffer":1}],35:[function(require,module,exports){
+},{"buffer":1}],36:[function(require,module,exports){
 (function (Buffer){
 
 module.exports = function() {
@@ -55077,7 +55412,7 @@ module.exports = function() {
 };
 
 }).call(this,require("buffer").Buffer)
-},{"buffer":1}],36:[function(require,module,exports){
+},{"buffer":1}],37:[function(require,module,exports){
 (function (Buffer){
 
 module.exports = function() {
@@ -55092,7 +55427,7 @@ module.exports = function() {
 };
 
 }).call(this,require("buffer").Buffer)
-},{"buffer":1}],37:[function(require,module,exports){
+},{"buffer":1}],38:[function(require,module,exports){
 module.exports = angular.module('appDirectives',[])
 		.directive('dsTraining', require('./directives/dsTrainingDirective.js'))
 		.directive('dsExercisesSelectList', require('./directives/dsExercisesSelectListDirective.js'))
@@ -55105,10 +55440,10 @@ module.exports = angular.module('appDirectives',[])
 		.directive('dsPlan', require('./directives/dsPlanDirective.js'))
 		.directive('dsInfo', require('./directives/dsInfoDirective.js'));
 
-},{"./directives/dsExerciseDirective.js":27,"./directives/dsExerciseEditDirective.js":28,"./directives/dsExerciseSelectItemDirective.js":29,"./directives/dsExercisesDirective.js":30,"./directives/dsExercisesSelectListDirective.js":31,"./directives/dsInfoDirective.js":32,"./directives/dsPlanDirective.js":33,"./directives/dsSerieDirective.js":34,"./directives/dsSerieEditDirective.js":35,"./directives/dsTrainingDirective.js":36}],38:[function(require,module,exports){
+},{"./directives/dsExerciseDirective.js":28,"./directives/dsExerciseEditDirective.js":29,"./directives/dsExerciseSelectItemDirective.js":30,"./directives/dsExercisesDirective.js":31,"./directives/dsExercisesSelectListDirective.js":32,"./directives/dsInfoDirective.js":33,"./directives/dsPlanDirective.js":34,"./directives/dsSerieDirective.js":35,"./directives/dsSerieEditDirective.js":36,"./directives/dsTrainingDirective.js":37}],39:[function(require,module,exports){
 
 
-module.exports = function ($stateProvider,$compileProvider,$animateProvider,$locationProvider,$urlRouterProvider,$breadcrumbProvider,ChartJsProvider, $mdThemingProvider) {
+module.exports = function ($stateProvider,cfpLoadingBarProvider,$compileProvider,$animateProvider,$locationProvider,$urlRouterProvider,$breadcrumbProvider,ChartJsProvider, $mdThemingProvider) {
 	$locationProvider.html5Mode(false);
 	$urlRouterProvider.otherwise('/user/12/training-history');
 	// $urlRouterProvider.when('/home', '/home/index');
@@ -55200,13 +55535,16 @@ module.exports = function ($stateProvider,$compileProvider,$animateProvider,$loc
 	// User em modo production para ganho de performance
 	// $compileProvider.debugInfoEnabled(false);
 
+	// cfpLoadingBarProvider.includeBar = false;
+	cfpLoadingBarProvider.includeSpinner = false;
+
     ChartJsProvider.setOptions({
       colours: ['#2196F3', '#BBDEFB'],
        // animation: false
     });	
 };
 
-},{"./auth/authRoutes.js":40,"./core/coreRoutes.js":49,"./train/trainRoutes.js":63,"./user/userRoutes.js":73}],39:[function(require,module,exports){
+},{"./auth/authRoutes.js":41,"./core/coreRoutes.js":50,"./train/trainRoutes.js":64,"./user/userRoutes.js":74}],40:[function(require,module,exports){
 module.exports = function ($rootScope,UCURL,$location,$state,$stateParams,authModelService,coreEventsService) {
 
 	$rootScope.$state = $state;
@@ -55276,7 +55614,7 @@ module.exports = function ($rootScope,UCURL,$location,$state,$stateParams,authMo
 	// });
 };
 
-},{}],40:[function(require,module,exports){
+},{}],41:[function(require,module,exports){
 (function (Buffer){
 
 module.exports = {
@@ -55309,7 +55647,7 @@ module.exports = {
 
 
 }).call(this,require("buffer").Buffer)
-},{"buffer":1}],41:[function(require,module,exports){
+},{"buffer":1}],42:[function(require,module,exports){
 module.exports = function ($scope,$timeout,$location, authModelService,$firebaseArray,FBURL) {
 	$scope.email = null;
 	$scope.password = null;
@@ -55359,12 +55697,12 @@ module.exports = function ($scope,$timeout,$location, authModelService,$firebase
 	};
 };
 
-},{}],42:[function(require,module,exports){
+},{}],43:[function(require,module,exports){
 module.exports = angular.module('auth',[])
 			.factory('authModelService', require('./services/authModelService.js'))
 			.controller('loginController', require('./controllers/loginController.js'));
 
-},{"./controllers/loginController.js":41,"./services/authModelService.js":43}],43:[function(require,module,exports){
+},{"./controllers/loginController.js":42,"./services/authModelService.js":44}],44:[function(require,module,exports){
 module.exports = function ($firebaseAuth,FBURL) {
 	var ref = new Firebase(FBURL);
 	return $firebaseAuth(ref);
@@ -55434,7 +55772,7 @@ module.exports = function ($firebaseAuth,FBURL) {
 	// return authModel;
 };
 
-},{}],44:[function(require,module,exports){
+},{}],45:[function(require,module,exports){
 module.exports = function($scope,FBURL,$firebaseArray, coreEventsService, $mdDialog, $mdToast, $animate) {
 	var coreEvents = $scope.coreEvents = coreEventsService;
 	// $scope.user = RestangularCustom.all('usuario').getList().$object;
@@ -55471,7 +55809,7 @@ module.exports = function($scope,FBURL,$firebaseArray, coreEventsService, $mdDia
 
 };
 
-},{}],45:[function(require,module,exports){
+},{}],46:[function(require,module,exports){
 (function (Buffer){
 
 module.exports = function ($scope,$mdDialog,$location, coreEventsService, authModelService) {
@@ -55509,7 +55847,7 @@ module.exports = function ($scope,$mdDialog,$location, coreEventsService, authMo
 };
 
 }).call(this,require("buffer").Buffer)
-},{"buffer":1}],46:[function(require,module,exports){
+},{"buffer":1}],47:[function(require,module,exports){
 (function (Buffer){
 
 module.exports = function($scope,$mdDialog, $mdToast,$animate) {
@@ -55555,7 +55893,7 @@ module.exports = function($scope,$mdDialog, $mdToast,$animate) {
 };
 
 }).call(this,require("buffer").Buffer)
-},{"buffer":1}],47:[function(require,module,exports){
+},{"buffer":1}],48:[function(require,module,exports){
 module.exports = function($scope,$mdToast,$mdDialog,FBURL,$window,$firebaseObject) {
 	$scope.newUser = {
 		image:null,
@@ -55608,7 +55946,7 @@ module.exports = function($scope,$mdToast,$mdDialog,FBURL,$window,$firebaseObjec
 	};
 };
 
-},{}],48:[function(require,module,exports){
+},{}],49:[function(require,module,exports){
 module.exports = function($scope, coreEventsService,$state,$stateParams,$mdDialog) {
 	$scope.duracao=2;
 	$scope.frequencia=3;
@@ -55624,7 +55962,7 @@ module.exports = function($scope, coreEventsService,$state,$stateParams,$mdDialo
 
 };
 
-},{}],49:[function(require,module,exports){
+},{}],50:[function(require,module,exports){
 (function (Buffer){
 
 module.exports = {
@@ -55679,7 +56017,7 @@ module.exports = {
 
 
 }).call(this,require("buffer").Buffer)
-},{"buffer":1}],50:[function(require,module,exports){
+},{"buffer":1}],51:[function(require,module,exports){
 module.exports = angular.module('core',[])
 		.controller('headerController', require('./controllers/headerController.js'))
 		.controller('searchController', require('./controllers/searchController.js'))
@@ -55691,7 +56029,7 @@ module.exports = angular.module('core',[])
 		.factory('coreEventsService', require('./services/coreEventsService.js'));
 
 
-},{"./controllers/asideController.js":44,"./controllers/headerController.js":45,"./controllers/searchController.js":46,"./controllers/searchDialogController.js":47,"./controllers/trainDialogController.js":48,"./services/coreEventsService.js":51,"./services/fbUtil.js":52}],51:[function(require,module,exports){
+},{"./controllers/asideController.js":45,"./controllers/headerController.js":46,"./controllers/searchController.js":47,"./controllers/searchDialogController.js":48,"./controllers/trainDialogController.js":49,"./services/coreEventsService.js":52,"./services/fbUtil.js":53}],52:[function(require,module,exports){
 module.exports = function () {
 	var eventsService = {
 		search: false,
@@ -55719,7 +56057,7 @@ module.exports = function () {
 	return eventsService;
 };
 
-},{}],52:[function(require,module,exports){
+},{}],53:[function(require,module,exports){
 module.exports = function (FBURL,$window, $q) {
 
 	var utils = {
@@ -55767,7 +56105,7 @@ module.exports = function (FBURL,$window, $q) {
 	}
 };
 
-},{}],53:[function(require,module,exports){
+},{}],54:[function(require,module,exports){
 module.exports = function($scope, coreEventsService,$state,$stateParams,$mdDialog) {
 	$scope.hide = function() {
 		$mdDialog.hide();
@@ -55780,13 +56118,13 @@ module.exports = function($scope, coreEventsService,$state,$stateParams,$mdDialo
 	};
 };
 
-},{}],54:[function(require,module,exports){
+},{}],55:[function(require,module,exports){
 module.exports = function($scope) {
 	$scope.duracao = 3;
 	$scope.frequencia =4;
 };
 
-},{}],55:[function(require,module,exports){
+},{}],56:[function(require,module,exports){
 (function (Buffer){
 
 module.exports = function($scope,$timeout,$q,$log, coreEventsService,$state,$stateParams,$mdDialog) {
@@ -56005,17 +56343,17 @@ module.exports = function($scope,$timeout,$q,$log, coreEventsService,$state,$sta
 };
 
 }).call(this,require("buffer").Buffer)
-},{"buffer":1}],56:[function(require,module,exports){
+},{"buffer":1}],57:[function(require,module,exports){
 module.exports = function($scope) {
 
 };
 
-},{}],57:[function(require,module,exports){
+},{}],58:[function(require,module,exports){
 module.exports = function ($scope) {
 
 };
 
-},{}],58:[function(require,module,exports){
+},{}],59:[function(require,module,exports){
 module.exports = function($scope, coreEventsService,$state,$stateParams,$mdDialog) {
 	$scope.hide = function() {
 		$mdDialog.hide();
@@ -56036,7 +56374,7 @@ module.exports = function($scope, coreEventsService,$state,$stateParams,$mdDialo
 
 };
 
-},{}],59:[function(require,module,exports){
+},{}],60:[function(require,module,exports){
 module.exports =  function($scope,$mdBottomSheet,$timeout, coreEventsService,$state,$stateParams) {
 	$scope.params = $stateParams;
 	$scope.state = $state.current;
@@ -56044,9 +56382,9 @@ module.exports =  function($scope,$mdBottomSheet,$timeout, coreEventsService,$st
 	// $scope.eventsService= eventsService;
 };
 
-},{}],60:[function(require,module,exports){
-arguments[4][56][0].apply(exports,arguments)
-},{"dup":56}],61:[function(require,module,exports){
+},{}],61:[function(require,module,exports){
+arguments[4][57][0].apply(exports,arguments)
+},{"dup":57}],62:[function(require,module,exports){
 module.exports = function($scope) {
 	$scope.train_menu= {menu: false};
 	$scope.close_train_menu = function(){
@@ -56058,7 +56396,7 @@ module.exports = function($scope) {
 
 };
 
-},{}],62:[function(require,module,exports){
+},{}],63:[function(require,module,exports){
 module.exports = angular.module('train',[])
 		.controller('listTrainingController', require('./controllers/listTrainingController.js'))
 		.controller('trainingTrainingController', require('./controllers/trainingTrainingController.js'))
@@ -56070,7 +56408,7 @@ module.exports = angular.module('train',[])
 		.controller('insertTrainingDialogController', require('./controllers/insertTrainingDialogController.js'))
 		.controller('ImportDialogController', require('./controllers/ImportDialogController.js'));
 
-},{"./controllers/ImportDialogController.js":53,"./controllers/addPlanController.js":54,"./controllers/addTrainingController.js":55,"./controllers/collectionTrainingController.js":56,"./controllers/historyTrainingController.js":57,"./controllers/insertTrainingDialogController.js":58,"./controllers/listTrainingController.js":59,"./controllers/plansController.js":60,"./controllers/trainingTrainingController.js":61}],63:[function(require,module,exports){
+},{"./controllers/ImportDialogController.js":54,"./controllers/addPlanController.js":55,"./controllers/addTrainingController.js":56,"./controllers/collectionTrainingController.js":57,"./controllers/historyTrainingController.js":58,"./controllers/insertTrainingDialogController.js":59,"./controllers/listTrainingController.js":60,"./controllers/plansController.js":61,"./controllers/trainingTrainingController.js":62}],64:[function(require,module,exports){
 (function (Buffer){
 
 module.exports = {
@@ -56195,10 +56533,10 @@ module.exports = {
 };
 
 }).call(this,require("buffer").Buffer)
-},{"buffer":1}],64:[function(require,module,exports){
+},{"buffer":1}],65:[function(require,module,exports){
 (function (Buffer){
 
-module.exports = function($scope,$timeout,fbUtil,$mdDialog) {
+module.exports = function($scope,$timeout,cfpLoadingBar,fbUtil,$mdDialog) {
 
 	var changeList = {};
 	var gymBackup = {};
@@ -56223,11 +56561,13 @@ module.exports = function($scope,$timeout,fbUtil,$mdDialog) {
 			}
 		});
 	};
-
+	
+	cfpLoadingBar.start();
 	var gymRef = fbUtil.ref('gym','-JyEh-WIYou07h4IZkas');
 	gymRef.once('value', function(data) {
 		$timeout(function() {
 			$scope.gym = data.val();
+			cfpLoadingBar.complete();
 		});
 	});
 	$scope.addGym = function() {
@@ -56258,7 +56598,7 @@ module.exports = function($scope,$timeout,fbUtil,$mdDialog) {
 };
 
 }).call(this,require("buffer").Buffer)
-},{"buffer":1}],65:[function(require,module,exports){
+},{"buffer":1}],66:[function(require,module,exports){
 (function (Buffer){
 
 module.exports = function($scope,$timeout,fbUtil,$mdDialog) {
@@ -56286,7 +56626,7 @@ module.exports = function($scope,$timeout,fbUtil,$mdDialog) {
 };
 
 }).call(this,require("buffer").Buffer)
-},{"buffer":1}],66:[function(require,module,exports){
+},{"buffer":1}],67:[function(require,module,exports){
 module.exports = function($scope,$mdDialog) {
 	// console.log(gymBackup);
 	// $scope.save = function() {
@@ -56300,15 +56640,15 @@ module.exports = function($scope,$mdDialog) {
 	};
 };
 
-},{}],67:[function(require,module,exports){
+},{}],68:[function(require,module,exports){
 module.exports = function($scope) {
  $scope.labels = ["Dias Decorridos", "Dias Restantes"];
   $scope.data = [14,7];
 };
 
-},{}],68:[function(require,module,exports){
-arguments[4][56][0].apply(exports,arguments)
-},{"dup":56}],69:[function(require,module,exports){
+},{}],69:[function(require,module,exports){
+arguments[4][57][0].apply(exports,arguments)
+},{"dup":57}],70:[function(require,module,exports){
 module.exports = function($scope,bruno,$mdDialog) {
 	// console.log(gymBackup);
 	// $scope.save = function() {
@@ -56324,7 +56664,7 @@ module.exports = function($scope,bruno,$mdDialog) {
 	};
 };
 
-},{}],70:[function(require,module,exports){
+},{}],71:[function(require,module,exports){
 module.exports = function($scope,FBURL, $window, $firebaseArray,exercisePatternModel) {
 
 	$scope.bindModel = exercisePatternModel.bindModel;
@@ -56335,7 +56675,7 @@ module.exports = function($scope,FBURL, $window, $firebaseArray,exercisePatternM
 
 };
 
-},{}],71:[function(require,module,exports){
+},{}],72:[function(require,module,exports){
 module.exports = angular.module('user',[])
 
 		.factory('exercisePatternModel', require('./services/exercisePatternModel.js'))
@@ -56350,7 +56690,7 @@ module.exports = angular.module('user',[])
 		// .factory('userModel', require('./services/userModel.js'))
 		// .factory('RestangularCustom', require('./services/restangularCustom.js'));
 
-},{"./controllers/gymAdminOwnerController.js":64,"./controllers/gymAdminStaffController.js":65,"./controllers/ownerAdminDialogController.js":66,"./controllers/planController.js":67,"./controllers/scheduleController.js":68,"./controllers/staffAdminDialogController.js":69,"./controllers/trainAdminExercisesController.js":70,"./services/exercisePatternModel.js":72}],72:[function(require,module,exports){
+},{"./controllers/gymAdminOwnerController.js":65,"./controllers/gymAdminStaffController.js":66,"./controllers/ownerAdminDialogController.js":67,"./controllers/planController.js":68,"./controllers/scheduleController.js":69,"./controllers/staffAdminDialogController.js":70,"./controllers/trainAdminExercisesController.js":71,"./services/exercisePatternModel.js":73}],73:[function(require,module,exports){
 module.exports = function (fbUtil,$mdDialog, $mdToast,$firebaseArray,FBURL) {
 
 	var bindModel = {
@@ -56428,7 +56768,7 @@ module.exports = function (fbUtil,$mdDialog, $mdToast,$firebaseArray,FBURL) {
 	};
 };
 
-},{}],73:[function(require,module,exports){
+},{}],74:[function(require,module,exports){
 (function (Buffer){
 
 module.exports = {
@@ -56620,4 +56960,4 @@ module.exports = {
 };
 
 }).call(this,require("buffer").Buffer)
-},{"buffer":1}]},{},[26]);
+},{"buffer":1}]},{},[27]);

@@ -1,6 +1,6 @@
 var fs = require('fs');
 
-module.exports = function ($stateProvider,$compileProvider,$animateProvider,$locationProvider,$urlRouterProvider,$breadcrumbProvider,ChartJsProvider, $mdThemingProvider) {
+module.exports = function ($stateProvider,cfpLoadingBarProvider,$compileProvider,$animateProvider,$locationProvider,$urlRouterProvider,$breadcrumbProvider,ChartJsProvider, $mdThemingProvider) {
 	$locationProvider.html5Mode(false);
 	$urlRouterProvider.otherwise('/user/12/training-history');
 	// $urlRouterProvider.when('/home', '/home/index');
@@ -91,6 +91,9 @@ module.exports = function ($stateProvider,$compileProvider,$animateProvider,$loc
 
 	// User em modo production para ganho de performance
 	// $compileProvider.debugInfoEnabled(false);
+
+	// cfpLoadingBarProvider.includeBar = false;
+	cfpLoadingBarProvider.includeSpinner = false;
 
     ChartJsProvider.setOptions({
       colours: ['#2196F3', '#BBDEFB'],

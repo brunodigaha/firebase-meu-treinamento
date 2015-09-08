@@ -40,6 +40,7 @@
     "angular": "./public/bower_components/angular/angular.js",
     "angularCookies": "./public/bower_components/angular-cookies/angular-cookies.min.js",
     "angularTooltips": "./public/bower_components/angular-tooltips/dist/angular-tooltips.min.js",
+    "angularLoadingBar": "./public/bower_components/angular-loading-bar/src/loading-bar.js",
     "chart": "./public/bower_components/Chart.js/Chart.min.js",
     "angularChart": "./public/bower_components/angular-chart.js/dist/angular-chart.min.js",
     "angularSortableView": "./public/bower_components/angular-sortable-view/src/angular-sortable-view.min.js",
@@ -70,6 +71,10 @@
     },
     "angularSortableView": {
       "exports": "angular.module('angular-sortable-view')",
+      "depends": "angular"
+    },
+    "angularLoadingBar": {
+      "exports": "angular.module('angular-loading-bar')",
       "depends": "angular"
     },
     "angularScroll": {
