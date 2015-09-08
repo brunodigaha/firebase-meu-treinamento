@@ -1,4 +1,4 @@
-module.exports = function($scope,FBURL,$firebaseArray, coreEventsService, $mdDialog, $mdToast, $animate) {
+module.exports = function($scope,cfpLoadingBar,FBURL,$firebaseArray, coreEventsService, $mdDialog, $mdToast, $animate) {
 	var coreEvents = $scope.coreEvents = coreEventsService;
 	// $scope.user = RestangularCustom.all('usuario').getList().$object;
 	$scope.doSecondaryAction = function(event) {
@@ -28,8 +28,13 @@ module.exports = function($scope,FBURL,$firebaseArray, coreEventsService, $mdDia
 	};	
 
 
+	cfpLoadingBar.start();
 	var ref = new Firebase(FBURL);
 	var users = ref.child("users");
 	$scope.users_opened  = $firebaseArray(users);
+	$scope.users_opened.$loaded()
+		.then(function(){
+			cfpLoadingBar.complete();
+		});
 
 };
