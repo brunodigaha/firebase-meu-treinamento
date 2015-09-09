@@ -1,2 +1,13 @@
 section.gym-content-members-wrap
-	p Alunos
+	section.gym-content-members-add-action
+		md-button(class="md-raised md-primary" title= "Adicionar Funcionário" ng-click="staffDialog($event)") 
+			ng-md-icon(icon="add_circle_outline" style="fill:white"  size="25")
+			| Funcionário
+	section.gym-content-members-search
+		md-input-container(md-no-float='')
+			input(placeholder='Pesquisar Funcionário' ng-model="bindModel.groupName")
+	section.gym-content-members-content-wrap
+		section.gym-content-members-content
+			ul.gym-content-members-list
+				li.gym-content-members-item(ng-repeat="n in [1,2,3,4,5,6,7] track by $index" class="angular-animate")
+					ds-user

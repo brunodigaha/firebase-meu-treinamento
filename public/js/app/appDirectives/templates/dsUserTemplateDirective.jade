@@ -1,4 +1,14 @@
 section.ds-user
 	section.ds-user-content
-		p teste
-		
+		section.ds-user-item--image
+			img(ng-src="https://www.ucarecdn.com/ae73a3d6-f816-4a0e-9d21-18528234b2cc/-/crop/175x175/89,0/-/preview/53x53/"  holder='holder.js/53x53?auto=yes&theme=sky&text=BRU')
+		section.ds-user-item--name
+			p Bruno Alexandre
+			span.ds-user-item--type Professor
+		section.ds-user-item--switch
+			md-switch.md-primary(md-no-ink='' title="{{active}}" aria-label='ativar Professor' ng-init='active=true' ng-model='active')
+				// | Switch (md-primary): No Ink
+		section.ds-user-item--edit
+			ng-md-icon(icon="mode_edit"  tooltip-delay="900" title="Editar Funcionário" tooltip-size="small" style="fill:grey"  size="25")
+		section.ds-user-item--delete
+			ng-md-icon(icon="clear" tooltips  tooltip-lazy="true"  tooltip-title="Excluir Funcionário" tooltip-size="small" style="fill:grey"  size="25")

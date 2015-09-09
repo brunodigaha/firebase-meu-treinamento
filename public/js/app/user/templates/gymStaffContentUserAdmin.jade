@@ -9,16 +9,5 @@ section.gym-content-staff-wrap
 	section.gym-content-staff-content-wrap
 		section.gym-content-staff-content
 			ul.gym-content-staff-list
-				li.gym-content-staff-item(ng-repeat="n in lista track by $index")
-					section.gym-content-staff-item--image
-						img(ng-src="https://www.ucarecdn.com/ae73a3d6-f816-4a0e-9d21-18528234b2cc/-/crop/175x175/89,0/-/preview/53x53/"  holder='holder.js/53x53?auto=yes&theme=sky&text=BRU')
-					section.gym-content-staff-item--name
-						p Bruno Alexandre
-						span.gym-content-staff-item--type Professor
-					section.gym-content-staff-item--switch
-						md-switch.md-primary(md-no-ink='' title="{{active}}" aria-label='ativar Professor' ng-init='active=true' ng-model='active')
-							// | Switch (md-primary): No Ink
-					section.gym-content-staff-item--edit
-						ng-md-icon(icon="mode_edit"  tooltip-delay="900" title="Editar Funcionário" tooltip-size="small" style="fill:grey"  size="25")
-					section.gym-content-staff-item--delete
-						ng-md-icon(icon="clear" tooltips  tooltip-lazy="true"  tooltip-title="Excluir Funcionário" tooltip-size="small" style="fill:grey"  size="25")
+				li.gym-content-staff-item(ng-repeat="n in lista track by $index" class="angular-animate")
+					ds-user
