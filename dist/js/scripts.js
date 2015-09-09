@@ -54971,7 +54971,7 @@ angular
 
 
 
-},{"./appDirectives":38,"./appRoutes.js":39,"./appRun.js":40,"./auth":43,"./core":51,"./train":63,"./user":72,"angular":21,"angularBreadcrumb":8,"angularChart":9,"angularCookies":10,"angularFire":22,"angularHolderjs":11,"angularIcons":13,"angularLoadingBar":12,"angularMaterial":14,"angularMessages":15,"angularScroll":16,"angularSortableView":17,"angularTooltips":18,"angularUploadcare":20,"modernizr":26,"ui-router":19}],28:[function(require,module,exports){
+},{"./appDirectives":39,"./appRoutes.js":40,"./appRun.js":41,"./auth":44,"./core":52,"./train":64,"./user":73,"angular":21,"angularBreadcrumb":8,"angularChart":9,"angularCookies":10,"angularFire":22,"angularHolderjs":11,"angularIcons":13,"angularLoadingBar":12,"angularMaterial":14,"angularMessages":15,"angularScroll":16,"angularSortableView":17,"angularTooltips":18,"angularUploadcare":20,"modernizr":26,"ui-router":19}],28:[function(require,module,exports){
 (function (Buffer){
 
 module.exports = function() {
@@ -55498,6 +55498,30 @@ module.exports = function() {
 
 }).call(this,require("buffer").Buffer)
 },{"buffer":1}],38:[function(require,module,exports){
+(function (Buffer){
+
+module.exports = function() {
+	return{
+		template: Buffer("CjxzZWN0aW9uIGNsYXNzPSJkcy11c2VyIj4KICA8c2VjdGlvbiBjbGFzcz0iZHMtdXNlci1jb250ZW50Ij4KICAgIDxwPnRlc3RlPC9wPgogIDwvc2VjdGlvbj4KPC9zZWN0aW9uPg==","base64"),
+		// scope: {
+		// },
+		// controller: function($scope,$log,$element,$attrs,exercisePatternModel){
+		// 	var exercisesItem = [];
+		// 	this.registerExerciseItem = function(exercise){
+		// 		exercisesItem.push(exercise);
+		// 	};
+		// 	this.close_all = function (){
+		// 		exercisesItem.forEach(function(exercise){
+		// 			exercise.isOpened = false;
+		// 		});
+		// 	};
+		// 	$scope.bindModel = exercisePatternModel.bindModel;
+		// }
+	};
+};
+
+}).call(this,require("buffer").Buffer)
+},{"buffer":1}],39:[function(require,module,exports){
 module.exports = angular.module('appDirectives',[])
 		.directive('dsTraining', require('./directives/dsTrainingDirective.js'))
 		.directive('dsExercisesSelectList', require('./directives/dsExercisesSelectListDirective.js'))
@@ -55508,9 +55532,10 @@ module.exports = angular.module('appDirectives',[])
 		.directive('dsSerie', require('./directives/dsSerieDirective.js'))
 		.directive('dsSerieEdit', require('./directives/dsSerieEditDirective.js'))
 		.directive('dsPlan', require('./directives/dsPlanDirective.js'))
+		.directive('dsUser', require('./directives/dsUserDirective.js'))
 		.directive('dsInfo', require('./directives/dsInfoDirective.js'));
 
-},{"./directives/dsExerciseDirective.js":28,"./directives/dsExerciseEditDirective.js":29,"./directives/dsExerciseSelectItemDirective.js":30,"./directives/dsExercisesDirective.js":31,"./directives/dsExercisesSelectListDirective.js":32,"./directives/dsInfoDirective.js":33,"./directives/dsPlanDirective.js":34,"./directives/dsSerieDirective.js":35,"./directives/dsSerieEditDirective.js":36,"./directives/dsTrainingDirective.js":37}],39:[function(require,module,exports){
+},{"./directives/dsExerciseDirective.js":28,"./directives/dsExerciseEditDirective.js":29,"./directives/dsExerciseSelectItemDirective.js":30,"./directives/dsExercisesDirective.js":31,"./directives/dsExercisesSelectListDirective.js":32,"./directives/dsInfoDirective.js":33,"./directives/dsPlanDirective.js":34,"./directives/dsSerieDirective.js":35,"./directives/dsSerieEditDirective.js":36,"./directives/dsTrainingDirective.js":37,"./directives/dsUserDirective.js":38}],40:[function(require,module,exports){
 
 
 module.exports = function ($stateProvider,cfpLoadingBarProvider,$compileProvider,$animateProvider,$locationProvider,$urlRouterProvider,$breadcrumbProvider,ChartJsProvider, $mdThemingProvider) {
@@ -55614,7 +55639,7 @@ module.exports = function ($stateProvider,cfpLoadingBarProvider,$compileProvider
     });	
 };
 
-},{"./auth/authRoutes.js":41,"./core/coreRoutes.js":50,"./train/trainRoutes.js":64,"./user/userRoutes.js":74}],40:[function(require,module,exports){
+},{"./auth/authRoutes.js":42,"./core/coreRoutes.js":51,"./train/trainRoutes.js":65,"./user/userRoutes.js":75}],41:[function(require,module,exports){
 module.exports = function ($rootScope,UCURL,$location,$state,$stateParams,authModelService,coreEventsService) {
 
 	$rootScope.$state = $state;
@@ -55684,7 +55709,7 @@ module.exports = function ($rootScope,UCURL,$location,$state,$stateParams,authMo
 	// });
 };
 
-},{}],41:[function(require,module,exports){
+},{}],42:[function(require,module,exports){
 (function (Buffer){
 
 module.exports = {
@@ -55717,7 +55742,7 @@ module.exports = {
 
 
 }).call(this,require("buffer").Buffer)
-},{"buffer":1}],42:[function(require,module,exports){
+},{"buffer":1}],43:[function(require,module,exports){
 module.exports = function ($scope,$timeout,$location, authModelService,$firebaseArray,FBURL) {
 	$scope.email = null;
 	$scope.password = null;
@@ -55767,12 +55792,12 @@ module.exports = function ($scope,$timeout,$location, authModelService,$firebase
 	};
 };
 
-},{}],43:[function(require,module,exports){
+},{}],44:[function(require,module,exports){
 module.exports = angular.module('auth',[])
 			.factory('authModelService', require('./services/authModelService.js'))
 			.controller('loginController', require('./controllers/loginController.js'));
 
-},{"./controllers/loginController.js":42,"./services/authModelService.js":44}],44:[function(require,module,exports){
+},{"./controllers/loginController.js":43,"./services/authModelService.js":45}],45:[function(require,module,exports){
 module.exports = function ($firebaseAuth,FBURL) {
 	var ref = new Firebase(FBURL);
 	return $firebaseAuth(ref);
@@ -55842,7 +55867,7 @@ module.exports = function ($firebaseAuth,FBURL) {
 	// return authModel;
 };
 
-},{}],45:[function(require,module,exports){
+},{}],46:[function(require,module,exports){
 module.exports = function($scope,cfpLoadingBar,FBURL,$firebaseArray, coreEventsService, $mdDialog, $mdToast, $animate) {
 	var coreEvents = $scope.coreEvents = coreEventsService;
 	// $scope.user = RestangularCustom.all('usuario').getList().$object;
@@ -55884,7 +55909,7 @@ module.exports = function($scope,cfpLoadingBar,FBURL,$firebaseArray, coreEventsS
 
 };
 
-},{}],46:[function(require,module,exports){
+},{}],47:[function(require,module,exports){
 (function (Buffer){
 
 module.exports = function ($scope,$mdDialog,$location, coreEventsService, authModelService) {
@@ -55922,7 +55947,7 @@ module.exports = function ($scope,$mdDialog,$location, coreEventsService, authMo
 };
 
 }).call(this,require("buffer").Buffer)
-},{"buffer":1}],47:[function(require,module,exports){
+},{"buffer":1}],48:[function(require,module,exports){
 (function (Buffer){
 
 module.exports = function($scope,$mdDialog, $mdToast,$animate) {
@@ -55968,7 +55993,7 @@ module.exports = function($scope,$mdDialog, $mdToast,$animate) {
 };
 
 }).call(this,require("buffer").Buffer)
-},{"buffer":1}],48:[function(require,module,exports){
+},{"buffer":1}],49:[function(require,module,exports){
 module.exports = function($scope,$mdToast,$mdDialog,FBURL,$window,$firebaseObject) {
 	$scope.newUser = {
 		image:null,
@@ -56021,7 +56046,7 @@ module.exports = function($scope,$mdToast,$mdDialog,FBURL,$window,$firebaseObjec
 	};
 };
 
-},{}],49:[function(require,module,exports){
+},{}],50:[function(require,module,exports){
 module.exports = function($scope, coreEventsService,$state,$stateParams,$mdDialog) {
 	$scope.duracao=2;
 	$scope.frequencia=3;
@@ -56037,7 +56062,7 @@ module.exports = function($scope, coreEventsService,$state,$stateParams,$mdDialo
 
 };
 
-},{}],50:[function(require,module,exports){
+},{}],51:[function(require,module,exports){
 (function (Buffer){
 
 module.exports = {
@@ -56092,7 +56117,7 @@ module.exports = {
 
 
 }).call(this,require("buffer").Buffer)
-},{"buffer":1}],51:[function(require,module,exports){
+},{"buffer":1}],52:[function(require,module,exports){
 module.exports = angular.module('core',[])
 		.controller('headerController', require('./controllers/headerController.js'))
 		.controller('searchController', require('./controllers/searchController.js'))
@@ -56104,7 +56129,7 @@ module.exports = angular.module('core',[])
 		.factory('coreEventsService', require('./services/coreEventsService.js'));
 
 
-},{"./controllers/asideController.js":45,"./controllers/headerController.js":46,"./controllers/searchController.js":47,"./controllers/searchDialogController.js":48,"./controllers/trainDialogController.js":49,"./services/coreEventsService.js":52,"./services/fbUtil.js":53}],52:[function(require,module,exports){
+},{"./controllers/asideController.js":46,"./controllers/headerController.js":47,"./controllers/searchController.js":48,"./controllers/searchDialogController.js":49,"./controllers/trainDialogController.js":50,"./services/coreEventsService.js":53,"./services/fbUtil.js":54}],53:[function(require,module,exports){
 module.exports = function () {
 	var eventsService = {
 		search: false,
@@ -56132,7 +56157,7 @@ module.exports = function () {
 	return eventsService;
 };
 
-},{}],53:[function(require,module,exports){
+},{}],54:[function(require,module,exports){
 module.exports = function (FBURL,$window, $q) {
 
 	var utils = {
@@ -56180,7 +56205,7 @@ module.exports = function (FBURL,$window, $q) {
 	}
 };
 
-},{}],54:[function(require,module,exports){
+},{}],55:[function(require,module,exports){
 module.exports = function($scope, coreEventsService,$state,$stateParams,$mdDialog) {
 	$scope.hide = function() {
 		$mdDialog.hide();
@@ -56193,13 +56218,13 @@ module.exports = function($scope, coreEventsService,$state,$stateParams,$mdDialo
 	};
 };
 
-},{}],55:[function(require,module,exports){
+},{}],56:[function(require,module,exports){
 module.exports = function($scope) {
 	$scope.duracao = 3;
 	$scope.frequencia =4;
 };
 
-},{}],56:[function(require,module,exports){
+},{}],57:[function(require,module,exports){
 (function (Buffer){
 
 module.exports = function($scope,$timeout,$q,$log, coreEventsService,$state,$stateParams,$mdDialog) {
@@ -56418,17 +56443,17 @@ module.exports = function($scope,$timeout,$q,$log, coreEventsService,$state,$sta
 };
 
 }).call(this,require("buffer").Buffer)
-},{"buffer":1}],57:[function(require,module,exports){
+},{"buffer":1}],58:[function(require,module,exports){
 module.exports = function($scope) {
 
 };
 
-},{}],58:[function(require,module,exports){
+},{}],59:[function(require,module,exports){
 module.exports = function ($scope) {
 
 };
 
-},{}],59:[function(require,module,exports){
+},{}],60:[function(require,module,exports){
 module.exports = function($scope, coreEventsService,$state,$stateParams,$mdDialog) {
 	$scope.hide = function() {
 		$mdDialog.hide();
@@ -56449,7 +56474,7 @@ module.exports = function($scope, coreEventsService,$state,$stateParams,$mdDialo
 
 };
 
-},{}],60:[function(require,module,exports){
+},{}],61:[function(require,module,exports){
 module.exports =  function($scope,$mdBottomSheet,$timeout, coreEventsService,$state,$stateParams) {
 	$scope.params = $stateParams;
 	$scope.state = $state.current;
@@ -56457,9 +56482,9 @@ module.exports =  function($scope,$mdBottomSheet,$timeout, coreEventsService,$st
 	// $scope.eventsService= eventsService;
 };
 
-},{}],61:[function(require,module,exports){
-arguments[4][57][0].apply(exports,arguments)
-},{"dup":57}],62:[function(require,module,exports){
+},{}],62:[function(require,module,exports){
+arguments[4][58][0].apply(exports,arguments)
+},{"dup":58}],63:[function(require,module,exports){
 module.exports = function($scope) {
 	$scope.train_menu= {menu: false};
 	$scope.close_train_menu = function(){
@@ -56471,7 +56496,7 @@ module.exports = function($scope) {
 
 };
 
-},{}],63:[function(require,module,exports){
+},{}],64:[function(require,module,exports){
 module.exports = angular.module('train',[])
 		.controller('listTrainingController', require('./controllers/listTrainingController.js'))
 		.controller('trainingTrainingController', require('./controllers/trainingTrainingController.js'))
@@ -56483,7 +56508,7 @@ module.exports = angular.module('train',[])
 		.controller('insertTrainingDialogController', require('./controllers/insertTrainingDialogController.js'))
 		.controller('ImportDialogController', require('./controllers/ImportDialogController.js'));
 
-},{"./controllers/ImportDialogController.js":54,"./controllers/addPlanController.js":55,"./controllers/addTrainingController.js":56,"./controllers/collectionTrainingController.js":57,"./controllers/historyTrainingController.js":58,"./controllers/insertTrainingDialogController.js":59,"./controllers/listTrainingController.js":60,"./controllers/plansController.js":61,"./controllers/trainingTrainingController.js":62}],64:[function(require,module,exports){
+},{"./controllers/ImportDialogController.js":55,"./controllers/addPlanController.js":56,"./controllers/addTrainingController.js":57,"./controllers/collectionTrainingController.js":58,"./controllers/historyTrainingController.js":59,"./controllers/insertTrainingDialogController.js":60,"./controllers/listTrainingController.js":61,"./controllers/plansController.js":62,"./controllers/trainingTrainingController.js":63}],65:[function(require,module,exports){
 (function (Buffer){
 
 module.exports = {
@@ -56608,7 +56633,7 @@ module.exports = {
 };
 
 }).call(this,require("buffer").Buffer)
-},{"buffer":1}],65:[function(require,module,exports){
+},{"buffer":1}],66:[function(require,module,exports){
 (function (Buffer){
 
 module.exports = function($scope,$timeout,cfpLoadingBar,fbUtil,$mdDialog) {
@@ -56673,7 +56698,7 @@ module.exports = function($scope,$timeout,cfpLoadingBar,fbUtil,$mdDialog) {
 };
 
 }).call(this,require("buffer").Buffer)
-},{"buffer":1}],66:[function(require,module,exports){
+},{"buffer":1}],67:[function(require,module,exports){
 (function (Buffer){
 
 module.exports = function($scope,$timeout,fbUtil,$mdDialog) {
@@ -56701,7 +56726,7 @@ module.exports = function($scope,$timeout,fbUtil,$mdDialog) {
 };
 
 }).call(this,require("buffer").Buffer)
-},{"buffer":1}],67:[function(require,module,exports){
+},{"buffer":1}],68:[function(require,module,exports){
 module.exports = function($scope,$mdDialog) {
 	// console.log(gymBackup);
 	// $scope.save = function() {
@@ -56715,15 +56740,15 @@ module.exports = function($scope,$mdDialog) {
 	};
 };
 
-},{}],68:[function(require,module,exports){
+},{}],69:[function(require,module,exports){
 module.exports = function($scope) {
  $scope.labels = ["Dias Decorridos", "Dias Restantes"];
   $scope.data = [14,7];
 };
 
-},{}],69:[function(require,module,exports){
-arguments[4][57][0].apply(exports,arguments)
-},{"dup":57}],70:[function(require,module,exports){
+},{}],70:[function(require,module,exports){
+arguments[4][58][0].apply(exports,arguments)
+},{"dup":58}],71:[function(require,module,exports){
 module.exports = function($scope,bruno,$mdDialog) {
 	// console.log(gymBackup);
 	// $scope.save = function() {
@@ -56739,7 +56764,7 @@ module.exports = function($scope,bruno,$mdDialog) {
 	};
 };
 
-},{}],71:[function(require,module,exports){
+},{}],72:[function(require,module,exports){
 module.exports = function($scope,FBURL, $window, $firebaseArray,exercisePatternModel) {
 
 	$scope.bindModel = exercisePatternModel.bindModel;
@@ -56750,7 +56775,7 @@ module.exports = function($scope,FBURL, $window, $firebaseArray,exercisePatternM
 
 };
 
-},{}],72:[function(require,module,exports){
+},{}],73:[function(require,module,exports){
 module.exports = angular.module('user',[])
 
 		.factory('exercisePatternModel', require('./services/exercisePatternModel.js'))
@@ -56765,7 +56790,7 @@ module.exports = angular.module('user',[])
 		// .factory('userModel', require('./services/userModel.js'))
 		// .factory('RestangularCustom', require('./services/restangularCustom.js'));
 
-},{"./controllers/gymAdminOwnerController.js":65,"./controllers/gymAdminStaffController.js":66,"./controllers/ownerAdminDialogController.js":67,"./controllers/planController.js":68,"./controllers/scheduleController.js":69,"./controllers/staffAdminDialogController.js":70,"./controllers/trainAdminExercisesController.js":71,"./services/exercisePatternModel.js":73}],73:[function(require,module,exports){
+},{"./controllers/gymAdminOwnerController.js":66,"./controllers/gymAdminStaffController.js":67,"./controllers/ownerAdminDialogController.js":68,"./controllers/planController.js":69,"./controllers/scheduleController.js":70,"./controllers/staffAdminDialogController.js":71,"./controllers/trainAdminExercisesController.js":72,"./services/exercisePatternModel.js":74}],74:[function(require,module,exports){
 module.exports = function (fbUtil,$mdDialog, $mdToast,$firebaseArray,FBURL) {
 
 	var bindModel = {
@@ -56843,7 +56868,7 @@ module.exports = function (fbUtil,$mdDialog, $mdToast,$firebaseArray,FBURL) {
 	};
 };
 
-},{}],74:[function(require,module,exports){
+},{}],75:[function(require,module,exports){
 (function (Buffer){
 
 module.exports = {

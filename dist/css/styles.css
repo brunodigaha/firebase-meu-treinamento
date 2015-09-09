@@ -14166,6 +14166,47 @@ a:visited {
     line-height: 55px;
   }
 }
+.ds-user {
+  *zoom: 1;
+  float: left;
+  clear: none;
+  text-align: inherit;
+  width: 100%;
+  margin-left: 0%;
+  margin-right: 0%;
+  background: #f00;
+}
+.ds-user:before,
+.ds-user:after {
+  content: '';
+  display: table;
+}
+.ds-user:after {
+  clear: both;
+}
+.ds-user:last-child {
+  margin-right: 0%;
+}
+.ds-user .ds-user-content {
+  *zoom: 1;
+  float: left;
+  clear: none;
+  text-align: inherit;
+  width: 100%;
+  margin-left: 0%;
+  margin-right: 0%;
+}
+.ds-user .ds-user-content:before,
+.ds-user .ds-user-content:after {
+  content: '';
+  display: table;
+}
+.ds-user .ds-user-content:after {
+  clear: both;
+}
+.ds-user .ds-user-content:last-child {
+  margin-right: 0%;
+}
 .login-wrap {
   *zoom: 1;
   float: left;

@@ -8,4 +8,5 @@ module.exports = angular.module('appDirectives',[])
 		.directive('dsSerie', require('./directives/dsSerieDirective.js'))
 		.directive('dsSerieEdit', require('./directives/dsSerieEditDirective.js'))
 		.directive('dsPlan', require('./directives/dsPlanDirective.js'))
+		.directive('dsUser', require('./directives/dsUserDirective.js'))
 		.directive('dsInfo', require('./directives/dsInfoDirective.js'));
