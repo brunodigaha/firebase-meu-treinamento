@@ -18170,8 +18170,7 @@ md-dialog md-dialog-content .train-dialog-wrap .train-dialog-content .action but
 }
 .gym-content-members-wrap .gym-content-members-content-wrap .gym-content-members-content md-content.gym-content-members-scroll .gym-content-members-list .gym-content-members-item.ng-enter,
 .gym-content-members-wrap .gym-content-members-content-wrap .gym-content-members-content md-content.gym-content-members-scroll .gym-content-members-list .gym-content-members-item.ng-leave {
-  -webkit-animation: enter 600ms cubic-bezier(0.445, 0.05, 0.55, 0.95);
-  animation: enter 600ms cubic-bezier(0.445, 0.05, 0.55, 0.95);
+  animation: enter 600ms;
   display: block;
   position: relative;
 }
