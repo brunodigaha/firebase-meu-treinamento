@@ -1,11 +1,11 @@
 section.gym-content-members-wrap
 	section.gym-content-members-add-action
-		md-button(class="md-raised md-primary" title= "Adicionar Funcionário" ng-click="staffDialog($event)") 
+		md-button(class="md-raised md-primary" title= "Adicionar Funcionário" ng-click="newMemberDialog($event)") 
 			ng-md-icon(icon="add_circle_outline" style="fill:white"  size="25")
 			| Aluno
 	section.gym-content-members-search
 		md-input-container(md-no-float='')
-			input(placeholder='Pesquisar Aluno' ng-model="bindModel.groupName")
+			input(placeholder='Pesquisar Aluno' ng-model="member")
 	section.gym-content-members-content-wrap
 		section.gym-content-members-content
 			md-content.gym-content-members-scroll
@@ -21,7 +21,7 @@ section.gym-content-members-wrap
 							section.ds-user-item--switch
 								md-switch.md-primary(md-no-ink='' title="{{active}}" aria-label='ativar Professor' ng-init='active=true' ng-model='active')
 									// | Switch (md-primary): No Ink
-							section.ds-user-item--edit(ng-click="staffDialog($event)")
+							section.ds-user-item--edit(ng-click="editMemberDialog($event,'bruno')")
 								ng-md-icon(icon="mode_edit" title="Editar Funcionário" style="fill:grey"  size="25")
 							section.ds-user-item--delete
 								ng-md-icon(icon="clear" tooltip-lazy="true"  title="Excluir Funcionário" style="fill:grey"  size="25")

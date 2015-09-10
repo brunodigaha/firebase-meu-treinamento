@@ -1,13 +1,13 @@
 
 <section class="gym-content-members-wrap">
   <section class="gym-content-members-add-action">
-    <md-button title="Adicionar Funcionário" ng-click="staffDialog($event)" class="md-raised md-primary"> 
+    <md-button title="Adicionar Funcionário" ng-click="newMemberDialog($event)" class="md-raised md-primary"> 
       <ng-md-icon icon="add_circle_outline" style="fill:white" size="25"></ng-md-icon>Aluno
     </md-button>
   </section>
   <section class="gym-content-members-search">
     <md-input-container md-no-float="">
-      <input placeholder="Pesquisar Aluno" ng-model="bindModel.groupName"/>
+      <input placeholder="Pesquisar Aluno" ng-model="member"/>
     </md-input-container>
   </section>
   <section class="gym-content-members-content-wrap">
@@ -26,7 +26,7 @@
                   <!-- | Switch (md-primary): No Ink-->
                 </md-switch>
               </section>
-              <section ng-click="staffDialog($event)" class="ds-user-item--edit">
+              <section ng-click="editMemberDialog($event,'bruno')" class="ds-user-item--edit">
                 <ng-md-icon icon="mode_edit" title="Editar Funcionário" style="fill:grey" size="25"></ng-md-icon>
               </section>
               <section class="ds-user-item--delete">
