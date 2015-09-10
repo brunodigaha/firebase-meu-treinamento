@@ -14376,6 +14376,7 @@ a:visited {
   margin-left: 0%;
   margin-right: 0%;
   text-align: center;
+  cursor: pointer;
 }
 .ds-user .ds-user-content .ds-user-item--edit:before,
 .ds-user .ds-user-content .ds-user-item--edit:after {
@@ -14419,6 +14420,7 @@ a:visited {
   margin-left: 0%;
   margin-right: 0%;
   text-align: center;
+  cursor: pointer;
 }
 .ds-user .ds-user-content .ds-user-item--delete:before,
 .ds-user .ds-user-content .ds-user-item--delete:after {
@@ -17857,23 +17859,6 @@ md-dialog md-dialog-content .train-dialog-wrap .train-dialog-content .action but
   display: block;
   position: relative;
 }
-@-webkit-keyframes enter {
-  from {
-    opacity: 0;
-    height: 40px;
-    left: -90px;
-  }
-  75% {
-    opacity: 1;
-    left: 15px;
-    height: 50px;
-  }
-  to {
-    opacity: 1;
-    height: 60px;
-    left: 0px;
-  }
-}
 .gym-content-staff-wrap .gym-content-staff-content-wrap .gym-content-staff-content ul.gym-content-staff-list li.gym-content-staff-item.mg-leave.ng-leave-active,
 .gym-content-staff-wrap .gym-content-staff-content-wrap .gym-content-staff-content ul.gym-content-staff-list li.gym-content-staff-item.ng-enter {
   -webkit-transform: rotateX(-180deg) translatez(30px);
@@ -17893,6 +17878,70 @@ md-dialog md-dialog-content .train-dialog-wrap .train-dialog-content .action but
   transform: rotateX(0deg) translatez(30px);
   opacity: 1;
   height: 30px;
+}
+@-moz-keyframes enter {
+  from {
+    opacity: 0;
+    height: 65px;
+    left: -90px;
+  }
+  75% {
+    opacity: 1;
+    left: 15px;
+  }
+  to {
+    opacity: 1;
+    height: 75px;
+    left: 0px;
+  }
+}
+@-webkit-keyframes enter {
+  from {
+    opacity: 0;
+    height: 65px;
+    left: -90px;
+  }
+  75% {
+    opacity: 1;
+    left: 15px;
+  }
+  to {
+    opacity: 1;
+    height: 75px;
+    left: 0px;
+  }
+}
+@-o-keyframes enter {
+  from {
+    opacity: 0;
+    height: 65px;
+    left: -90px;
+  }
+  75% {
+    opacity: 1;
+    left: 15px;
+  }
+  to {
+    opacity: 1;
+    height: 75px;
+    left: 0px;
+  }
+}
+@keyframes enter {
+  from {
+    opacity: 0;
+    height: 65px;
+    left: -90px;
+  }
+  75% {
+    opacity: 1;
+    left: 15px;
+  }
+  to {
+    opacity: 1;
+    height: 75px;
+    left: 0px;
+  }
 }
 .gym-content-members-wrap {
   *zoom: 1;

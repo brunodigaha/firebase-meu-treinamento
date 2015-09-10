@@ -8,7 +8,7 @@ section.ds-user
 		section.ds-user-item--switch
 			md-switch.md-primary(md-no-ink='' title="{{active}}" aria-label='ativar Professor' ng-init='active=true' ng-model='active')
 				// | Switch (md-primary): No Ink
-		section.ds-user-item--edit
+		section.ds-user-item--edit(ng-click="staffDialog($event)")
 			ng-md-icon(icon="mode_edit"  tooltip-delay="900" title="Editar Funcionário" tooltip-size="small" style="fill:grey"  size="25")
 		section.ds-user-item--delete
 			ng-md-icon(icon="clear" tooltips  tooltip-lazy="true"  tooltip-title="Excluir Funcionário" tooltip-size="small" style="fill:grey"  size="25")
