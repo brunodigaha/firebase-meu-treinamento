@@ -17415,6 +17415,11 @@ md-dialog md-dialog-content .train-dialog-wrap .train-dialog-content .action but
   height: 93vh;
   background-color: transparent;
 }
+@media only screen and (min-width: 400px) and (max-width: 1050px) and (orientation: portrait) {
+  .admin-wrap .admin-content-wrap md-card md-card-content md-content.administration-scroll {
+    height: 95vh;
+  }
+}
 .admin-wrap .admin-content-wrap md-card md-card-content md-content.administration-scroll .admin-content .admin-content-menu {
   *zoom: 1;
   float: left;
@@ -18130,7 +18135,12 @@ md-dialog md-dialog-content .train-dialog-wrap .train-dialog-content .action but
 }
 .gym-content-members-wrap .gym-content-members-content-wrap .gym-content-members-content md-content.gym-content-members-scroll {
   padding-top: 0.5em;
-  max-height: 63vh;
+  max-height: 62vh;
+}
+@media only screen and (min-width: 400px) and (max-width: 1050px) and (orientation: portrait) {
+  .gym-content-members-wrap .gym-content-members-content-wrap .gym-content-members-content md-content.gym-content-members-scroll {
+    max-height: 66vh;
+  }
 }
 .gym-content-members-wrap .gym-content-members-content-wrap .gym-content-members-content md-content.gym-content-members-scroll .gym-content-members-list {
   padding-left: 4em;
@@ -18539,47 +18549,6 @@ md-dialog md-dialog-content .train-dialog-wrap .train-dialog-content .action but
 .staff-admin-dialog-wrap .staff-admin-dialog-content:last-child {
   margin-right: 0%;
 }
-@media only screen and (max-width: 1200px) {
-  .staff-admin-dialog-wrap .staff-admin-dialog-content md-input-container {
-    padding-bottom: 10px;
-  }
-}
-.staff-admin-dialog-wrap .staff-admin-dialog-content .staff-admin-dialog-content--image {
-  *zoom: 1;
-  float: left;
-  clear: none;
-  text-align: inherit;
-  width: 41.66666666666667%;
-  margin-left: 0%;
-  margin-right: 0%;
-  box-sizing: border-box;
-  text-align: center;
-  padding-top: 1em;
-  padding-left: 1em;
-  padding-right: 1em;
-}
-.staff-admin-dialog-wrap .staff-admin-dialog-content .staff-admin-dialog-content--image:before,
-.staff-admin-dialog-wrap .staff-admin-dialog-content .staff-admin-dialog-content--image:after {
-  content: '';
-  display: table;
-}
-.staff-admin-dialog-wrap .staff-admin-dialog-content .staff-admin-dialog-content--image:after {
-  clear: both;
-}
-.staff-admin-dialog-wrap .staff-admin-dialog-content .staff-admin-dialog-content--image:last-child {
-  margin-right: 0%;
-}
-@media only screen and (min-width: 1050px) {
-  .staff-admin-dialog-wrap .staff-admin-dialog-content .staff-admin-dialog-content--image {
-    padding-left: 2em;
-    padding-right: 2em;
-  }
-}
-.staff-admin-dialog-wrap .staff-admin-dialog-content .staff-admin-dialog-content--image img {
-  max-width: 90%;
-  display: inline-block;
-  border: 1px solid #e0e0e0;
-}
 .staff-admin-dialog-wrap .staff-admin-dialog-content .staff-admin-dialog-content--perfil {
   *zoom: 1;
   float: left;
@@ -18639,6 +18608,42 @@ md-dialog md-dialog-content .train-dialog-wrap .train-dialog-content .action but
 }
 .staff-admin-dialog-wrap .staff-admin-dialog-content .staff-admin-dialog-content--perfil .staff-admin-dialog-content--surname:last-child {
   margin-right: 0%;
+}
+.staff-admin-dialog-wrap .staff-admin-dialog-content .staff-admin-dialog-content--image {
+  *zoom: 1;
+  float: left;
+  clear: none;
+  text-align: inherit;
+  width: 41.66666666666667%;
+  margin-left: 0%;
+  margin-right: 0%;
+  box-sizing: border-box;
+  text-align: center;
+  padding-top: 1em;
+  padding-left: 1em;
+  padding-right: 1em;
+}
+.staff-admin-dialog-wrap .staff-admin-dialog-content .staff-admin-dialog-content--image:before,
+.staff-admin-dialog-wrap .staff-admin-dialog-content .staff-admin-dialog-content--image:after {
+  content: '';
+  display: table;
+}
+.staff-admin-dialog-wrap .staff-admin-dialog-content .staff-admin-dialog-content--image:after {
+  clear: both;
+}
+.staff-admin-dialog-wrap .staff-admin-dialog-content .staff-admin-dialog-content--image:last-child {
+  margin-right: 0%;
+}
+@media only screen and (min-width: 1050px) {
+  .staff-admin-dialog-wrap .staff-admin-dialog-content .staff-admin-dialog-content--image {
+    padding-left: 2em;
+    padding-right: 2em;
+  }
+}
+.staff-admin-dialog-wrap .staff-admin-dialog-content .staff-admin-dialog-content--image img {
+  max-width: 90%;
+  display: inline-block;
+  border: 1px solid #e0e0e0;
 }
 .staff-admin-dialog-wrap .staff-admin-dialog-content .staff-admin-dialog-content--email {
   *zoom: 1;

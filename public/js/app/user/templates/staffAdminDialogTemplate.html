@@ -2,22 +2,19 @@
 <md-dialog flex="85" aria-label="funcionário">
   <md-toolbar md-theme="default"> 
     <div class="md-toolbar-tools">
-      <h1>Adicionar Funcionário</h1><span flex=""></span>
-      <md-button ng-click="cancel()">Fechar</md-button>
+      <h1>{{::mode}} de Funcionário</h1><span flex=""></span>
+      <md-button ng-click="cancel()">Cancelar</md-button>
       <!-- ng-md-icon(icon="close" ng-click="answer('not applicable')" style="fill:white" size="25")-->
     </div>
   </md-toolbar>
   <md-dialog-content>
     <section class="staff-admin-dialog-wrap">
       <section class="staff-admin-dialog-content">
-        <section class="staff-admin-dialog-content--image"><img ng-src="https://www.ucarecdn.com/ae73a3d6-f816-4a0e-9d21-18528234b2cc/-/crop/175x175/89,0/-/preview/100x100/" holder="holder.js/100x100?auto=yes&amp;theme=sky&amp;text=BRU"/>
-          <uploadcare-widget ng-model="object.image.info.uuid" data-public-key="eb39c5def657fcd88946" data-locale="pt" data-tabs="file facebook gdrive dropbox instagram evernote flickr skydrive" data-images-only="true" data-path-value="true" data-preview-step="true" data-clearable="true" data-multiple="false" data-crop="4:4" on-upload-complete="onUCUploadComplete(info)" on-widget-ready="onUCWidgetReady(widget)" value="{{ object.image.info.cdnUrl }}"></uploadcare-widget>
-        </section>
         <section class="staff-admin-dialog-content--perfil">
           <section class="staff-admin-dialog-content--name">
             <md-input-container>
               <label>Nome Funcionário</label>
-              <input md-maxlength="20" required="required" name="name" ng-change="change('staff')" ng-model="staff.name"/>
+              <input md-maxlength="20" required="required" name="name" ng-change="change('name')" ng-model="staff.name"/>
               <div ng-messages="staffForm.name.$error" role="alert">
                 <div ng-if="ishowRequiredError">
                   <div ng-message="required">Este campo é obrigatório.</div>
@@ -29,8 +26,8 @@
           <section class="staff-admin-dialog-content--surname">
             <md-input-container>
               <label>Sobrenome</label>
-              <input md-maxlength="20" required="required" name="name" ng-change="change('staff')" ng-model="staff.name"/>
-              <div ng-messages="staffForm.name.$error" role="alert">
+              <input md-maxlength="20" required="required" name="surname" ng-change="change('surname')" ng-model="staff.surname"/>
+              <div ng-messages="staffForm.surname.$error" role="alert">
                 <div ng-if="ishowRequiredError">
                   <div ng-message="required">Este campo é obrigatório.</div>
                 </div>
@@ -39,11 +36,14 @@
             </md-input-container>
           </section>
         </section>
+        <section class="staff-admin-dialog-content--image"><img ng-src="https://www.ucarecdn.com/ae73a3d6-f816-4a0e-9d21-18528234b2cc/-/crop/175x175/89,0/-/preview/100x100/" holder="holder.js/100x100?auto=yes&amp;theme=sky&amp;text=BRU"/>
+          <uploadcare-widget ng-model="object.image.info.uuid" ng-change="change('image')" data-public-key="eb39c5def657fcd88946" data-locale="pt" data-tabs="file facebook gdrive dropbox instagram evernote flickr skydrive" data-images-only="true" data-path-value="true" data-preview-step="true" data-clearable="true" data-multiple="false" data-crop="4:4" on-upload-complete="onUCUploadComplete(info)" on-widget-ready="onUCWidgetReady(widget)" value="{{ object.image.info.cdnUrl }}"></uploadcare-widget>
+        </section>
         <section class="staff-admin-dialog-content--email">
           <md-input-container>
             <label>Email</label>
-            <input md-maxlength="30" required="required" name="name" ng-change="change('staff')" ng-model="staff.email"/>
-            <div ng-messages="staffForm.name.$error" role="alert">
+            <input md-maxlength="30" required="required" name="email" ng-change="change('email')" ng-model="staff.email"/>
+            <div ng-messages="staffForm.email.$error" role="alert">
               <div ng-if="ishowRequiredError">
                 <div ng-message="required">Este campo é obrigatório.</div>
               </div>
@@ -54,8 +54,8 @@
         <section class="staff-admin-dialog-content--birthday">
           <md-input-container>
             <label>Data Nascimento</label>
-            <input type="date" required="required" name="name" ng-change="change('staff')" ng-model="staff.birthday"/>
-            <div ng-messages="staffForm.name.$error" role="alert">
+            <input type="date" required="required" name="birthday" ng-change="change('birthday')" ng-model="staff.birthday"/>
+            <div ng-messages="staffForm.birthday.$error" role="alert">
               <div ng-if="ishowRequiredError">
                 <div ng-message="required">Este campo é obrigatório.</div>
               </div>
@@ -66,8 +66,8 @@
         <section class="staff-admin-dialog-content--phone">
           <md-input-container>
             <label>Celular</label>
-            <input type="number" md-maxlength="10" required="required" name="name" ng-change="change('staff')" ng-model="staff.phone"/>
-            <div ng-messages="staffForm.name.$error" role="alert">
+            <input md-maxlength="10" required="required" name="phone" ng-change="change('phone')" ng-model="staff.phone"/>
+            <div ng-messages="staffForm.phone.$error" role="alert">
               <div ng-if="ishowRequiredError">
                 <div ng-message="required">Este campo é obrigatório.</div>
               </div>
@@ -77,9 +77,9 @@
         </section>
         <section class="staff-admin-dialog-content--permission">
           <p class="staff-admin-dialog-content--permission-title">Cargo:</p>
-          <md-radio-group ng-model="staff.permission">
-            <md-radio-button value="Administrador" class="md-primary">Administrador</md-radio-button>
-            <md-radio-button value="Professor" class="md-primary">Professor</md-radio-button>
+          <md-radio-group ng-model="staff.permission" ng-change="change('permission')">
+            <md-radio-button value="admin" class="md-primary">Administrador</md-radio-button>
+            <md-radio-button value="teacher" class="md-primary">Professor</md-radio-button>
           </md-radio-group>
         </section>
       </section>
