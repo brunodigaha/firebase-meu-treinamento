@@ -1,20 +1,4 @@
 
 <section class="ds-user">
-  <section class="ds-user-content">
-    <section class="ds-user-item--image"><img ng-src="https://www.ucarecdn.com/ae73a3d6-f816-4a0e-9d21-18528234b2cc/-/crop/175x175/89,0/-/preview/53x53/" holder="holder.js/53x53?auto=yes&amp;theme=sky&amp;text=BRU"/></section>
-    <section class="ds-user-item--name">
-      <p>Bruno Alexandre</p><span class="ds-user-item--type">Professor</span>
-    </section>
-    <section class="ds-user-item--switch">
-      <md-switch md-no-ink="" title="{{active}}" aria-label="ativar Professor" ng-init="active=true" ng-model="active" class="md-primary">
-        <!-- | Switch (md-primary): No Ink-->
-      </md-switch>
-    </section>
-    <section ng-click="staffDialog($event)" class="ds-user-item--edit">
-      <ng-md-icon icon="mode_edit" tooltip-delay="900" title="Editar Funcionário" tooltip-size="small" style="fill:grey" size="25"></ng-md-icon>
-    </section>
-    <section class="ds-user-item--delete">
-      <ng-md-icon icon="clear" tooltips="tooltips" tooltip-lazy="true" tooltip-title="Excluir Funcionário" tooltip-size="small" style="fill:grey" size="25"></ng-md-icon>
-    </section>
-  </section>
+  <section ng-transclude="ng-transclude" class="ds-user-content"></section>
 </section>

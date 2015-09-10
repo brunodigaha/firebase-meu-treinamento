@@ -7,7 +7,7 @@
   </section>
   <section class="gym-content-members-search">
     <md-input-container md-no-float="">
-      <input placeholder="Pesquisar Funcionário" ng-model="bindModel.groupName"/>
+      <input placeholder="Pesquisar Aluno" ng-model="bindModel.groupName"/>
     </md-input-container>
   </section>
   <section class="gym-content-members-content-wrap">
@@ -15,7 +15,25 @@
       <md-content class="gym-content-members-scroll">
         <section class="gym-content-members-list">
           <section ng-repeat="n in [1,2,3,4,5,6,7,8,9,10,11,12] track by $index" class="gym-content-members-item angular-animate">
-            <ds-user></ds-user>
+            <ds-user>
+              <section class="ds-user-item--image"><img ng-src="https://www.ucarecdn.com/ae73a3d6-f816-4a0e-9d21-18528234b2cc/-/crop/175x175/89,0/-/preview/53x53/" holder="holder.js/53x53?auto=yes&amp;theme=sky&amp;text=BRU"/></section>
+              <section class="ds-user-item--name">
+                <p>Bruno Alexandre</p><span class="ds-user-item--type">Professor</span>
+              </section>
+              <section class="ds-user-item--switch">
+                <md-switch md-no-ink="" title="{{active}}" aria-label="ativar Professor" ng-init="active=true" ng-model="active" class="md-primary">
+                  <!-- | Switch (md-primary): No Ink-->
+                </md-switch>
+              </section>
+              <section ng-click="staffDialog($event)" class="ds-user-item--edit">
+                <ng-md-icon icon="mode_edit" title="Editar Funcionário" style="fill:grey" size="25"></ng-md-icon>
+              </section>
+              <section class="ds-user-item--delete">
+                <ng-md-icon icon="clear" tooltip-lazy="true" title="Excluir Funcionário" style="fill:grey" size="25"></ng-md-icon>
+              </section>
+              <!-- section.ds-user-item--delete-->
+              <!-- 	ng-md-icon(icon="clear" tooltips  tooltip-lazy="true"  tooltip-title="Excluir Funcionário" tooltip-size="small" style="fill:grey"  size="25")-->
+            </ds-user>
           </section>
         </section>
       </md-content>
