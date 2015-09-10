@@ -12,11 +12,13 @@
   </section>
   <section class="gym-content-members-content-wrap">
     <section class="gym-content-members-content">
-      <ul class="gym-content-members-list">
-        <li ng-repeat="n in [1,2,3,4,5,6,7] track by $index" class="gym-content-members-item angular-animate">
-          <ds-user></ds-user>
-        </li>
-      </ul>
+      <md-content class="gym-content-members-scroll">
+        <section class="gym-content-members-list">
+          <section ng-repeat="n in [1,2,3,4,5,6,7,8,9,10,11,12] track by $index" class="gym-content-members-item angular-animate">
+            <ds-user></ds-user>
+          </section>
+        </section>
+      </md-content>
     </section>
   </section>
 </section>

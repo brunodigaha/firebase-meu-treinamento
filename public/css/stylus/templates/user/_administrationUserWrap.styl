@@ -1,18 +1,18 @@
 .admin-wrap
 	col(12/12,gutter:0)
+	box-sizing border-box
 	height 100%
 	.admin-aside
 		col(2.5/12,gutter:0)
 		box-sizing border-box
 		height 100%
+		overflow-y auto
 		+desktop()
 			col(2/12,gutter:0)
 		+hd()
 			col(2/16,gutter:0)
-		overflow-y auto
-		border 1px solid palette('Grey','300')
+		// border-right 1px solid palette('Grey','300')
 		background-color white
-		position relative
 		.administration-action-back
 			height 3.8em
 			col(4/4,gutter:0)
@@ -100,12 +100,15 @@
 			padding-right 8em
 			padding-left 8em
 		md-card
-			min-height:97vh
-			// +tablet(orientation: portrait)
-			// 	min-height:98vh
 			md-card-content
-				.admin-content
-					.admin-content-menu
-						col(10/10,gutter:0)
-					.admin-content-menu-content
-						col(10/10,gutter:0)
+				+tablet()
+					padding-top 7px
+					padding-bottom 7px
+				md-content.administration-scroll
+					height 93vh
+					background-color transparent 
+					.admin-content
+						.admin-content-menu
+							col(10/10,gutter:0)
+						.admin-content-menu-content
+							col(10/10,gutter:0)

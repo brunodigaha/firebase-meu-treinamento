@@ -24,8 +24,9 @@ section.admin-wrap
 	section.admin-content-wrap
 		md-card
 			md-card-content
-				section.admin-content(ui-view="content-admin")
-					section.admin-content-menu(ui-view="admin-content-menu")
-						p Admin-content-menu-menu
-					section.admin-content-menu-content(ui-view="admin-content-menu-content")
-						p Admin-content-menu-content
+				md-content.administration-scroll
+					section.admin-content(ui-view="content-admin")
+						section.admin-content-menu(ui-view="admin-content-menu")
+							p Admin-content-menu-menu
+						section.admin-content-menu-content(ui-view="admin-content-menu-content")
+							p Admin-content-menu-content

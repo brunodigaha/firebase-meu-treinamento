@@ -53,64 +53,62 @@
 		margin-top 2em
 		.gym-content-members-content
 			col(12/12,gutter:0)
-			ul.gym-content-members-list
-				margin 0
-				padding 0
-				// margin-top .7em
-				padding-left 4em
-				padding-right 4em
-				+desktop()
-					padding-left 6em
-					padding-right 6em
-				+hd()
-					padding-left 10em
-					padding-right 10em
-				list-style none
-				li.gym-content-members-item
-					col(12/12,gutter:0)
-					&.ng-enter, 
-					&.ng-leave { 
-					-webkit-animation: enter 600ms cubic-bezier(0.445, 0.050, 0.550, 0.950);
-					animation: enter 600ms cubic-bezier(0.445, 0.050, 0.550, 0.950);
-					display: block;
-					position: relative;
-					} 
-					// @-webkit-keyframes enter {
-					// 	from {
-					// 		opacity: 0;
-					// 		height: 40px;
-					// 		left: -110px;
-					// 	}
-					// 	75% {
-					// 		left: 15px;
-					// 		height: 55px;
-					// 	}
-					// 	to {
-					// 		opacity: 1;
-					// 		height: 72px;
-					// 		left: 0px;
-					// 	}
-					// }
-					&.mg-leave.ng-leave-active,
-					&.ng-enter {
-						-webkit-transform: rotateX(-180deg) translatez(30px);
-						-moz-transform: rotateX(-180deg) translatez(30px);
-						-ms-transform: rotateX(-180deg) translatez(30px);
-						-o-transform: rotateX(-180deg) translatez(30px);
-						transform: rotateX(-180deg) translatez(30px);
-						opacity: 0;
-						height: 0px;
-					}        
-					 
-					&.ng-enter.ng-enter-active,
-					&.ng-leave {
-						-webkit-transform: rotateX(0deg) translatez(30px);
-						-moz-transform: rotateX(0deg) translatez(30px);
-						-ms-transform: rotateX(0deg) translatez(30px);
-						-o-transform: rotateX(0deg) translatez(30px);
-						transform: rotateX(0deg) translatez(30px);
-						opacity: 1;
-						height: 30px;
-					}
+			md-content.gym-content-members-scroll
+				max-height 50vh
+				.gym-content-members-list
+					padding-left 4em
+					padding-right 4em
+					+desktop()
+						padding-left 6em
+						padding-right 6em
+					+hd()
+						padding-left 10em
+						padding-right 10em
+					.gym-content-members-item
+						col(12/12,gutter:0)
+						&.ng-enter, 
+						&.ng-leave { 
+						-webkit-animation: enter 600ms cubic-bezier(0.445, 0.050, 0.550, 0.950);
+						animation: enter 600ms cubic-bezier(0.445, 0.050, 0.550, 0.950);
+						display: block;
+						position: relative;
+						} 
+						// @-webkit-keyframes enter {
+						// 	from {
+						// 		opacity: 0;
+						// 		height: 40px;
+						// 		left: -110px;
+						// 	}
+						// 	75% {
+						// 		left: 15px;
+						// 		height: 55px;
+						// 	}
+						// 	to {
+						// 		opacity: 1;
+						// 		height: 72px;
+						// 		left: 0px;
+						// 	}
+						// }
+						&.mg-leave.ng-leave-active,
+						&.ng-enter {
+							-webkit-transform: rotateX(-180deg) translatez(30px);
+							-moz-transform: rotateX(-180deg) translatez(30px);
+							-ms-transform: rotateX(-180deg) translatez(30px);
+							-o-transform: rotateX(-180deg) translatez(30px);
+							transform: rotateX(-180deg) translatez(30px);
+							opacity: 0;
+							height: 0px;
+						}        
+						 
+						&.ng-enter.ng-enter-active,
+						&.ng-leave {
+							-webkit-transform: rotateX(0deg) translatez(30px);
+							-moz-transform: rotateX(0deg) translatez(30px);
+							-ms-transform: rotateX(0deg) translatez(30px);
+							-o-transform: rotateX(0deg) translatez(30px);
+							transform: rotateX(0deg) translatez(30px);
+							opacity: 1;
+							height: 30px;
+						}
 
 
