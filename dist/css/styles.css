@@ -18716,6 +18716,221 @@ md-dialog md-dialog-content .train-dialog-wrap .train-dialog-content .action but
   color: #000;
   font-weight: bold;
 }
+.members-admin-dialog-wrap {
+  *zoom: 1;
+  float: left;
+  clear: none;
+  text-align: inherit;
+  width: 100%;
+  margin-left: 0%;
+  margin-right: 0%;
+  box-sizing: border-box;
+  padding-right: 1em;
+  padding-left: 1em;
+}
+.members-admin-dialog-wrap:before,
+.members-admin-dialog-wrap:after {
+  content: '';
+  display: table;
+}
+.members-admin-dialog-wrap:after {
+  clear: both;
+}
+.members-admin-dialog-wrap:last-child {
+  margin-right: 0%;
+}
+@media only screen and (min-width: 1050px) {
+  .members-admin-dialog-wrap {
+    padding-right: 4em;
+    padding-left: 4em;
+  }
+}
+@media only screen and (min-width: 1800px) {
+  .members-admin-dialog-wrap {
+    padding-right: 5em;
+    padding-left: 5em;
+  }
+}
+.members-admin-dialog-wrap .members-admin-dialog-content {
+  *zoom: 1;
+  float: left;
+  clear: none;
+  text-align: inherit;
+  width: 100%;
+  margin-left: 0%;
+  margin-right: 0%;
+}
+.members-admin-dialog-wrap .members-admin-dialog-content:before,
+.members-admin-dialog-wrap .members-admin-dialog-content:after {
+  content: '';
+  display: table;
+}
+.members-admin-dialog-wrap .members-admin-dialog-content:after {
+  clear: both;
+}
+.members-admin-dialog-wrap .members-admin-dialog-content:last-child {
+  margin-right: 0%;
+}
+.members-admin-dialog-wrap .members-admin-dialog-content .members-admin-dialog-content--perfil {
+  *zoom: 1;
+  float: left;
+  clear: none;
+  text-align: inherit;
+  width: 58.333333333333336%;
+  margin-left: 0%;
+  margin-right: 0%;
+}
+.members-admin-dialog-wrap .members-admin-dialog-content .members-admin-dialog-content--perfil:before,
+.members-admin-dialog-wrap .members-admin-dialog-content .members-admin-dialog-content--perfil:after {
+  content: '';
+  display: table;
+}
+.members-admin-dialog-wrap .members-admin-dialog-content .members-admin-dialog-content--perfil:after {
+  clear: both;
+}
+.members-admin-dialog-wrap .members-admin-dialog-content .members-admin-dialog-content--perfil:last-child {
+  margin-right: 0%;
+}
+.members-admin-dialog-wrap .members-admin-dialog-content .members-admin-dialog-content--perfil .members-admin-dialog-content--name {
+  *zoom: 1;
+  float: left;
+  clear: none;
+  text-align: inherit;
+  width: 100%;
+  margin-left: 0%;
+  margin-right: 0%;
+}
+.members-admin-dialog-wrap .members-admin-dialog-content .members-admin-dialog-content--perfil .members-admin-dialog-content--name:before,
+.members-admin-dialog-wrap .members-admin-dialog-content .members-admin-dialog-content--perfil .members-admin-dialog-content--name:after {
+  content: '';
+  display: table;
+}
+.members-admin-dialog-wrap .members-admin-dialog-content .members-admin-dialog-content--perfil .members-admin-dialog-content--name:after {
+  clear: both;
+}
+.members-admin-dialog-wrap .members-admin-dialog-content .members-admin-dialog-content--perfil .members-admin-dialog-content--name:last-child {
+  margin-right: 0%;
+}
+.members-admin-dialog-wrap .members-admin-dialog-content .members-admin-dialog-content--perfil .members-admin-dialog-content--surname {
+  *zoom: 1;
+  float: left;
+  clear: none;
+  text-align: inherit;
+  width: 100%;
+  margin-left: 0%;
+  margin-right: 0%;
+}
+.members-admin-dialog-wrap .members-admin-dialog-content .members-admin-dialog-content--perfil .members-admin-dialog-content--surname:before,
+.members-admin-dialog-wrap .members-admin-dialog-content .members-admin-dialog-content--perfil .members-admin-dialog-content--surname:after {
+  content: '';
+  display: table;
+}
+.members-admin-dialog-wrap .members-admin-dialog-content .members-admin-dialog-content--perfil .members-admin-dialog-content--surname:after {
+  clear: both;
+}
+.members-admin-dialog-wrap .members-admin-dialog-content .members-admin-dialog-content--perfil .members-admin-dialog-content--surname:last-child {
+  margin-right: 0%;
+}
+.members-admin-dialog-wrap .members-admin-dialog-content .members-admin-dialog-content--image {
+  *zoom: 1;
+  float: left;
+  clear: none;
+  text-align: inherit;
+  width: 41.66666666666667%;
+  margin-left: 0%;
+  margin-right: 0%;
+  box-sizing: border-box;
+  text-align: center;
+  padding-top: 1em;
+  padding-left: 1em;
+  padding-right: 1em;
+}
+.members-admin-dialog-wrap .members-admin-dialog-content .members-admin-dialog-content--image:before,
+.members-admin-dialog-wrap .members-admin-dialog-content .members-admin-dialog-content--image:after {
+  content: '';
+  display: table;
+}
+.members-admin-dialog-wrap .members-admin-dialog-content .members-admin-dialog-content--image:after {
+  clear: both;
+}
+.members-admin-dialog-wrap .members-admin-dialog-content .members-admin-dialog-content--image:last-child {
+  margin-right: 0%;
+}
+@media only screen and (min-width: 1050px) {
+  .members-admin-dialog-wrap .members-admin-dialog-content .members-admin-dialog-content--image {
+    padding-left: 2em;
+    padding-right: 2em;
+  }
+}
+.members-admin-dialog-wrap .members-admin-dialog-content .members-admin-dialog-content--image img {
+  max-width: 90%;
+  display: inline-block;
+  border: 1px solid #e0e0e0;
+}
+.members-admin-dialog-wrap .members-admin-dialog-content .members-admin-dialog-content--email {
+  *zoom: 1;
+  float: left;
+  clear: none;
+  text-align: inherit;
+  width: 100%;
+  margin-left: 0%;
+  margin-right: 0%;
+}
+.members-admin-dialog-wrap .members-admin-dialog-content .members-admin-dialog-content--email:before,
+.members-admin-dialog-wrap .members-admin-dialog-content .members-admin-dialog-content--email:after {
+  content: '';
+  display: table;
+}
+.members-admin-dialog-wrap .members-admin-dialog-content .members-admin-dialog-content--email:after {
+  clear: both;
+}
+.members-admin-dialog-wrap .members-admin-dialog-content .members-admin-dialog-content--email:last-child {
+  margin-right: 0%;
+}
+.members-admin-dialog-wrap .members-admin-dialog-content .members-admin-dialog-content--birthday {
+  *zoom: 1;
+  float: left;
+  clear: none;
+  text-align: inherit;
+  width: 50%;
+  margin-left: 0%;
+  margin-right: 0%;
+  box-sizing: border-box;
+  padding-right: 1em;
+}
+.members-admin-dialog-wrap .members-admin-dialog-content .members-admin-dialog-content--birthday:before,
+.members-admin-dialog-wrap .members-admin-dialog-content .members-admin-dialog-content--birthday:after {
+  content: '';
+  display: table;
+}
+.members-admin-dialog-wrap .members-admin-dialog-content .members-admin-dialog-content--birthday:after {
+  clear: both;
+}
+.members-admin-dialog-wrap .members-admin-dialog-content .members-admin-dialog-content--birthday:last-child {
+  margin-right: 0%;
+}
+.members-admin-dialog-wrap .members-admin-dialog-content .members-admin-dialog-content--phone {
+  *zoom: 1;
+  float: left;
+  clear: none;
+  text-align: inherit;
+  width: 50%;
+  margin-left: 0%;
+  margin-right: 0%;
+  box-sizing: border-box;
+  padding-left: 1em;
+}
+.members-admin-dialog-wrap .members-admin-dialog-content .members-admin-dialog-content--phone:before,
+.members-admin-dialog-wrap .members-admin-dialog-content .members-admin-dialog-content--phone:after {
+  content: '';
+  display: table;
+}
+.members-admin-dialog-wrap .members-admin-dialog-content .members-admin-dialog-content--phone:after {
+  clear: both;
+}
+.members-admin-dialog-wrap .members-admin-dialog-content .members-admin-dialog-content--phone:last-child {
+  margin-right: 0%;
+}
 .training {
   *zoom: 1;
   float: left;

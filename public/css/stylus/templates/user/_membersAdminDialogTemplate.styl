@@ -1,0 +1,46 @@
+.members-admin-dialog-wrap
+	col(12/12,gutter:0)
+	box-sizing border-box
+	padding-right 1em
+	padding-left 1em
+	+desktop()
+		padding-right 4em
+		padding-left 4em
+	+hd()
+		padding-right 5em
+		padding-left 5em
+	.members-admin-dialog-content
+		col(12/12,gutter:0)
+		// +below(1200px)
+		// 	md-input-container
+		// 		padding-bottom 10px
+		.members-admin-dialog-content--perfil
+			col(7/12,gutter:0)
+			.members-admin-dialog-content--name
+				col(7/7,gutter:0)
+			.members-admin-dialog-content--surname
+				col(7/7,gutter:0)
+		.members-admin-dialog-content--image
+			col(5/12,gutter:0)
+			box-sizing border-box
+			text-align center
+			padding-top 1em
+			padding-left 1em
+			padding-right 1em
+			+desktop()
+				padding-left 2em
+				padding-right 2em
+			img
+				max-width 90%
+				display inline-block
+				border 1px solid palette('Grey','300')
+		.members-admin-dialog-content--email
+			col(12/12,gutter:0)
+		.members-admin-dialog-content--birthday
+			col(6/12,gutter:0)
+			box-sizing border-box
+			padding-right 1em
+		.members-admin-dialog-content--phone
+			col(6/12,gutter:0)
+			box-sizing border-box
+			padding-left 1em

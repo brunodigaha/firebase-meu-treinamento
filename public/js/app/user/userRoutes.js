@@ -100,10 +100,8 @@ module.exports = {
 				label: 'Administração - Academia'
 			},
 			views: {
-				// controller: function($stateParams) {
-				// 	// expect($stateParams).toBe({userId: 12});
-				// },
 				'admin-content-menu-content@administration': {
+					controller:'gymAdminMembersController',
 					template: fs.readFileSync(__dirname + '/templates/gymMembersContentUserAdmin.html')  
 				}
 			},

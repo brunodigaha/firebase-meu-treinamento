@@ -54971,7 +54971,7 @@ angular
 
 
 
-},{"./appDirectives":39,"./appRoutes.js":40,"./appRun.js":41,"./auth":44,"./core":52,"./train":64,"./user":73,"angular":21,"angularBreadcrumb":8,"angularChart":9,"angularCookies":10,"angularFire":22,"angularHolderjs":11,"angularIcons":13,"angularLoadingBar":12,"angularMaterial":14,"angularMessages":15,"angularScroll":16,"angularSortableView":17,"angularTooltips":18,"angularUploadcare":20,"modernizr":26,"ui-router":19}],28:[function(require,module,exports){
+},{"./appDirectives":39,"./appRoutes.js":40,"./appRun.js":41,"./auth":44,"./core":52,"./train":64,"./user":75,"angular":21,"angularBreadcrumb":8,"angularChart":9,"angularCookies":10,"angularFire":22,"angularHolderjs":11,"angularIcons":13,"angularLoadingBar":12,"angularMaterial":14,"angularMessages":15,"angularScroll":16,"angularSortableView":17,"angularTooltips":18,"angularUploadcare":20,"modernizr":26,"ui-router":19}],28:[function(require,module,exports){
 (function (Buffer){
 
 module.exports = function() {
@@ -55639,7 +55639,7 @@ module.exports = function ($stateProvider,cfpLoadingBarProvider,$compileProvider
     });	
 };
 
-},{"./auth/authRoutes.js":42,"./core/coreRoutes.js":51,"./train/trainRoutes.js":65,"./user/userRoutes.js":75}],41:[function(require,module,exports){
+},{"./auth/authRoutes.js":42,"./core/coreRoutes.js":51,"./train/trainRoutes.js":65,"./user/userRoutes.js":77}],41:[function(require,module,exports){
 module.exports = function ($rootScope,UCURL,$location,$state,$stateParams,authModelService,coreEventsService) {
 
 	$rootScope.$state = $state;
@@ -56636,6 +56636,34 @@ module.exports = {
 },{"buffer":1}],66:[function(require,module,exports){
 (function (Buffer){
 
+module.exports = function($scope,$timeout,fbUtil,$mdDialog) {
+	$scope.staffDialog = function(ev) {
+		$mdDialog.show({
+			controller: 'membersAdminDialogController',
+			// scope: $scope,
+			// preserveScope: true,
+			locals: {bruno:"Alexandre"},
+			// bindToController: true,
+			template: Buffer("CjxtZC1kaWFsb2cgZmxleD0iODUiIGFyaWEtbGFiZWw9ImFsdW5vcyI+CiAgPG1kLXRvb2xiYXIgbWQtdGhlbWU9ImRlZmF1bHQiPiAKICAgIDxkaXYgY2xhc3M9Im1kLXRvb2xiYXItdG9vbHMiPgogICAgICA8aDE+QWRpY2lvbmFyIEFsdW5vczwvaDE+PHNwYW4gZmxleD0iIj48L3NwYW4+CiAgICAgIDxtZC1idXR0b24gbmctY2xpY2s9ImNhbmNlbCgpIj5GZWNoYXI8L21kLWJ1dHRvbj4KICAgICAgPCEtLSBuZy1tZC1pY29uKGljb249ImNsb3NlIiBuZy1jbGljaz0iYW5zd2VyKCdub3QgYXBwbGljYWJsZScpIiBzdHlsZT0iZmlsbDp3aGl0ZSIgc2l6ZT0iMjUiKS0tPgogICAgPC9kaXY+CiAgPC9tZC10b29sYmFyPgogIDxtZC1kaWFsb2ctY29udGVudD4KICAgIDxzZWN0aW9uIGNsYXNzPSJtZW1iZXJzLWFkbWluLWRpYWxvZy13cmFwIj4KICAgICAgPHNlY3Rpb24gY2xhc3M9Im1lbWJlcnMtYWRtaW4tZGlhbG9nLWNvbnRlbnQiPgogICAgICAgIDxzZWN0aW9uIGNsYXNzPSJtZW1iZXJzLWFkbWluLWRpYWxvZy1jb250ZW50LS1wZXJmaWwiPgogICAgICAgICAgPHNlY3Rpb24gY2xhc3M9Im1lbWJlcnMtYWRtaW4tZGlhbG9nLWNvbnRlbnQtLW5hbWUiPgogICAgICAgICAgICA8bWQtaW5wdXQtY29udGFpbmVyPgogICAgICAgICAgICAgIDxsYWJlbD5Ob21lIEFsdW5vPC9sYWJlbD4KICAgICAgICAgICAgICA8aW5wdXQgbWQtbWF4bGVuZ3RoPSIyMCIgcmVxdWlyZWQ9InJlcXVpcmVkIiBuYW1lPSJuYW1lIiBuZy1jaGFuZ2U9ImNoYW5nZSgnc3RhZmYnKSIgbmctbW9kZWw9InN0YWZmLm5hbWUiLz4KICAgICAgICAgICAgICA8ZGl2IG5nLW1lc3NhZ2VzPSJzdGFmZkZvcm0ubmFtZS4kZXJyb3IiIHJvbGU9ImFsZXJ0Ij4KICAgICAgICAgICAgICAgIDxkaXYgbmctaWY9ImlzaG93UmVxdWlyZWRFcnJvciI+CiAgICAgICAgICAgICAgICAgIDxkaXYgbmctbWVzc2FnZT0icmVxdWlyZWQiPkVzdGUgY2FtcG8gw6kgb2JyaWdhdMOzcmlvLjwvZGl2PgogICAgICAgICAgICAgICAgPC9kaXY+CiAgICAgICAgICAgICAgICA8ZGl2IG5nLW1lc3NhZ2U9Im1kLW1heGxlbmd0aCI+Tm9tZSBjb20gbm8gbcOheGltbyAzMCBjYXJhY3RlcmVzPC9kaXY+CiAgICAgICAgICAgICAgPC9kaXY+CiAgICAgICAgICAgIDwvbWQtaW5wdXQtY29udGFpbmVyPgogICAgICAgICAgPC9zZWN0aW9uPgogICAgICAgICAgPHNlY3Rpb24gY2xhc3M9Im1lbWJlcnMtYWRtaW4tZGlhbG9nLWNvbnRlbnQtLXN1cm5hbWUiPgogICAgICAgICAgICA8bWQtaW5wdXQtY29udGFpbmVyPgogICAgICAgICAgICAgIDxsYWJlbD5Tb2JyZW5vbWU8L2xhYmVsPgogICAgICAgICAgICAgIDxpbnB1dCBtZC1tYXhsZW5ndGg9IjIwIiByZXF1aXJlZD0icmVxdWlyZWQiIG5hbWU9Im5hbWUiIG5nLWNoYW5nZT0iY2hhbmdlKCdzdGFmZicpIiBuZy1tb2RlbD0ic3RhZmYuc3VybmFtZSIvPgogICAgICAgICAgICAgIDxkaXYgbmctbWVzc2FnZXM9InN0YWZmRm9ybS5uYW1lLiRlcnJvciIgcm9sZT0iYWxlcnQiPgogICAgICAgICAgICAgICAgPGRpdiBuZy1pZj0iaXNob3dSZXF1aXJlZEVycm9yIj4KICAgICAgICAgICAgICAgICAgPGRpdiBuZy1tZXNzYWdlPSJyZXF1aXJlZCI+RXN0ZSBjYW1wbyDDqSBvYnJpZ2F0w7NyaW8uPC9kaXY+CiAgICAgICAgICAgICAgICA8L2Rpdj4KICAgICAgICAgICAgICAgIDxkaXYgbmctbWVzc2FnZT0ibWQtbWF4bGVuZ3RoIj5Ob21lIGNvbSBubyBtw6F4aW1vIDMwIGNhcmFjdGVyZXM8L2Rpdj4KICAgICAgICAgICAgICA8L2Rpdj4KICAgICAgICAgICAgPC9tZC1pbnB1dC1jb250YWluZXI+CiAgICAgICAgICA8L3NlY3Rpb24+CiAgICAgICAgPC9zZWN0aW9uPgogICAgICAgIDxzZWN0aW9uIGNsYXNzPSJtZW1iZXJzLWFkbWluLWRpYWxvZy1jb250ZW50LS1pbWFnZSI+PGltZyBuZy1zcmM9Imh0dHBzOi8vd3d3LnVjYXJlY2RuLmNvbS9hZTczYTNkNi1mODE2LTRhMGUtOWQyMS0xODUyODIzNGIyY2MvLS9jcm9wLzE3NXgxNzUvODksMC8tL3ByZXZpZXcvMTAweDEwMC8iIGhvbGRlcj0iaG9sZGVyLmpzLzEwMHgxMDA/YXV0bz15ZXMmYW1wO3RoZW1lPXNreSZhbXA7dGV4dD1CUlUiLz4KICAgICAgICAgIDx1cGxvYWRjYXJlLXdpZGdldCBuZy1tb2RlbD0ib2JqZWN0LmltYWdlLmluZm8udXVpZCIgZGF0YS1wdWJsaWMta2V5PSJlYjM5YzVkZWY2NTdmY2Q4ODk0NiIgZGF0YS1sb2NhbGU9InB0IiBkYXRhLXRhYnM9ImZpbGUgZmFjZWJvb2sgZ2RyaXZlIGRyb3Bib3ggaW5zdGFncmFtIGV2ZXJub3RlIGZsaWNrciBza3lkcml2ZSIgZGF0YS1pbWFnZXMtb25seT0idHJ1ZSIgZGF0YS1wYXRoLXZhbHVlPSJ0cnVlIiBkYXRhLXByZXZpZXctc3RlcD0idHJ1ZSIgZGF0YS1jbGVhcmFibGU9InRydWUiIGRhdGEtbXVsdGlwbGU9ImZhbHNlIiBkYXRhLWNyb3A9IjQ6NCIgb24tdXBsb2FkLWNvbXBsZXRlPSJvblVDVXBsb2FkQ29tcGxldGUoaW5mbykiIG9uLXdpZGdldC1yZWFkeT0ib25VQ1dpZGdldFJlYWR5KHdpZGdldCkiIHZhbHVlPSJ7eyBvYmplY3QuaW1hZ2UuaW5mby5jZG5VcmwgfX0iPjwvdXBsb2FkY2FyZS13aWRnZXQ+CiAgICAgICAgPC9zZWN0aW9uPgogICAgICAgIDxzZWN0aW9uIGNsYXNzPSJtZW1iZXJzLWFkbWluLWRpYWxvZy1jb250ZW50LS1lbWFpbCI+CiAgICAgICAgICA8bWQtaW5wdXQtY29udGFpbmVyPgogICAgICAgICAgICA8bGFiZWw+RW1haWw8L2xhYmVsPgogICAgICAgICAgICA8aW5wdXQgbWQtbWF4bGVuZ3RoPSIzMCIgcmVxdWlyZWQ9InJlcXVpcmVkIiBuYW1lPSJuYW1lIiBuZy1jaGFuZ2U9ImNoYW5nZSgnc3RhZmYnKSIgbmctbW9kZWw9InN0YWZmLmVtYWlsIi8+CiAgICAgICAgICAgIDxkaXYgbmctbWVzc2FnZXM9InN0YWZmRm9ybS5uYW1lLiRlcnJvciIgcm9sZT0iYWxlcnQiPgogICAgICAgICAgICAgIDxkaXYgbmctaWY9ImlzaG93UmVxdWlyZWRFcnJvciI+CiAgICAgICAgICAgICAgICA8ZGl2IG5nLW1lc3NhZ2U9InJlcXVpcmVkIj5Fc3RlIGNhbXBvIMOpIG9icmlnYXTDs3Jpby48L2Rpdj4KICAgICAgICAgICAgICA8L2Rpdj4KICAgICAgICAgICAgICA8ZGl2IG5nLW1lc3NhZ2U9Im1kLW1heGxlbmd0aCI+Tm9tZSBjb20gbm8gbcOheGltbyAzMCBjYXJhY3RlcmVzPC9kaXY+CiAgICAgICAgICAgIDwvZGl2PgogICAgICAgICAgPC9tZC1pbnB1dC1jb250YWluZXI+CiAgICAgICAgPC9zZWN0aW9uPgogICAgICAgIDxzZWN0aW9uIGNsYXNzPSJtZW1iZXJzLWFkbWluLWRpYWxvZy1jb250ZW50LS1iaXJ0aGRheSI+CiAgICAgICAgICA8bWQtaW5wdXQtY29udGFpbmVyPgogICAgICAgICAgICA8bGFiZWw+RGF0YSBOYXNjaW1lbnRvPC9sYWJlbD4KICAgICAgICAgICAgPGlucHV0IHR5cGU9ImRhdGUiIHJlcXVpcmVkPSJyZXF1aXJlZCIgbmFtZT0ibmFtZSIgbmctY2hhbmdlPSJjaGFuZ2UoJ3N0YWZmJykiIG5nLW1vZGVsPSJzdGFmZi5iaXJ0aGRheSIvPgogICAgICAgICAgICA8ZGl2IG5nLW1lc3NhZ2VzPSJzdGFmZkZvcm0ubmFtZS4kZXJyb3IiIHJvbGU9ImFsZXJ0Ij4KICAgICAgICAgICAgICA8ZGl2IG5nLWlmPSJpc2hvd1JlcXVpcmVkRXJyb3IiPgogICAgICAgICAgICAgICAgPGRpdiBuZy1tZXNzYWdlPSJyZXF1aXJlZCI+RXN0ZSBjYW1wbyDDqSBvYnJpZ2F0w7NyaW8uPC9kaXY+CiAgICAgICAgICAgICAgPC9kaXY+CiAgICAgICAgICAgICAgPGRpdiBuZy1tZXNzYWdlPSJtZC1tYXhsZW5ndGgiPk5vbWUgY29tIG5vIG3DoXhpbW8gMzAgY2FyYWN0ZXJlczwvZGl2PgogICAgICAgICAgICA8L2Rpdj4KICAgICAgICAgIDwvbWQtaW5wdXQtY29udGFpbmVyPgogICAgICAgIDwvc2VjdGlvbj4KICAgICAgICA8c2VjdGlvbiBjbGFzcz0ibWVtYmVycy1hZG1pbi1kaWFsb2ctY29udGVudC0tcGhvbmUiPgogICAgICAgICAgPG1kLWlucHV0LWNvbnRhaW5lcj4KICAgICAgICAgICAgPGxhYmVsPkNlbHVsYXI8L2xhYmVsPgogICAgICAgICAgICA8aW5wdXQgdHlwZT0ibnVtYmVyIiBtZC1tYXhsZW5ndGg9IjEwIiByZXF1aXJlZD0icmVxdWlyZWQiIG5hbWU9Im5hbWUiIG5nLWNoYW5nZT0iY2hhbmdlKCdzdGFmZicpIiBuZy1tb2RlbD0ic3RhZmYucGhvbmUiLz4KICAgICAgICAgICAgPGRpdiBuZy1tZXNzYWdlcz0ic3RhZmZGb3JtLm5hbWUuJGVycm9yIiByb2xlPSJhbGVydCI+CiAgICAgICAgICAgICAgPGRpdiBuZy1pZj0iaXNob3dSZXF1aXJlZEVycm9yIj4KICAgICAgICAgICAgICAgIDxkaXYgbmctbWVzc2FnZT0icmVxdWlyZWQiPkVzdGUgY2FtcG8gw6kgb2JyaWdhdMOzcmlvLjwvZGl2PgogICAgICAgICAgICAgIDwvZGl2PgogICAgICAgICAgICAgIDxkaXYgbmctbWVzc2FnZT0ibWQtbWF4bGVuZ3RoIj5Ob21lIGNvbSBubyBtw6F4aW1vIDMwIGNhcmFjdGVyZXM8L2Rpdj4KICAgICAgICAgICAgPC9kaXY+CiAgICAgICAgICA8L21kLWlucHV0LWNvbnRhaW5lcj4KICAgICAgICA8L3NlY3Rpb24+CiAgICAgIDwvc2VjdGlvbj4KICAgIDwvc2VjdGlvbj4KICA8L21kLWRpYWxvZy1jb250ZW50PgogIDxkaXYgbGF5b3V0PSJyb3ciIGNsYXNzPSJtZC1hY3Rpb25zIj48c3BhbiBmbGV4PSIiPjwvc3Bhbj4KICAgIDxtZC1idXR0b24gbmctY2xpY2s9ImNhbmNlbCgpIiBjbGFzcz0ibWQtcHJpbWFyeSI+Q2FuY2VsYXI8L21kLWJ1dHRvbj4KICAgIDxtZC1idXR0b24gbmctY2xpY2s9InNhdmUoKSIgY2xhc3M9Im1kLXByaW1hcnkgYnV0dG9uLXNpbHZlciI+U2FsdmFyPC9tZC1idXR0b24+CiAgPC9kaXY+CjwvbWQtZGlhbG9nPg==","base64"),
+			parent: angular.element(document.body),
+			targetEvent: ev,
+		})
+		.then(function(answer) {
+			// $scope.updateGym();
+		}, function() {
+			// if (Object.keys(changeList).length !== 0) {
+			// 	$scope.gym = gymBackup;
+			// 	gymBackup = {};
+			// }
+		});
+	};
+	$scope.lista = [1,2,3];
+};
+
+}).call(this,require("buffer").Buffer)
+},{"buffer":1}],67:[function(require,module,exports){
+(function (Buffer){
+
 module.exports = function($scope,$timeout,cfpLoadingBar,fbUtil,$mdDialog) {
 
 	var changeList = {};
@@ -56698,7 +56726,7 @@ module.exports = function($scope,$timeout,cfpLoadingBar,fbUtil,$mdDialog) {
 };
 
 }).call(this,require("buffer").Buffer)
-},{"buffer":1}],67:[function(require,module,exports){
+},{"buffer":1}],68:[function(require,module,exports){
 (function (Buffer){
 
 module.exports = function($scope,$timeout,fbUtil,$mdDialog) {
@@ -56726,29 +56754,7 @@ module.exports = function($scope,$timeout,fbUtil,$mdDialog) {
 };
 
 }).call(this,require("buffer").Buffer)
-},{"buffer":1}],68:[function(require,module,exports){
-module.exports = function($scope,$mdDialog) {
-	// console.log(gymBackup);
-	// $scope.save = function() {
-	// 	$mdDialog.hide();
-	// };
-	$scope.cancel = function() {
-		$mdDialog.cancel();
-	};
-	$scope.save = function(answer) {
-		$mdDialog.hide(answer);
-	};
-};
-
-},{}],69:[function(require,module,exports){
-module.exports = function($scope) {
- $scope.labels = ["Dias Decorridos", "Dias Restantes"];
-  $scope.data = [14,7];
-};
-
-},{}],70:[function(require,module,exports){
-arguments[4][58][0].apply(exports,arguments)
-},{"dup":58}],71:[function(require,module,exports){
+},{"buffer":1}],69:[function(require,module,exports){
 module.exports = function($scope,bruno,$mdDialog) {
 	// console.log(gymBackup);
 	// $scope.save = function() {
@@ -56764,7 +56770,31 @@ module.exports = function($scope,bruno,$mdDialog) {
 	};
 };
 
+},{}],70:[function(require,module,exports){
+module.exports = function($scope,$mdDialog) {
+	// console.log(gymBackup);
+	// $scope.save = function() {
+	// 	$mdDialog.hide();
+	// };
+	$scope.cancel = function() {
+		$mdDialog.cancel();
+	};
+	$scope.save = function(answer) {
+		$mdDialog.hide(answer);
+	};
+};
+
+},{}],71:[function(require,module,exports){
+module.exports = function($scope) {
+ $scope.labels = ["Dias Decorridos", "Dias Restantes"];
+  $scope.data = [14,7];
+};
+
 },{}],72:[function(require,module,exports){
+arguments[4][58][0].apply(exports,arguments)
+},{"dup":58}],73:[function(require,module,exports){
+arguments[4][69][0].apply(exports,arguments)
+},{"dup":69}],74:[function(require,module,exports){
 module.exports = function($scope,FBURL, $window, $firebaseArray,exercisePatternModel) {
 
 	$scope.bindModel = exercisePatternModel.bindModel;
@@ -56775,7 +56805,7 @@ module.exports = function($scope,FBURL, $window, $firebaseArray,exercisePatternM
 
 };
 
-},{}],73:[function(require,module,exports){
+},{}],75:[function(require,module,exports){
 module.exports = angular.module('user',[])
 
 		.factory('exercisePatternModel', require('./services/exercisePatternModel.js'))
@@ -56784,13 +56814,15 @@ module.exports = angular.module('user',[])
 		.controller('trainAdminExercisesController', require('./controllers/trainAdminExercisesController.js'))
 		.controller('gymAdminStaffController', require('./controllers/gymAdminStaffController.js'))
 		.controller('staffAdminDialogController', require('./controllers/staffAdminDialogController.js'))
+		.controller('gymAdminMembersController', require('./controllers/gymAdminMembersController.js'))
+		.controller('membersAdminDialogController', require('./controllers/membersAdminDialogController.js'))
 		.controller('gymAdminOwnerController', require('./controllers/gymAdminOwnerController.js'))
 		.controller('ownerAdminDialogController', require('./controllers/ownerAdminDialogController.js'))
 		.controller('scheduleController', require('./controllers/scheduleController.js'));
 		// .factory('userModel', require('./services/userModel.js'))
 		// .factory('RestangularCustom', require('./services/restangularCustom.js'));
 
-},{"./controllers/gymAdminOwnerController.js":66,"./controllers/gymAdminStaffController.js":67,"./controllers/ownerAdminDialogController.js":68,"./controllers/planController.js":69,"./controllers/scheduleController.js":70,"./controllers/staffAdminDialogController.js":71,"./controllers/trainAdminExercisesController.js":72,"./services/exercisePatternModel.js":74}],74:[function(require,module,exports){
+},{"./controllers/gymAdminMembersController.js":66,"./controllers/gymAdminOwnerController.js":67,"./controllers/gymAdminStaffController.js":68,"./controllers/membersAdminDialogController.js":69,"./controllers/ownerAdminDialogController.js":70,"./controllers/planController.js":71,"./controllers/scheduleController.js":72,"./controllers/staffAdminDialogController.js":73,"./controllers/trainAdminExercisesController.js":74,"./services/exercisePatternModel.js":76}],76:[function(require,module,exports){
 module.exports = function (fbUtil,$mdDialog, $mdToast,$firebaseArray,FBURL) {
 
 	var bindModel = {
@@ -56868,7 +56900,7 @@ module.exports = function (fbUtil,$mdDialog, $mdToast,$firebaseArray,FBURL) {
 	};
 };
 
-},{}],75:[function(require,module,exports){
+},{}],77:[function(require,module,exports){
 (function (Buffer){
 
 module.exports = {
@@ -56972,11 +57004,9 @@ module.exports = {
 				label: 'Administração - Academia'
 			},
 			views: {
-				// controller: function($stateParams) {
-				// 	// expect($stateParams).toBe({userId: 12});
-				// },
 				'admin-content-menu-content@administration': {
-					template: Buffer("CjxzZWN0aW9uIGNsYXNzPSJneW0tY29udGVudC1tZW1iZXJzLXdyYXAiPgogIDxzZWN0aW9uIGNsYXNzPSJneW0tY29udGVudC1tZW1iZXJzLWFkZC1hY3Rpb24iPgogICAgPG1kLWJ1dHRvbiB0aXRsZT0iQWRpY2lvbmFyIEZ1bmNpb27DoXJpbyIgbmctY2xpY2s9InN0YWZmRGlhbG9nKCRldmVudCkiIGNsYXNzPSJtZC1yYWlzZWQgbWQtcHJpbWFyeSI+IAogICAgICA8bmctbWQtaWNvbiBpY29uPSJhZGRfY2lyY2xlX291dGxpbmUiIHN0eWxlPSJmaWxsOndoaXRlIiBzaXplPSIyNSI+PC9uZy1tZC1pY29uPkZ1bmNpb27DoXJpbwogICAgPC9tZC1idXR0b24+CiAgPC9zZWN0aW9uPgogIDxzZWN0aW9uIGNsYXNzPSJneW0tY29udGVudC1tZW1iZXJzLXNlYXJjaCI+CiAgICA8bWQtaW5wdXQtY29udGFpbmVyIG1kLW5vLWZsb2F0PSIiPgogICAgICA8aW5wdXQgcGxhY2Vob2xkZXI9IlBlc3F1aXNhciBGdW5jaW9uw6FyaW8iIG5nLW1vZGVsPSJiaW5kTW9kZWwuZ3JvdXBOYW1lIi8+CiAgICA8L21kLWlucHV0LWNvbnRhaW5lcj4KICA8L3NlY3Rpb24+CiAgPHNlY3Rpb24gY2xhc3M9Imd5bS1jb250ZW50LW1lbWJlcnMtY29udGVudC13cmFwIj4KICAgIDxzZWN0aW9uIGNsYXNzPSJneW0tY29udGVudC1tZW1iZXJzLWNvbnRlbnQiPgogICAgICA8dWwgY2xhc3M9Imd5bS1jb250ZW50LW1lbWJlcnMtbGlzdCI+CiAgICAgICAgPGxpIG5nLXJlcGVhdD0ibiBpbiBbMSwyLDMsNCw1LDYsN10gdHJhY2sgYnkgJGluZGV4IiBjbGFzcz0iZ3ltLWNvbnRlbnQtbWVtYmVycy1pdGVtIGFuZ3VsYXItYW5pbWF0ZSI+CiAgICAgICAgICA8ZHMtdXNlcj48L2RzLXVzZXI+CiAgICAgICAgPC9saT4KICAgICAgPC91bD4KICAgIDwvc2VjdGlvbj4KICA8L3NlY3Rpb24+Cjwvc2VjdGlvbj4=","base64")  
+					controller:'gymAdminMembersController',
+					template: Buffer("CjxzZWN0aW9uIGNsYXNzPSJneW0tY29udGVudC1tZW1iZXJzLXdyYXAiPgogIDxzZWN0aW9uIGNsYXNzPSJneW0tY29udGVudC1tZW1iZXJzLWFkZC1hY3Rpb24iPgogICAgPG1kLWJ1dHRvbiB0aXRsZT0iQWRpY2lvbmFyIEZ1bmNpb27DoXJpbyIgbmctY2xpY2s9InN0YWZmRGlhbG9nKCRldmVudCkiIGNsYXNzPSJtZC1yYWlzZWQgbWQtcHJpbWFyeSI+IAogICAgICA8bmctbWQtaWNvbiBpY29uPSJhZGRfY2lyY2xlX291dGxpbmUiIHN0eWxlPSJmaWxsOndoaXRlIiBzaXplPSIyNSI+PC9uZy1tZC1pY29uPkFsdW5vCiAgICA8L21kLWJ1dHRvbj4KICA8L3NlY3Rpb24+CiAgPHNlY3Rpb24gY2xhc3M9Imd5bS1jb250ZW50LW1lbWJlcnMtc2VhcmNoIj4KICAgIDxtZC1pbnB1dC1jb250YWluZXIgbWQtbm8tZmxvYXQ9IiI+CiAgICAgIDxpbnB1dCBwbGFjZWhvbGRlcj0iUGVzcXVpc2FyIEZ1bmNpb27DoXJpbyIgbmctbW9kZWw9ImJpbmRNb2RlbC5ncm91cE5hbWUiLz4KICAgIDwvbWQtaW5wdXQtY29udGFpbmVyPgogIDwvc2VjdGlvbj4KICA8c2VjdGlvbiBjbGFzcz0iZ3ltLWNvbnRlbnQtbWVtYmVycy1jb250ZW50LXdyYXAiPgogICAgPHNlY3Rpb24gY2xhc3M9Imd5bS1jb250ZW50LW1lbWJlcnMtY29udGVudCI+CiAgICAgIDx1bCBjbGFzcz0iZ3ltLWNvbnRlbnQtbWVtYmVycy1saXN0Ij4KICAgICAgICA8bGkgbmctcmVwZWF0PSJuIGluIFsxLDIsMyw0LDUsNiw3XSB0cmFjayBieSAkaW5kZXgiIGNsYXNzPSJneW0tY29udGVudC1tZW1iZXJzLWl0ZW0gYW5ndWxhci1hbmltYXRlIj4KICAgICAgICAgIDxkcy11c2VyPjwvZHMtdXNlcj4KICAgICAgICA8L2xpPgogICAgICA8L3VsPgogICAgPC9zZWN0aW9uPgogIDwvc2VjdGlvbj4KPC9zZWN0aW9uPg==","base64")  
 				}
 			},
 		},

@@ -6,6 +6,8 @@ module.exports = angular.module('user',[])
 		.controller('trainAdminExercisesController', require('./controllers/trainAdminExercisesController.js'))
 		.controller('gymAdminStaffController', require('./controllers/gymAdminStaffController.js'))
 		.controller('staffAdminDialogController', require('./controllers/staffAdminDialogController.js'))
+		.controller('gymAdminMembersController', require('./controllers/gymAdminMembersController.js'))
+		.controller('membersAdminDialogController', require('./controllers/membersAdminDialogController.js'))
 		.controller('gymAdminOwnerController', require('./controllers/gymAdminOwnerController.js'))
 		.controller('ownerAdminDialogController', require('./controllers/ownerAdminDialogController.js'))
 		.controller('scheduleController', require('./controllers/scheduleController.js'));
