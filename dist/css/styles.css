@@ -17265,7 +17265,7 @@ md-dialog md-dialog-content .train-dialog-wrap .train-dialog-content .action but
     padding-left: 5em;
   }
 }
-.gym-content-members-wrap .gym-content-members-add-action {
+.gym-content-members-wrap .gym-content-members-new {
   *zoom: 1;
   float: left;
   clear: none;
@@ -17275,18 +17275,18 @@ md-dialog md-dialog-content .train-dialog-wrap .train-dialog-content .action but
   margin-right: 0%;
   text-align: right;
 }
-.gym-content-members-wrap .gym-content-members-add-action:before,
-.gym-content-members-wrap .gym-content-members-add-action:after {
+.gym-content-members-wrap .gym-content-members-new:before,
+.gym-content-members-wrap .gym-content-members-new:after {
   content: '';
   display: table;
 }
-.gym-content-members-wrap .gym-content-members-add-action:after {
+.gym-content-members-wrap .gym-content-members-new:after {
   clear: both;
 }
-.gym-content-members-wrap .gym-content-members-add-action:last-child {
+.gym-content-members-wrap .gym-content-members-new:last-child {
   margin-right: 0%;
 }
-.gym-content-members-wrap .gym-content-members-add-action button.md-button {
+.gym-content-members-wrap .gym-content-members-new button.md-button {
   width: 36%;
   min-width: 15px;
   min-height: 34px;
@@ -17296,25 +17296,25 @@ md-dialog md-dialog-content .train-dialog-wrap .train-dialog-content .action but
   font-size: 100%;
 }
 @media only screen and (min-width: 1050px) {
-  .gym-content-members-wrap .gym-content-members-add-action button.md-button {
+  .gym-content-members-wrap .gym-content-members-new button.md-button {
     width: 28%;
     min-height: 44px;
     line-height: 44px;
   }
 }
 @media only screen and (min-width: 1800px) {
-  .gym-content-members-wrap .gym-content-members-add-action button.md-button {
+  .gym-content-members-wrap .gym-content-members-new button.md-button {
     width: 22%;
   }
 }
-.gym-content-members-wrap .gym-content-members-add-action button.md-button ng-md-icon svg {
+.gym-content-members-wrap .gym-content-members-new button.md-button ng-md-icon svg {
   position: relative;
   vertical-align: middle;
   top: -1px;
   left: -5px;
 }
 @media only screen and (min-width: 1050px) {
-  .gym-content-members-wrap .gym-content-members-add-action button.md-button ng-md-icon svg {
+  .gym-content-members-wrap .gym-content-members-new button.md-button ng-md-icon svg {
     width: 30px;
     height: 30px;
   }
@@ -18153,6 +18153,9 @@ md-dialog md-dialog-content .train-dialog-wrap .train-dialog-content .action but
   max-width: 90%;
   display: inline-block;
   border: 1px solid #e0e0e0;
+}
+.members-admin-dialog-wrap .members-admin-dialog-content .members-admin-dialog-content--image .uploadcare-widget-button-open {
+  background-color: #2196f3;
 }
 .members-admin-dialog-wrap .members-admin-dialog-content .members-admin-dialog-content--email {
   *zoom: 1;

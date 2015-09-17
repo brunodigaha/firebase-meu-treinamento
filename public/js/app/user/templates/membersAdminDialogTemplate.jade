@@ -1,60 +1,62 @@
 md-dialog(flex="85" aria-label="alunos")
-	md-toolbar(md-theme="default") 
-		.md-toolbar-tools
-			h1 Inserir Aluno
+	form(name="memberForm" ng-submit="save()")
+		md-toolbar(md-theme="default") 
+			.md-toolbar-tools
+				h1 {{mode}} de Aluno
+				span(flex="")
+				md-button(type="button" ng-click="cancel()") Fechar
+				// ng-md-icon(icon="close" ng-click="answer('not applicable')" style="fill:white" size="25")
+		md-dialog-content
+			section.members-admin-dialog-wrap
+				section.members-admin-dialog-content
+					section.members-admin-dialog-content--perfil
+						section.members-admin-dialog-content--name
+							md-input-container
+								label Nome Aluno
+								input(md-maxlength="20" required name="name" ng-change="change('name')" ng-model="member.name")
+								div(ng-messages="memberForm.name.$error" role="alert")
+									div(ng-if="ishowRequiredError")
+										div(ng-message="required") Este campo é obrigatório.
+									div(ng-message="md-maxlength") Nome com no máximo 30 caracteres
+						section.members-admin-dialog-content--surname
+							md-input-container
+								label Sobrenome
+								input(md-maxlength="20" required name="surname" ng-change="change('surname')" ng-model="member.surname")
+								div(ng-messages="memberForm.surname" role="alert")
+									div(ng-if="ishowRequiredError")
+										div(ng-message="required") Este campo é obrigatório.
+									div(ng-message="md-maxlength") Nome com no máximo 30 caracteres
+					section.members-admin-dialog-content--image
+						img(class="img-responsive img-selected" ng-src="{{UCURL}}{{member.image}}-/preview/100x100/" ng-if="member.image")
+						img(holder='holder.js/100x100?auto=yes&theme=grey&text=IMG' ng-if="!member.image")
+						uploadcare-widget(ng-model="object.image.info.uuid" ng-change="change('image')" data-public-key="eb39c5def657fcd88946" data-locale="pt" data-tabs="file facebook gdrive dropbox instagram evernote flickr skydrive" data-images-only="true" data-path-value="true" data-preview-step="true" data-clearable="true" data-multiple="false" data-crop="4:4" on-upload-complete="onUCUploadComplete(info)" on-widget-ready="onUCWidgetReady(widget)" value="{{ object.image.info.cdnUrl }}")
+					section.members-admin-dialog-content--email
+						md-input-container
+							label Email
+							input(md-maxlength="30" type="email" required name="email" ng-change="change('email')" ng-model="member.email")
+							div(ng-messages="memberForm.email.$error" role="alert")
+								div(ng-if="ishowRequiredError")
+									div(ng-message="required") Este campo é obrigatório.
+								div(ng-message="md-maxlength") Nome com no máximo 30 caracteres
+					section.members-admin-dialog-content--birthday
+						md-input-container
+							label Data Nascimento
+							input(type="date" required name="birthday" ng-change="change('birthday')" ng-model="member.birthday")
+							div(ng-messages="memberForm.birthday.$error" role="alert")
+								div(ng-if="ishowRequiredError")
+									div(ng-message="required") Este campo é obrigatório.
+								div(ng-message="md-maxlength") Nome com no máximo 30 caracteres
+					section.members-admin-dialog-content--phone
+						md-input-container
+							label Celular
+							input(type="tel" md-maxlength="10" required name="phone" ng-change="change('phone')" ng-model="member.phone")
+							div(ng-messages="memberForm.phone.$error" role="alert")
+								div(ng-if="ishowRequiredError")
+									div(ng-message="required") Este campo é obrigatório.
+								div(ng-message="md-maxlength") Nome com no máximo 30 caracteres
+		.md-actions(layout="row")
 			span(flex="")
-			md-button(ng-click="cancel()") Fechar
-			// ng-md-icon(icon="close" ng-click="answer('not applicable')" style="fill:white" size="25")
-	md-dialog-content
-		section.members-admin-dialog-wrap
-			section.members-admin-dialog-content
-				section.members-admin-dialog-content--perfil
-					section.members-admin-dialog-content--name
-						md-input-container
-							label Nome Aluno
-							input(md-maxlength="20" required name="name" ng-change="change('name')" ng-model="member.name")
-							div(ng-messages="memberForm.name.$error" role="alert")
-								div(ng-if="ishowRequiredError")
-									div(ng-message="required") Este campo é obrigatório.
-								div(ng-message="md-maxlength") Nome com no máximo 30 caracteres
-					section.members-admin-dialog-content--surname
-						md-input-container
-							label Sobrenome
-							input(md-maxlength="20" required name="surname" ng-change="change('surname')" ng-model="member.surname")
-							div(ng-messages="memberForm.surname" role="alert")
-								div(ng-if="ishowRequiredError")
-									div(ng-message="required") Este campo é obrigatório.
-								div(ng-message="md-maxlength") Nome com no máximo 30 caracteres
-				section.members-admin-dialog-content--image
-					img(ng-src="https://www.ucarecdn.com/ae73a3d6-f816-4a0e-9d21-18528234b2cc/-/crop/175x175/89,0/-/preview/100x100/"  holder='holder.js/100x100?auto=yes&theme=sky&text=BRU')
-					uploadcare-widget(ng-model="object.image.info.uuid" ng-change="change('image')" data-public-key="eb39c5def657fcd88946" data-locale="pt" data-tabs="file facebook gdrive dropbox instagram evernote flickr skydrive" data-images-only="true" data-path-value="true" data-preview-step="true" data-clearable="true" data-multiple="false" data-crop="4:4" on-upload-complete="onUCUploadComplete(info)" on-widget-ready="onUCWidgetReady(widget)" value="{{ object.image.info.cdnUrl }}")
-				section.members-admin-dialog-content--email
-					md-input-container
-						label Email
-						input(md-maxlength="30" required name="email" ng-change="change('email')" ng-model="member.email")
-						div(ng-messages="memberForm.email.$error" role="alert")
-							div(ng-if="ishowRequiredError")
-								div(ng-message="required") Este campo é obrigatório.
-							div(ng-message="md-maxlength") Nome com no máximo 30 caracteres
-				section.members-admin-dialog-content--birthday
-					md-input-container
-						label Data Nascimento
-						input(type="date" required name="birthday" ng-change="change('birthday')" ng-model="member.birthday")
-						div(ng-messages="memberForm.birthday.$error" role="alert")
-							div(ng-if="ishowRequiredError")
-								div(ng-message="required") Este campo é obrigatório.
-							div(ng-message="md-maxlength") Nome com no máximo 30 caracteres
-				section.members-admin-dialog-content--phone
-					md-input-container
-						label Celular
-						input(type="number" md-maxlength="10" required name="phone" ng-change="change('phone')" ng-model="member.phone")
-						div(ng-messages="memberForm.phone.$error" role="alert")
-							div(ng-if="ishowRequiredError")
-								div(ng-message="required") Este campo é obrigatório.
-							div(ng-message="md-maxlength") Nome com no máximo 30 caracteres
-	.md-actions(layout="row")
-		span(flex="")
-		md-button.md-primary(ng-click="cancel()")
-			| Cancelar
-		md-button.md-primary.button-silver(ng-click="save()")
-			| Salvar
+			md-button.md-primary(type="button" ng-click="cancel()")
+				| Cancelar
+			md-button.md-primary.button-silver(type="submit")
+				| Salvar

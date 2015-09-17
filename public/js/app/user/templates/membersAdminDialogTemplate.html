@@ -1,21 +1,50 @@
 
 <md-dialog flex="85" aria-label="alunos">
-  <md-toolbar md-theme="default"> 
-    <div class="md-toolbar-tools">
-      <h1>Inserir Aluno</h1><span flex=""></span>
-      <md-button ng-click="cancel()">Fechar</md-button>
-      <!-- ng-md-icon(icon="close" ng-click="answer('not applicable')" style="fill:white" size="25")-->
-    </div>
-  </md-toolbar>
-  <md-dialog-content>
-    <section class="members-admin-dialog-wrap">
-      <section class="members-admin-dialog-content">
-        <section class="members-admin-dialog-content--perfil">
-          <section class="members-admin-dialog-content--name">
+  <form name="memberForm" ng-submit="save()">
+    <md-toolbar md-theme="default"> 
+      <div class="md-toolbar-tools">
+        <h1>{{mode}} de Aluno</h1><span flex=""></span>
+        <md-button type="button" ng-click="cancel()">Fechar</md-button>
+        <!-- ng-md-icon(icon="close" ng-click="answer('not applicable')" style="fill:white" size="25")-->
+      </div>
+    </md-toolbar>
+    <md-dialog-content>
+      <section class="members-admin-dialog-wrap">
+        <section class="members-admin-dialog-content">
+          <section class="members-admin-dialog-content--perfil">
+            <section class="members-admin-dialog-content--name">
+              <md-input-container>
+                <label>Nome Aluno</label>
+                <input md-maxlength="20" required="required" name="name" ng-change="change('name')" ng-model="member.name"/>
+                <div ng-messages="memberForm.name.$error" role="alert">
+                  <div ng-if="ishowRequiredError">
+                    <div ng-message="required">Este campo é obrigatório.</div>
+                  </div>
+                  <div ng-message="md-maxlength">Nome com no máximo 30 caracteres</div>
+                </div>
+              </md-input-container>
+            </section>
+            <section class="members-admin-dialog-content--surname">
+              <md-input-container>
+                <label>Sobrenome</label>
+                <input md-maxlength="20" required="required" name="surname" ng-change="change('surname')" ng-model="member.surname"/>
+                <div ng-messages="memberForm.surname" role="alert">
+                  <div ng-if="ishowRequiredError">
+                    <div ng-message="required">Este campo é obrigatório.</div>
+                  </div>
+                  <div ng-message="md-maxlength">Nome com no máximo 30 caracteres</div>
+                </div>
+              </md-input-container>
+            </section>
+          </section>
+          <section class="members-admin-dialog-content--image"><img ng-src="{{UCURL}}{{member.image}}-/preview/100x100/" ng-if="member.image" class="img-responsive img-selected"/><img holder="holder.js/100x100?auto=yes&amp;theme=grey&amp;text=IMG" ng-if="!member.image"/>
+            <uploadcare-widget ng-model="object.image.info.uuid" ng-change="change('image')" data-public-key="eb39c5def657fcd88946" data-locale="pt" data-tabs="file facebook gdrive dropbox instagram evernote flickr skydrive" data-images-only="true" data-path-value="true" data-preview-step="true" data-clearable="true" data-multiple="false" data-crop="4:4" on-upload-complete="onUCUploadComplete(info)" on-widget-ready="onUCWidgetReady(widget)" value="{{ object.image.info.cdnUrl }}"></uploadcare-widget>
+          </section>
+          <section class="members-admin-dialog-content--email">
             <md-input-container>
-              <label>Nome Aluno</label>
-              <input md-maxlength="20" required="required" name="name" ng-change="change('name')" ng-model="member.name"/>
-              <div ng-messages="memberForm.name.$error" role="alert">
+              <label>Email</label>
+              <input md-maxlength="30" type="email" required="required" name="email" ng-change="change('email')" ng-model="member.email"/>
+              <div ng-messages="memberForm.email.$error" role="alert">
                 <div ng-if="ishowRequiredError">
                   <div ng-message="required">Este campo é obrigatório.</div>
                 </div>
@@ -23,11 +52,11 @@
               </div>
             </md-input-container>
           </section>
-          <section class="members-admin-dialog-content--surname">
+          <section class="members-admin-dialog-content--birthday">
             <md-input-container>
-              <label>Sobrenome</label>
-              <input md-maxlength="20" required="required" name="surname" ng-change="change('surname')" ng-model="member.surname"/>
-              <div ng-messages="memberForm.surname" role="alert">
+              <label>Data Nascimento</label>
+              <input type="date" required="required" name="birthday" ng-change="change('birthday')" ng-model="member.birthday"/>
+              <div ng-messages="memberForm.birthday.$error" role="alert">
                 <div ng-if="ishowRequiredError">
                   <div ng-message="required">Este campo é obrigatório.</div>
                 </div>
@@ -35,51 +64,24 @@
               </div>
             </md-input-container>
           </section>
-        </section>
-        <section class="members-admin-dialog-content--image"><img ng-src="https://www.ucarecdn.com/ae73a3d6-f816-4a0e-9d21-18528234b2cc/-/crop/175x175/89,0/-/preview/100x100/" holder="holder.js/100x100?auto=yes&amp;theme=sky&amp;text=BRU"/>
-          <uploadcare-widget ng-model="object.image.info.uuid" ng-change="change('image')" data-public-key="eb39c5def657fcd88946" data-locale="pt" data-tabs="file facebook gdrive dropbox instagram evernote flickr skydrive" data-images-only="true" data-path-value="true" data-preview-step="true" data-clearable="true" data-multiple="false" data-crop="4:4" on-upload-complete="onUCUploadComplete(info)" on-widget-ready="onUCWidgetReady(widget)" value="{{ object.image.info.cdnUrl }}"></uploadcare-widget>
-        </section>
-        <section class="members-admin-dialog-content--email">
-          <md-input-container>
-            <label>Email</label>
-            <input md-maxlength="30" required="required" name="email" ng-change="change('email')" ng-model="member.email"/>
-            <div ng-messages="memberForm.email.$error" role="alert">
-              <div ng-if="ishowRequiredError">
-                <div ng-message="required">Este campo é obrigatório.</div>
+          <section class="members-admin-dialog-content--phone">
+            <md-input-container>
+              <label>Celular</label>
+              <input type="tel" md-maxlength="10" required="required" name="phone" ng-change="change('phone')" ng-model="member.phone"/>
+              <div ng-messages="memberForm.phone.$error" role="alert">
+                <div ng-if="ishowRequiredError">
+                  <div ng-message="required">Este campo é obrigatório.</div>
+                </div>
+                <div ng-message="md-maxlength">Nome com no máximo 30 caracteres</div>
               </div>
-              <div ng-message="md-maxlength">Nome com no máximo 30 caracteres</div>
-            </div>
-          </md-input-container>
-        </section>
-        <section class="members-admin-dialog-content--birthday">
-          <md-input-container>
-            <label>Data Nascimento</label>
-            <input type="date" required="required" name="birthday" ng-change="change('birthday')" ng-model="member.birthday"/>
-            <div ng-messages="memberForm.birthday.$error" role="alert">
-              <div ng-if="ishowRequiredError">
-                <div ng-message="required">Este campo é obrigatório.</div>
-              </div>
-              <div ng-message="md-maxlength">Nome com no máximo 30 caracteres</div>
-            </div>
-          </md-input-container>
-        </section>
-        <section class="members-admin-dialog-content--phone">
-          <md-input-container>
-            <label>Celular</label>
-            <input type="number" md-maxlength="10" required="required" name="phone" ng-change="change('phone')" ng-model="member.phone"/>
-            <div ng-messages="memberForm.phone.$error" role="alert">
-              <div ng-if="ishowRequiredError">
-                <div ng-message="required">Este campo é obrigatório.</div>
-              </div>
-              <div ng-message="md-maxlength">Nome com no máximo 30 caracteres</div>
-            </div>
-          </md-input-container>
+            </md-input-container>
+          </section>
         </section>
       </section>
-    </section>
-  </md-dialog-content>
-  <div layout="row" class="md-actions"><span flex=""></span>
-    <md-button ng-click="cancel()" class="md-primary">Cancelar</md-button>
-    <md-button ng-click="save()" class="md-primary button-silver">Salvar</md-button>
-  </div>
+    </md-dialog-content>
+    <div layout="row" class="md-actions"><span flex=""></span>
+      <md-button type="button" ng-click="cancel()" class="md-primary">Cancelar</md-button>
+      <md-button type="submit" class="md-primary button-silver">Salvar</md-button>
+    </div>
+  </form>
 </md-dialog>
