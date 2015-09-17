@@ -1805,57 +1805,57 @@ module.exports = isArray || function (val) {
 ; require("/home/bruno/ProjNode/FirebaseMeuTreinamento/firebase-meu-treinamento/public/bower_components/angular/angular.js");
 ; var __browserify_shim_require__=require;(function browserifyShim(module, exports, require, define, browserify_shim__define__module__export__) {
 /*
- AngularJS v1.4.5
+ AngularJS v1.4.6
  (c) 2010-2015 Google, Inc. http://angularjs.org
  License: MIT
 */
-(function(F,x,Z){'use strict';function ua(a,b,c){if(!a)throw ngMinErr("areq",b||"?",c||"required");return a}function va(a,b){if(!a&&!b)return"";if(!a)return b;if(!b)return a;$(a)&&(a=a.join(" "));$(b)&&(b=b.join(" "));return a+" "+b}function Ea(a){var b={};a&&(a.to||a.from)&&(b.to=a.to,b.from=a.from);return b}function V(a,b,c){var d="";a=$(a)?a:a&&M(a)&&a.length?a.split(/\s+/):[];q(a,function(a,y){a&&0<a.length&&(d+=0<y?" ":"",d+=c?b+a:a+b)});return d}function Fa(a){if(a instanceof I)switch(a.length){case 0:return[];
-case 1:if(1===a[0].nodeType)return a;break;default:return I(ma(a))}if(1===a.nodeType)return I(a)}function ma(a){if(!a[0])return a;for(var b=0;b<a.length;b++){var c=a[b];if(1==c.nodeType)return c}}function Ga(a,b,c){q(b,function(b){a.addClass(b,c)})}function Ha(a,b,c){q(b,function(b){a.removeClass(b,c)})}function Q(a){return function(b,c){c.addClass&&(Ga(a,b,c.addClass),c.addClass=null);c.removeClass&&(Ha(a,b,c.removeClass),c.removeClass=null)}}function ia(a){a=a||{};if(!a.$$prepared){var b=a.domOperation||
-L;a.domOperation=function(){a.$$domOperationFired=!0;b();b=L};a.$$prepared=!0}return a}function ea(a,b){wa(a,b);xa(a,b)}function wa(a,b){b.from&&(a.css(b.from),b.from=null)}function xa(a,b){b.to&&(a.css(b.to),b.to=null)}function R(a,b,c){var d=(b.addClass||"")+" "+(c.addClass||""),e=(b.removeClass||"")+" "+(c.removeClass||"");a=Ia(a.attr("class"),d,e);c.preparationClasses&&(b.preparationClasses=W(c.preparationClasses,b.preparationClasses),delete c.preparationClasses);d=b.domOperation!==L?b.domOperation:
-null;ya(b,c);d&&(b.domOperation=d);b.addClass=a.addClass?a.addClass:null;b.removeClass=a.removeClass?a.removeClass:null;return b}function Ia(a,b,c){function d(a){M(a)&&(a=a.split(" "));var b={};q(a,function(a){a.length&&(b[a]=!0)});return b}var e={};a=d(a);b=d(b);q(b,function(a,b){e[b]=1});c=d(c);q(c,function(a,b){e[b]=1===e[b]?null:-1});var y={addClass:"",removeClass:""};q(e,function(b,c){var e,d;1===b?(e="addClass",d=!a[c]):-1===b&&(e="removeClass",d=a[c]);d&&(y[e].length&&(y[e]+=" "),y[e]+=c)});
-return y}function G(a){return a instanceof x.element?a[0]:a}function Ja(a,b,c){var d="";b&&(d=V(b,"ng-",!0));c.addClass&&(d=W(d,V(c.addClass,"-add")));c.removeClass&&(d=W(d,V(c.removeClass,"-remove")));d.length&&(c.preparationClasses=d,a.addClass(d))}function ja(a,b){var c=b?"-"+b+"s":"";fa(a,[ga,c]);return[ga,c]}function na(a,b){var c=b?"paused":"",d=X+"PlayState";fa(a,[d,c]);return[d,c]}function fa(a,b){a.style[b[0]]=b[1]}function W(a,b){return a?b?a+" "+b:a:b}function za(a,b,c){var d=Object.create(null),
-e=a.getComputedStyle(b)||{};q(c,function(a,b){var c=e[a];if(c){var l=c.charAt(0);if("-"===l||"+"===l||0<=l)c=Ka(c);0===c&&(c=null);d[b]=c}});return d}function Ka(a){var b=0;a=a.split(/\s*,\s*/);q(a,function(a){"s"==a.charAt(a.length-1)&&(a=a.substring(0,a.length-1));a=parseFloat(a)||0;b=b?Math.max(a,b):a});return b}function oa(a){return 0===a||null!=a}function Aa(a,b){var c=N,d=a+"s";b?c+="Duration":d+=" linear all";return[c,d]}function Ba(){var a=Object.create(null);return{flush:function(){a=Object.create(null)},
-count:function(b){return(b=a[b])?b.total:0},get:function(b){return(b=a[b])&&b.value},put:function(b,c){a[b]?a[b].total++:a[b]={total:1,value:c}}}}var L=x.noop,ya=x.extend,I=x.element,q=x.forEach,$=x.isArray,M=x.isString,pa=x.isObject,La=x.isUndefined,Ma=x.isDefined,Ca=x.isFunction,qa=x.isElement,N,ra,X,sa;F.ontransitionend===Z&&F.onwebkittransitionend!==Z?(N="WebkitTransition",ra="webkitTransitionEnd transitionend"):(N="transition",ra="transitionend");F.onanimationend===Z&&F.onwebkitanimationend!==
-Z?(X="WebkitAnimation",sa="webkitAnimationEnd animationend"):(X="animation",sa="animationend");var ka=X+"Delay",ta=X+"Duration",ga=N+"Delay";F=N+"Duration";var Na={transitionDuration:F,transitionDelay:ga,transitionProperty:N+"Property",animationDuration:ta,animationDelay:ka,animationIterationCount:X+"IterationCount"},Oa={transitionDuration:F,transitionDelay:ga,animationDuration:ta,animationDelay:ka};x.module("ngAnimate",[]).provider("$$body",function(){this.$get=["$document",function(a){return I(a[0].body)}]}).directive("ngAnimateChildren",
+(function(F,x,Oa){'use strict';function va(a,b,c){if(!a)throw ngMinErr("areq",b||"?",c||"required");return a}function wa(a,b){if(!a&&!b)return"";if(!a)return b;if(!b)return a;Y(a)&&(a=a.join(" "));Y(b)&&(b=b.join(" "));return a+" "+b}function Fa(a){var b={};a&&(a.to||a.from)&&(b.to=a.to,b.from=a.from);return b}function V(a,b,c){var d="";a=Y(a)?a:a&&M(a)&&a.length?a.split(/\s+/):[];q(a,function(a,y){a&&0<a.length&&(d+=0<y?" ":"",d+=c?b+a:a+b)});return d}function Ga(a){if(a instanceof I)switch(a.length){case 0:return[];
+case 1:if(1===a[0].nodeType)return a;break;default:return I(Z(a))}if(1===a.nodeType)return I(a)}function Z(a){if(!a[0])return a;for(var b=0;b<a.length;b++){var c=a[b];if(1==c.nodeType)return c}}function Ha(a,b,c){q(b,function(b){a.addClass(b,c)})}function Ia(a,b,c){q(b,function(b){a.removeClass(b,c)})}function Q(a){return function(b,c){c.addClass&&(Ha(a,b,c.addClass),c.addClass=null);c.removeClass&&(Ia(a,b,c.removeClass),c.removeClass=null)}}function ia(a){a=a||{};if(!a.$$prepared){var b=a.domOperation||
+L;a.domOperation=function(){a.$$domOperationFired=!0;b();b=L};a.$$prepared=!0}return a}function ea(a,b){xa(a,b);ya(a,b)}function xa(a,b){b.from&&(a.css(b.from),b.from=null)}function ya(a,b){b.to&&(a.css(b.to),b.to=null)}function R(a,b,c){var d=(b.addClass||"")+" "+(c.addClass||""),e=(b.removeClass||"")+" "+(c.removeClass||"");a=Ja(a.attr("class"),d,e);c.preparationClasses&&(b.preparationClasses=$(c.preparationClasses,b.preparationClasses),delete c.preparationClasses);d=b.domOperation!==L?b.domOperation:
+null;za(b,c);d&&(b.domOperation=d);b.addClass=a.addClass?a.addClass:null;b.removeClass=a.removeClass?a.removeClass:null;return b}function Ja(a,b,c){function d(a){M(a)&&(a=a.split(" "));var b={};q(a,function(a){a.length&&(b[a]=!0)});return b}var e={};a=d(a);b=d(b);q(b,function(a,b){e[b]=1});c=d(c);q(c,function(a,b){e[b]=1===e[b]?null:-1});var y={addClass:"",removeClass:""};q(e,function(b,c){var e,d;1===b?(e="addClass",d=!a[c]):-1===b&&(e="removeClass",d=a[c]);d&&(y[e].length&&(y[e]+=" "),y[e]+=c)});
+return y}function G(a){return a instanceof x.element?a[0]:a}function Ka(a,b,c){var d="";b&&(d=V(b,"ng-",!0));c.addClass&&(d=$(d,V(c.addClass,"-add")));c.removeClass&&(d=$(d,V(c.removeClass,"-remove")));d.length&&(c.preparationClasses=d,a.addClass(d))}function ja(a,b){var c=b?"-"+b+"s":"";fa(a,[ga,c]);return[ga,c]}function ma(a,b){var c=b?"paused":"",d=W+"PlayState";fa(a,[d,c]);return[d,c]}function fa(a,b){a.style[b[0]]=b[1]}function $(a,b){return a?b?a+" "+b:a:b}function Aa(a,b,c){var d=Object.create(null),
+e=a.getComputedStyle(b)||{};q(c,function(a,b){var c=e[a];if(c){var l=c.charAt(0);if("-"===l||"+"===l||0<=l)c=La(c);0===c&&(c=null);d[b]=c}});return d}function La(a){var b=0;a=a.split(/\s*,\s*/);q(a,function(a){"s"==a.charAt(a.length-1)&&(a=a.substring(0,a.length-1));a=parseFloat(a)||0;b=b?Math.max(a,b):a});return b}function na(a){return 0===a||null!=a}function Ba(a,b){var c=N,d=a+"s";b?c+="Duration":d+=" linear all";return[c,d]}function Ca(){var a=Object.create(null);return{flush:function(){a=Object.create(null)},
+count:function(b){return(b=a[b])?b.total:0},get:function(b){return(b=a[b])&&b.value},put:function(b,c){a[b]?a[b].total++:a[b]={total:1,value:c}}}}var L=x.noop,za=x.extend,I=x.element,q=x.forEach,Y=x.isArray,M=x.isString,oa=x.isObject,pa=x.isUndefined,qa=x.isDefined,Da=x.isFunction,ra=x.isElement,N,sa,W,ta;pa(F.ontransitionend)&&qa(F.onwebkittransitionend)?(N="WebkitTransition",sa="webkitTransitionEnd transitionend"):(N="transition",sa="transitionend");pa(F.onanimationend)&&qa(F.onwebkitanimationend)?
+(W="WebkitAnimation",ta="webkitAnimationEnd animationend"):(W="animation",ta="animationend");var ka=W+"Delay",ua=W+"Duration",ga=N+"Delay";F=N+"Duration";var Ma={transitionDuration:F,transitionDelay:ga,transitionProperty:N+"Property",animationDuration:ua,animationDelay:ka,animationIterationCount:W+"IterationCount"},Na={transitionDuration:F,transitionDelay:ga,animationDuration:ua,animationDelay:ka};x.module("ngAnimate",[]).provider("$$body",function(){this.$get=["$document",function(a){return I(a[0].body)}]}).directive("ngAnimateChildren",
 [function(){return function(a,b,c){a=c.ngAnimateChildren;x.isString(a)&&0===a.length?b.data("$$ngAnimateChildren",!0):c.$observe("ngAnimateChildren",function(a){b.data("$$ngAnimateChildren","on"===a||"true"===a)})}}]).factory("$$rAFScheduler",["$$rAF",function(a){function b(a){d=d.concat(a);c()}function c(){if(d.length){for(var b=d.shift(),v=0;v<b.length;v++)b[v]();e||a(function(){e||c()})}}var d,e;d=b.queue=[];b.waitUntilQuiet=function(b){e&&e();e=a(function(){e=null;b();c()})};return b}]).factory("$$AnimateRunner",
 ["$q","$sniffer","$$animateAsyncRun",function(a,b,c){function d(a){this.setHost(a);this._doneCallbacks=[];this._runInAnimationFrame=c();this._state=0}d.chain=function(a,b){function c(){if(d===a.length)b(!0);else a[d](function(a){!1===a?b(!1):(d++,c())})}var d=0;c()};d.all=function(a,b){function c(v){l=l&&v;++d===a.length&&b(l)}var d=0,l=!0;q(a,function(a){a.done(c)})};d.prototype={setHost:function(a){this.host=a||{}},done:function(a){2===this._state?a():this._doneCallbacks.push(a)},progress:L,getPromise:function(){if(!this.promise){var b=
 this;this.promise=a(function(a,c){b.done(function(b){!1===b?c():a()})})}return this.promise},then:function(a,b){return this.getPromise().then(a,b)},"catch":function(a){return this.getPromise()["catch"](a)},"finally":function(a){return this.getPromise()["finally"](a)},pause:function(){this.host.pause&&this.host.pause()},resume:function(){this.host.resume&&this.host.resume()},end:function(){this.host.end&&this.host.end();this._resolve(!0)},cancel:function(){this.host.cancel&&this.host.cancel();this._resolve(!1)},
 complete:function(a){var b=this;0===b._state&&(b._state=1,b._runInAnimationFrame(function(){b._resolve(a)}))},_resolve:function(a){2!==this._state&&(q(this._doneCallbacks,function(b){b(a)}),this._doneCallbacks.length=0,this._state=2)}};return d}]).factory("$$animateAsyncRun",["$$rAF",function(a){function b(b){c.push(b);1<c.length||a(function(){for(var a=0;a<c.length;a++)c[a]();c=[]})}var c=[];return function(){var a=!1;b(function(){a=!0});return function(c){a?c():b(c)}}}]).provider("$$animateQueue",
 ["$animateProvider",function(a){function b(a,b,c,q){return d[a].some(function(a){return a(b,c,q)})}function c(a,b){a=a||{};var c=0<(a.addClass||"").length,d=0<(a.removeClass||"").length;return b?c&&d:c||d}var d=this.rules={skip:[],cancel:[],join:[]};d.join.push(function(a,b,d){return!b.structural&&c(b.options)});d.skip.push(function(a,b,d){return!b.structural&&!c(b.options)});d.skip.push(function(a,b,c){return"leave"==c.event&&b.structural});d.skip.push(function(a,b,c){return c.structural&&2===c.state&&
 !b.structural});d.cancel.push(function(a,b,c){return c.structural&&b.structural});d.cancel.push(function(a,b,c){return 2===c.state&&b.structural});d.cancel.push(function(a,b,c){a=b.options;c=c.options;return a.addClass&&a.addClass===c.removeClass||a.removeClass&&a.removeClass===c.addClass});this.$get=["$$rAF","$rootScope","$rootElement","$document","$$body","$$HashMap","$$animation","$$AnimateRunner","$templateRequest","$$jqLite","$$forceReflow",function(d,y,v,z,l,s,O,x,t,la,E){function h(a,b){var c=
-G(a),f=[],g=w[b];g&&q(g,function(a){a.node.contains(c)&&f.push(a.callback)});return f}function S(a,b,c,f){d(function(){q(h(b,a),function(a){a(b,c,f)})})}function u(a,g,m){function d(b,c,g,f){S(c,a,g,f);b.progress(c,g,f)}function w(b){var c=a,g=m;g.preparationClasses&&(c.removeClass(g.preparationClasses),g.preparationClasses=null);g.activeClasses&&(c.removeClass(g.activeClasses),g.activeClasses=null);Da(a,m);ea(a,m);m.domOperation();e.complete(!b)}var B,h;if(a=Fa(a))B=G(a),h=a.parent();m=ia(m);var e=
-new x;$(m.addClass)&&(m.addClass=m.addClass.join(" "));m.addClass&&!M(m.addClass)&&(m.addClass=null);$(m.removeClass)&&(m.removeClass=m.removeClass.join(" "));m.removeClass&&!M(m.removeClass)&&(m.removeClass=null);m.from&&!pa(m.from)&&(m.from=null);m.to&&!pa(m.to)&&(m.to=null);if(!B)return w(),e;var k=[B.className,m.addClass,m.removeClass].join(" ");if(!C(k))return w(),e;var l=0<=["enter","move","leave"].indexOf(g),u=!H||U.get(B),k=!u&&A.get(B)||{},v=!!k.state;u||v&&1==k.state||(u=!p(a,h,g));if(u)return w(),
-e;l&&J(a);h={structural:l,element:a,event:g,close:w,options:m,runner:e};if(v){if(b("skip",a,h,k)){if(2===k.state)return w(),e;R(a,k.options,m);return k.runner}if(b("cancel",a,h,k))if(2===k.state)k.runner.end();else if(k.structural)k.close();else return R(a,k.options,h.options),k.runner;else if(b("join",a,h,k))if(2===k.state)R(a,m,{});else return Ja(a,l?g:null,m),g=h.event=k.event,m=R(a,k.options,h.options),k.runner}else R(a,m,{});(v=h.structural)||(v="animate"===h.event&&0<Object.keys(h.options.to||
-{}).length||c(h.options));if(!v)return w(),f(a),e;var t=(k.counter||0)+1;h.counter=t;r(a,1,h);y.$$postDigest(function(){var b=A.get(B),h=!b,b=b||{},J=0<(a.parent()||[]).length&&("animate"===b.event||b.structural||c(b.options));if(h||b.counter!==t||!J){h&&(Da(a,m),ea(a,m));if(h||l&&b.event!==g)m.domOperation(),e.end();J||f(a)}else g=!b.structural&&c(b.options,!0)?"setClass":b.event,r(a,2),b=O(a,g,b.options),b.done(function(b){w(!b);(b=A.get(B))&&b.counter===t&&f(G(a));d(e,g,"close",{})}),e.setHost(b),
+G(a),f=[],g=w[b];g&&q(g,function(a){a.node.contains(c)&&f.push(a.callback)});return f}function S(a,b,c,f){d(function(){q(h(b,a),function(a){a(b,c,f)})})}function u(a,g,m){function d(b,c,g,f){S(c,a,g,f);b.progress(c,g,f)}function w(b){var c=a,g=m;g.preparationClasses&&(c.removeClass(g.preparationClasses),g.preparationClasses=null);g.activeClasses&&(c.removeClass(g.activeClasses),g.activeClasses=null);Ea(a,m);ea(a,m);m.domOperation();e.complete(!b)}var B,h;if(a=Ga(a))B=G(a),h=a.parent();m=ia(m);var e=
+new x;Y(m.addClass)&&(m.addClass=m.addClass.join(" "));m.addClass&&!M(m.addClass)&&(m.addClass=null);Y(m.removeClass)&&(m.removeClass=m.removeClass.join(" "));m.removeClass&&!M(m.removeClass)&&(m.removeClass=null);m.from&&!oa(m.from)&&(m.from=null);m.to&&!oa(m.to)&&(m.to=null);if(!B)return w(),e;var k=[B.className,m.addClass,m.removeClass].join(" ");if(!C(k))return w(),e;var l=0<=["enter","move","leave"].indexOf(g),u=!H||U.get(B),k=!u&&A.get(B)||{},v=!!k.state;u||v&&1==k.state||(u=!p(a,h,g));if(u)return w(),
+e;l&&J(a);h={structural:l,element:a,event:g,close:w,options:m,runner:e};if(v){if(b("skip",a,h,k)){if(2===k.state)return w(),e;R(a,k.options,m);return k.runner}if(b("cancel",a,h,k))if(2===k.state)k.runner.end();else if(k.structural)k.close();else return R(a,k.options,h.options),k.runner;else if(b("join",a,h,k))if(2===k.state)R(a,m,{});else return Ka(a,l?g:null,m),g=h.event=k.event,m=R(a,k.options,h.options),k.runner}else R(a,m,{});(v=h.structural)||(v="animate"===h.event&&0<Object.keys(h.options.to||
+{}).length||c(h.options));if(!v)return w(),f(a),e;var t=(k.counter||0)+1;h.counter=t;r(a,1,h);y.$$postDigest(function(){var b=A.get(B),h=!b,b=b||{},J=0<(a.parent()||[]).length&&("animate"===b.event||b.structural||c(b.options));if(h||b.counter!==t||!J){h&&(Ea(a,m),ea(a,m));if(h||l&&b.event!==g)m.domOperation(),e.end();J||f(a)}else g=!b.structural&&c(b.options,!0)?"setClass":b.event,r(a,2),b=O(a,g,b.options),b.done(function(b){w(!b);(b=A.get(B))&&b.counter===t&&f(G(a));d(e,g,"close",{})}),e.setHost(b),
 d(e,g,"start",{})});return e}function J(a){a=G(a).querySelectorAll("[data-ng-animate]");q(a,function(a){var b=parseInt(a.getAttribute("data-ng-animate")),c=A.get(a);switch(b){case 2:c.runner.end();case 1:c&&A.remove(a)}})}function f(a){a=G(a);a.removeAttribute("data-ng-animate");A.remove(a)}function B(a,b){return G(a)===G(b)}function p(a,b,c){c=B(a,l)||"HTML"===a[0].nodeName;var g=B(a,v),f=!1,d;for((a=a.data("$ngAnimatePin"))&&(b=a);b&&b.length;){g||(g=B(b,v));a=b[0];if(1!==a.nodeType)break;var w=
-A.get(a)||{};f||(f=w.structural||U.get(a));if(La(d)||!0===d)a=b.data("$$ngAnimateChildren"),Ma(a)&&(d=a);if(f&&!1===d)break;g||(g=B(b,v),g||(a=b.data("$ngAnimatePin"))&&(b=a));c||(c=B(b,l));b=b.parent()}return(!f||d)&&g&&c}function r(a,b,c){c=c||{};c.state=b;a=G(a);a.setAttribute("data-ng-animate",b);c=(b=A.get(a))?ya(b,c):c;A.put(a,c)}var A=new s,U=new s,H=null,g=y.$watch(function(){return 0===t.totalPendingRequests},function(a){a&&(g(),y.$$postDigest(function(){y.$$postDigest(function(){null===
-H&&(H=!0)})}))}),w={},k=a.classNameFilter(),C=k?function(a){return k.test(a)}:function(){return!0},Da=Q(la);return{on:function(a,b,c){b=ma(b);w[a]=w[a]||[];w[a].push({node:b,callback:c})},off:function(a,b,c){function g(a,b,c){var f=ma(b);return a.filter(function(a){return!(a.node===f&&(!c||a.callback===c))})}var f=w[a];f&&(w[a]=1===arguments.length?null:g(f,b,c))},pin:function(a,b){ua(qa(a),"element","not an element");ua(qa(b),"parentElement","not an element");a.data("$ngAnimatePin",b)},push:function(a,
-b,c,g){c=c||{};c.domOperation=g;return u(a,b,c)},enabled:function(a,b){var c=arguments.length;if(0===c)b=!!H;else if(qa(a)){var g=G(a),f=U.get(g);1===c?b=!f:(b=!!b)?f&&U.remove(g):U.put(g,!0)}else b=H=!!a;return b}}}]}]).provider("$$animation",["$animateProvider",function(a){function b(a){return a.data("$$animationRunner")}var c=this.drivers=[];this.$get=["$$jqLite","$rootScope","$injector","$$AnimateRunner","$$HashMap","$$rAFScheduler",function(a,e,y,v,z,l){function s(a){function b(a){if(a.processed)return a;
+A.get(a)||{};f||(f=w.structural||U.get(a));if(pa(d)||!0===d)a=b.data("$$ngAnimateChildren"),qa(a)&&(d=a);if(f&&!1===d)break;g||(g=B(b,v),g||(a=b.data("$ngAnimatePin"))&&(b=a));c||(c=B(b,l));b=b.parent()}return(!f||d)&&g&&c}function r(a,b,c){c=c||{};c.state=b;a=G(a);a.setAttribute("data-ng-animate",b);c=(b=A.get(a))?za(b,c):c;A.put(a,c)}var A=new s,U=new s,H=null,g=y.$watch(function(){return 0===t.totalPendingRequests},function(a){a&&(g(),y.$$postDigest(function(){y.$$postDigest(function(){null===
+H&&(H=!0)})}))}),w={},k=a.classNameFilter(),C=k?function(a){return k.test(a)}:function(){return!0},Ea=Q(la);return{on:function(a,b,c){b=Z(b);w[a]=w[a]||[];w[a].push({node:b,callback:c})},off:function(a,b,c){function g(a,b,c){var f=Z(b);return a.filter(function(a){return!(a.node===f&&(!c||a.callback===c))})}var f=w[a];f&&(w[a]=1===arguments.length?null:g(f,b,c))},pin:function(a,b){va(ra(a),"element","not an element");va(ra(b),"parentElement","not an element");a.data("$ngAnimatePin",b)},push:function(a,
+b,c,g){c=c||{};c.domOperation=g;return u(a,b,c)},enabled:function(a,b){var c=arguments.length;if(0===c)b=!!H;else if(ra(a)){var g=G(a),f=U.get(g);1===c?b=!f:(b=!!b)?f&&U.remove(g):U.put(g,!0)}else b=H=!!a;return b}}}]}]).provider("$$animation",["$animateProvider",function(a){function b(a){return a.data("$$animationRunner")}var c=this.drivers=[];this.$get=["$$jqLite","$rootScope","$injector","$$AnimateRunner","$$HashMap","$$rAFScheduler",function(a,e,y,v,z,l){function s(a){function b(a){if(a.processed)return a;
 a.processed=!0;var f=a.domNode,d=f.parentNode;e.put(f,a);for(var h;d;){if(h=e.get(d)){h.processed||(h=b(h));break}d=d.parentNode}(h||c).children.push(a);return a}var c={children:[]},d,e=new z;for(d=0;d<a.length;d++){var l=a[d];e.put(l.domNode,a[d]={domNode:l.domNode,fn:l.fn,children:[]})}for(d=0;d<a.length;d++)b(a[d]);return function(a){var b=[],c=[],d;for(d=0;d<a.children.length;d++)c.push(a.children[d]);a=c.length;var h=0,e=[];for(d=0;d<c.length;d++){var l=c[d];0>=a&&(a=h,h=0,b.push(e),e=[]);e.push(l.fn);
 l.children.forEach(function(a){h++;c.push(a)});a--}e.length&&b.push(e);return b}(c)}var O=[],x=Q(a);return function(t,z,E){function h(a){a=a.hasAttribute("ng-animate-ref")?[a]:a.querySelectorAll("[ng-animate-ref]");var b=[];q(a,function(a){var c=a.getAttribute("ng-animate-ref");c&&c.length&&b.push(a)});return b}function S(a){var b=[],c={};q(a,function(a,g){var d=G(a.element),f=0<=["enter","move"].indexOf(a.event),d=a.structural?h(d):[];if(d.length){var e=f?"to":"from";q(d,function(a){var b=a.getAttribute("ng-animate-ref");
 c[b]=c[b]||{};c[b][e]={animationID:g,element:I(a)}})}else b.push(a)});var d={},f={};q(c,function(c,e){var h=c.from,r=c.to;if(h&&r){var J=a[h.animationID],k=a[r.animationID],B=h.animationID.toString();if(!f[B]){var l=f[B]={structural:!0,beforeStart:function(){J.beforeStart();k.beforeStart()},close:function(){J.close();k.close()},classes:u(J.classes,k.classes),from:J,to:k,anchors:[]};l.classes.length?b.push(l):(b.push(J),b.push(k))}f[B].anchors.push({out:h.element,"in":r.element})}else h=h?h.animationID:
 r.animationID,r=h.toString(),d[r]||(d[r]=!0,b.push(a[h]))});return b}function u(a,b){a=a.split(" ");b=b.split(" ");for(var c=[],d=0;d<a.length;d++){var f=a[d];if("ng-"!==f.substring(0,3))for(var h=0;h<b.length;h++)if(f===b[h]){c.push(f);break}}return c.join(" ")}function J(a){for(var b=c.length-1;0<=b;b--){var d=c[b];if(y.has(d)&&(d=y.get(d)(a)))return d}}function f(a,c){a.from&&a.to?(b(a.from.element).setHost(c),b(a.to.element).setHost(c)):b(a.element).setHost(c)}function B(){var a=b(t);!a||"leave"===
-z&&E.$$domOperationFired||a.end()}function p(b){t.off("$destroy",B);t.removeData("$$animationRunner");x(t,E);ea(t,E);E.domOperation();H&&a.removeClass(t,H);t.removeClass("ng-animate");A.complete(!b)}E=ia(E);var r=0<=["enter","move","leave"].indexOf(z),A=new v({end:function(){p()},cancel:function(){p(!0)}});if(!c.length)return p(),A;t.data("$$animationRunner",A);var U=va(t.attr("class"),va(E.addClass,E.removeClass)),H=E.tempClasses;H&&(U+=" "+H,E.tempClasses=null);O.push({element:t,classes:U,event:z,
+z&&E.$$domOperationFired||a.end()}function p(b){t.off("$destroy",B);t.removeData("$$animationRunner");x(t,E);ea(t,E);E.domOperation();H&&a.removeClass(t,H);t.removeClass("ng-animate");A.complete(!b)}E=ia(E);var r=0<=["enter","move","leave"].indexOf(z),A=new v({end:function(){p()},cancel:function(){p(!0)}});if(!c.length)return p(),A;t.data("$$animationRunner",A);var U=wa(t.attr("class"),wa(E.addClass,E.removeClass)),H=E.tempClasses;H&&(U+=" "+H,E.tempClasses=null);O.push({element:t,classes:U,event:z,
 structural:r,options:E,beforeStart:function(){t.addClass("ng-animate");H&&a.addClass(t,H)},close:p});t.on("$destroy",B);if(1<O.length)return A;e.$$postDigest(function(){var a=[];q(O,function(c){b(c.element)?a.push(c):c.close()});O.length=0;var c=S(a),d=[];q(c,function(a){d.push({domNode:G(a.from?a.from.element:a.element),fn:function(){a.beforeStart();var c,d=a.close;if(b(a.anchors?a.from.element||a.to.element:a.element)){var g=J(a);g&&(c=g.start)}c?(c=c(),c.done(function(a){d(!a)}),f(a,c)):d()}})});
-l(s(d))});return A}}]}]).provider("$animateCss",["$animateProvider",function(a){var b=Ba(),c=Ba();this.$get=["$window","$$jqLite","$$AnimateRunner","$timeout","$$forceReflow","$sniffer","$$rAFScheduler","$animate",function(a,e,y,v,z,l,s,O){function x(a,b){var c=a.parentNode;return(c.$$ngAnimateParentKey||(c.$$ngAnimateParentKey=++S))+"-"+a.getAttribute("class")+"-"+b}function t(h,f,l,p){var r;0<b.count(l)&&(r=c.get(l),r||(f=V(f,"-stagger"),e.addClass(h,f),r=za(a,h,p),r.animationDuration=Math.max(r.animationDuration,
-0),r.transitionDuration=Math.max(r.transitionDuration,0),e.removeClass(h,f),c.put(l,r)));return r||{}}function la(a){u.push(a);s.waitUntilQuiet(function(){b.flush();c.flush();for(var a=z(),d=0;d<u.length;d++)u[d](a);u.length=0})}function E(c,f,h){f=b.get(h);f||(f=za(a,c,Na),"infinite"===f.animationIterationCount&&(f.animationIterationCount=1));b.put(h,f);c=f;h=c.animationDelay;f=c.transitionDelay;c.maxDelay=h&&f?Math.max(h,f):h||f;c.maxDuration=Math.max(c.animationDuration*c.animationIterationCount,
-c.transitionDuration);return c}var h=Q(e),S=0,u=[];return function(a,c){function d(){r()}function p(){r(!0)}function r(b){if(!(s||S&&z)){s=!0;z=!1;c.$$skipPreparationClasses||e.removeClass(a,aa);e.removeClass(a,Z);na(g,!1);ja(g,!1);q(w,function(a){g.style[a[0]]=""});h(a,c);ea(a,c);if(c.onDone)c.onDone();m&&m.complete(!b)}}function A(a){n.blockTransition&&ja(g,a);n.blockKeyframeAnimation&&na(g,!!a)}function u(){m=new y({end:d,cancel:p});la(L);r();return{$$willAnimate:!1,start:function(){return m},
-end:d}}function H(){function b(){if(!s){A(!1);q(w,function(a){g.style[a[0]]=a[1]});h(a,c);e.addClass(a,Z);if(n.recalculateTimingStyles){ha=g.className+" "+aa;ba=x(g,ha);D=E(g,ha,ba);Y=D.maxDelay;I=Math.max(Y,0);K=D.maxDuration;if(0===K){r();return}n.hasTransitions=0<D.transitionDuration;n.hasAnimations=0<D.animationDuration}n.applyAnimationDelay&&(Y="boolean"!==typeof c.delay&&oa(c.delay)?parseFloat(c.delay):Y,I=Math.max(Y,0),D.animationDelay=Y,da=[ka,Y+"s"],w.push(da),g.style[da[0]]=da[1]);M=1E3*
-I;Q=1E3*K;if(c.easing){var k,p=c.easing;n.hasTransitions&&(k=N+"TimingFunction",w.push([k,p]),g.style[k]=p);n.hasAnimations&&(k=X+"TimingFunction",w.push([k,p]),g.style[k]=p)}D.transitionDuration&&m.push(ra);D.animationDuration&&m.push(sa);H=Date.now();var u=M+1.5*Q;k=H+u;var p=a.data("$$animateCss")||[],z=!0;if(p.length){var C=p[0];(z=k>C.expectedEndTime)?v.cancel(C.timer):p.push(r)}z&&(u=v(d,u,!1),p[0]={timer:u,expectedEndTime:k},p.push(r),a.data("$$animateCss",p));a.on(m.join(" "),l);xa(a,c)}}
-function d(){var b=a.data("$$animateCss");if(b){for(var c=1;c<b.length;c++)b[c]();a.removeData("$$animateCss")}}function l(a){a.stopPropagation();var b=a.originalEvent||a;a=b.$manualTimeStamp||b.timeStamp||Date.now();b=parseFloat(b.elapsedTime.toFixed(3));Math.max(a-H,0)>=M&&b>=K&&(S=!0,r())}if(!s)if(g.parentNode){var H,m=[],k=function(a){if(S)z&&a&&(z=!1,r());else if(z=!a,D.animationDuration)if(a=na(g,z),z)w.push(a);else{var b=w,c=b.indexOf(a);0<=a&&b.splice(c,1)}},p=0<W&&(D.transitionDuration&&
-0===T.transitionDuration||D.animationDuration&&0===T.animationDuration)&&Math.max(T.animationDelay,T.transitionDelay);p?v(b,Math.floor(p*W*1E3),!1):b();F.resume=function(){k(!0)};F.pause=function(){k(!1)}}else r()}var g=G(a);if(!g||!g.parentNode||!O.enabled())return u();c=ia(c);var w=[],k=a.attr("class"),C=Ea(c),s,z,S,m,F,I,M,K,Q;if(0===c.duration||!l.animations&&!l.transitions)return u();var ca=c.event&&$(c.event)?c.event.join(" "):c.event,R="",P="";ca&&c.structural?R=V(ca,"ng-",!0):ca&&(R=ca);c.addClass&&
-(P+=V(c.addClass,"-add"));c.removeClass&&(P.length&&(P+=" "),P+=V(c.removeClass,"-remove"));c.applyClassesEarly&&P.length&&h(a,c);var aa=[R,P].join(" ").trim(),ha=k+" "+aa,Z=V(aa,"-active"),k=C.to&&0<Object.keys(C.to).length;if(!(0<(c.keyframeStyle||"").length||k||aa))return u();var ba,T;0<c.stagger?(C=parseFloat(c.stagger),T={transitionDelay:C,animationDelay:C,transitionDuration:0,animationDuration:0}):(ba=x(g,ha),T=t(g,aa,ba,Oa));c.$$skipPreparationClasses||e.addClass(a,aa);c.transitionStyle&&(C=
-[N,c.transitionStyle],fa(g,C),w.push(C));0<=c.duration&&(C=0<g.style[N].length,C=Aa(c.duration,C),fa(g,C),w.push(C));c.keyframeStyle&&(C=[X,c.keyframeStyle],fa(g,C),w.push(C));var W=T?0<=c.staggerIndex?c.staggerIndex:b.count(ba):0;(ca=0===W)&&!c.skipBlocking&&ja(g,9999);var D=E(g,ha,ba),Y=D.maxDelay;I=Math.max(Y,0);K=D.maxDuration;var n={};n.hasTransitions=0<D.transitionDuration;n.hasAnimations=0<D.animationDuration;n.hasTransitionAll=n.hasTransitions&&"all"==D.transitionProperty;n.applyTransitionDuration=
-k&&(n.hasTransitions&&!n.hasTransitionAll||n.hasAnimations&&!n.hasTransitions);n.applyAnimationDuration=c.duration&&n.hasAnimations;n.applyTransitionDelay=oa(c.delay)&&(n.applyTransitionDuration||n.hasTransitions);n.applyAnimationDelay=oa(c.delay)&&n.hasAnimations;n.recalculateTimingStyles=0<P.length;if(n.applyTransitionDuration||n.applyAnimationDuration)K=c.duration?parseFloat(c.duration):K,n.applyTransitionDuration&&(n.hasTransitions=!0,D.transitionDuration=K,C=0<g.style[N+"Property"].length,w.push(Aa(K,
-C))),n.applyAnimationDuration&&(n.hasAnimations=!0,D.animationDuration=K,w.push([ta,K+"s"]));if(0===K&&!n.recalculateTimingStyles)return u();if(null!=c.delay){var da=parseFloat(c.delay);n.applyTransitionDelay&&w.push([ga,da+"s"]);n.applyAnimationDelay&&w.push([ka,da+"s"])}null==c.duration&&0<D.transitionDuration&&(n.recalculateTimingStyles=n.recalculateTimingStyles||ca);M=1E3*I;Q=1E3*K;c.skipBlocking||(n.blockTransition=0<D.transitionDuration,n.blockKeyframeAnimation=0<D.animationDuration&&0<T.animationDelay&&
-0===T.animationDuration);wa(a,c);n.blockTransition||n.blockKeyframeAnimation?A(K):c.skipBlocking||ja(g,!1);return{$$willAnimate:!0,end:d,start:function(){if(!s)return F={end:d,cancel:p,resume:null,pause:null},m=new y(F),la(H),m}}}}]}]).provider("$$animateCssDriver",["$$animationProvider",function(a){a.drivers.push("$$animateCssDriver");this.$get=["$animateCss","$rootScope","$$AnimateRunner","$rootElement","$$body","$sniffer","$$jqLite",function(a,c,d,e,y,v,z){function l(a){return a.replace(/\bng-\S+\b/g,
+l(s(d))});return A}}]}]).provider("$animateCss",["$animateProvider",function(a){var b=Ca(),c=Ca();this.$get=["$window","$$jqLite","$$AnimateRunner","$timeout","$$forceReflow","$sniffer","$$rAFScheduler","$animate",function(a,e,y,v,z,l,s,O){function x(a,b){var c=a.parentNode;return(c.$$ngAnimateParentKey||(c.$$ngAnimateParentKey=++S))+"-"+a.getAttribute("class")+"-"+b}function t(h,f,l,p){var r;0<b.count(l)&&(r=c.get(l),r||(f=V(f,"-stagger"),e.addClass(h,f),r=Aa(a,h,p),r.animationDuration=Math.max(r.animationDuration,
+0),r.transitionDuration=Math.max(r.transitionDuration,0),e.removeClass(h,f),c.put(l,r)));return r||{}}function la(a){u.push(a);s.waitUntilQuiet(function(){b.flush();c.flush();for(var a=z(),d=0;d<u.length;d++)u[d](a);u.length=0})}function E(c,f,h){f=b.get(h);f||(f=Aa(a,c,Ma),"infinite"===f.animationIterationCount&&(f.animationIterationCount=1));b.put(h,f);c=f;h=c.animationDelay;f=c.transitionDelay;c.maxDelay=h&&f?Math.max(h,f):h||f;c.maxDuration=Math.max(c.animationDuration*c.animationIterationCount,
+c.transitionDuration);return c}var h=Q(e),S=0,u=[];return function(a,c){function d(){r()}function p(){r(!0)}function r(b){if(!(s||S&&z)){s=!0;z=!1;c.$$skipPreparationClasses||e.removeClass(a,aa);e.removeClass(a,$);ma(g,!1);ja(g,!1);q(w,function(a){g.style[a[0]]=""});h(a,c);ea(a,c);if(c.onDone)c.onDone();m&&m.complete(!b)}}function A(a){n.blockTransition&&ja(g,a);n.blockKeyframeAnimation&&ma(g,!!a)}function u(){m=new y({end:d,cancel:p});la(L);r();return{$$willAnimate:!1,start:function(){return m},
+end:d}}function H(){function b(){if(!s){A(!1);q(w,function(a){g.style[a[0]]=a[1]});h(a,c);e.addClass(a,$);if(n.recalculateTimingStyles){ha=g.className+" "+aa;ba=x(g,ha);D=E(g,ha,ba);X=D.maxDelay;I=Math.max(X,0);K=D.maxDuration;if(0===K){r();return}n.hasTransitions=0<D.transitionDuration;n.hasAnimations=0<D.animationDuration}n.applyAnimationDelay&&(X="boolean"!==typeof c.delay&&na(c.delay)?parseFloat(c.delay):X,I=Math.max(X,0),D.animationDelay=X,da=[ka,X+"s"],w.push(da),g.style[da[0]]=da[1]);M=1E3*
+I;Q=1E3*K;if(c.easing){var k,p=c.easing;n.hasTransitions&&(k=N+"TimingFunction",w.push([k,p]),g.style[k]=p);n.hasAnimations&&(k=W+"TimingFunction",w.push([k,p]),g.style[k]=p)}D.transitionDuration&&m.push(sa);D.animationDuration&&m.push(ta);H=Date.now();var u=M+1.5*Q;k=H+u;var p=a.data("$$animateCss")||[],z=!0;if(p.length){var C=p[0];(z=k>C.expectedEndTime)?v.cancel(C.timer):p.push(r)}z&&(u=v(d,u,!1),p[0]={timer:u,expectedEndTime:k},p.push(r),a.data("$$animateCss",p));a.on(m.join(" "),l);ya(a,c)}}
+function d(){var b=a.data("$$animateCss");if(b){for(var c=1;c<b.length;c++)b[c]();a.removeData("$$animateCss")}}function l(a){a.stopPropagation();var b=a.originalEvent||a;a=b.$manualTimeStamp||b.timeStamp||Date.now();b=parseFloat(b.elapsedTime.toFixed(3));Math.max(a-H,0)>=M&&b>=K&&(S=!0,r())}if(!s)if(g.parentNode){var H,m=[],k=function(a){if(S)z&&a&&(z=!1,r());else if(z=!a,D.animationDuration)if(a=ma(g,z),z)w.push(a);else{var b=w,c=b.indexOf(a);0<=a&&b.splice(c,1)}},p=0<Z&&(D.transitionDuration&&
+0===T.transitionDuration||D.animationDuration&&0===T.animationDuration)&&Math.max(T.animationDelay,T.transitionDelay);p?v(b,Math.floor(p*Z*1E3),!1):b();F.resume=function(){k(!0)};F.pause=function(){k(!1)}}else r()}var g=G(a);if(!g||!g.parentNode||!O.enabled())return u();c=ia(c);var w=[],k=a.attr("class"),C=Fa(c),s,z,S,m,F,I,M,K,Q;if(0===c.duration||!l.animations&&!l.transitions)return u();var ca=c.event&&Y(c.event)?c.event.join(" "):c.event,R="",P="";ca&&c.structural?R=V(ca,"ng-",!0):ca&&(R=ca);c.addClass&&
+(P+=V(c.addClass,"-add"));c.removeClass&&(P.length&&(P+=" "),P+=V(c.removeClass,"-remove"));c.applyClassesEarly&&P.length&&h(a,c);var aa=[R,P].join(" ").trim(),ha=k+" "+aa,$=V(aa,"-active"),k=C.to&&0<Object.keys(C.to).length;if(!(0<(c.keyframeStyle||"").length||k||aa))return u();var ba,T;0<c.stagger?(C=parseFloat(c.stagger),T={transitionDelay:C,animationDelay:C,transitionDuration:0,animationDuration:0}):(ba=x(g,ha),T=t(g,aa,ba,Na));c.$$skipPreparationClasses||e.addClass(a,aa);c.transitionStyle&&(C=
+[N,c.transitionStyle],fa(g,C),w.push(C));0<=c.duration&&(C=0<g.style[N].length,C=Ba(c.duration,C),fa(g,C),w.push(C));c.keyframeStyle&&(C=[W,c.keyframeStyle],fa(g,C),w.push(C));var Z=T?0<=c.staggerIndex?c.staggerIndex:b.count(ba):0;(ca=0===Z)&&!c.skipBlocking&&ja(g,9999);var D=E(g,ha,ba),X=D.maxDelay;I=Math.max(X,0);K=D.maxDuration;var n={};n.hasTransitions=0<D.transitionDuration;n.hasAnimations=0<D.animationDuration;n.hasTransitionAll=n.hasTransitions&&"all"==D.transitionProperty;n.applyTransitionDuration=
+k&&(n.hasTransitions&&!n.hasTransitionAll||n.hasAnimations&&!n.hasTransitions);n.applyAnimationDuration=c.duration&&n.hasAnimations;n.applyTransitionDelay=na(c.delay)&&(n.applyTransitionDuration||n.hasTransitions);n.applyAnimationDelay=na(c.delay)&&n.hasAnimations;n.recalculateTimingStyles=0<P.length;if(n.applyTransitionDuration||n.applyAnimationDuration)K=c.duration?parseFloat(c.duration):K,n.applyTransitionDuration&&(n.hasTransitions=!0,D.transitionDuration=K,C=0<g.style[N+"Property"].length,w.push(Ba(K,
+C))),n.applyAnimationDuration&&(n.hasAnimations=!0,D.animationDuration=K,w.push([ua,K+"s"]));if(0===K&&!n.recalculateTimingStyles)return u();if(null!=c.delay){var da=parseFloat(c.delay);n.applyTransitionDelay&&w.push([ga,da+"s"]);n.applyAnimationDelay&&w.push([ka,da+"s"])}null==c.duration&&0<D.transitionDuration&&(n.recalculateTimingStyles=n.recalculateTimingStyles||ca);M=1E3*I;Q=1E3*K;c.skipBlocking||(n.blockTransition=0<D.transitionDuration,n.blockKeyframeAnimation=0<D.animationDuration&&0<T.animationDelay&&
+0===T.animationDuration);xa(a,c);n.blockTransition||n.blockKeyframeAnimation?A(K):c.skipBlocking||ja(g,!1);return{$$willAnimate:!0,end:d,start:function(){if(!s)return F={end:d,cancel:p,resume:null,pause:null},m=new y(F),la(H),m}}}}]}]).provider("$$animateCssDriver",["$$animationProvider",function(a){a.drivers.push("$$animateCssDriver");this.$get=["$animateCss","$rootScope","$$AnimateRunner","$rootElement","$$body","$sniffer","$$jqLite",function(a,c,d,e,y,v,z){function l(a){return a.replace(/\bng-\S+\b/g,
 "")}function s(a,b){M(a)&&(a=a.split(" "));M(b)&&(b=b.split(" "));return a.filter(function(a){return-1===b.indexOf(a)}).join(" ")}function O(c,e,u){function v(a){var b={},c=G(a).getBoundingClientRect();q(["width","height","top","left"],function(a){var d=c[a];switch(a){case "top":d+=F.scrollTop;break;case "left":d+=F.scrollLeft}b[a]=Math.floor(d)+"px"});return b}function f(){var c=l(u.attr("class")||""),d=s(c,r),c=s(r,c),d=a(p,{to:v(u),addClass:"ng-anchor-in "+d,removeClass:"ng-anchor-out "+c,delay:!0});
 return d.$$willAnimate?d:null}function z(){p.remove();e.removeClass("ng-animate-shim");u.removeClass("ng-animate-shim")}var p=I(G(e).cloneNode(!0)),r=l(p.attr("class")||"");e.addClass("ng-animate-shim");u.addClass("ng-animate-shim");p.addClass("ng-anchor");E.append(p);var A;c=function(){var c=a(p,{addClass:"ng-anchor-out",delay:!0,from:v(e)});return c.$$willAnimate?c:null}();if(!c&&(A=f(),!A))return z();var t=c||A;return{start:function(){function a(){c&&c.end()}var b,c=t.start();c.done(function(){c=
 null;if(!A&&(A=f()))return c=A.start(),c.done(function(){c=null;z();b.complete()}),c;z();b.complete()});return b=new d({end:a,cancel:a})}}}function x(a,b,c,e){var f=t(a,L),l=t(b,L),p=[];q(e,function(a){(a=O(c,a.out,a["in"]))&&p.push(a)});if(f||l||0!==p.length)return{start:function(){function a(){q(b,function(a){a.end()})}var b=[];f&&b.push(f.start());l&&b.push(l.start());q(p,function(a){b.push(a.start())});var c=new d({end:a,cancel:a});d.all(b,function(a){c.complete(a)});return c}}}function t(c){var d=
-c.element,e=c.options||{};c.structural&&(e.event=c.event,e.structural=!0,e.applyClassesEarly=!0,"leave"===c.event&&(e.onDone=e.domOperation));e.preparationClasses&&(e.event=W(e.event,e.preparationClasses));c=a(d,e);return c.$$willAnimate?c:null}if(!v.animations&&!v.transitions)return L;var F=G(y);c=G(e);var E=I(F.parentNode===c?F:c);Q(z);return function(a){return a.from&&a.to?x(a.from,a.to,a.classes,a.anchors):t(a)}}]}]).provider("$$animateJs",["$animateProvider",function(a){this.$get=["$injector",
-"$$AnimateRunner","$$jqLite",function(b,c,d){function e(c){c=$(c)?c:c.split(" ");for(var d=[],e={},s=0;s<c.length;s++){var q=c[s],y=a.$$registeredAnimations[q];y&&!e[q]&&(d.push(b.get(y)),e[q]=!0)}return d}var y=Q(d);return function(a,b,d,s){function x(){s.domOperation();y(a,s)}function F(a,b,d,e,f){switch(d){case "animate":b=[b,e.from,e.to,f];break;case "setClass":b=[b,E,h,f];break;case "addClass":b=[b,E,f];break;case "removeClass":b=[b,h,f];break;default:b=[b,f]}b.push(e);if(a=a.apply(a,b))if(Ca(a.start)&&
-(a=a.start()),a instanceof c)a.done(f);else if(Ca(a))return a;return L}function t(a,b,d,e,f){var g=[];q(e,function(e){var h=e[f];h&&g.push(function(){var e,g,f=!1,l=function(a){f||(f=!0,(g||L)(a),e.complete(!a))};e=new c({end:function(){l()},cancel:function(){l(!0)}});g=F(h,a,b,d,function(a){l(!1===a)});return e})});return g}function G(a,b,d,e,f){var g=t(a,b,d,e,f);if(0===g.length){var h,k;"beforeSetClass"===f?(h=t(a,"removeClass",d,e,"beforeRemoveClass"),k=t(a,"addClass",d,e,"beforeAddClass")):"setClass"===
-f&&(h=t(a,"removeClass",d,e,"removeClass"),k=t(a,"addClass",d,e,"addClass"));h&&(g=g.concat(h));k&&(g=g.concat(k))}if(0!==g.length)return function(a){var b=[];g.length&&q(g,function(a){b.push(a())});b.length?c.all(b,a):a();return function(a){q(b,function(b){a?b.cancel():b.end()})}}}3===arguments.length&&pa(d)&&(s=d,d=null);s=ia(s);d||(d=a.attr("class")||"",s.addClass&&(d+=" "+s.addClass),s.removeClass&&(d+=" "+s.removeClass));var E=s.addClass,h=s.removeClass,I=e(d),u,J;if(I.length){var f,B;"leave"==
+c.element,e=c.options||{};c.structural&&(e.event=c.event,e.structural=!0,e.applyClassesEarly=!0,"leave"===c.event&&(e.onDone=e.domOperation));e.preparationClasses&&(e.event=$(e.event,e.preparationClasses));c=a(d,e);return c.$$willAnimate?c:null}if(!v.animations&&!v.transitions)return L;var F=G(y);c=G(e);var E=I(F.parentNode===c?F:c);Q(z);return function(a){return a.from&&a.to?x(a.from,a.to,a.classes,a.anchors):t(a)}}]}]).provider("$$animateJs",["$animateProvider",function(a){this.$get=["$injector",
+"$$AnimateRunner","$$jqLite",function(b,c,d){function e(c){c=Y(c)?c:c.split(" ");for(var d=[],e={},s=0;s<c.length;s++){var q=c[s],y=a.$$registeredAnimations[q];y&&!e[q]&&(d.push(b.get(y)),e[q]=!0)}return d}var y=Q(d);return function(a,b,d,s){function x(){s.domOperation();y(a,s)}function F(a,b,d,e,f){switch(d){case "animate":b=[b,e.from,e.to,f];break;case "setClass":b=[b,E,h,f];break;case "addClass":b=[b,E,f];break;case "removeClass":b=[b,h,f];break;default:b=[b,f]}b.push(e);if(a=a.apply(a,b))if(Da(a.start)&&
+(a=a.start()),a instanceof c)a.done(f);else if(Da(a))return a;return L}function t(a,b,d,e,f){var g=[];q(e,function(e){var h=e[f];h&&g.push(function(){var e,g,f=!1,l=function(a){f||(f=!0,(g||L)(a),e.complete(!a))};e=new c({end:function(){l()},cancel:function(){l(!0)}});g=F(h,a,b,d,function(a){l(!1===a)});return e})});return g}function G(a,b,d,e,f){var g=t(a,b,d,e,f);if(0===g.length){var h,k;"beforeSetClass"===f?(h=t(a,"removeClass",d,e,"beforeRemoveClass"),k=t(a,"addClass",d,e,"beforeAddClass")):"setClass"===
+f&&(h=t(a,"removeClass",d,e,"removeClass"),k=t(a,"addClass",d,e,"addClass"));h&&(g=g.concat(h));k&&(g=g.concat(k))}if(0!==g.length)return function(a){var b=[];g.length&&q(g,function(a){b.push(a())});b.length?c.all(b,a):a();return function(a){q(b,function(b){a?b.cancel():b.end()})}}}3===arguments.length&&oa(d)&&(s=d,d=null);s=ia(s);d||(d=a.attr("class")||"",s.addClass&&(d+=" "+s.addClass),s.removeClass&&(d+=" "+s.removeClass));var E=s.addClass,h=s.removeClass,I=e(d),u,J;if(I.length){var f,B;"leave"==
 b?(B="leave",f="afterLeave"):(B="before"+b.charAt(0).toUpperCase()+b.substr(1),f=b);"enter"!==b&&"move"!==b&&(u=G(a,b,s,I,B));J=G(a,b,s,I,f)}if(u||J)return{start:function(){function b(c){f=!0;x();ea(a,s);h.complete(c)}var d,e=[];u&&e.push(function(a){d=u(a)});e.length?e.push(function(a){x();a(!0)}):x();J&&e.push(function(a){d=J(a)});var f=!1,h=new c({end:function(){f||((d||L)(void 0),b(void 0))},cancel:function(){f||((d||L)(!0),b(!0))}});c.chain(e,b);return h}}}}]}]).provider("$$animateJsDriver",
 ["$$animationProvider",function(a){a.drivers.push("$$animateJsDriver");this.$get=["$$animateJs","$$AnimateRunner",function(a,c){function d(c){return a(c.element,c.event,c.classes,c.options)}return function(a){if(a.from&&a.to){var b=d(a.from),v=d(a.to);if(b||v)return{start:function(){function a(){return function(){q(d,function(a){a.end()})}}var d=[];b&&d.push(b.start());v&&d.push(v.start());c.all(d,function(a){e.complete(a)});var e=new c({end:a(),cancel:a()});return e}}}else return d(a)}}]}])})(window,
 window.angular);
@@ -1872,17 +1872,18 @@ window.angular);
 ; require("/home/bruno/ProjNode/FirebaseMeuTreinamento/firebase-meu-treinamento/public/bower_components/angular/angular.js");
 ; var __browserify_shim_require__=require;(function browserifyShim(module, exports, require, define, browserify_shim__define__module__export__) {
 /*
- AngularJS v1.4.5
+ AngularJS v1.4.6
  (c) 2010-2015 Google, Inc. http://angularjs.org
  License: MIT
 */
-(function(s,n,t){'use strict';n.module("ngAria",["ng"]).provider("$aria",function(){function a(a,f,l){return function(m,d,e){var b=e.$normalize(f);c[b]&&!e[b]&&m.$watch(e[a],function(b){b=l?!b:!!b;d.attr(f,b)})}}var c={ariaHidden:!0,ariaChecked:!0,ariaDisabled:!0,ariaRequired:!0,ariaInvalid:!0,ariaMultiline:!0,ariaValue:!0,tabindex:!0,bindKeypress:!0,bindRoleForClick:!0};this.config=function(a){c=n.extend(c,a)};this.$get=function(){return{config:function(a){return c[a]},$$watchExpr:a}}}).directive("ngShow",
-["$aria",function(a){return a.$$watchExpr("ngShow","aria-hidden",!0)}]).directive("ngHide",["$aria",function(a){return a.$$watchExpr("ngHide","aria-hidden",!1)}]).directive("ngModel",["$aria",function(a){function c(c,m,d){return a.config(m)&&!d.attr(c)}function k(a,c){return!c.attr("role")&&c.attr("type")===a&&"INPUT"!==c[0].nodeName}function f(a,c){var d=a.type,e=a.role;return"checkbox"===(d||e)||"menuitemcheckbox"===e?"checkbox":"radio"===(d||e)||"menuitemradio"===e?"radio":"range"===d||"progressbar"===
-e||"slider"===e?"range":"textbox"===(d||e)||"TEXTAREA"===c[0].nodeName?"multiline":""}return{restrict:"A",require:"?ngModel",priority:200,compile:function(l,m){var d=f(m,l);return{pre:function(a,b,c,g){"checkbox"===d&&"checkbox"!==c.type&&(g.$isEmpty=function(b){return!1===b})},post:function(e,b,h,g){function f(){return g.$modelValue}function m(){return p?(p=!1,function(a){a=h.value==g.$viewValue;b.attr("aria-checked",a);b.attr("tabindex",0-!a)}):function(a){b.attr("aria-checked",h.value==g.$viewValue)}}
-function l(){b.attr("aria-checked",!g.$isEmpty(g.$viewValue))}var p=c("tabindex","tabindex",b);switch(d){case "radio":case "checkbox":k(d,b)&&b.attr("role",d);c("aria-checked","ariaChecked",b)&&e.$watch(f,"radio"===d?m():l);break;case "range":k(d,b)&&b.attr("role","slider");if(a.config("ariaValue")){var n=!b.attr("aria-valuemin")&&(h.hasOwnProperty("min")||h.hasOwnProperty("ngMin")),q=!b.attr("aria-valuemax")&&(h.hasOwnProperty("max")||h.hasOwnProperty("ngMax")),r=!b.attr("aria-valuenow");n&&h.$observe("min",
-function(a){b.attr("aria-valuemin",a)});q&&h.$observe("max",function(a){b.attr("aria-valuemax",a)});r&&e.$watch(f,function(a){b.attr("aria-valuenow",a)})}break;case "multiline":c("aria-multiline","ariaMultiline",b)&&b.attr("aria-multiline",!0)}p&&b.attr("tabindex",0);g.$validators.required&&c("aria-required","ariaRequired",b)&&e.$watch(function(){return g.$error.required},function(a){b.attr("aria-required",!!a)});c("aria-invalid","ariaInvalid",b)&&e.$watch(function(){return g.$invalid},function(a){b.attr("aria-invalid",
-!!a)})}}}}}]).directive("ngDisabled",["$aria",function(a){return a.$$watchExpr("ngDisabled","aria-disabled")}]).directive("ngMessages",function(){return{restrict:"A",require:"?ngMessages",link:function(a,c,k,f){c.attr("aria-live")||c.attr("aria-live","assertive")}}}).directive("ngClick",["$aria","$parse",function(a,c){return{restrict:"A",compile:function(k,f){var l=c(f.ngClick,null,!0);return function(c,d,e){function b(a,b){if(-1!==b.indexOf(a[0].nodeName))return!0}var f=["BUTTON","A","INPUT","TEXTAREA"];
-!a.config("bindRoleForClick")||d.attr("role")||b(d,f)||d.attr("role","button");a.config("tabindex")&&!d.attr("tabindex")&&d.attr("tabindex",0);if(a.config("bindKeypress")&&!e.ngKeypress&&!b(d,f))d.on("keypress",function(a){function b(){l(c,{$event:a})}var d=a.which||a.keyCode;32!==d&&13!==d||c.$apply(b)})}}}}]).directive("ngDblclick",["$aria",function(a){return function(c,k,f){a.config("tabindex")&&!k.attr("tabindex")&&k.attr("tabindex",0)}}])})(window,window.angular);
+(function(s,p,t){'use strict';var q="BUTTON A INPUT TEXTAREA SELECT DETAILS SUMMARY".split(" "),n=function(a,c){if(-1!==c.indexOf(a[0].nodeName))return!0};p.module("ngAria",["ng"]).provider("$aria",function(){function a(a,f,l,m){return function(d,e,b){var g=b.$normalize(f);!c[g]||n(e,l)||b[g]||d.$watch(b[a],function(b){b=m?!b:!!b;e.attr(f,b)})}}var c={ariaHidden:!0,ariaChecked:!0,ariaDisabled:!0,ariaRequired:!0,ariaInvalid:!0,ariaMultiline:!0,ariaValue:!0,tabindex:!0,bindKeypress:!0,bindRoleForClick:!0};
+this.config=function(a){c=p.extend(c,a)};this.$get=function(){return{config:function(a){return c[a]},$$watchExpr:a}}}).directive("ngShow",["$aria",function(a){return a.$$watchExpr("ngShow","aria-hidden",[],!0)}]).directive("ngHide",["$aria",function(a){return a.$$watchExpr("ngHide","aria-hidden",[],!1)}]).directive("ngModel",["$aria",function(a){function c(c,m,d){return a.config(m)&&!d.attr(c)}function k(a,c){return!c.attr("role")&&c.attr("type")===a&&"INPUT"!==c[0].nodeName}function f(a,c){var d=
+a.type,e=a.role;return"checkbox"===(d||e)||"menuitemcheckbox"===e?"checkbox":"radio"===(d||e)||"menuitemradio"===e?"radio":"range"===d||"progressbar"===e||"slider"===e?"range":"textbox"===(d||e)||"TEXTAREA"===c[0].nodeName?"multiline":""}return{restrict:"A",require:"?ngModel",priority:200,compile:function(l,m){var d=f(m,l);return{pre:function(a,b,c,h){"checkbox"===d&&"checkbox"!==c.type&&(h.$isEmpty=function(b){return!1===b})},post:function(e,b,g,h){function f(){return h.$modelValue}function m(){return r?
+(r=!1,function(a){a=g.value==h.$viewValue;b.attr("aria-checked",a);b.attr("tabindex",0-!a)}):function(a){b.attr("aria-checked",g.value==h.$viewValue)}}function l(){b.attr("aria-checked",!h.$isEmpty(h.$viewValue))}var r=c("tabindex","tabindex",b);switch(d){case "radio":case "checkbox":k(d,b)&&b.attr("role",d);c("aria-checked","ariaChecked",b)&&e.$watch(f,"radio"===d?m():l);r&&b.attr("tabindex",0);break;case "range":k(d,b)&&b.attr("role","slider");if(a.config("ariaValue")){var n=!b.attr("aria-valuemin")&&
+(g.hasOwnProperty("min")||g.hasOwnProperty("ngMin")),p=!b.attr("aria-valuemax")&&(g.hasOwnProperty("max")||g.hasOwnProperty("ngMax")),q=!b.attr("aria-valuenow");n&&g.$observe("min",function(a){b.attr("aria-valuemin",a)});p&&g.$observe("max",function(a){b.attr("aria-valuemax",a)});q&&e.$watch(f,function(a){b.attr("aria-valuenow",a)})}r&&b.attr("tabindex",0);break;case "multiline":c("aria-multiline","ariaMultiline",b)&&b.attr("aria-multiline",!0)}h.$validators.required&&c("aria-required","ariaRequired",
+b)&&e.$watch(function(){return h.$error.required},function(a){b.attr("aria-required",!!a)});c("aria-invalid","ariaInvalid",b)&&e.$watch(function(){return h.$invalid},function(a){b.attr("aria-invalid",!!a)})}}}}}]).directive("ngDisabled",["$aria",function(a){return a.$$watchExpr("ngDisabled","aria-disabled",[])}]).directive("ngMessages",function(){return{restrict:"A",require:"?ngMessages",link:function(a,c,k,f){c.attr("aria-live")||c.attr("aria-live","assertive")}}}).directive("ngClick",["$aria","$parse",
+function(a,c){return{restrict:"A",compile:function(k,f){var l=c(f.ngClick,null,!0);return function(c,d,e){if(!n(d,q)&&(a.config("bindRoleForClick")&&!d.attr("role")&&d.attr("role","button"),a.config("tabindex")&&!d.attr("tabindex")&&d.attr("tabindex",0),a.config("bindKeypress")&&!e.ngKeypress))d.on("keypress",function(a){function d(){l(c,{$event:a})}var e=a.which||a.keyCode;32!==e&&13!==e||c.$apply(d)})}}}}]).directive("ngDblclick",["$aria",function(a){return function(c,k,f){!a.config("tabindex")||
+k.attr("tabindex")||n(k,q)||k.attr("tabindex",0)}}])})(window,window.angular);
 
 
 ; browserify_shim__define__module__export__(typeof angular.module('ngAria') != "undefined" ? angular.module('ngAria') : window.angular.module('ngAria'));
@@ -1923,13 +1924,13 @@ require("/home/bruno/ProjNode/FirebaseMeuTreinamento/firebase-meu-treinamento/pu
 ; require("/home/bruno/ProjNode/FirebaseMeuTreinamento/firebase-meu-treinamento/public/bower_components/angular/angular.js");
 ; var __browserify_shim_require__=require;(function browserifyShim(module, exports, require, define, browserify_shim__define__module__export__) {
 /*
- AngularJS v1.4.5
+ AngularJS v1.4.6
  (c) 2010-2015 Google, Inc. http://angularjs.org
  License: MIT
 */
-(function(p,g,l){'use strict';function m(b,a,f){var c=f.baseHref(),k=b[0];return function(b,d,e){var f,h;e=e||{};h=e.expires;f=g.isDefined(e.path)?e.path:c;d===l&&(h="Thu, 01 Jan 1970 00:00:00 GMT",d="");g.isString(h)&&(h=new Date(h));d=encodeURIComponent(b)+"="+encodeURIComponent(d);d=d+(f?";path="+f:"")+(e.domain?";domain="+e.domain:"");d+=h?";expires="+h.toUTCString():"";d+=e.secure?";secure":"";e=d.length+1;4096<e&&a.warn("Cookie '"+b+"' possibly not set or overflowed because it was too large ("+
-e+" > 4096 bytes)!");k.cookie=d}}g.module("ngCookies",["ng"]).provider("$cookies",[function(){var b=this.defaults={};this.$get=["$$cookieReader","$$cookieWriter",function(a,f){return{get:function(c){return a()[c]},getObject:function(c){return(c=this.get(c))?g.fromJson(c):c},getAll:function(){return a()},put:function(c,a,n){f(c,a,n?g.extend({},b,n):b)},putObject:function(c,b,a){this.put(c,g.toJson(b),a)},remove:function(a,k){f(a,l,k?g.extend({},b,k):b)}}}]}]);g.module("ngCookies").factory("$cookieStore",
-["$cookies",function(b){return{get:function(a){return b.getObject(a)},put:function(a,f){b.putObject(a,f)},remove:function(a){b.remove(a)}}}]);m.$inject=["$document","$log","$browser"];g.module("ngCookies").provider("$$cookieWriter",function(){this.$get=m})})(window,window.angular);
+(function(p,c,n){'use strict';function l(b,a,g){var d=g.baseHref(),k=b[0];return function(b,e,f){var g,h;f=f||{};h=f.expires;g=c.isDefined(f.path)?f.path:d;c.isUndefined(e)&&(h="Thu, 01 Jan 1970 00:00:00 GMT",e="");c.isString(h)&&(h=new Date(h));e=encodeURIComponent(b)+"="+encodeURIComponent(e);e=e+(g?";path="+g:"")+(f.domain?";domain="+f.domain:"");e+=h?";expires="+h.toUTCString():"";e+=f.secure?";secure":"";f=e.length+1;4096<f&&a.warn("Cookie '"+b+"' possibly not set or overflowed because it was too large ("+
+f+" > 4096 bytes)!");k.cookie=e}}c.module("ngCookies",["ng"]).provider("$cookies",[function(){var b=this.defaults={};this.$get=["$$cookieReader","$$cookieWriter",function(a,g){return{get:function(d){return a()[d]},getObject:function(d){return(d=this.get(d))?c.fromJson(d):d},getAll:function(){return a()},put:function(d,a,m){g(d,a,m?c.extend({},b,m):b)},putObject:function(d,b,a){this.put(d,c.toJson(b),a)},remove:function(a,k){g(a,n,k?c.extend({},b,k):b)}}}]}]);c.module("ngCookies").factory("$cookieStore",
+["$cookies",function(b){return{get:function(a){return b.getObject(a)},put:function(a,c){b.putObject(a,c)},remove:function(a){b.remove(a)}}}]);l.$inject=["$document","$log","$browser"];c.module("ngCookies").provider("$$cookieWriter",function(){this.$get=l})})(window,window.angular);
 
 
 ; browserify_shim__define__module__export__(typeof angular.module('ngCookies') != "undefined" ? angular.module('ngCookies') : window.angular.module('ngCookies'));
@@ -24184,7 +24185,7 @@ angular.module("material.core").constant("$MD_THEME_CSS", "md-autocomplete.md-TH
 ; require("/home/bruno/ProjNode/FirebaseMeuTreinamento/firebase-meu-treinamento/public/bower_components/angular/angular.js");
 ; var __browserify_shim_require__=require;(function browserifyShim(module, exports, require, define, browserify_shim__define__module__export__) {
 /*
- AngularJS v1.4.5
+ AngularJS v1.4.6
  (c) 2010-2015 Google, Inc. http://angularjs.org
  License: MIT
 */
@@ -28815,7 +28816,7 @@ angular.module('ng-uploadcare', [])
 ; require("/home/bruno/ProjNode/FirebaseMeuTreinamento/firebase-meu-treinamento/public/bower_components/lodash/lodash.min.js");
 ; var __browserify_shim_require__=require;(function browserifyShim(module, exports, require, define, browserify_shim__define__module__export__) {
 /**
- * @license AngularJS v1.4.5
+ * @license AngularJS v1.4.6
  * (c) 2010-2015 Google, Inc. http://angularjs.org
  * License: MIT
  */
@@ -28873,7 +28874,7 @@ function minErr(module, ErrorConstructor) {
       return match;
     });
 
-    message += '\nhttp://errors.angularjs.org/1.4.5/' +
+    message += '\nhttp://errors.angularjs.org/1.4.6/' +
       (module ? module + '/' : '') + code;
 
     for (i = SKIP_INDEXES, paramPrefix = '?'; i < templateArgs.length; i++, paramPrefix = '&') {
@@ -29710,6 +29711,8 @@ function copy(source, destination, stackSource, stackDest) {
       } else if (isRegExp(source)) {
         destination = new RegExp(source.source, source.toString().match(/[^\/]*$/)[0]);
         destination.lastIndex = source.lastIndex;
+      } else if (isFunction(source.cloneNode)) {
+          destination = source.cloneNode(true);
       } else {
         var emptyObject = Object.create(getPrototypeOf(source));
         return copy(source, emptyObject, stackSource, stackDest);
@@ -29860,7 +29863,7 @@ function equals(o1, o2) {
         for (key in o2) {
           if (!(key in keySet) &&
               key.charAt(0) !== '$' &&
-              o2[key] !== undefined &&
+              isDefined(o2[key]) &&
               !isFunction(o2[key])) return false;
         }
         return true;
@@ -30556,10 +30559,9 @@ function bindJQuery() {
 
   // bind to jQuery if present;
   var jqName = jq();
-  jQuery = window.jQuery; // use default jQuery.
-  if (isDefined(jqName)) { // `ngJq` present
-    jQuery = jqName === null ? undefined : window[jqName]; // if empty; use jqLite. if not empty, use jQuery specified by `ngJq`.
-  }
+  jQuery = isUndefined(jqName) ? window.jQuery :   // use jQuery (if present)
+           !jqName             ? undefined     :   // use jqLite
+                                 window[jqName];   // use jQuery specified by `ngJq`
 
   // Use jQuery if it exists with proper functionality, otherwise default to us.
   // Angular 1.2+ requires jQuery 1.7+ for on()/off() support.
@@ -30664,22 +30666,24 @@ function getter(obj, path, bindFnToScope) {
 /**
  * Return the DOM siblings between the first and last node in the given array.
  * @param {Array} array like object
- * @returns {jqLite} jqLite collection containing the nodes
+ * @returns {Array} the inputted object or a jqLite collection containing the nodes
  */
 function getBlockNodes(nodes) {
-  // TODO(perf): just check if all items in `nodes` are siblings and if they are return the original
-  //             collection, otherwise update the original collection.
+  // TODO(perf): update `nodes` instead of creating a new object?
   var node = nodes[0];
   var endNode = nodes[nodes.length - 1];
-  var blockNodes = [node];
+  var blockNodes;
 
-  do {
-    node = node.nextSibling;
-    if (!node) break;
-    blockNodes.push(node);
-  } while (node !== endNode);
+  for (var i = 1; node !== endNode && (node = node.nextSibling); i++) {
+    if (blockNodes || nodes[i] !== node) {
+      if (!blockNodes) {
+        blockNodes = jqLite(slice.call(nodes, 0, i));
+      }
+      blockNodes.push(node);
+    }
+  }
 
-  return jqLite(blockNodes);
+  return blockNodes || nodes;
 }
 
 
@@ -31063,7 +31067,7 @@ function serializeObject(obj) {
     val = toJsonReplacer(key, val);
     if (isObject(val)) {
 
-      if (seen.indexOf(val) >= 0) return '<<already seen>>';
+      if (seen.indexOf(val) >= 0) return '...';
 
       seen.push(val);
     }
@@ -31074,7 +31078,7 @@ function serializeObject(obj) {
 function toDebugString(obj) {
   if (typeof obj === 'function') {
     return obj.toString().replace(/ \{[\s\S]*$/, '');
-  } else if (typeof obj === 'undefined') {
+  } else if (isUndefined(obj)) {
     return 'undefined';
   } else if (typeof obj !== 'string') {
     return serializeObject(obj);
@@ -31180,8 +31184,9 @@ function toDebugString(obj) {
  * @name angular.version
  * @module ng
  * @description
- * An object that contains information about the current AngularJS version. This object has the
- * following properties:
+ * An object that contains information about the current AngularJS version.
+ *
+ * This object has the following properties:
  *
  * - `full` – `{string}` – Full version string, such as "0.9.18".
  * - `major` – `{number}` – Major version number, such as "0".
@@ -31190,11 +31195,11 @@ function toDebugString(obj) {
  * - `codeName` – `{string}` – Code name of the release, such as "jiggling-armfat".
  */
 var version = {
-  full: '1.4.5',    // all of these placeholder strings will be replaced by grunt's
+  full: '1.4.6',    // all of these placeholder strings will be replaced by grunt's
   major: 1,    // package task
   minor: 4,
-  dot: 5,
-  codeName: 'permanent-internship'
+  dot: 6,
+  codeName: 'multiplicative-elevation'
 };
 
 
@@ -31784,7 +31789,7 @@ function jqLiteInheritedData(element, name, value) {
 
   while (element) {
     for (var i = 0, ii = names.length; i < ii; i++) {
-      if ((value = jqLite.data(element, names[i])) !== undefined) return value;
+      if (isDefined(value = jqLite.data(element, names[i]))) return value;
     }
 
     // If dealing with a document fragment node with a host element, and no parent, use the host
@@ -31890,9 +31895,8 @@ function getBooleanAttrName(element, name) {
   return booleanAttr && BOOLEAN_ELEMENTS[nodeName_(element)] && booleanAttr;
 }
 
-function getAliasedAttrName(element, name) {
-  var nodeName = element.nodeName;
-  return (nodeName === 'INPUT' || nodeName === 'TEXTAREA') && ALIASED_ATTR[name];
+function getAliasedAttrName(name) {
+  return ALIASED_ATTR[name];
 }
 
 forEach({
@@ -32029,7 +32033,7 @@ forEach({
     // in a way that survives minification.
     // jqLiteEmpty takes no arguments but is a setter.
     if (fn !== jqLiteEmpty &&
-        (((fn.length == 2 && (fn !== jqLiteHasClass && fn !== jqLiteController)) ? arg1 : arg2) === undefined)) {
+        (isUndefined((fn.length == 2 && (fn !== jqLiteHasClass && fn !== jqLiteController)) ? arg1 : arg2))) {
       if (isObject(arg1)) {
 
         // we are a write, but the object properties are the key/values
@@ -32050,7 +32054,7 @@ forEach({
         // TODO: do we still need this?
         var value = fn.$dv;
         // Only if we have $dv do we iterate over all, otherwise it is just the first element.
-        var jj = (value === undefined) ? Math.min(nodeCount, 1) : nodeCount;
+        var jj = (isUndefined(value)) ? Math.min(nodeCount, 1) : nodeCount;
         for (var j = 0; j < jj; j++) {
           var nodeValue = fn(this[j], arg1, arg2);
           value = value ? value + nodeValue : nodeValue;
@@ -33689,61 +33693,66 @@ var $$CoreAnimateQueueProvider = function() {
       }
     };
 
-    function addRemoveClassesPostDigest(element, add, remove) {
-      var classVal, data = postDigestQueue.get(element);
 
-      if (!data) {
-        postDigestQueue.put(element, data = {});
-        postDigestElements.push(element);
-      }
-
-      var updateData = function(classes, value) {
-        var changed = false;
-        if (classes) {
-          classes = isString(classes) ? classes.split(' ') :
-                    isArray(classes) ? classes : [];
-          forEach(classes, function(className) {
-            if (className) {
-              changed = true;
-              data[className] = value;
-            }
-          });
-        }
-        return changed;
-      };
-
-      var classesAdded = updateData(add, true);
-      var classesRemoved = updateData(remove, false);
-      if ((!classesAdded && !classesRemoved) || postDigestElements.length > 1) return;
-
-      $rootScope.$$postDigest(function() {
-        forEach(postDigestElements, function(element) {
-          var data = postDigestQueue.get(element);
-          if (data) {
-            var existing = splitClasses(element.attr('class'));
-            var toAdd = '';
-            var toRemove = '';
-            forEach(data, function(status, className) {
-              var hasClass = !!existing[className];
-              if (status !== hasClass) {
-                if (status) {
-                  toAdd += (toAdd.length ? ' ' : '') + className;
-                } else {
-                  toRemove += (toRemove.length ? ' ' : '') + className;
-                }
-              }
-            });
-
-            forEach(element, function(elm) {
-              toAdd    && jqLiteAddClass(elm, toAdd);
-              toRemove && jqLiteRemoveClass(elm, toRemove);
-            });
-            postDigestQueue.remove(element);
+    function updateData(data, classes, value) {
+      var changed = false;
+      if (classes) {
+        classes = isString(classes) ? classes.split(' ') :
+                  isArray(classes) ? classes : [];
+        forEach(classes, function(className) {
+          if (className) {
+            changed = true;
+            data[className] = value;
           }
         });
+      }
+      return changed;
+    }
 
-        postDigestElements.length = 0;
+    function handleCSSClassChanges() {
+      forEach(postDigestElements, function(element) {
+        var data = postDigestQueue.get(element);
+        if (data) {
+          var existing = splitClasses(element.attr('class'));
+          var toAdd = '';
+          var toRemove = '';
+          forEach(data, function(status, className) {
+            var hasClass = !!existing[className];
+            if (status !== hasClass) {
+              if (status) {
+                toAdd += (toAdd.length ? ' ' : '') + className;
+              } else {
+                toRemove += (toRemove.length ? ' ' : '') + className;
+              }
+            }
+          });
+
+          forEach(element, function(elm) {
+            toAdd    && jqLiteAddClass(elm, toAdd);
+            toRemove && jqLiteRemoveClass(elm, toRemove);
+          });
+          postDigestQueue.remove(element);
+        }
       });
+      postDigestElements.length = 0;
+    }
+
+
+    function addRemoveClassesPostDigest(element, add, remove) {
+      var data = postDigestQueue.get(element) || {};
+
+      var classesAdded = updateData(data, add, true);
+      var classesRemoved = updateData(data, remove, false);
+
+      if (classesAdded || classesRemoved) {
+
+        postDigestQueue.put(element, data);
+        postDigestElements.push(element);
+
+        if (postDigestElements.length === 1) {
+          $rootScope.$$postDigest(handleCSSClassChanges);
+        }
+      }
     }
   }];
 };
@@ -34344,7 +34353,7 @@ function Browser(window, document, $log, $sniffer) {
   var cachedState, lastHistoryState,
       lastBrowserUrl = location.href,
       baseElement = document.find('base'),
-      reloadLocation = null;
+      pendingLocation = null;
 
   cacheState();
   lastHistoryState = cachedState;
@@ -34404,8 +34413,8 @@ function Browser(window, document, $log, $sniffer) {
         // Do the assignment again so that those two variables are referentially identical.
         lastHistoryState = cachedState;
       } else {
-        if (!sameBase || reloadLocation) {
-          reloadLocation = url;
+        if (!sameBase || pendingLocation) {
+          pendingLocation = url;
         }
         if (replace) {
           location.replace(url);
@@ -34414,14 +34423,18 @@ function Browser(window, document, $log, $sniffer) {
         } else {
           location.hash = getHash(url);
         }
+        if (location.href !== url) {
+          pendingLocation = url;
+        }
       }
       return self;
     // getter
     } else {
-      // - reloadLocation is needed as browsers don't allow to read out
-      //   the new location.href if a reload happened.
+      // - pendingLocation is needed as browsers don't allow to read out
+      //   the new location.href if a reload happened or if there is a bug like in iOS 9 (see
+      //   https://openradar.appspot.com/22186109).
       // - the replacement is a workaround for https://bugzilla.mozilla.org/show_bug.cgi?id=407172
-      return reloadLocation || location.href.replace(/%27/g,"'");
+      return pendingLocation || location.href.replace(/%27/g,"'");
     }
   };
 
@@ -34443,6 +34456,7 @@ function Browser(window, document, $log, $sniffer) {
       urlChangeInit = false;
 
   function cacheStateAndFireUrlChange() {
+    pendingLocation = null;
     cacheState();
     fireUrlChange();
   }
@@ -34678,10 +34692,10 @@ function $BrowserProvider() {
            $scope.keys = [];
            $scope.cache = $cacheFactory('cacheId');
            $scope.put = function(key, value) {
-             if ($scope.cache.get(key) === undefined) {
+             if (isUndefined($scope.cache.get(key))) {
                $scope.keys.push(key);
              }
-             $scope.cache.put(key, value === undefined ? null : value);
+             $scope.cache.put(key, isUndefined(value) ? null : value);
            };
          }]);
      </file>
@@ -35157,18 +35171,24 @@ function $TemplateCacheProvider() {
  * and other directives used in the directive's template will also be excluded from execution.
  *
  * #### `scope`
- * **If set to `true`,** then a new scope will be created for this directive. If multiple directives on the
- * same element request a new scope, only one new scope is created. The new scope rule does not
- * apply for the root of the template since the root of the template always gets a new scope.
+ * The scope property can be `true`, an object or a falsy value:
  *
- * **If set to `{}` (object hash),** then a new "isolate" scope is created. The 'isolate' scope differs from
- * normal scope in that it does not prototypically inherit from the parent scope. This is useful
- * when creating reusable components, which should not accidentally read or modify data in the
- * parent scope.
+ * * **falsy:** No scope will be created for the directive. The directive will use its parent's scope.
  *
- * The 'isolate' scope takes an object hash which defines a set of local scope properties
- * derived from the parent scope. These local properties are useful for aliasing values for
- * templates. Locals definition is a hash of local scope property to its source:
+ * * **`true`:** A new child scope that prototypically inherits from its parent will be created for
+ * the directive's element. If multiple directives on the same element request a new scope,
+ * only one new scope is created. The new scope rule does not apply for the root of the template
+ * since the root of the template always gets a new scope.
+ *
+ * * **`{...}` (an object hash):** A new "isolate" scope is created for the directive's element. The
+ * 'isolate' scope differs from normal scope in that it does not prototypically inherit from its parent
+ * scope. This is useful when creating reusable components, which should not accidentally read or modify
+ * data in the parent scope.
+ *
+ * The 'isolate' scope object hash defines a set of local scope properties derived from attributes on the
+ * directive's element. These local properties are useful for aliasing values for templates. The keys in
+ * the object hash map to the name of the property on the isolate scope; the values define how the property
+ * is bound to the parent scope, via matching attributes on the directive's element:
  *
  * * `@` or `@attr` - bind a local scope property to the value of DOM attribute. The result is
  *   always a string since DOM attributes are strings. If no `attr` name is specified  then the
@@ -35201,6 +35221,20 @@ function $TemplateCacheProvider() {
  *   For example, if the expression is `increment(amount)` then we can specify the amount value
  *   by calling the `localFn` as `localFn({amount: 22})`.
  *
+ * In general it's possible to apply more than one directive to one element, but there might be limitations
+ * depending on the type of scope required by the directives. The following points will help explain these limitations.
+ * For simplicity only two directives are taken into account, but it is also applicable for several directives:
+ *
+ * * **no scope** + **no scope** => Two directives which don't require their own scope will use their parent's scope
+ * * **child scope** + **no scope** =>  Both directives will share one single child scope
+ * * **child scope** + **child scope** =>  Both directives will share one single child scope
+ * * **isolated scope** + **no scope** =>  The isolated directive will use it's own created isolated scope. The other directive will use
+ * its parent's scope
+ * * **isolated scope** + **child scope** =>  **Won't work!** Only one scope can be related to one element. Therefore these directives cannot
+ * be applied to the same element.
+ * * **isolated scope** + **isolated scope**  =>  **Won't work!** Only one scope can be related to one element. Therefore these directives
+ * cannot be applied to the same element.
+ *
  *
  * #### `bindToController`
  * When an isolate scope is used for a component (see above), and `controllerAs` is used, `bindToController: true` will
@@ -35209,7 +35243,7 @@ function $TemplateCacheProvider() {
  *
  * #### `controller`
  * Controller constructor function. The controller is instantiated before the
- * pre-linking phase and it is shared with other directives (see
+ * pre-linking phase and can be accessed by other directives (see
  * `require` attribute). This allows the directives to communicate with each other and augment
  * each other's behavior. The controller is injectable (and supports bracket notation) with the following locals:
  *
@@ -35249,9 +35283,10 @@ function $TemplateCacheProvider() {
  *
  * #### `controllerAs`
  * Identifier name for a reference to the controller in the directive's scope.
- * This allows the controller to be referenced from the directive template. The directive
- * needs to define a scope for this configuration to be used. Useful in the case when
- * directive is used as component.
+ * This allows the controller to be referenced from the directive template. This is especially
+ * useful when a directive is used as component, i.e. with an `isolate` scope. It's also possible
+ * to use it in a directive without an `isolate` / `new` scope, but you need to be aware that the
+ * `controllerAs` reference might overwrite a property that already exists on the parent scope.
  *
  *
  * #### `restrict`
@@ -36088,7 +36123,7 @@ function $CompileProvider($provide, $$sanitizeUriProvider) {
 
         var node = this.$$element[0],
             booleanKey = getBooleanAttrName(node, key),
-            aliasedKey = getAliasedAttrName(node, key),
+            aliasedKey = getAliasedAttrName(key),
             observer = key,
             nodeName;
 
@@ -36155,7 +36190,7 @@ function $CompileProvider($provide, $$sanitizeUriProvider) {
         }
 
         if (writeAttr !== false) {
-          if (value === null || value === undefined) {
+          if (value === null || isUndefined(value)) {
             this.$$element.removeAttr(attrName);
           } else {
             this.$$element.attr(attrName, value);
@@ -37121,7 +37156,7 @@ function $CompileProvider($provide, $$sanitizeUriProvider) {
             i = 0, ii = directives.length; i < ii; i++) {
           try {
             directive = directives[i];
-            if ((maxPriority === undefined || maxPriority > directive.priority) &&
+            if ((isUndefined(maxPriority) || maxPriority > directive.priority) &&
                  directive.restrict.indexOf(location) != -1) {
               if (startAttrName) {
                 directive = inherit(directive, {$$start: startAttrName, $$end: endAttrName});
@@ -39333,8 +39368,8 @@ function $HttpProvider() {
        * Resolves the raw $http promise.
        */
       function resolvePromise(response, status, headers, statusText) {
-        // normalize internal statuses to 0
-        status = Math.max(status, 0);
+        //status: HTTP response status code, 0, -1 (aborted by timeout / promise)
+        status = status >= -1 ? status : 0;
 
         (isSuccess(status) ? deferred.resolve : deferred.reject)({
           data: response,
@@ -39474,7 +39509,7 @@ function createHttpBackend($browser, createXhr, $browserDefer, callbacks, rawDoc
         }
       }
 
-      xhr.send(post);
+      xhr.send(isUndefined(post) ? null : post);
     }
 
     if (timeout > 0) {
@@ -39491,7 +39526,7 @@ function createHttpBackend($browser, createXhr, $browserDefer, callbacks, rawDoc
 
     function completeRequest(callback, status, response, headersString, statusText) {
       // cancel timeout and subsequent timeout promise resolution
-      if (timeoutId !== undefined) {
+      if (isDefined(timeoutId)) {
         $browserDefer.cancel(timeoutId);
       }
       jsonpDone = xhr = null;
@@ -39677,7 +39712,7 @@ function $InterpolateProvider() {
      * ```js
      *   var $interpolate = ...; // injected
      *   var exp = $interpolate('Hello {{name | uppercase}}!');
-     *   expect(exp({name:'Angular'}).toEqual('Hello ANGULAR!');
+     *   expect(exp({name:'Angular'})).toEqual('Hello ANGULAR!');
      * ```
      *
      * `$interpolate` takes an optional fourth argument, `allOrNothing`. If `allOrNothing` is
@@ -40230,14 +40265,14 @@ function LocationHtml5Url(appBase, appBaseNoFile, basePrefix) {
     var appUrl, prevAppUrl;
     var rewrittenUrl;
 
-    if ((appUrl = beginsWith(appBase, url)) !== undefined) {
+    if (isDefined(appUrl = beginsWith(appBase, url))) {
       prevAppUrl = appUrl;
-      if ((appUrl = beginsWith(basePrefix, appUrl)) !== undefined) {
+      if (isDefined(appUrl = beginsWith(basePrefix, appUrl))) {
         rewrittenUrl = appBaseNoFile + (beginsWith('/', appUrl) || appUrl);
       } else {
         rewrittenUrl = appBase + prevAppUrl;
       }
-    } else if ((appUrl = beginsWith(appBaseNoFile, url)) !== undefined) {
+    } else if (isDefined(appUrl = beginsWith(appBaseNoFile, url))) {
       rewrittenUrl = appBaseNoFile + appUrl;
     } else if (appBaseNoFile == url + '/') {
       rewrittenUrl = appBaseNoFile;
@@ -41280,6 +41315,15 @@ var $parseMinErr = minErr('$parse');
 
 
 function ensureSafeMemberName(name, fullExpression) {
+  // From the JavaScript docs:
+  // Property names must be strings. This means that non-string objects cannot be used
+  // as keys in an object. Any non-string object, including a number, is typecasted
+  // into a string via the toString method.
+  //
+  // So, to ensure that we are checking the same `name` that JavaScript would use,
+  // we cast it to a string, if possible
+  name =  (isObject(name) && name.toString) ? name.toString() : name;
+
   if (name === "__defineGetter__" || name === "__defineSetter__"
       || name === "__lookupGetter__" || name === "__lookupSetter__"
       || name === "__proto__") {
@@ -42016,6 +42060,7 @@ ASTCompiler.prototype = {
       this.state.computing = 'assign';
       var result = this.nextId();
       this.recurse(assignable, result);
+      this.return_(result);
       extra = 'fn.assign=' + this.generateFunction('assign', 's,v,l');
     }
     var toWatch = getInputs(ast.body);
@@ -44006,10 +44051,10 @@ function $RootScopeProvider() {
        * Registers a `listener` callback to be executed whenever the `watchExpression` changes.
        *
        * - The `watchExpression` is called on every call to {@link ng.$rootScope.Scope#$digest
-       *   $digest()} and should return the value that will be watched. (Since
-       *   {@link ng.$rootScope.Scope#$digest $digest()} reruns when it detects changes the
-       *   `watchExpression` can execute multiple times per
-       *   {@link ng.$rootScope.Scope#$digest $digest()} and should be idempotent.)
+       *   $digest()} and should return the value that will be watched. (`watchExpression` should not change
+       *   its value when executed multiple times with the same input because it may be executed multiple
+       *   times by {@link ng.$rootScope.Scope#$digest $digest()}. That is, `watchExpression` should be
+       *   [idempotent](http://en.wikipedia.org/wiki/Idempotence).
        * - The `listener` is called only when the value from the current `watchExpression` and the
        *   previous call to `watchExpression` are not equal (with the exception of the initial run,
        *   see below). Inequality is determined according to reference inequality,
@@ -44358,7 +44403,7 @@ function $RootScopeProvider() {
             // copy the items to oldValue and look for changes.
             newLength = 0;
             for (key in newValue) {
-              if (newValue.hasOwnProperty(key)) {
+              if (hasOwnProperty.call(newValue, key)) {
                 newLength++;
                 newItem = newValue[key];
                 oldItem = oldValue[key];
@@ -44380,7 +44425,7 @@ function $RootScopeProvider() {
               // we used to have more keys, need to find them and destroy them.
               changeDetected++;
               for (key in oldValue) {
-                if (!newValue.hasOwnProperty(key)) {
+                if (!hasOwnProperty.call(newValue, key)) {
                   oldLength--;
                   delete oldValue[key];
                 }
@@ -45465,7 +45510,7 @@ function $SceDelegateProvider() {
             'Attempted to trust a value in invalid context. Context: {0}; Value: {1}',
             type, trustedValue);
       }
-      if (trustedValue === null || trustedValue === undefined || trustedValue === '') {
+      if (trustedValue === null || isUndefined(trustedValue) || trustedValue === '') {
         return trustedValue;
       }
       // All the current contexts in SCE_CONTEXTS happen to be strings.  In order to avoid trusting
@@ -45520,7 +45565,7 @@ function $SceDelegateProvider() {
      *     `$sceDelegate.trustAs`} if valid in this context.  Otherwise, throws an exception.
      */
     function getTrusted(type, maybeTrusted) {
-      if (maybeTrusted === null || maybeTrusted === undefined || maybeTrusted === '') {
+      if (maybeTrusted === null || isUndefined(maybeTrusted) || maybeTrusted === '') {
         return maybeTrusted;
       }
       var constructor = (byType.hasOwnProperty(type) ? byType[type] : null);
@@ -46781,7 +46826,7 @@ function $$CookieReader($document) {
           // the first value that is seen for a cookie is the most
           // specific one.  values for the same cookie name that
           // follow are for less specific paths.
-          if (lastCookies[name] === undefined) {
+          if (isUndefined(lastCookies[name])) {
             lastCookies[name] = safeDecodeURIComponent(cookie.substring(index + 1));
           }
         }
@@ -48727,6 +48772,7 @@ function nullFormRenameControl(control, name) {
  * @property {boolean} $dirty True if user has already interacted with the form.
  * @property {boolean} $valid True if all of the containing forms and controls are valid.
  * @property {boolean} $invalid True if at least one containing control or form is invalid.
+ * @property {boolean} $pending True if at least one containing control or form is pending.
  * @property {boolean} $submitted True if user has submitted the form even if its invalid.
  *
  * @property {Object} $error Is an object hash, containing references to controls or
@@ -48766,8 +48812,6 @@ function FormController(element, attrs, $scope, $animate, $interpolate) {
   var form = this,
       controls = [];
 
-  var parentForm = form.$$parentForm = element.parent().controller('form') || nullFormCtrl;
-
   // init state
   form.$error = {};
   form.$$success = {};
@@ -48778,8 +48822,7 @@ function FormController(element, attrs, $scope, $animate, $interpolate) {
   form.$valid = true;
   form.$invalid = false;
   form.$submitted = false;
-
-  parentForm.$addControl(form);
+  form.$$parentForm = nullFormCtrl;
 
   /**
    * @ngdoc method
@@ -48818,11 +48861,23 @@ function FormController(element, attrs, $scope, $animate, $interpolate) {
   /**
    * @ngdoc method
    * @name form.FormController#$addControl
+   * @param {object} control control object, either a {@link form.FormController} or an
+   * {@link ngModel.NgModelController}
    *
    * @description
-   * Register a control with the form.
+   * Register a control with the form. Input elements using ngModelController do this automatically
+   * when they are linked.
    *
-   * Input elements using ngModelController do this automatically when they are linked.
+   * Note that the current state of the control will not be reflected on the new parent form. This
+   * is not an issue with normal use, as freshly compiled and linked controls are in a `$pristine`
+   * state.
+   *
+   * However, if the method is used programmatically, for example by adding dynamically created controls,
+   * or controls that have been previously removed without destroying their corresponding DOM element,
+   * it's the developers responsiblity to make sure the current state propagates to the parent form.
+   *
+   * For example, if an input control is added that is already `$dirty` and has `$error` properties,
+   * calling `$setDirty()` and `$validate()` afterwards will propagate the state to the parent form.
    */
   form.$addControl = function(control) {
     // Breaking change - before, inputs whose name was "hasOwnProperty" were quietly ignored
@@ -48833,6 +48888,8 @@ function FormController(element, attrs, $scope, $animate, $interpolate) {
     if (control.$name) {
       form[control.$name] = control;
     }
+
+    control.$$parentForm = form;
   };
 
   // Private API: rename a form control
@@ -48849,11 +48906,18 @@ function FormController(element, attrs, $scope, $animate, $interpolate) {
   /**
    * @ngdoc method
    * @name form.FormController#$removeControl
+   * @param {object} control control object, either a {@link form.FormController} or an
+   * {@link ngModel.NgModelController}
    *
    * @description
    * Deregister a control from the form.
    *
    * Input elements using ngModelController do this automatically when they are destroyed.
+   *
+   * Note that only the removed control's validation state (`$errors`etc.) will be removed from the
+   * form. `$dirty`, `$submitted` states will not be changed, because the expected behavior can be
+   * different from case to case. For example, removing the only `$dirty` control from a form may or
+   * may not mean that the form is still `$dirty`.
    */
   form.$removeControl = function(control) {
     if (control.$name && form[control.$name] === control) {
@@ -48870,6 +48934,7 @@ function FormController(element, attrs, $scope, $animate, $interpolate) {
     });
 
     arrayRemove(controls, control);
+    control.$$parentForm = nullFormCtrl;
   };
 
 
@@ -48906,7 +48971,6 @@ function FormController(element, attrs, $scope, $animate, $interpolate) {
         delete object[property];
       }
     },
-    parentForm: parentForm,
     $animate: $animate
   });
 
@@ -48925,7 +48989,7 @@ function FormController(element, attrs, $scope, $animate, $interpolate) {
     $animate.addClass(element, DIRTY_CLASS);
     form.$dirty = true;
     form.$pristine = false;
-    parentForm.$setDirty();
+    form.$$parentForm.$setDirty();
   };
 
   /**
@@ -48981,7 +49045,7 @@ function FormController(element, attrs, $scope, $animate, $interpolate) {
   form.$setSubmitted = function() {
     $animate.addClass(element, SUBMITTED_CLASS);
     form.$submitted = true;
-    parentForm.$setSubmitted();
+    form.$$parentForm.$setSubmitted();
   };
 }
 
@@ -49031,6 +49095,7 @@ function FormController(element, attrs, $scope, $animate, $interpolate) {
  * # CSS classes
  *  - `ng-valid` is set if the form is valid.
  *  - `ng-invalid` is set if the form is invalid.
+ *  - `ng-pending` is set if the form is pending.
  *  - `ng-pristine` is set if the form is pristine.
  *  - `ng-dirty` is set if the form is dirty.
  *  - `ng-submitted` is set if the form was submitted.
@@ -49154,6 +49219,7 @@ var formDirectiveFactory = function(isNgForm) {
     var formDirective = {
       name: 'form',
       restrict: isNgForm ? 'EAC' : 'E',
+      require: ['form', '^^?form'], //first is the form's own ctrl, second is an optional parent form
       controller: FormController,
       compile: function ngFormCompile(formElement, attr) {
         // Setup initial state of the control
@@ -49162,7 +49228,9 @@ var formDirectiveFactory = function(isNgForm) {
         var nameAttr = attr.name ? 'name' : (isNgForm && attr.ngForm ? 'ngForm' : false);
 
         return {
-          pre: function ngFormPreLink(scope, formElement, attr, controller) {
+          pre: function ngFormPreLink(scope, formElement, attr, ctrls) {
+            var controller = ctrls[0];
+
             // if `action` attr is not present on the form, prevent the default action (submission)
             if (!('action' in attr)) {
               // we can't use jq events because if a form is destroyed during submission the default
@@ -49191,7 +49259,9 @@ var formDirectiveFactory = function(isNgForm) {
               });
             }
 
-            var parentFormCtrl = controller.$$parentForm;
+            var parentFormCtrl = ctrls[1] || controller.$$parentForm;
+            parentFormCtrl.$addControl(controller);
+
             var setter = nameAttr ? getSetter(controller.$name) : noop;
 
             if (nameAttr) {
@@ -49199,13 +49269,13 @@ var formDirectiveFactory = function(isNgForm) {
               attr.$observe(nameAttr, function(newValue) {
                 if (controller.$name === newValue) return;
                 setter(scope, undefined);
-                parentFormCtrl.$$renameControl(controller, newValue);
+                controller.$$parentForm.$$renameControl(controller, newValue);
                 setter = getSetter(controller.$name);
                 setter(scope, controller);
               });
             }
             formElement.on('$destroy', function() {
-              parentFormCtrl.$removeControl(controller);
+              controller.$$parentForm.$removeControl(controller);
               setter(scope, undefined);
               extend(controller, nullFormCtrl); //stop propagating child destruction handlers upwards
             });
@@ -49367,9 +49437,17 @@ var inputType = {
      * @param {string} ngModel Assignable angular expression to data-bind to.
      * @param {string=} name Property name of the form under which the control is published.
      * @param {string=} min Sets the `min` validation error key if the value entered is less than `min`. This must be a
-     * valid ISO date string (yyyy-MM-dd).
+     *   valid ISO date string (yyyy-MM-dd). You can also use interpolation inside this attribute
+     *   (e.g. `min="{{minDate | date:'yyyy-MM-dd'}}"`). Note that `min` will also add native HTML5
+     *   constraint validation.
      * @param {string=} max Sets the `max` validation error key if the value entered is greater than `max`. This must be
-     * a valid ISO date string (yyyy-MM-dd).
+     *   a valid ISO date string (yyyy-MM-dd). You can also use interpolation inside this attribute
+     *   (e.g. `max="{{maxDate | date:'yyyy-MM-dd'}}"`). Note that `max` will also add native HTML5
+     *   constraint validation.
+     * @param {(date|string)=} ngMin Sets the `min` validation constraint to the Date / ISO date string
+     *   the `ngMin` expression evaluates to. Note that it does not set the `min` attribute.
+     * @param {(date|string)=} ngMax Sets the `max` validation constraint to the Date / ISO date string
+     *   the `ngMax` expression evaluates to. Note that it does not set the `max` attribute.
      * @param {string=} required Sets `required` validation error key if the value is not entered.
      * @param {string=} ngRequired Adds `required` attribute and `required` validation constraint to
      *    the element when the ngRequired expression evaluates to true. Use `ngRequired` instead of
@@ -49461,10 +49539,18 @@ var inputType = {
     *
     * @param {string} ngModel Assignable angular expression to data-bind to.
     * @param {string=} name Property name of the form under which the control is published.
-    * @param {string=} min Sets the `min` validation error key if the value entered is less than `min`. This must be a
-    * valid ISO datetime format (yyyy-MM-ddTHH:mm:ss).
-    * @param {string=} max Sets the `max` validation error key if the value entered is greater than `max`. This must be
-    * a valid ISO datetime format (yyyy-MM-ddTHH:mm:ss).
+    * @param {string=} min Sets the `min` validation error key if the value entered is less than `min`.
+    *   This must be a valid ISO datetime format (yyyy-MM-ddTHH:mm:ss). You can also use interpolation
+    *   inside this attribute (e.g. `min="{{minDatetimeLocal | date:'yyyy-MM-ddTHH:mm:ss'}}"`).
+    *   Note that `min` will also add native HTML5 constraint validation.
+    * @param {string=} max Sets the `max` validation error key if the value entered is greater than `max`.
+    *   This must be a valid ISO datetime format (yyyy-MM-ddTHH:mm:ss). You can also use interpolation
+    *   inside this attribute (e.g. `max="{{maxDatetimeLocal | date:'yyyy-MM-ddTHH:mm:ss'}}"`).
+    *   Note that `max` will also add native HTML5 constraint validation.
+    * @param {(date|string)=} ngMin Sets the `min` validation error key to the Date / ISO datetime string
+    *   the `ngMin` expression evaluates to. Note that it does not set the `min` attribute.
+    * @param {(date|string)=} ngMax Sets the `max` validation error key to the Date / ISO datetime string
+    *   the `ngMax` expression evaluates to. Note that it does not set the `max` attribute.
     * @param {string=} required Sets `required` validation error key if the value is not entered.
     * @param {string=} ngRequired Adds `required` attribute and `required` validation constraint to
     *    the element when the ngRequired expression evaluates to true. Use `ngRequired` instead of
@@ -49557,10 +49643,18 @@ var inputType = {
    *
    * @param {string} ngModel Assignable angular expression to data-bind to.
    * @param {string=} name Property name of the form under which the control is published.
-   * @param {string=} min Sets the `min` validation error key if the value entered is less than `min`. This must be a
-   * valid ISO time format (HH:mm:ss).
-   * @param {string=} max Sets the `max` validation error key if the value entered is greater than `max`. This must be a
-   * valid ISO time format (HH:mm:ss).
+   * @param {string=} min Sets the `min` validation error key if the value entered is less than `min`.
+   *   This must be a valid ISO time format (HH:mm:ss). You can also use interpolation inside this
+   *   attribute (e.g. `min="{{minTime | date:'HH:mm:ss'}}"`). Note that `min` will also add
+   *   native HTML5 constraint validation.
+   * @param {string=} max Sets the `max` validation error key if the value entered is greater than `max`.
+   *   This must be a valid ISO time format (HH:mm:ss). You can also use interpolation inside this
+   *   attribute (e.g. `max="{{maxTime | date:'HH:mm:ss'}}"`). Note that `max` will also add
+   *   native HTML5 constraint validation.
+   * @param {(date|string)=} ngMin Sets the `min` validation constraint to the Date / ISO time string the
+   *   `ngMin` expression evaluates to. Note that it does not set the `min` attribute.
+   * @param {(date|string)=} ngMax Sets the `max` validation constraint to the Date / ISO time string the
+   *   `ngMax` expression evaluates to. Note that it does not set the `max` attribute.
    * @param {string=} required Sets `required` validation error key if the value is not entered.
    * @param {string=} ngRequired Adds `required` attribute and `required` validation constraint to
    *    the element when the ngRequired expression evaluates to true. Use `ngRequired` instead of
@@ -49652,10 +49746,18 @@ var inputType = {
     *
     * @param {string} ngModel Assignable angular expression to data-bind to.
     * @param {string=} name Property name of the form under which the control is published.
-    * @param {string=} min Sets the `min` validation error key if the value entered is less than `min`. This must be a
-    * valid ISO week format (yyyy-W##).
-    * @param {string=} max Sets the `max` validation error key if the value entered is greater than `max`. This must be
-    * a valid ISO week format (yyyy-W##).
+    * @param {string=} min Sets the `min` validation error key if the value entered is less than `min`.
+    *   This must be a valid ISO week format (yyyy-W##). You can also use interpolation inside this
+    *   attribute (e.g. `min="{{minWeek | date:'yyyy-Www'}}"`). Note that `min` will also add
+    *   native HTML5 constraint validation.
+    * @param {string=} max Sets the `max` validation error key if the value entered is greater than `max`.
+    *   This must be a valid ISO week format (yyyy-W##). You can also use interpolation inside this
+    *   attribute (e.g. `max="{{maxWeek | date:'yyyy-Www'}}"`). Note that `max` will also add
+    *   native HTML5 constraint validation.
+    * @param {(date|string)=} ngMin Sets the `min` validation constraint to the Date / ISO week string
+    *   the `ngMin` expression evaluates to. Note that it does not set the `min` attribute.
+    * @param {(date|string)=} ngMax Sets the `max` validation constraint to the Date / ISO week string
+    *   the `ngMax` expression evaluates to. Note that it does not set the `max` attribute.
     * @param {string=} required Sets `required` validation error key if the value is not entered.
     * @param {string=} ngRequired Adds `required` attribute and `required` validation constraint to
     *    the element when the ngRequired expression evaluates to true. Use `ngRequired` instead of
@@ -49749,10 +49851,19 @@ var inputType = {
    *
    * @param {string} ngModel Assignable angular expression to data-bind to.
    * @param {string=} name Property name of the form under which the control is published.
-   * @param {string=} min Sets the `min` validation error key if the value entered is less than `min`. This must be
-   * a valid ISO month format (yyyy-MM).
-   * @param {string=} max Sets the `max` validation error key if the value entered is greater than `max`. This must
-   * be a valid ISO month format (yyyy-MM).
+   * @param {string=} min Sets the `min` validation error key if the value entered is less than `min`.
+   *   This must be a valid ISO month format (yyyy-MM). You can also use interpolation inside this
+   *   attribute (e.g. `min="{{minMonth | date:'yyyy-MM'}}"`). Note that `min` will also add
+   *   native HTML5 constraint validation.
+   * @param {string=} max Sets the `max` validation error key if the value entered is greater than `max`.
+   *   This must be a valid ISO month format (yyyy-MM). You can also use interpolation inside this
+   *   attribute (e.g. `max="{{maxMonth | date:'yyyy-MM'}}"`). Note that `max` will also add
+   *   native HTML5 constraint validation.
+   * @param {(date|string)=} ngMin Sets the `min` validation constraint to the Date / ISO week string
+   *   the `ngMin` expression evaluates to. Note that it does not set the `min` attribute.
+   * @param {(date|string)=} ngMax Sets the `max` validation constraint to the Date / ISO week string
+   *   the `ngMax` expression evaluates to. Note that it does not set the `max` attribute.
+
    * @param {string=} required Sets `required` validation error key if the value is not entered.
    * @param {string=} ngRequired Adds `required` attribute and `required` validation constraint to
    *    the element when the ngRequired expression evaluates to true. Use `ngRequired` instead of
@@ -50514,7 +50625,7 @@ function createDateInputType(type, regexp, parseDate, format) {
     }
 
     function parseObservedDateValue(val) {
-      return isDefined(val) ? (isDate(val) ? val : parseDate(val)) : undefined;
+      return isDefined(val) && !isDate(val) ? parseDate(val) || undefined : val;
     }
   };
 }
@@ -51009,7 +51120,7 @@ var ngBindDirective = ['$compile', function($compile) {
         $compile.$$addBindingInfo(element, attr.ngBind);
         element = element[0];
         scope.$watch(attr.ngBind, function ngBindWatchAction(value) {
-          element.textContent = value === undefined ? '' : value;
+          element.textContent = isUndefined(value) ? '' : value;
         });
       };
     }
@@ -51077,7 +51188,7 @@ var ngBindTemplateDirective = ['$interpolate', '$compile', function($interpolate
         $compile.$$addBindingInfo(element, interpolateFn.expressions);
         element = element[0];
         attr.$observe('ngBindTemplate', function(value) {
-          element.textContent = value === undefined ? '' : value;
+          element.textContent = isUndefined(value) ? '' : value;
         });
       };
     }
@@ -53034,16 +53145,18 @@ var ngIncludeFillContentDirective = ['$compile',
  * current scope.
  *
  * <div class="alert alert-danger">
- * The only appropriate use of `ngInit` is for aliasing special properties of
- * {@link ng.directive:ngRepeat `ngRepeat`}, as seen in the demo below. Besides this case, you
- * should use {@link guide/controller controllers} rather than `ngInit`
- * to initialize values on a scope.
+ * This directive can be abused to add unnecessary amounts of logic into your templates.
+ * There are only a few appropriate uses of `ngInit`, such as for aliasing special properties of
+ * {@link ng.directive:ngRepeat `ngRepeat`}, as seen in the demo below; and for injecting data via
+ * server side scripting. Besides these few cases, you should use {@link guide/controller controllers}
+ * rather than `ngInit` to initialize values on a scope.
  * </div>
+ *
  * <div class="alert alert-warning">
- * **Note**: If you have assignment in `ngInit` along with {@link ng.$filter `$filter`}, make
- * sure you have parenthesis for correct precedence:
+ * **Note**: If you have assignment in `ngInit` along with a {@link ng.$filter `filter`}, make
+ * sure you have parentheses to ensure correct operator precedence:
  * <pre class="prettyprint">
- * `<div ng-init="test1 = (data | orderBy:'name')"></div>`
+ * `<div ng-init="test1 = ($index | toString)"></div>`
  * </pre>
  * </div>
  *
@@ -53455,7 +53568,7 @@ var NgModelController = ['$scope', '$exceptionHandler', '$attrs', '$element', '$
   this.$$success = {}; // keep valid keys here
   this.$pending = undefined; // keep pending keys here
   this.$name = $interpolate($attr.name || '', false)($scope);
-
+  this.$$parentForm = nullFormCtrl;
 
   var parsedNgModel = $parse($attr.ngModel),
       parsedNgModelAssign = parsedNgModel.assign,
@@ -53535,8 +53648,7 @@ var NgModelController = ['$scope', '$exceptionHandler', '$attrs', '$element', '$
     return isUndefined(value) || value === '' || value === null || value !== value;
   };
 
-  var parentForm = $element.inheritedData('$formController') || nullFormCtrl,
-      currentValidationRunId = 0;
+  var currentValidationRunId = 0;
 
   /**
    * @ngdoc method
@@ -53569,7 +53681,6 @@ var NgModelController = ['$scope', '$exceptionHandler', '$attrs', '$element', '$
     unset: function(object, property) {
       delete object[property];
     },
-    parentForm: parentForm,
     $animate: $animate
   });
 
@@ -53607,7 +53718,7 @@ var NgModelController = ['$scope', '$exceptionHandler', '$attrs', '$element', '$
     ctrl.$pristine = false;
     $animate.removeClass($element, PRISTINE_CLASS);
     $animate.addClass($element, DIRTY_CLASS);
-    parentForm.$setDirty();
+    ctrl.$$parentForm.$setDirty();
   };
 
   /**
@@ -53777,7 +53888,7 @@ var NgModelController = ['$scope', '$exceptionHandler', '$attrs', '$element', '$
 
     function processParseErrors() {
       var errorKey = ctrl.$$parserName || 'parse';
-      if (parserValid === undefined) {
+      if (isUndefined(parserValid)) {
         setValidity(errorKey, null);
       } else {
         if (!parserValid) {
@@ -53947,37 +54058,47 @@ var NgModelController = ['$scope', '$exceptionHandler', '$attrs', '$element', '$
    * @description
    * Update the view value.
    *
-   * This method should be called when an input directive want to change the view value; typically,
-   * this is done from within a DOM event handler.
+   * This method should be called when a control wants to change the view value; typically,
+   * this is done from within a DOM event handler. For example, the {@link ng.directive:input input}
+   * directive calls it when the value of the input changes and {@link ng.directive:select select}
+   * calls it when an option is selected.
    *
-   * For example {@link ng.directive:input input} calls it when the value of the input changes and
-   * {@link ng.directive:select select} calls it when an option is selected.
-   *
-   * If the new `value` is an object (rather than a string or a number), we should make a copy of the
-   * object before passing it to `$setViewValue`.  This is because `ngModel` does not perform a deep
-   * watch of objects, it only looks for a change of identity. If you only change the property of
-   * the object then ngModel will not realise that the object has changed and will not invoke the
-   * `$parsers` and `$validators` pipelines.
-   *
-   * For this reason, you should not change properties of the copy once it has been passed to
-   * `$setViewValue`. Otherwise you may cause the model value on the scope to change incorrectly.
-   *
-   * When this method is called, the new `value` will be staged for committing through the `$parsers`
+   * When `$setViewValue` is called, the new `value` will be staged for committing through the `$parsers`
    * and `$validators` pipelines. If there are no special {@link ngModelOptions} specified then the staged
    * value sent directly for processing, finally to be applied to `$modelValue` and then the
-   * **expression** specified in the `ng-model` attribute.
-   *
-   * Lastly, all the registered change listeners, in the `$viewChangeListeners` list, are called.
+   * **expression** specified in the `ng-model` attribute. Lastly, all the registered change listeners,
+   * in the `$viewChangeListeners` list, are called.
    *
    * In case the {@link ng.directive:ngModelOptions ngModelOptions} directive is used with `updateOn`
    * and the `default` trigger is not listed, all those actions will remain pending until one of the
    * `updateOn` events is triggered on the DOM element.
    * All these actions will be debounced if the {@link ng.directive:ngModelOptions ngModelOptions}
    * directive is used with a custom debounce for this particular event.
+   * Note that a `$digest` is only triggered once the `updateOn` events are fired, or if `debounce`
+   * is specified, once the timer runs out.
    *
-   * Note that calling this function does not trigger a `$digest`.
+   * When used with standard inputs, the view value will always be a string (which is in some cases
+   * parsed into another type, such as a `Date` object for `input[date]`.)
+   * However, custom controls might also pass objects to this method. In this case, we should make
+   * a copy of the object before passing it to `$setViewValue`. This is because `ngModel` does not
+   * perform a deep watch of objects, it only looks for a change of identity. If you only change
+   * the property of the object then ngModel will not realise that the object has changed and
+   * will not invoke the `$parsers` and `$validators` pipelines. For this reason, you should
+   * not change properties of the copy once it has been passed to `$setViewValue`.
+   * Otherwise you may cause the model value on the scope to change incorrectly.
    *
-   * @param {string} value Value from the view.
+   * <div class="alert alert-info">
+   * In any case, the value passed to the method should always reflect the current value
+   * of the control. For example, if you are calling `$setViewValue` for an input element,
+   * you should pass the input DOM value. Otherwise, the control and the scope model become
+   * out of sync. It's also important to note that `$setViewValue` does not call `$render` or change
+   * the control's DOM value in any way. If we want to change the control's DOM value
+   * programmatically, we should update the `ngModel` scope expression. Its new value will be
+   * picked up by the model controller, which will run it through the `$formatters`, `$render` it
+   * to update the DOM, and finally call `$validate` on it.
+   * </div>
+   *
+   * @param {*} value value from the view.
    * @param {string} trigger Event that triggered the update.
    */
   this.$setViewValue = function(value, trigger) {
@@ -54240,7 +54361,7 @@ var ngModelDirective = ['$rootScope', function($rootScope) {
       return {
         pre: function ngModelPreLink(scope, element, attr, ctrls) {
           var modelCtrl = ctrls[0],
-              formCtrl = ctrls[1] || nullFormCtrl;
+              formCtrl = ctrls[1] || modelCtrl.$$parentForm;
 
           modelCtrl.$$setOptions(ctrls[2] && ctrls[2].$options);
 
@@ -54249,12 +54370,12 @@ var ngModelDirective = ['$rootScope', function($rootScope) {
 
           attr.$observe('name', function(newValue) {
             if (modelCtrl.$name !== newValue) {
-              formCtrl.$$renameControl(modelCtrl, newValue);
+              modelCtrl.$$parentForm.$$renameControl(modelCtrl, newValue);
             }
           });
 
           scope.$on('$destroy', function() {
-            formCtrl.$removeControl(modelCtrl);
+            modelCtrl.$$parentForm.$removeControl(modelCtrl);
           });
         },
         post: function ngModelPostLink(scope, element, attr, ctrls) {
@@ -54449,7 +54570,7 @@ var ngModelOptionsDirective = function() {
       var that = this;
       this.$options = copy($scope.$eval($attrs.ngModelOptions));
       // Allow adding/overriding bound events
-      if (this.$options.updateOn !== undefined) {
+      if (isDefined(this.$options.updateOn)) {
         this.$options.updateOnDefault = false;
         // extract "default" pseudo-event from list of events that can trigger a model update
         this.$options.updateOn = trim(this.$options.updateOn.replace(DEFAULT_REGEXP, function() {
@@ -54472,7 +54593,6 @@ function addSetValidityMethod(context) {
       classCache = {},
       set = context.set,
       unset = context.unset,
-      parentForm = context.parentForm,
       $animate = context.$animate;
 
   classCache[INVALID_CLASS] = !(classCache[VALID_CLASS] = $element.hasClass(VALID_CLASS));
@@ -54480,7 +54600,7 @@ function addSetValidityMethod(context) {
   ctrl.$setValidity = setValidity;
 
   function setValidity(validationErrorKey, state, controller) {
-    if (state === undefined) {
+    if (isUndefined(state)) {
       createAndSet('$pending', validationErrorKey, controller);
     } else {
       unsetAndCleanup('$pending', validationErrorKey, controller);
@@ -54524,7 +54644,7 @@ function addSetValidityMethod(context) {
     }
 
     toggleValidationCss(validationErrorKey, combinedState);
-    parentForm.$setValidity(validationErrorKey, combinedState, ctrl);
+    ctrl.$$parentForm.$setValidity(validationErrorKey, combinedState, ctrl);
   }
 
   function createAndSet(name, value, controller) {
@@ -55592,8 +55712,10 @@ var ngPluralizeDirective = ['$locale', '$interpolate', '$log', function($locale,
  * | `$even`   | {@type boolean} | true if the iterator position `$index` is even (otherwise false).           |
  * | `$odd`    | {@type boolean} | true if the iterator position `$index` is odd (otherwise false).            |
  *
- * Creating aliases for these properties is possible with {@link ng.directive:ngInit `ngInit`}.
- * This may be useful when, for instance, nesting ngRepeats.
+ * <div class="alert alert-info">
+ *   Creating aliases for these properties is possible with {@link ng.directive:ngInit `ngInit`}.
+ *   This may be useful when, for instance, nesting ngRepeats.
+ * </div>
  *
  *
  * # Iterating over object properties
@@ -55998,7 +56120,7 @@ var ngRepeatDirective = ['$parse', '$animate', function($parse, $animate) {
             // if object, extract keys, in enumeration order, unsorted
             collectionKeys = [];
             for (var itemKey in collection) {
-              if (collection.hasOwnProperty(itemKey) && itemKey.charAt(0) !== '$') {
+              if (hasOwnProperty.call(collection, itemKey) && itemKey.charAt(0) !== '$') {
                 collectionKeys.push(itemKey);
               }
             }
@@ -57211,9 +57333,12 @@ var optionDirective = ['$interpolate', function($interpolate) {
     priority: 100,
     compile: function(element, attr) {
 
-      // If the value attribute is not defined then we fall back to the
-      // text content of the option element, which may be interpolated
-      if (isUndefined(attr.value)) {
+      if (isDefined(attr.value)) {
+        // If the value attribute is defined, check if it contains an interpolation
+        var valueInterpolated = $interpolate(attr.value, true);
+      } else {
+        // If the value attribute is not defined then we fall back to the
+        // text content of the option element, which may be interpolated
         var interpolateFn = $interpolate(element.text(), true);
         if (!interpolateFn) {
           attr.$set('value', element.text());
@@ -57229,24 +57354,38 @@ var optionDirective = ['$interpolate', function($interpolate) {
             selectCtrl = parent.data(selectCtrlName) ||
               parent.parent().data(selectCtrlName); // in case we are in optgroup
 
+        function addOption(optionValue) {
+          selectCtrl.addOption(optionValue, element);
+          selectCtrl.ngModelCtrl.$render();
+          chromeHack(element);
+        }
+
         // Only update trigger option updates if this is an option within a `select`
         // that also has `ngModel` attached
         if (selectCtrl && selectCtrl.ngModelCtrl) {
 
-          if (interpolateFn) {
+          if (valueInterpolated) {
+            // The value attribute is interpolated
+            var oldVal;
+            attr.$observe('value', function valueAttributeObserveAction(newVal) {
+              if (isDefined(oldVal)) {
+                selectCtrl.removeOption(oldVal);
+              }
+              oldVal = newVal;
+              addOption(newVal);
+            });
+          } else if (interpolateFn) {
+            // The text content is interpolated
             scope.$watch(interpolateFn, function interpolateWatchAction(newVal, oldVal) {
               attr.$set('value', newVal);
               if (oldVal !== newVal) {
                 selectCtrl.removeOption(oldVal);
               }
-              selectCtrl.addOption(newVal, element);
-              selectCtrl.ngModelCtrl.$render();
-              chromeHack(element);
+              addOption(newVal);
             });
           } else {
-            selectCtrl.addOption(attr.value, element);
-            selectCtrl.ngModelCtrl.$render();
-            chromeHack(element);
+            // The value attribute is static
+            addOption(attr.value);
           }
 
           element.on('$destroy', function() {

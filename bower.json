@@ -34,6 +34,7 @@
     "google-material-color": "~1.2.2",
     "holderjs": "~2.8.2",
     "jeet": "~6.1.2",
+    "lodash": "~3.10.1",
     "modernizr": "~2.8.3",
     "normalize.styl": "~3.0.2",
     "rupture-by-jenius": "~0.6.1",
