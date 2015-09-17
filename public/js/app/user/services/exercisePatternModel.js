@@ -42,6 +42,9 @@ module.exports = function (fbUtil,$mdDialog, $mdToast,$firebaseArray,FBURL) {
 			bindModel.isLoaded = true;
 		});
 	};
+
+	init();
+
 	var addExercise = function(group) {
 		if (bindModel.exerciseName) {
 			// retorna 0, 1 , 2 posição na matrix

@@ -142,10 +142,10 @@ module.exports = {
 				label: 'Administração - Treinos'
 			},
 			onEnter: function(exercisePatternModel){
-				exercisePatternModel.init();
+				// exercisePatternModel.init();
 			},
 			onExit: function(exercisePatternModel){
-				exercisePatternModel.destroy();
+				// exercisePatternModel.destroy();
 			},
 			views: {
 				'admin-content-menu-content@administration': {

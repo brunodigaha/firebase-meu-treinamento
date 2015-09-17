@@ -2,14 +2,13 @@
 <section class="gym-content-members-wrap">
   <section class="gym-content-members-new">
     <md-button title="Adicionar Funcionário" ng-click="newMemberDialog($event)" class="md-raised md-primary"> 
-      <ng-md-icon icon="add_circle_outline" style="fill:white" size="25"></ng-md-icon>Aluno
+      <!-- ng-md-icon(icon="add_circle_outline" style="fill:white"  size="22")-->Inserir Aluno
     </md-button>
   </section>
-  <section class="gym-content-members-search">
-    <md-input-container md-no-float="">
-      <input placeholder="Pesquisar Aluno" ng-model="member"/>
-    </md-input-container>
-  </section>
+  <!-- section.gym-content-members-search-->
+  <md-input-container md-no-float="">
+    <input placeholder="Pesquisar Aluno" ng-model="searchMember"/>
+  </md-input-container>
   <section class="gym-content-members-content-wrap">
     <section class="gym-content-members-content">
       <md-content class="gym-content-members-scroll">
@@ -27,10 +26,10 @@
                 </md-switch>
               </section>
               <section ng-click="editMemberDialog($event,'bruno')" class="ds-user-item--edit">
-                <ng-md-icon icon="mode_edit" title="Editar Funcionário" style="fill:grey" size="25"></ng-md-icon>
+                <ng-md-icon icon="mode_edit" title="Editar Aluno" style="fill:grey" size="25"></ng-md-icon>
               </section>
               <section class="ds-user-item--delete">
-                <ng-md-icon icon="clear" tooltip-lazy="true" title="Excluir Funcionário" style="fill:grey" size="25"></ng-md-icon>
+                <ng-md-icon icon="clear" tooltip-lazy="true" title="Excluir Aluno" style="fill:grey" size="25"></ng-md-icon>
               </section>
               <!-- section.ds-user-item--delete-->
               <!-- 	ng-md-icon(icon="clear" tooltips  tooltip-lazy="true"  tooltip-title="Excluir Funcionário" tooltip-size="small" style="fill:grey"  size="25")-->
