@@ -11738,7 +11738,7 @@ a:visited {
   margin-right: 0%;
 }
 .ds-exercise-edit .ds-exercise-edit-content .ds-exercise-edit-scroll {
-  overflow: auto;
+  overflow-y: scroll;
   min-height: 30vh;
   max-height: 45vh;
 }
