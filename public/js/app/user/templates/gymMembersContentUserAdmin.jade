@@ -3,9 +3,9 @@ section.gym-content-members-wrap
 		md-button(class="md-raised md-primary" title= "Adicionar Funcionário" ng-click="newMemberDialog($event)") 
 			// ng-md-icon(icon="add_circle_outline" style="fill:white"  size="22")
 			| Inserir Aluno
-	// section.gym-content-members-search
-	md-input-container(md-no-float='')
-		input(placeholder='Pesquisar Aluno' ng-model="searchMember")
+	section.gym-content-members-search
+		md-input-container(md-no-float='')
+			input(placeholder='Pesquisar Aluno' ng-model="searchMember")
 	section.gym-content-members-content-wrap
 		section.gym-content-members-content
 			md-content.gym-content-members-scroll

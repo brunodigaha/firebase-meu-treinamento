@@ -8,7 +8,7 @@ section.ds-exercise-edit
 		section.ds-exercise-edit-action
 			md-button(class="md-raised md-primary" ng-click="insertTraining($event);") Adicionar Série
 	section.ds-exercise-edit-content
-		md-content.series
+		section.ds-exercise-edit-scroll
 			// ds-serie(serie="{name:'bruno'}" position="{{$index+1}}" ng-repeat="serie in exercise")
 			ul(sv-root="serie" sv-part="exercise")
 				li(ng-repeat="serie in exercise" sv-element="serie")
