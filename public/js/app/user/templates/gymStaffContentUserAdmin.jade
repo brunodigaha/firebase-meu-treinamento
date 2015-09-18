@@ -5,7 +5,8 @@ section.gym-content-staff-wrap
 			| Inserir Funcionário
 	section.gym-content-staff-search
 		md-input-container(md-no-float='')
-			input(placeholder='Pesquisar Funcionário' ng-model="bindModel.groupName")
+			input.input-search(placeholder='Pesquisar Funcionário' ng-model="bindModel.groupName")
+		ng-md-icon(icon="search" style="fill:grey"  size="35")
 	section.gym-content-staff-content-wrap
 		section.gym-content-staff-content
 			md-content.gym-content-staff-scroll

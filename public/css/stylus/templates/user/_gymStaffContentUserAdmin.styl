@@ -16,21 +16,18 @@
 			width 30%
 			min-width 15px
 			min-height 33px
-			font-weight bold
 			line-height 33px
 			margin 0
 			font-size 100%
 			+below(650px)
-				width 40%
+				width 45%
 			+desktop()
 				width 27%
-				min-height 40px
-				line-height 40px
+				min-height 43px
+				line-height 43px
 				// font-size 100%
 			+hd()
 				width 20%
-				min-height 43px
-				line-height 43px
 			ng-md-icon
 				svg
 					position relative
@@ -44,17 +41,26 @@
 	.gym-content-staff-search
 		col(12/12,gutter:0)
 		box-sizing border-box
-		margin-top 1em
+		margin-top 1.5em
 		padding-right 1.5em
 		padding-left 1.5em
+		position relative
 		+desktop()
-			margin-top 1.5em
 			padding-right 3em
 			padding-left 3em
+			margin-top 2em
+		ng-md-icon
+			svg
+				position absolute
+				top .5em
+				left 2.3em
+				+desktop()
+					left 3.5em
 	.gym-content-staff-content-wrap
 		col(12/12,gutter:0)
 		box-sizing border-box
-		margin-top 1.5em
+		+desktop()
+			margin-top .3em
 		.gym-content-staff-content
 			col(12/12,gutter:0)
 			md-content.gym-content-staff-scroll

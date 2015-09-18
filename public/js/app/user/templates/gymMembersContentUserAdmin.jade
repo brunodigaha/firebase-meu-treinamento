@@ -5,7 +5,8 @@ section.gym-content-members-wrap
 			| Inserir Aluno
 	section.gym-content-members-search
 		md-input-container(md-no-float='')
-			input(placeholder='Pesquisar Aluno' ng-model="searchMember")
+			input.input-search(placeholder='Pesquisar Aluno' ng-model="searchMember")
+		ng-md-icon(icon="search" style="fill:grey"  size="35")
 	section.gym-content-members-content-wrap
 		section.gym-content-members-content
 			md-content.gym-content-members-scroll
