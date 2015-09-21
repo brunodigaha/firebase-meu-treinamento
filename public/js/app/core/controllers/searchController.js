@@ -26,9 +26,12 @@ module.exports = function($scope,$mdDialog, $mdToast,$animate) {
 	$scope.new_user = function(ev) {
 		$mdDialog.show({
 			controller: 'searchDialogController',
+			// controller: 'membersAdminDialogController2',
 			scope: $scope,
 			preserveScope: true,
+			// locals: null,
 			template: fs.readFileSync(__dirname + '/../templates/searchDialogTemplate.html'),
+			// template: fs.readFileSync(__dirname + '/../../user/templates/membersAdminDialogTemplate.html'),
 			parent: angular.element(document.body),
 			targetEvent: ev,
 		})
