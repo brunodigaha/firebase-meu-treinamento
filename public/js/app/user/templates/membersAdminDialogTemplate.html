@@ -1,6 +1,6 @@
 
 <md-dialog flex="85" aria-label="alunos">
-  <form name="memberForm" ng-submit="save()">
+  <form name="memberForm" ng-submit="save(member.name)">
     <md-toolbar md-theme="default"> 
       <div class="md-toolbar-tools">
         <h1>{{mode}} de Aluno</h1><span flex=""></span>
@@ -82,6 +82,7 @@
     <div layout="row" class="md-actions"><span flex=""></span>
       <md-button type="button" ng-click="cancel()" class="md-primary">Cancelar</md-button>
       <md-button type="submit" class="md-primary button-silver">Salvar</md-button>
+      <md-progress-linear ng-show="loading" md-mode="query" class="progress-top md-primary"></md-progress-linear>
     </div>
   </form>
 </md-dialog>

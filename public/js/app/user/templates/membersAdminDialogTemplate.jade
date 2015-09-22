@@ -1,5 +1,5 @@
 md-dialog(flex="85" aria-label="alunos")
-	form(name="memberForm" ng-submit="save()")
+	form(name="memberForm" ng-submit="save(member.name)")
 		md-toolbar(md-theme="default") 
 			.md-toolbar-tools
 				h1 {{mode}} de Aluno
@@ -60,3 +60,4 @@ md-dialog(flex="85" aria-label="alunos")
 				| Cancelar
 			md-button.md-primary.button-silver(type="submit")
 				| Salvar
+			md-progress-linear.progress-top(class="md-primary" ng-show="loading" md-mode='query')

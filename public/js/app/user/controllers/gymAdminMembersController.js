@@ -1,5 +1,5 @@
 var fs = require('fs');
-module.exports = function($scope,$timeout,fbUtil,$mdDialog) {
+module.exports = function($scope,$mdToast,$timeout,fbUtil,$mdDialog) {
 	$scope.newMemberDialog = function(ev) {
 		$mdDialog.show({
 			controller: 'membersAdminDialogController',
@@ -12,8 +12,14 @@ module.exports = function($scope,$timeout,fbUtil,$mdDialog) {
 			parent: angular.element(document.body),
 			targetEvent: ev,
 		})
-		.then(function(answer) {
-			// $scope.updateGym();
+		.then(function(member) {
+			$mdToast.show(
+				$mdToast.simple()
+					.content("Aluno "+ member+' Inserido!')
+					.position("top right")
+					.action('x')
+					.hideDelay(2500)
+			);
 		}, function() {
 			// if (Object.keys(changeList).length !== 0) {
 			// 	$scope.gym = gymBackup;
@@ -41,7 +47,14 @@ module.exports = function($scope,$timeout,fbUtil,$mdDialog) {
 			parent: angular.element(document.body),
 			targetEvent: ev,
 		})
-		.then(function(answer) {
+		.then(function(member) {
+			$mdToast.show(
+				$mdToast.simple()
+					.content("Grupo "+ group.group.toString()+' Excluído')
+					.position("top right")
+					.action('x')
+					.hideDelay(2500)
+			);
 			// $scope.updateGym();
 		}, function() {
 			// if (Object.keys(changeList).length !== 0) {

@@ -1,4 +1,4 @@
-module.exports = function($scope,locals,$mdDialog,UCURL) {
+module.exports = function($scope,membersService,locals,$timeout,$mdDialog,UCURL) {
 
 	var changeList = {};
 
@@ -13,6 +13,7 @@ module.exports = function($scope,locals,$mdDialog,UCURL) {
 
 	$scope.mode = "Inserção";
 	$scope.UCURL = UCURL;
+	$scope.loading = false;
 
 	var init = function (){
 		if (locals !== null) {
@@ -41,11 +42,18 @@ module.exports = function($scope,locals,$mdDialog,UCURL) {
 	$scope.cancel = function() {
 		$mdDialog.cancel();
 	};
-	$scope.save = function(answer) {
-		console.log("teste");
-		if (true === false) {
-			$mdDialog.hide(answer);
-		}
+	$scope.save = function(member) {
+		// $scope.loading = true;
+		membersService.addMember(angular.copy($scope.member))
+			.then(function(datas){
+				$mdDialog.hide(member);
+				// $timeout(function(){
+				// $mdDialog.hide(answer);
+				// $scope.loading = false;
+				// },1500);
+			}, function(error){
+				console.log(error);
+			});
 	};
 
 	init();
