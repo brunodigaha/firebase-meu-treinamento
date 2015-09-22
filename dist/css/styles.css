@@ -11934,7 +11934,22 @@ a:visited {
   margin-right: 0%;
 }
 .ds-exercises-select-list .ds-exercises-select-list-content md-content.ds-exercise-select-list-scroll {
+  box-sizing: border-box;
+  padding-left: 0.5em;
+  padding-right: 0.5em;
   height: 70vh;
+}
+@media only screen and (min-width: 1050px) {
+  .ds-exercises-select-list .ds-exercises-select-list-content md-content.ds-exercise-select-list-scroll {
+    padding-left: 2em;
+    padding-right: 2em;
+  }
+}
+@media only screen and (min-width: 1800px) {
+  .ds-exercises-select-list .ds-exercises-select-list-content md-content.ds-exercise-select-list-scroll {
+    padding-left: 4em;
+    padding-right: 4em;
+  }
 }
 @media only screen and (min-width: 400px) and (max-width: 1050px) and (orientation: portrait) {
   .ds-exercises-select-list .ds-exercises-select-list-content md-content.ds-exercise-select-list-scroll {
