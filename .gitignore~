@@ -12,6 +12,3 @@ results
 npm-debug.log
 node_modules
 public/bower_components
-dist/css/*.css
-dist/js/*.js
-dist/index.html
