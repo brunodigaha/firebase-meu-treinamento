@@ -16,18 +16,22 @@
       <md-content class="gym-content-members-scroll">
         <section class="gym-content-members-list">
           <!-- section.gym-content-members-item(ng-repeat="n in [1,2,3,4,5,6,7,8,9,10,11,12] track by $index" class="angular-animate")-->
-          <section ng-repeat="n in [1,2,3,4,5,6,7,8,9,10,11,12] track by $index" class="gym-content-members-item">
+          <section ng-repeat="(key,member) in members track by member.$id" class="gym-content-members-item">
             <ds-user>
-              <section class="ds-user-item--image"><img ng-src="https://www.ucarecdn.com/ae73a3d6-f816-4a0e-9d21-18528234b2cc/-/crop/175x175/89,0/-/preview/53x53/" holder="holder.js/53x53?auto=yes&amp;theme=sky&amp;text=BRU"/></section>
+              <section class="ds-user-item--image">
+                <!-- img(ng-src="https://www.ucarecdn.com/ae73a3d6-f816-4a0e-9d21-18528234b2cc/-/crop/175x175/89,0/-/preview/53x53/"  holder='holder.js/53x53?auto=yes&theme=sky&text=BRU')-->
+                <!-- img(ng-src="{{$root.UCURL.url}}{{member.image}}-/preview/53x53/"  holder='holder.js/53x53?auto=yes&theme=sky&text=BRU')--><img ui-sref-active="active" ui-sref="core.user.listTraining" ng-src="{{UCURL.url}}{{member.image}}-/preview/53x53/" title="{{ member.full_name }}" holder="holder.js/53x53?auto=yes&amp;random=yes&amp;text={{member.full_name | limitTo:3}}" class="img-responsive"/>
+              </section>
               <section class="ds-user-item--name">
-                <p>Bruno Alexandre</p><span class="ds-user-item--type">Professor</span>
+                <p ng-bind="member.full_name"></p>
+                <!-- input(ng-model="member.full_name" ng-change="members.$save(member)")--><span class="ds-user-item--type">Desde {{member.created | date:"dd/MM/yy 'as' h:mma"}}</span>
               </section>
               <section class="ds-user-item--switch">
-                <md-switch md-no-ink="" title="{{active}}" aria-label="ativar Professor" ng-init="active=true" ng-model="active" class="md-primary">
+                <md-switch md-no-ink="" title="{{member.active}}" aria-label="ativar Professor" ng-model="member.active" class="md-primary">
                   <!-- | Switch (md-primary): No Ink-->
                 </md-switch>
               </section>
-              <section ng-click="editMemberDialog($event,'bruno')" class="ds-user-item--edit">
+              <section ng-click="editMemberDialog($event,member)" class="ds-user-item--edit">
                 <ng-md-icon icon="mode_edit" title="Editar Aluno" style="fill:grey" size="25"></ng-md-icon>
               </section>
               <section class="ds-user-item--delete">

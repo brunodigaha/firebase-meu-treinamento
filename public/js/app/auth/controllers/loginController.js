@@ -3,7 +3,7 @@ module.exports = function ($scope,$timeout,$location, authModelService,$firebase
 	$scope.password = null;
 	$scope.error = null;
 
-	// var URL = new Firebase(FBURL);
+	// var URL = new Firebase(FBURL+/users');
 	// $scope.users  = $firebaseArray(URL);
 	// $scope.addUser = function(){
 	// 	$scope.users.$add({

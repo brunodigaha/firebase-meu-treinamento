@@ -1,5 +1,8 @@
 var fs = require('fs');
-module.exports = function($scope,$mdToast,$timeout,fbUtil,$mdDialog) {
+module.exports = function($scope,$mdToast,membersService,$timeout,$mdDialog) {
+
+	var members = $scope.members = membersService.membersArray;
+
 	$scope.newMemberDialog = function(ev) {
 		$mdDialog.show({
 			controller: 'membersAdminDialogController',
@@ -28,19 +31,21 @@ module.exports = function($scope,$mdToast,$timeout,fbUtil,$mdDialog) {
 		});
 	};
 	$scope.editMemberDialog = function(ev,member) {
-		var member2 = {
-				name: 'Membro',
-				surname: '',
-				email: '',
-				image: '',
-				birthday: '',
-				phone:'',
-		};
+		// var member2 = {
+		// 		name: 'Membro',
+		// 		surname: '',
+		// 		email: '',
+		// 		image: '',
+		// 		birthday: '',
+		// 		phone:'',
+		// };
+		member.birthday = new Date(member.birthday);
+		console.log(member);
 		$mdDialog.show({
 			controller: 'membersAdminDialogController',
 			// scope: $scope,
 			// preserveScope: true,
-			locals: member2,
+			locals: member,
 			// bindToController: true,
 			escapeToClose: false,
 			template: fs.readFileSync(__dirname + '/../templates/membersAdminDialogTemplate.html'),

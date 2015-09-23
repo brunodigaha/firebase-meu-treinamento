@@ -12,17 +12,20 @@ section.gym-content-members-wrap
 			md-content.gym-content-members-scroll
 				section.gym-content-members-list
 					// section.gym-content-members-item(ng-repeat="n in [1,2,3,4,5,6,7,8,9,10,11,12] track by $index" class="angular-animate")
-					section.gym-content-members-item(ng-repeat="n in [1,2,3,4,5,6,7,8,9,10,11,12] track by $index")
+					section.gym-content-members-item(ng-repeat="(key,member) in members track by member.$id")
 						ds-user
 							section.ds-user-item--image
-								img(ng-src="https://www.ucarecdn.com/ae73a3d6-f816-4a0e-9d21-18528234b2cc/-/crop/175x175/89,0/-/preview/53x53/"  holder='holder.js/53x53?auto=yes&theme=sky&text=BRU')
+								// img(ng-src="https://www.ucarecdn.com/ae73a3d6-f816-4a0e-9d21-18528234b2cc/-/crop/175x175/89,0/-/preview/53x53/"  holder='holder.js/53x53?auto=yes&theme=sky&text=BRU')
+								// img(ng-src="{{$root.UCURL.url}}{{member.image}}-/preview/53x53/"  holder='holder.js/53x53?auto=yes&theme=sky&text=BRU')
+								img(class="img-responsive" ui-sref-active="active" ui-sref="core.user.listTraining"  ng-src="{{UCURL.url}}{{member.image}}-/preview/53x53/" title="{{ member.full_name }}" holder='holder.js/53x53?auto=yes&random=yes&text={{member.full_name | limitTo:3}}')
 							section.ds-user-item--name
-								p Bruno Alexandre
-								span.ds-user-item--type Professor
+								p(ng-bind="member.full_name")
+								// input(ng-model="member.full_name" ng-change="members.$save(member)")
+								span.ds-user-item--type Desde {{member.created | date:"dd/MM/yy 'as' h:mma"}}
 							section.ds-user-item--switch
-								md-switch.md-primary(md-no-ink='' title="{{active}}" aria-label='ativar Professor' ng-init='active=true' ng-model='active')
+								md-switch.md-primary(md-no-ink='' title="{{member.active}}" aria-label='ativar Professor' ng-model='member.active')
 									// | Switch (md-primary): No Ink
-							section.ds-user-item--edit(ng-click="editMemberDialog($event,'bruno')")
+							section.ds-user-item--edit(ng-click="editMemberDialog($event,member)")
 								ng-md-icon(icon="mode_edit" title="Editar Aluno" style="fill:grey"  size="25")
 							section.ds-user-item--delete
 								ng-md-icon(icon="clear" tooltip-lazy="true"  title="Excluir Aluno" style="fill:grey"  size="25")

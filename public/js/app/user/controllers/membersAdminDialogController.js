@@ -6,7 +6,7 @@ module.exports = function($scope,membersService,locals,$timeout,$mdDialog,UCURL)
 			name: '',
 			surname: '',
 			email: '',
-			image: '',
+			image: null,
 			birthday: '',
 			phone:'',
 	};
