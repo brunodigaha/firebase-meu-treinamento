@@ -18,6 +18,15 @@ module.exports = {
 		administration : {
 			authenticate: true,
 			abstract: true,
+			onEnter: function(exercisePatternModel){
+				// exercisePatternModel.init();
+				// console.log("entrou admin");
+			},
+			onExit: function(exercisePatternModel,membersService){
+				// exercisePatternModel.destroy();
+				membersService.destroy();
+				// console.log("saiu admin");
+			},
 			views: {
 				'wrap@': {
 					// controller: function($stateParams) {

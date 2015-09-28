@@ -1,7 +1,12 @@
 var fs = require('fs');
 module.exports = function($scope,$mdToast,membersService,$timeout,$mdDialog) {
 
-	var members = $scope.members = membersService.membersArray;
+	membersService.init()
+		.then(function(members){
+			$scope.members = members;
+		},function(error){
+			console.log(error);
+		});
 
 	$scope.newMemberDialog = function(ev) {
 		$mdDialog.show({
@@ -31,14 +36,6 @@ module.exports = function($scope,$mdToast,membersService,$timeout,$mdDialog) {
 		});
 	};
 	$scope.editMemberDialog = function(ev,member) {
-		// var member2 = {
-		// 		name: 'Membro',
-		// 		surname: '',
-		// 		email: '',
-		// 		image: '',
-		// 		birthday: '',
-		// 		phone:'',
-		// };
 		member.birthday = new Date(member.birthday);
 		console.log(member);
 		$mdDialog.show({
@@ -53,14 +50,15 @@ module.exports = function($scope,$mdToast,membersService,$timeout,$mdDialog) {
 			targetEvent: ev,
 		})
 		.then(function(member) {
-			$mdToast.show(
-				$mdToast.simple()
-					.content("Grupo "+ group.group.toString()+' Excluído')
-					.position("top right")
-					.action('x')
-					.hideDelay(2500)
-			);
-			// $scope.updateGym();
+			if (!_.isEmpty(member)) {
+				$mdToast.show(
+					$mdToast.simple()
+						.content("Aluno "+ member+' Atualizado!')
+						.position("top right")
+						.action('x')
+						.hideDelay(2500)
+				);
+			}
 		}, function() {
 			// if (Object.keys(changeList).length !== 0) {
 			// 	$scope.gym = gymBackup;
@@ -68,6 +66,61 @@ module.exports = function($scope,$mdToast,membersService,$timeout,$mdDialog) {
 			// }
 		});
 	};
-	$scope.lista = [1,2,3];
-	$scope.lista = [1,2,3];
+	$scope.toggleActive = function(member) {
+		var mode = "ATIVAR";
+		if (member.active) {
+			mode = "DESATIVAR";
+		}
+		console.log(member.active);
+		var isActive = member.active;
+		member.active = !isActive;
+
+		var confirm = $mdDialog.confirm()
+			.title('Deseja '+ mode +' o aluno: '+ member.full_name )
+			.content('Alunos desativados não podem ser gerenciados!')
+			.ariaLabel('Desativar Aluno')
+			.ok(mode+' Aluno')
+			.cancel('Cancelar')
+			.targetEvent(event);
+			$mdDialog.show(confirm).then(function() {
+				membersService.toggleActive(member).then(function(data){
+					$mdToast.show(
+						$mdToast.simple()
+							.content("Aluno "+ member.name + mode)
+							.position("top right")
+							.action('x')
+							.hideDelay(2500)
+					);
+				}, function(error) {
+					console.log(eror);
+				});
+			},function(){
+				console.log("cancelou");
+				member.active = isActive;
+			});
+	};
+
+	$scope.deleteMember = function(member) {
+		var confirm = $mdDialog.confirm()
+			.title('Deseja EXCLUIR o aluno: '+ member.full_name )
+			.content('Ao ser confirmada essa ação não pode ser desfeita!')
+			.ariaLabel('Remover Aluno')
+			.ok('Excluir Aluno')
+			.cancel('Cancelar')
+			.targetEvent(event);
+			$mdDialog.show(confirm).then(function() {
+				membersService.deleteMember(member.$id).then(function(data){
+					$mdToast.show(
+						$mdToast.simple()
+							.content("Aluno "+ member.name+' Atualizado!')
+							.position("top right")
+							.action('x')
+							.hideDelay(2500)
+					);
+				}, function(error) {
+					console.log(eror);
+				});
+			});
+	};
+
 };

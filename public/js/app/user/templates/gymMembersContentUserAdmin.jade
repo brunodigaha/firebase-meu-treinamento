@@ -23,11 +23,11 @@ section.gym-content-members-wrap
 								// input(ng-model="member.full_name" ng-change="members.$save(member)")
 								span.ds-user-item--type Desde {{member.created | date:"dd/MM/yy 'as' h:mma"}}
 							section.ds-user-item--switch
-								md-switch.md-primary(md-no-ink='' title="{{member.active}}" aria-label='ativar Professor' ng-model='member.active')
+								md-switch.md-primary(md-no-ink='' title="{{member.active}}" aria-label='ativar Professor' ng-click="toggleActive(member)" ng-model='member.active')
 									// | Switch (md-primary): No Ink
 							section.ds-user-item--edit(ng-click="editMemberDialog($event,member)")
 								ng-md-icon(icon="mode_edit" title="Editar Aluno" style="fill:grey"  size="25")
-							section.ds-user-item--delete
+							section.ds-user-item--delete(ng-click="deleteMember(member)")
 								ng-md-icon(icon="clear" tooltip-lazy="true"  title="Excluir Aluno" style="fill:grey"  size="25")
 							// section.ds-user-item--delete
 							// 	ng-md-icon(icon="clear" tooltips  tooltip-lazy="true"  tooltip-title="Excluir Funcionário" tooltip-size="small" style="fill:grey"  size="25")

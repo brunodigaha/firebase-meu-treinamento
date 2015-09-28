@@ -1,4 +1,4 @@
-module.exports = function ($rootScope,UCURL,$location,$state,$stateParams,authModelService,coreEventsService) {
+module.exports = function ($rootScope,UCURL,$location,$state,$stateParams,authModelService,coreEventsService,cfpLoadingBar) {
 
 	$rootScope.$state = $state;
 	$rootScope.$stateParams = $stateParams;
@@ -9,7 +9,11 @@ module.exports = function ($rootScope,UCURL,$location,$state,$stateParams,authMo
 		// console.log("tostate", toState);
 		// console.log("toParam", toParams);
 		// console.log("fromParam", fromParams);
+		
+		//Fechar todos menus ao trocar de estado
 		coreEventsService.close_all();
+		//Cancelar loader ao trocar de estado
+		cfpLoadingBar.complete();
 		if(toState.authenticate && !authModelService.$getAuth()){
 			event.preventDefault();
 			$state.go("login");
