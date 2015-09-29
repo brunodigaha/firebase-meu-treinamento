@@ -51,7 +51,6 @@ module.exports = function ($q,cfpLoadingBar,$firebaseArray,fbUtil) {
 		member.active = true;
 		
 		var ID = membersRef.push().key();
-		
 		var promise1 = membersRef.child(ID).set(member, function(error){
 			if (error){
 				console.log("Erro ao salvar Membro: "+ error);
@@ -85,8 +84,7 @@ module.exports = function ($q,cfpLoadingBar,$firebaseArray,fbUtil) {
 
 		membersRef.child(ID).update(member,function(error){
 			if (error){
-				console.log("Erro ao atualizar aluno",error);
-				deferred.reject();
+				deferred.reject(error);
 			}else{
 				deferred.resolve(member);
 			}
@@ -105,8 +103,7 @@ module.exports = function ($q,cfpLoadingBar,$firebaseArray,fbUtil) {
 	
 		membersRef.child(ID).update(updateMember,function(error){
 			if (error){
-				console.log("Erro ao Ativar/Desativar aluno",error);
-				deferred.reject();
+				deferred.reject(error);
 			}else{
 				deferred.resolve(member);
 			}

@@ -93,7 +93,7 @@ module.exports = function($scope,$mdToast,membersService,$timeout,$mdDialog) {
 							.hideDelay(2500)
 					);
 				}, function(error) {
-					console.log(eror);
+					console.log(error);
 				});
 			},function(){
 				console.log("cancelou");
