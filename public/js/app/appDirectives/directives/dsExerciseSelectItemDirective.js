@@ -8,6 +8,7 @@ module.exports = function() {
 		controller: function($scope,exercisePatternModel){
 
 			$scope.bindModel = exercisePatternModel.bindModel;
+			$scope._ = _;
 
 			$scope.removeGroup = function(event,group){
 				exercisePatternModel.removeGroup(event,group);

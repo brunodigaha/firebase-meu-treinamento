@@ -10,8 +10,8 @@
 		// border 1px solid palette('Blue Grey','200')
 		// border 1px solid #d8d8d8
 		&.active
-			// box-shadow 0px 2px 4px rgba(0,0,0,0.08)
-			border 3px solid palette('Blue Grey','50')
+			box-shadow 0px 2px 4px rgba(0,0,0,0.08)
+			border 5px solid palette('Blue Grey','50')
 			margin-top 5px
 			margin-bottom 5px
 		.ds-exercise-item-closed-wrap
@@ -28,9 +28,12 @@
 				+desktop()
 					line-height 44px
 					height 44px
+				cursor pointer 
 				.ds-exercise-item-closed-title
 					col(5/12,gutter:0)
-					font-size 120%
+					font-size 115%
+					Roboto-Regular()
+					color black
 					// font-weight bold
 				.ds-exercise-item-closed-resume
 					col(7/12,gutter:0)
@@ -58,9 +61,12 @@
 					col(3/12,gutter:0)
 					+desktop()
 						col(5/12,gutter:0)
-					font-size 120%
+					font-size 115%
 					// font-weight bold
+					Roboto-Regular()
+					color black
 					text-align left !important
+					cursor pointer 
 				.ds-exercise-item-opened-resume
 					col(9/12,gutter:0)
 					+desktop()

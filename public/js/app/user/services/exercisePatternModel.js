@@ -2,6 +2,7 @@ module.exports = function (fbUtil,$mdDialog, $mdToast,$firebaseArray,FBURL) {
 
 	var bindModel = {
 		groupName: '',
+		groups: {},
 		exerciseName: '',
 		isLoaded: false
 	};
@@ -36,14 +37,15 @@ module.exports = function (fbUtil,$mdDialog, $mdToast,$firebaseArray,FBURL) {
 			});
 	};
 	var init = function() {
-		bindModel.groups = $firebaseArray(fbUtil.ref('gym','namesexercises'));
-		bindModel.groups.$loaded().then(function(x) {
-			console.log("carregou grupos");
-			bindModel.isLoaded = true;
-		});
+		if (_.isEmpty(bindModel.groups)){
+			bindModel.groups = $firebaseArray(fbUtil.ref('gym','namesexercises'));
+			bindModel.groups.$loaded().then(function(x) {
+				bindModel.isLoaded = true;
+			});
+		}
 	};
 
-	init();
+	// init();
 
 	var addExercise = function(group) {
 		if (bindModel.exerciseName) {
@@ -64,7 +66,9 @@ module.exports = function (fbUtil,$mdDialog, $mdToast,$firebaseArray,FBURL) {
 		refExercise.remove();
 	};
 	var destroy = function() {
-		bindModel.groups.$destroy();
+		if (!_.isEmpty(bindModel.groups)){
+			bindModel.groups.$destroy();
+		}
 	};
 
 	return {  

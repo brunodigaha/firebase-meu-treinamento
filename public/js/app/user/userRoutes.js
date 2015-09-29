@@ -23,7 +23,7 @@ module.exports = {
 				// console.log("entrou admin");
 			},
 			onExit: function(exercisePatternModel,membersService){
-				// exercisePatternModel.destroy();
+				exercisePatternModel.destroy();
 				membersService.destroy();
 				// console.log("saiu admin");
 			},
@@ -151,7 +151,7 @@ module.exports = {
 				label: 'Administração - Treinos'
 			},
 			onEnter: function(exercisePatternModel){
-				// exercisePatternModel.init();
+				exercisePatternModel.init();
 			},
 			onExit: function(exercisePatternModel){
 				// exercisePatternModel.destroy();

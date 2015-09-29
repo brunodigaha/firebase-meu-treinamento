@@ -7,14 +7,14 @@ module.exports = function ($q,cfpLoadingBar,$firebaseArray,fbUtil) {
 	var gym_grafRef = fbUtil.ref('gym_graf','keyacad');
 		
 	// Array de ref firebase real time
-	var membersArray = null;
+	var membersArray = {};
 
 
 	//Para inicializar a escuta com firebase eventos
 	var init = function(){
 		var deferred = $q.defer();
 		cfpLoadingBar.start();
-		if (membersArray === null || _.isEmpty(membersArray)){
+		if ( _.isEmpty(membersArray)){
 			membersArray = $firebaseArray(membersRef);
 			membersArray.$loaded()
 				.then(function(data){
@@ -36,7 +36,7 @@ module.exports = function ($q,cfpLoadingBar,$firebaseArray,fbUtil) {
 
 
 	var destroy = function() {
-		if (membersArray){
+		if (!_.isEmpty(membersArray)){
 			membersArray.$destroy();
 		}
 	};
