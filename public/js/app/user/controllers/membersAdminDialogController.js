@@ -22,7 +22,6 @@ module.exports = function($scope,membersService,locals,$timeout,$mdDialog,UCURL)
 		}
 	};
 	$scope.onUCUploadComplete = function (info){
-		console.log(info);
 		if (info.cdnUrlModifiers) {
 			$scope.member.image = info.uuid+'/'+info.cdnUrlModifiers;
 			changeList.image = info.uuid+'/'+info.cdnUrlModifiers;
@@ -31,7 +30,6 @@ module.exports = function($scope,membersService,locals,$timeout,$mdDialog,UCURL)
 			changeList.image = info.uuid+'/';
 		}
 		$scope.$digest();
-		// console.log($scope.member.image);
 	};
 	$scope.change = function(key) {
 		if ($scope.mode === "Edição" && $scope.member[key]) {
@@ -39,7 +37,6 @@ module.exports = function($scope,membersService,locals,$timeout,$mdDialog,UCURL)
 				changeList.full_name = $scope.member.name+' '+$scope.member.surname;
 			}
 			changeList[key] = $scope.member[key];
-			// console.log(changeList);
 		}
 	};
 	$scope.cancel = function() {
@@ -60,16 +57,16 @@ module.exports = function($scope,membersService,locals,$timeout,$mdDialog,UCURL)
 					// $mdDialog.hide(member);
 				});
 		}else {
-			membersService.updateMember(member.$id,changeList)
-				.then(function(data){
-					if (!_.isEmpty(data)) {
+			if (_.isEmpty(changeList)){
+				$mdDialog.hide(null);
+			}else {
+				membersService.updateMember(member.$id,changeList)
+					.then(function(data){
 						$mdDialog.hide(member.name);
-					}else {
-						$mdDialog.hide(null);
-					}
-				},function(error){
-					console.log(error);
-				});
+					},function(error){
+						console.log(error);
+					});
+			}
 		}
 	};
 

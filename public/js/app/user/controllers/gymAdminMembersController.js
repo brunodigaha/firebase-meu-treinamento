@@ -36,13 +36,14 @@ module.exports = function($scope,$mdToast,membersService,$timeout,$mdDialog) {
 		});
 	};
 	$scope.editMemberDialog = function(ev,member) {
-		member.birthday = new Date(member.birthday);
-		console.log(member);
+		var memberEdit = angular.copy(member);
+		memberEdit.birthday = new Date(memberEdit.birthday);
+		// console.log(memberEdit);
 		$mdDialog.show({
 			controller: 'membersAdminDialogController',
 			// scope: $scope,
 			// preserveScope: true,
-			locals: member,
+			locals: memberEdit,
 			// bindToController: true,
 			escapeToClose: false,
 			template: fs.readFileSync(__dirname + '/../templates/membersAdminDialogTemplate.html'),

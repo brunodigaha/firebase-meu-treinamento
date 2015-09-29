@@ -77,7 +77,12 @@ module.exports = function ($q,cfpLoadingBar,$firebaseArray,fbUtil) {
 
 
 	var updateMember = function (ID,member) {
+
 		var deferred = $q.defer();
+		if (member.birthday) {
+			member.birthday = member.birthday.getTime();
+		}
+
 		membersRef.child(ID).update(member,function(error){
 			if (error){
 				console.log("Erro ao atualizar aluno",error);
